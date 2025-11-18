@@ -1,0 +1,4 @@
+/.quarto/
+.DS_Store
+lessons/data
+lessons/results

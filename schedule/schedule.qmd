@@ -1,0 +1,172 @@
+---
+sidebar: false
+toc: false
+---
+
+# Workshop Schedule
+
+## Pre-reading
+
+- [Lesson 01](../lessons/01_lesson.qmd)
+- [Lesson 02](../lessons/02_lesson.qmd)
+- [Lesson 03](../lessons/03_lesson.qmd)
+
+## Day 1
+
+| Time |  Topic  | Instructor |
+|:-----------:|:----------:|:--------:|
+| 10:00 - 10:15 | [Workshop introduction](../slides/workshop_intro_slides.pdf) |  Instructor_name |
+| 10:15 - 10:45 | [Lesson 04](../lessons/04_lesson.qmd) | Instructor_name |
+| 10:45 - 10:50 | Break | |
+| 10:50 - 11:25 | [Lesson 05](../lessons/05_lesson.qmd) | Instructor_name |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+
+### Before the next class:
+
+I. Please **study the contents** and **work through all the code** within the following lessons:
+ 
+   1. [Lesson 06](../lessons/06_lesson.qmd)
+      
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+
+   2. [Lesson 07](../lessons/07_lesson.qmd)
+      
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+
+II. **Submit your work**:
+   * Each lesson above contains exercises; please go through each of them.
+   * **Submit your answers** to the exercises using [this Google form]() on **the day *before* the next class**.
+   
+### Questions?
+* ***If you get stuck due to an error*** while running code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu) 
+
+***
+
+## Day 2
+
+| Time |  Topic  | Instructor |
+|:-----------:|:----------:|:--------:|
+| 10:00 - 10:30 | Self-learning lessons discussion | All |
+| 10:30 - 10:55 | [Lesson 08](../lessons/08_lesson.qmd) | Instructor_name |
+| 10:55 - 11:00 | Break | |
+| 11:00 - 11:55 | [Lesson 09](../lessons/09_lesson.qmd) | Instructor_name |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+
+### Before the next class:
+
+I. Please **study the contents** and **work through all the code** within the following lessons:
+ 
+   1. [Lesson 10](../lessons/10_lesson.qmd)
+
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+
+   2. [Lesson 11](../lessons/11_lesson.qmd)
+
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+         
+II. **Submit your work**:
+   * Each lesson above contains exercises; please go through each of them.
+   * **Submit your answers** to the exercises using [this Google form]() on **the day *before* the next class**.
+   
+### Questions?
+* ***If you get stuck due to an error*** while running code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu) 
+
+***
+
+## Day 3
+
+| Time |  Topic  | Instructor |
+|:-----------:|:----------:|:--------:|
+| 10:00 - 10:30 | Self-learning lessons discussion | All |
+| 10:30 - 10:55 | [Lesson 12](../lessons/12_lesson.qmd) | Instructor_name |
+| 10:55 - 11:00 | Break | |
+| 11:00 - 11:55 | [Lesson 13](../lessons/13_lesson.qmd) | Instructor_name |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+
+### Before the next class:
+
+I. Please **study the contents** and **work through all the code** within the following lessons:
+ 
+   1. [Lesson 14](../lessons/14_lesson.qmd)
+
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+
+   2. [Lesson 15](../lessons/15_lesson.qmd)
+
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+         
+II. **Submit your work**:
+   * Each lesson above contains exercises; please go through each of them.
+   * **Submit your answers** to the exercises using [this Google form]() on **the day *before* the next class**.
+   
+### Questions?
+* ***If you get stuck due to an error*** while running code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu) 
+
+***
+
+
+## Day 4
+
+| Time |  Topic  | Instructor |
+|:-----------:|:----------:|:--------:|
+| 10:00 - 10:30 | Self-learning lessons discussion | All |
+| 10:30 - 10:55 | [Lesson 16](../lessons/16_lesson.qmd) | Instructor_name |
+| 10:55 - 11:00 | Break | |
+| 11:00 - 11:55 | [Lesson 17](../lessons/17_lesson.qmd) | Instructor_name |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+
+***
+
+## Resources
+
+- [Additional Resource 1](link_to_additonal_resource_1)
+- [Additional Resource 2](link_to_additonal_resource_2)
+- [Additional Resource 3](link_to_additonal_resource_3)
