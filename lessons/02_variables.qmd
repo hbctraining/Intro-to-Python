@@ -1,0 +1,365 @@
+---
+title: "Variable"
+description: |
+  Write a description of the lesson here. 
+author:
+  - Will Gammerdinger
+  - Noor Sohail
+date: "2025-11-18"
+categories: 
+  - category_1
+  - category_2
+  - category_3
+  - category_4
+keywords:
+  - keyword_1
+  - keyword_2
+  - keyword_3
+  - keyword_4
+  - keyword_5
+  - keyword_6
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+Approximate time: 30 minutes
+
+## Learning Objectives 
+
+In this lesson, we will:
+
+- Assign values to variables
+- Describe the different data types available
+
+## Overview of lesson
+
+Variables are one of the most fundamental units in many programming languages. Variables can be thought of as a label for an object. You can then retrieve this object for later use. Some helpful uses for variables are if:
+
+- The output of something processed needs to be stored for later use
+- A value is used multiple times in an analysis
+- Your code is being read by others
+
+In many cases, you will be creating variables in many different programming languages for all three of these reasons. Let's go ahead and dive into how to create variable within Python.
+
+## Assigning Variables
+
+In Python, in order to assign a value to an object we need to use `=`. For example, you might have a number or word that you think is important that you'd like to store to use at a later time like this: 
+
+```{python}
+#| label: create_variable
+# Creating a variable 
+my_number = 16
+```
+
+:::{.callout-note}
+When creating variables in Python, there are some rules and guidelines that you should follow:
+
+***Rules***
+
+- Python variables are ***case sensitive***, so `my_number` and `My_number` are different variables
+- Variables names must only consist of letters, numbers and underscores
+- Must begin with a letter or an underscore, it cannot start with a number. Starting a variable with an underscore has some special properties that are beyond the scope of this workshop
+- It cannot be a reserved keyword like `for` or `if`
+
+***Guidelines***
+
+- Make variable names meaningful. Technically, there is nothing wrong with a variable named `s5ro_l67`, but that is likely not very descriptive to yourself and others.
+- Use camel case (`MyVariableName`) or underscores (`my_variable_name`) to denote multi-word variable names 
+- Be consistent in your style
+
+There is an [official Python style guide](https://peps.python.org/pep-0008/) that has much more detailed guidelines.
+:::
+
+If we would like to see the the value of a variable we have created, we can use the the `print()` function:
+
+```{python}
+#| label: print_function
+# Print my_number
+print(my_number)
+```
+
+You can add text around a variable within the `print()` function:
+
+```{python}
+#| label: text_within_print
+# Added text within the print function
+print('I want to remember', my_number, 'for later use.')
+```
+
+:::{.callout-note}
+You can see that when we add text around a variable, it automatically adds spaces on either side of that variable.
+:::
+
+Let's go ahead and create a second number that we are interested in:
+
+```{python}
+#| label: create_variable_2
+# Creating a second variable called your_number
+your_number = 8.5
+```
+
+### Printing variables
+
+We can use the `print()` function to see the values of these variables:
+
+```{python}
+#| label: multiple_variable_within_print
+# Multiple variable within a print function
+print('I want to remember', my_number, 'and', your_number)
+```
+
+You can carry out basic arithmetic using variables. For example, if we wanted to add `my_number` and `your_number`, we could do that with:
+
+```{python}
+#| label: add_variables
+# Add our numbers
+print(my_number + your_number)
+```
+
+Additionally, we can assign the output of that summation to a new variable:
+
+```{python}
+#| label: add_variables_assign
+# Add our numbers
+our_sum = my_number + your_number
+
+# Print the sum of our numbers
+print(our_sum)
+```
+
+:::{.callout-note}
+Python uses white-space to define scope as we will [see later](05_lessons.qmd), but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:
+
+```{python}
+#| label: white_space_example_1
+# No whitespace on either side of =
+x=3
+# Print the value of x
+print(x)
+```
+
+```{python}
+#| label: white_space_example_2
+# One space on either side of =
+x = 3
+# Print the value of x
+print(x)
+```
+
+```{python}
+#| label: white_space_example_3
+# Three spaces on either side of =
+x    =    3
+# Print the value of x
+print(x)
+```
+:::
+
+### Re-assigning variable
+
+You can also assign a new value to a variable. Let's update `my_number` to be a new number:
+
+```{python}
+#| label: number reassignment
+
+print(my_number)
+
+my_number = 22
+
+print(my_number)
+```
+
+```{python}
+#| label: dependent_reassignment
+# Print the sum of our numbers
+print(our_sum)
+
+# Add our numbers
+our_sum = my_number + your_number
+
+# Print the sum of our numbers
+print(our_sum)
+```
+
+:::{.callout-tip}
+# [**Exercise 1**](02_variables-Answer_key.qmd#exercise-1)
+1. Create two new variables called `a`, that has the value of 5, and `b`, that has the value of 3.
+2. Subtract `b` from `a` and assign it to the new variable called `difference` 
+3. Using the variables `a`, `b` and `difference`, print out the sentence that looks like:
+
+```{python}
+#| label: exercise_1_hidden
+#| echo: false
+# Create variables
+a = 5
+b = 3
+
+# Subtract variables and assign them to difference
+difference = a - b
+```
+
+```{python}
+#| label: exercise_1_sentence
+#| echo: false
+print('The difference of', a, 'and', b, 'is', difference)
+```
+:::
+
+## Types of Variables
+
+Now that we have a basic understanding of what a variable is, let's discuss the different **data types** can hold a single value. Some of these most common data types are:
+
+- **int** - Integers
+- **float** - Floating point numbers (number with decimals)
+- **bool** - Booleans (True/False)
+- **str** - Strings
+
+We can determine what type of data type a variable is by using the `type()` function.
+
+```{python}
+#| label: type_function
+# Data type of my_number
+print(type(my_number))
+```
+
+:::{.callout-note}
+When we have functions nested inside of one another, the innermost function is evaluated first and the output from it is passed to the next outer function until you reach the outermost function. In the example above, `my_number` is evaluated by the `type()` function and the output of the `type()` function is then passed onto the `print()` function.
+:::
+
+### Strings
+
+Strings are a data type that can hold a sequence of characters. Strings are denoted by wrapping the string in either single- or double-quotes and either is acceptable. 
+
+```{python}
+#| label: string_variable
+# Create a string variable
+my_word = 'sequence'
+
+print(type(my_word))
+```
+
+:::{.callout-note}
+In order to demonstrate that Python is indifferent between single- and double-quotes, we can also create a string variable with double-quotes and we can see that Python still returns that this variable is of the string data type:
+
+```{python}
+#| label: string_variable_double_quotes
+# Create a second string variable
+my_other_word = "chromosome"
+
+# Print the data type for a double-quoted string
+print(type(my_other_word))
+```
+:::
+
+If you were to place a variable name within quotes, it will be evaluated as a string rather than as a variable. For example:
+
+```{python}
+#| label: quote_variable
+# Printing a variable name within quotes
+print('my_number is a string, but', my_number, 'is a variable.')
+```
+
+Furthermore, if you were to place a numeric value within quotes, then Python will interpret that number as a string rather than as a number.
+
+```{python}
+#| label: number_in_quotes
+# Number in quotes is a string
+number_string = '12'
+
+# Print the data type of number_string
+print(type(number_string))
+```
+
+And if you were to attempt to add together a string and a numeric value, integer or floating point, Python will return an error message letting you know that adding together numbers and strings is not permitted. This is even true if the string is a number like `number_string`:
+
+```{python}
+#| label: adding_strings_numbers
+#| error: true
+# Trying to add strings and numbers
+my_number + number_string
+```
+
+### Booleans
+
+Booleans are another data type and the denotes `True`/`False` values. 
+
+```{python}
+#| label: create_boolean
+# Create a boolean variable
+my_boolean = True
+
+print(type(my_boolean))
+```
+
+### Changing the Data Type
+
+Let's consider the case where you have perhaps classified the data type of variable incorrectly. In our case, `number_string` is a string with the number `16`. We can see that:
+
+```{python}
+#| label: number_string_data_type_1
+# Data type of number_string
+print(type(number_string))
+```
+
+But we can tell Python to interpret this string as a number if we would like to, by using either the `int()` or `float()` functions.
+
+```{python}
+#| label: number_string_data_type_2
+# Change the data type of number_string to integer
+print(type(int(number_string)))
+```
+
+Sometimes, `0` and `1` denote `False` and `True`, respectively, in the world of computers, but if we evaluate the type for `0` or `1`, we will know that by themselves they are integers: 
+
+```{python}
+#| label: string_boolean
+# Retrieve the data type of 1
+print(type(1))
+```
+
+Thus, if we wanted to have `0` or `1` evaluated as booleans rather than integers, then we can use the `bool()` function.
+
+```{python}
+#| label: boolean_boolean
+# Retrieve the data type for 1 as a boolean
+print(type(bool(1)))
+```
+
+:::{.callout-note}
+Interestingly, because booleans are `0` and `1` under the hood, they can be added together and the end result is a integer data type.
+
+```{python}
+#| label: summing_booleans
+# Adding together two Trues and a False
+True + True + False
+
+# Data type for adding together two Trues and a False
+print(type(True + True + False))
+```
+:::
+
+:::{.callout-tip}
+# [**Exercise 2**](02_variables-Answer_key.qmd#exercise-2)
+1. How would you determine the data type on `your_number` and what data type is it?
+:::
+
+## Other Data Type
+
+There exists several more data types that we will discuss in depth in later lessons:
+
+- [list](06_lesson.qmd)
+- [dictionary](07_lesson.qmd)
+- [tuple](08_lesson.qmd)
+- [set](09_lesson.qmd)
+
+***
+
+[Next Lesson >>](03_lesson.qmd)
+
+[Back to Schedule](../schedule/schedule.qmd)
+
+***
+
+*These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
