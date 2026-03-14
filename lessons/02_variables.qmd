@@ -54,6 +54,7 @@ my_number = 16
 ```
 
 :::{.callout-note}
+# Python rules and guidelines for variable names
 When creating variables in Python, there are some rules and guidelines that you should follow:
 
 ***Rules***
@@ -89,7 +90,8 @@ print('I want to remember', my_number, 'for later use.')
 ```
 
 :::{.callout-note}
-You can see that when we add text around a variable, it automatically adds spaces on either side of that variable.
+# The `print()` function
+You can see that when we add text around a variable, it automatically adds spaces on either side of that variable inside the `print()` function.
 :::
 
 Let's go ahead and create a second number that we are interested in:
@@ -130,6 +132,7 @@ print(our_sum)
 ```
 
 :::{.callout-note}
+# White space
 Python uses white-space to define scope as we will [see later](05_lessons.qmd), but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:
 
 ```{python}
@@ -211,10 +214,12 @@ print('The difference of', a, 'and', b, 'is', difference)
 
 Now that we have a basic understanding of what a variable is, let's discuss the different **data types** can hold a single value. Some of these most common data types are:
 
-- **int** - Integers
-- **float** - Floating point numbers (number with decimals)
-- **bool** - Booleans (True/False)
-- **str** - Strings
+| Type  | Description                                   |
+|-------|-----------------------------------------------|
+| int   | Integers                                     |
+| float | Floating point numbers (numbers with decimals) |
+| bool  | Booleans (True/False)                        |
+| str   | Strings                                      |
 
 We can determine what type of data type a variable is by using the `type()` function.
 
@@ -225,6 +230,7 @@ print(type(my_number))
 ```
 
 :::{.callout-note}
+# Nested functions
 When we have functions nested inside of one another, the innermost function is evaluated first and the output from it is passed to the next outer function until you reach the outermost function. In the example above, `my_number` is evaluated by the `type()` function and the output of the `type()` function is then passed onto the `print()` function.
 :::
 
@@ -241,6 +247,7 @@ print(type(my_word))
 ```
 
 :::{.callout-note}
+# Single- and double-quotes
 In order to demonstrate that Python is indifferent between single- and double-quotes, we can also create a string variable with double-quotes and we can see that Python still returns that this variable is of the string data type:
 
 ```{python}
@@ -328,6 +335,7 @@ print(type(bool(1)))
 ```
 
 :::{.callout-note}
+# Boolean addition
 Interestingly, because booleans are `0` and `1` under the hood, they can be added together and the end result is a integer data type.
 
 ```{python}
@@ -342,7 +350,7 @@ print(type(True + True + False))
 
 :::{.callout-tip}
 # [**Exercise 2**](02_variables-Answer_key.qmd#exercise-2)
-1. How would you determine the data type on `your_number` and what data type is it?
+4. How would you determine the data type on `your_number` and what data type is it?
 :::
 
 ## Other Data Type
@@ -354,12 +362,27 @@ There exists several more data types that we will discuss in depth in later less
 - [tuple](08_lesson.qmd)
 - [set](09_lesson.qmd)
 
+## Variable Inspector
+
+If we right click on some empty space within the Jupyter Lab interface, we can open up the `Variable Inspector`. This is a helpful tool to see all of the variables that you have created and their data types.
+
+::: {#fig-jupyter_right_click .figure}
+![](../img/jupyter_lab_right_click.png)
+
+Options after right-clicking within Jupyter Lab.
+:::
+
+Once we open up the `Variable Inspector`, a new tab will open in our notebook. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and are not sure what they all are.
+
+
+::: {#fig-jupyter_variable_inspector .figure}
+![](../img/jupyter_lab_variable_inspector.png)
+
+Variable Inspector in Jupyter Lab, showing all the variables created in the current session.
+:::
+
 ***
 
 [Next Lesson >>](03_lesson.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)
-
-***
-
-*These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
