@@ -1,25 +1,23 @@
 ---
+title: "Introduction to Python"
 sidebar: false
 toc: false
 ---
 
-# Workshop_title
 
 | Audience | Computational skills required| Duration |
 :----------|:----------|:----------|
-| Biologists | [Workshop pre-requisite]() | 4-session online workshop (8 hours of trainer-led time)|
+| Biologists | None | 4-session workshop (8 hours of trainer-led time)|
 
 ### Description
 
-This repository has teaching materials for a hands-on workshop on **Workshop Name**. Description of workshop. 
+This repository has teaching materials for a hands-on workshop on **Introduction to Python**. 
 
-::: calout-note
-# Note for Trainers:
-Please note that the schedule linked below assumes that learners will spend between 3-5 hours on reading through and completing exercises from selected lessons between classes. The online component of the workshop focuses on more exercises and discussion/Q & A.
-:::
+Description of workshop. 
 
 ::: callout-note
-These materials were developed for a trainer-led workshop, but are also amenable to self-guided learning.
+# Note for trainers
+Please note that the schedule linked below assumes that learners will spend between 3-5 hours on reading through and completing exercises from selected lessons between classes. The online component of the workshop focuses on more exercises and discussion/Q & A.
 :::
 
 ### Learning Objectives
@@ -32,93 +30,16 @@ In this workshop, the participants will:
 - Broad Learning Objective 4
 
 ### Lessons
-* [Workshop schedule (trainer-led learning)](schedule/schedule.qmd)
-* [Self-learning](schedule/self-learning.qmd)
+These materials were developed for a trainer-led workshop, but are also amenable to self-guided learning.
 
-### Installation Requirements (shell-based)
-***All:***
+- [Workshop schedule (trainer-led learning)](schedule/schedule.qmd)
+- [Self-learning](schedule/self-learning.qmd)
 
-***Mac users:***
-No additional installation requirements.  
 
-***Windows users:***
-[GitBash](https://git-scm.com/download/win)  
+### Installation Requirements
 
-### Installation Requirements (R-based)
+Download the most recent version of the **Graphical Installer** of Anaconda for the appropriate operating system of your computer using the link below:
 
-#### Applications
-Download the most recent versions of R and RStudio for your laptop:
+- [Anaconda](https://www.anaconda.com/download/success)
 
- - [R](http://lib.stat.cmu.edu/R/CRAN/) **(version 4.3.0 or above)**
- - [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
-
-#### Packages for R
-
-> **Note 1: Install the packages in the order listed below.**
-
-> **Note 2:  All the package names listed below are case sensitive!**
-
-> **Note 3**: **If you have a Mac,** download and install this tool before installing your packages if using R versions 4.3.0 up to 4.4.3:
-https://mac.r-project.org/tools/gfortran-12.2-universal.pkg
-And this tool if using R versions after 4.4.3:
-https://mac.r-project.org/tools/gfortran-14.2-universal.pkg
-
-> **Note 4**: At any point (especially if you’ve used R/Bioconductor in the past), in the console **R may ask you if you want to update any old packages by asking Update all/some/none? [a/s/n]:**. If you see this, **type "a" at the prompt and hit Enter** to update any old packages. _Updating packages can sometimes take quite a bit of time to run, so please account for that before you start with these installations._  
-
-> **Note 5:** If you see a message in your console along the lines of “binary version available but the source version is later”, followed by a question, **“Do you want to install from sources the package which needs compilation? y/n”, type n for no, and hit enter**.
-
-**(1)** Install the X packages listed below from **CRAN** using the `install.packages()` function. 
-
-1. BiocManager
-2. ..
-3. ...
-
-**Please install them one-by-one as follows:**
-
-```{r}
-#| label: install_CRAN_packages
-#| eval: false
-install.packages("BiocManager")
-install.packages("package_name")
-install.packages("package_name")
-```
-
-**(2)** Install the X packages listed below from **Bioconductor** using the the `BiocManager::install()` function.
-
-1. ..
-2. ..
-
-**Please install them one-by-one as follows:**
-
-```{r}
-#| label: install_bioconductor_packages
-#| eval: false
-BiocManager::install("package_name")
-BiocManager::install("package_name")
-BiocManager::install("package_name")
-```
-
-**(3)** Finally, please check that all the packages were installed successfully by **loading them one at a time** using the `library()` function.  
-
-```{r}
-#| label: load_libraries
-#| eval: false
-library(package_name)
-library(package_name)
-library(package_name)
-library(package_name)
-library(package_name)
-library(package_name)
-```
-
-**(4)** Once all packages have been loaded, run sessionInfo().  
-
-```{r}
-#| label: print_sessionInfo
-#| eval: false
-sessionInfo()
-```
-
-***
-
-*These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
+Once downloaded, run the installer and follow the prompts to complete the installation. Use the default settings, and make sure to add Anaconda to your PATH variable if prompted.

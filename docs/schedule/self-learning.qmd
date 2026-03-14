@@ -1,0 +1,44 @@
+# Workshop Name
+
+## Learning Objectives
+
+- Broad Learning Objective 1
+- Broad Learning Objective 2
+- Broad Learning Objective 3
+- Broad Learning Objective 4
+  
+## Installations
+
+1. [Tool 1](link_to_tool_1) 
+2. [Tool 2](link_to_tool_2)
+
+## Lessons
+
+- [Lesson 1](../lessons/01_lesson.qmd)
+- [Lesson 2](../lessons/02_lesson.qmd)
+- [Lesson 3](../lessons/03_lesson.qmd)
+- [Lesson 4](../lessons/04_lesson.qmd)
+- [Lesson 5](../lessons/05_lesson.qmd)
+- [Lesson 6](../lessons/06_lesson.qmd)
+- [Lesson 7](../lessons/07_lesson.qmd)
+- [Lesson 8](../lessons/08_lesson.qmd)
+- [Lesson 9](../lessons/09_lesson.qmd)
+- [Lesson 10](../lessons/10_lesson.qmd)
+- [Lesson 11](../lessons/11_lesson.qmd)
+- [Lesson 12](../lessons/12_lesson.qmd)
+- [Lesson 13](../lessons/13_lesson.qmd)
+- [Lesson 14](../lessons/14_lesson.qmd)
+- [Lesson 15](../lessons/15_lesson.qmd)
+- [Lesson 16](../lessons/16_lesson.qmd)
+- [Lesson 17](../lessons/17_lesson.qmd)
+
+
+## Resources
+
+- [Additional Resource 1](link_to_additonal_resource_1)
+- [Additional Resource 2](link_to_additonal_resource_2)
+- [Additional Resource 3](link_to_additonal_resource_3)
+
+***
+
+*These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*

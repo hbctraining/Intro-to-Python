@@ -1,24 +1,20 @@
 ---
+title: "Schedule - Introduction to Python"
 sidebar: false
 toc: false
 ---
 
 # Workshop Schedule
 
-## Pre-reading
-
-- [Lesson 01](../lessons/01_lesson.qmd)
-- [Lesson 02](../lessons/02_lesson.qmd)
-- [Lesson 03](../lessons/03_lesson.qmd)
 
 ## Day 1
 
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:15 | [Workshop introduction](../slides/workshop_intro_slides.pdf) |  Instructor_name |
-| 10:15 - 10:45 | [Lesson 04](../lessons/04_lesson.qmd) | Instructor_name |
+| 10:15 - 10:45 | [Lesson 04](../lessons/01_setting_up.qmd) | Instructor_name |
 | 10:45 - 10:50 | Break | |
-| 10:50 - 11:25 | [Lesson 05](../lessons/05_lesson.qmd) | Instructor_name |
+| 10:50 - 11:25 | [Lesson 05](../lessons/02_variables.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
 
 ### Before the next class:

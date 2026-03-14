@@ -217,6 +217,9 @@ table thead th {
 .quarto-figure,
 .figure,          /* your custom .figure block */
 figure {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;   /* centers image and caption horizontally */
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -235,4 +238,34 @@ figure {
 .figure .figure-caption,
 figure figcaption {
   text-align: left !important;
+  align-self: flex-start !important; /* keep caption left-aligned inside centered flex container */
 }
+
+/* Ensure captions don't overflow when left-aligned in narrow columns */
+.quarto-figure .figure-caption,
+.figure .figure-caption {
+  max-width: 100% !important;
+}
+
+/* When a figure appears inside a Quarto/markdown column, center the caption */
+.column .quarto-figure .figure-caption,
+.column .figure .figure-caption {
+  text-align: center !important;
+  align-self: center !important;
+}
+
+/* Make Quarto columns stretch to equal height and center their content vertically
+   so images inside a column appear in the vertical middle of the column. */
+.columns {
+  display: flex !important;
+  align-items: stretch !important; /* ensure columns match height */
+}
+
+.columns .column {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* vertical centering of column content */
+}
+
+/* If you want a minimum column height for visual spacing, uncomment and tune: */
+/* .columns { min-height: 220px; } */
