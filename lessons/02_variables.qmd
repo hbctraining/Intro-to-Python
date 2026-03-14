@@ -1,5 +1,5 @@
 ---
-title: "Variable"
+title: "Variables"
 description: |
   Write a description of the lesson here. 
 author:
@@ -214,6 +214,8 @@ print('The difference of', a, 'and', b, 'is', difference)
 
 Now that we have a basic understanding of what a variable is, let's discuss the different **data types** can hold a single value. Some of these most common data types are:
 
+Table: Common Python data types. {#tbl-common_data_types}
+
 | Type  | Description                                   |
 |-------|-----------------------------------------------|
 | int   | Integers                                     |
@@ -357,10 +359,14 @@ print(type(True + True + False))
 
 There exists several more data types that we will discuss in depth in later lessons:
 
-- [list](06_lesson.qmd)
-- [dictionary](07_lesson.qmd)
-- [tuple](08_lesson.qmd)
-- [set](09_lesson.qmd)
+Table: More Python data types. {#tbl-more_data_types}
+
+| Type       | What it is                             |
+|------------|-----------------------------------------------------|
+| [list](06_lesson.qmd)       | An ordered, changeable collection of elements.        |
+| [dictionary](07_lesson.qmd) | A collection of key–value pairs.  |
+| [tuple](08_lesson.qmd)      | An ordered collection of elements you.   |
+| [set](09_lesson.qmd)        | An unordered collection of unique elements.           |
 
 ## Variable Inspector
 

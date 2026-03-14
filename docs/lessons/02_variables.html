@@ -12,7 +12,7 @@
 <meta name="keywords" content="keyword_1, keyword_2, keyword_3, keyword_4, keyword_5, keyword_6">
 <meta name="description" content="Write a description of the lesson here.">
 
-<title>Variable – Introduction to Python</title>
+<title>Variables – Introduction to Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -5092,7 +5092,7 @@ justify-content: center !important;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Variable</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Variables</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
   <div class="quarto-categories">
     <div class="quarto-category">category_1</div>
     <div class="quarto-category">category_2</div>
@@ -5351,6 +5351,12 @@ White space
 <section id="types-of-variables" class="level2">
 <h2 class="anchored" data-anchor-id="types-of-variables">Types of Variables</h2>
 <p>Now that we have a basic understanding of what a variable is, let’s discuss the different <strong>data types</strong> can hold a single value. Some of these most common data types are:</p>
+<div id="tbl-common_data_types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-common_data_types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 1: Common Python data types.
+</figcaption>
+<div aria-describedby="tbl-common_data_types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -5377,6 +5383,9 @@ White space
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <p>We can determine what type of data type a variable is by using the <code>type()</code> function.</p>
 <div id="type_function" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type of my_number</span></span>
@@ -5460,7 +5469,7 @@ Single- and double-quotes
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[20]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[124]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Trying to add strings and numbers</span>
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-yellow-bg">my_number</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">+</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">number_string</span>
 
@@ -5559,12 +5568,41 @@ Boolean addition
 <section id="other-data-type" class="level2">
 <h2 class="anchored" data-anchor-id="other-data-type">Other Data Type</h2>
 <p>There exists several more data types that we will discuss in depth in later lessons:</p>
-<ul>
-<li><a href="../lessons/06_lesson.html">list</a></li>
-<li><a href="../lessons/07_lesson.html">dictionary</a></li>
-<li><a href="../lessons/08_lesson.html">tuple</a></li>
-<li><a href="../lessons/09_lesson.html">set</a></li>
-</ul>
+<div id="tbl-more_data_types" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-more_data_types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 2: More Python data types.
+</figcaption>
+<div aria-describedby="tbl-more_data_types-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../lessons/06_lesson.html">list</a></td>
+<td>An ordered, changeable collection of elements.</td>
+</tr>
+<tr class="even">
+<td><a href="../lessons/07_lesson.html">dictionary</a></td>
+<td>A collection of key–value pairs.</td>
+</tr>
+<tr class="odd">
+<td><a href="../lessons/08_lesson.html">tuple</a></td>
+<td>An ordered collection of elements you.</td>
+</tr>
+<tr class="even">
+<td><a href="../lessons/09_lesson.html">set</a></td>
+<td>An unordered collection of unique elements.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
 <section id="variable-inspector" class="level2">
 <h2 class="anchored" data-anchor-id="variable-inspector">Variable Inspector</h2>
@@ -6051,7 +6089,7 @@ Figure 2: Variable Inspector in Jupyter Lab, showing all the variables created 
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
 <div class="sourceCode" id="cb47" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Variable&quot;</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Variables&quot;</span></span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Write a description of the lesson here. </span></span>
 <span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
@@ -6266,178 +6304,184 @@ Figure 2: Variable Inspector in Jupyter Lab, showing all the variables created 
 <span id="cb47-242"><a href="#cb47-242" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-243"><a href="#cb47-243" aria-hidden="true" tabindex="-1"></a>Now that we have a basic understanding of what a variable is, let&#39;s discuss the different **data types** can hold a single value. Some of these most common data types are:</span>
 <span id="cb47-244"><a href="#cb47-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-245"><a href="#cb47-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Type  <span class="pp">|</span> Description                                   <span class="pp">|</span></span>
-<span id="cb47-246"><a href="#cb47-246" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----------------------------------------------|</span></span>
-<span id="cb47-247"><a href="#cb47-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> int   <span class="pp">|</span> Integers                                     <span class="pp">|</span></span>
-<span id="cb47-248"><a href="#cb47-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> float <span class="pp">|</span> Floating point numbers (numbers with decimals) <span class="pp">|</span></span>
-<span id="cb47-249"><a href="#cb47-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bool  <span class="pp">|</span> Booleans (True/False)                        <span class="pp">|</span></span>
-<span id="cb47-250"><a href="#cb47-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> str   <span class="pp">|</span> Strings                                      <span class="pp">|</span></span>
-<span id="cb47-251"><a href="#cb47-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-252"><a href="#cb47-252" aria-hidden="true" tabindex="-1"></a>We can determine what type of data type a variable is by using the <span class="in">`type()`</span> function.</span>
+<span id="cb47-245"><a href="#cb47-245" aria-hidden="true" tabindex="-1"></a>Table: Common Python data types. {#tbl-common_data_types}</span>
+<span id="cb47-246"><a href="#cb47-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-247"><a href="#cb47-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Type  <span class="pp">|</span> Description                                   <span class="pp">|</span></span>
+<span id="cb47-248"><a href="#cb47-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-----------------------------------------------|</span></span>
+<span id="cb47-249"><a href="#cb47-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> int   <span class="pp">|</span> Integers                                     <span class="pp">|</span></span>
+<span id="cb47-250"><a href="#cb47-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> float <span class="pp">|</span> Floating point numbers (numbers with decimals) <span class="pp">|</span></span>
+<span id="cb47-251"><a href="#cb47-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bool  <span class="pp">|</span> Booleans (True/False)                        <span class="pp">|</span></span>
+<span id="cb47-252"><a href="#cb47-252" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> str   <span class="pp">|</span> Strings                                      <span class="pp">|</span></span>
 <span id="cb47-253"><a href="#cb47-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-256"><a href="#cb47-256" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-257"><a href="#cb47-257" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: type_function</span></span>
-<span id="cb47-258"><a href="#cb47-258" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type of my_number</span></span>
-<span id="cb47-259"><a href="#cb47-259" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_number))</span>
-<span id="cb47-260"><a href="#cb47-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-261"><a href="#cb47-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-262"><a href="#cb47-262" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb47-263"><a href="#cb47-263" aria-hidden="true" tabindex="-1"></a><span class="fu"># Nested functions</span></span>
-<span id="cb47-264"><a href="#cb47-264" aria-hidden="true" tabindex="-1"></a>When we have functions nested inside of one another, the innermost function is evaluated first and the output from it is passed to the next outer function until you reach the outermost function. In the example above, <span class="in">`my_number`</span> is evaluated by the <span class="in">`type()`</span> function and the output of the <span class="in">`type()`</span> function is then passed onto the <span class="in">`print()`</span> function.</span>
-<span id="cb47-265"><a href="#cb47-265" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb47-266"><a href="#cb47-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-267"><a href="#cb47-267" aria-hidden="true" tabindex="-1"></a><span class="fu">### Strings</span></span>
+<span id="cb47-254"><a href="#cb47-254" aria-hidden="true" tabindex="-1"></a>We can determine what type of data type a variable is by using the <span class="in">`type()`</span> function.</span>
+<span id="cb47-255"><a href="#cb47-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-258"><a href="#cb47-258" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-259"><a href="#cb47-259" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: type_function</span></span>
+<span id="cb47-260"><a href="#cb47-260" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type of my_number</span></span>
+<span id="cb47-261"><a href="#cb47-261" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_number))</span>
+<span id="cb47-262"><a href="#cb47-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb47-263"><a href="#cb47-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-264"><a href="#cb47-264" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb47-265"><a href="#cb47-265" aria-hidden="true" tabindex="-1"></a><span class="fu"># Nested functions</span></span>
+<span id="cb47-266"><a href="#cb47-266" aria-hidden="true" tabindex="-1"></a>When we have functions nested inside of one another, the innermost function is evaluated first and the output from it is passed to the next outer function until you reach the outermost function. In the example above, <span class="in">`my_number`</span> is evaluated by the <span class="in">`type()`</span> function and the output of the <span class="in">`type()`</span> function is then passed onto the <span class="in">`print()`</span> function.</span>
+<span id="cb47-267"><a href="#cb47-267" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb47-268"><a href="#cb47-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-269"><a href="#cb47-269" aria-hidden="true" tabindex="-1"></a>Strings are a data type that can hold a sequence of characters. Strings are denoted by wrapping the string in either single- or double-quotes and either is acceptable. </span>
+<span id="cb47-269"><a href="#cb47-269" aria-hidden="true" tabindex="-1"></a><span class="fu">### Strings</span></span>
 <span id="cb47-270"><a href="#cb47-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-273"><a href="#cb47-273" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-274"><a href="#cb47-274" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_variable</span></span>
-<span id="cb47-275"><a href="#cb47-275" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a string variable</span></span>
-<span id="cb47-276"><a href="#cb47-276" aria-hidden="true" tabindex="-1"></a>my_word <span class="op">=</span> <span class="st">&#39;sequence&#39;</span></span>
-<span id="cb47-277"><a href="#cb47-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-278"><a href="#cb47-278" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_word))</span>
-<span id="cb47-279"><a href="#cb47-279" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-280"><a href="#cb47-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-281"><a href="#cb47-281" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb47-282"><a href="#cb47-282" aria-hidden="true" tabindex="-1"></a><span class="fu"># Single- and double-quotes</span></span>
-<span id="cb47-283"><a href="#cb47-283" aria-hidden="true" tabindex="-1"></a>In order to demonstrate that Python is indifferent between single- and double-quotes, we can also create a string variable with double-quotes and we can see that Python still returns that this variable is of the string data type:</span>
-<span id="cb47-284"><a href="#cb47-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-287"><a href="#cb47-287" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-288"><a href="#cb47-288" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_variable_double_quotes</span></span>
-<span id="cb47-289"><a href="#cb47-289" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second string variable</span></span>
-<span id="cb47-290"><a href="#cb47-290" aria-hidden="true" tabindex="-1"></a>my_other_word <span class="op">=</span> <span class="st">&quot;chromosome&quot;</span></span>
-<span id="cb47-291"><a href="#cb47-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-292"><a href="#cb47-292" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data type for a double-quoted string</span></span>
-<span id="cb47-293"><a href="#cb47-293" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_other_word))</span>
-<span id="cb47-294"><a href="#cb47-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-295"><a href="#cb47-295" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb47-296"><a href="#cb47-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-297"><a href="#cb47-297" aria-hidden="true" tabindex="-1"></a>If you were to place a variable name within quotes, it will be evaluated as a string rather than as a variable. For example:</span>
+<span id="cb47-271"><a href="#cb47-271" aria-hidden="true" tabindex="-1"></a>Strings are a data type that can hold a sequence of characters. Strings are denoted by wrapping the string in either single- or double-quotes and either is acceptable. </span>
+<span id="cb47-272"><a href="#cb47-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-275"><a href="#cb47-275" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-276"><a href="#cb47-276" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_variable</span></span>
+<span id="cb47-277"><a href="#cb47-277" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a string variable</span></span>
+<span id="cb47-278"><a href="#cb47-278" aria-hidden="true" tabindex="-1"></a>my_word <span class="op">=</span> <span class="st">&#39;sequence&#39;</span></span>
+<span id="cb47-279"><a href="#cb47-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-280"><a href="#cb47-280" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_word))</span>
+<span id="cb47-281"><a href="#cb47-281" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb47-282"><a href="#cb47-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-283"><a href="#cb47-283" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb47-284"><a href="#cb47-284" aria-hidden="true" tabindex="-1"></a><span class="fu"># Single- and double-quotes</span></span>
+<span id="cb47-285"><a href="#cb47-285" aria-hidden="true" tabindex="-1"></a>In order to demonstrate that Python is indifferent between single- and double-quotes, we can also create a string variable with double-quotes and we can see that Python still returns that this variable is of the string data type:</span>
+<span id="cb47-286"><a href="#cb47-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-289"><a href="#cb47-289" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-290"><a href="#cb47-290" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_variable_double_quotes</span></span>
+<span id="cb47-291"><a href="#cb47-291" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a second string variable</span></span>
+<span id="cb47-292"><a href="#cb47-292" aria-hidden="true" tabindex="-1"></a>my_other_word <span class="op">=</span> <span class="st">&quot;chromosome&quot;</span></span>
+<span id="cb47-293"><a href="#cb47-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-294"><a href="#cb47-294" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data type for a double-quoted string</span></span>
+<span id="cb47-295"><a href="#cb47-295" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_other_word))</span>
+<span id="cb47-296"><a href="#cb47-296" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb47-297"><a href="#cb47-297" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb47-298"><a href="#cb47-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-301"><a href="#cb47-301" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-302"><a href="#cb47-302" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: quote_variable</span></span>
-<span id="cb47-303"><a href="#cb47-303" aria-hidden="true" tabindex="-1"></a><span class="co"># Printing a variable name within quotes</span></span>
-<span id="cb47-304"><a href="#cb47-304" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;my_number is a string, but&#39;</span>, my_number, <span class="st">&#39;is a variable.&#39;</span>)</span>
-<span id="cb47-305"><a href="#cb47-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-306"><a href="#cb47-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-307"><a href="#cb47-307" aria-hidden="true" tabindex="-1"></a>Furthermore, if you were to place a numeric value within quotes, then Python will interpret that number as a string rather than as a number.</span>
+<span id="cb47-299"><a href="#cb47-299" aria-hidden="true" tabindex="-1"></a>If you were to place a variable name within quotes, it will be evaluated as a string rather than as a variable. For example:</span>
+<span id="cb47-300"><a href="#cb47-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-303"><a href="#cb47-303" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-304"><a href="#cb47-304" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: quote_variable</span></span>
+<span id="cb47-305"><a href="#cb47-305" aria-hidden="true" tabindex="-1"></a><span class="co"># Printing a variable name within quotes</span></span>
+<span id="cb47-306"><a href="#cb47-306" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;my_number is a string, but&#39;</span>, my_number, <span class="st">&#39;is a variable.&#39;</span>)</span>
+<span id="cb47-307"><a href="#cb47-307" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-308"><a href="#cb47-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-311"><a href="#cb47-311" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-312"><a href="#cb47-312" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: number_in_quotes</span></span>
-<span id="cb47-313"><a href="#cb47-313" aria-hidden="true" tabindex="-1"></a><span class="co"># Number in quotes is a string</span></span>
-<span id="cb47-314"><a href="#cb47-314" aria-hidden="true" tabindex="-1"></a>number_string <span class="op">=</span> <span class="st">&#39;12&#39;</span></span>
-<span id="cb47-315"><a href="#cb47-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-316"><a href="#cb47-316" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data type of number_string</span></span>
-<span id="cb47-317"><a href="#cb47-317" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(number_string))</span>
-<span id="cb47-318"><a href="#cb47-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-319"><a href="#cb47-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-320"><a href="#cb47-320" aria-hidden="true" tabindex="-1"></a>And if you were to attempt to add together a string and a numeric value, integer or floating point, Python will return an error message letting you know that adding together numbers and strings is not permitted. This is even true if the string is a number like <span class="in">`number_string`</span>:</span>
+<span id="cb47-309"><a href="#cb47-309" aria-hidden="true" tabindex="-1"></a>Furthermore, if you were to place a numeric value within quotes, then Python will interpret that number as a string rather than as a number.</span>
+<span id="cb47-310"><a href="#cb47-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-313"><a href="#cb47-313" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-314"><a href="#cb47-314" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: number_in_quotes</span></span>
+<span id="cb47-315"><a href="#cb47-315" aria-hidden="true" tabindex="-1"></a><span class="co"># Number in quotes is a string</span></span>
+<span id="cb47-316"><a href="#cb47-316" aria-hidden="true" tabindex="-1"></a>number_string <span class="op">=</span> <span class="st">&#39;12&#39;</span></span>
+<span id="cb47-317"><a href="#cb47-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-318"><a href="#cb47-318" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data type of number_string</span></span>
+<span id="cb47-319"><a href="#cb47-319" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(number_string))</span>
+<span id="cb47-320"><a href="#cb47-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-321"><a href="#cb47-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-324"><a href="#cb47-324" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-325"><a href="#cb47-325" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: adding_strings_numbers</span></span>
-<span id="cb47-326"><a href="#cb47-326" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: true</span></span>
-<span id="cb47-327"><a href="#cb47-327" aria-hidden="true" tabindex="-1"></a><span class="co"># Trying to add strings and numbers</span></span>
-<span id="cb47-328"><a href="#cb47-328" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">+</span> number_string</span>
-<span id="cb47-329"><a href="#cb47-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-330"><a href="#cb47-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-331"><a href="#cb47-331" aria-hidden="true" tabindex="-1"></a><span class="fu">### Booleans</span></span>
+<span id="cb47-322"><a href="#cb47-322" aria-hidden="true" tabindex="-1"></a>And if you were to attempt to add together a string and a numeric value, integer or floating point, Python will return an error message letting you know that adding together numbers and strings is not permitted. This is even true if the string is a number like <span class="in">`number_string`</span>:</span>
+<span id="cb47-323"><a href="#cb47-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-326"><a href="#cb47-326" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-327"><a href="#cb47-327" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: adding_strings_numbers</span></span>
+<span id="cb47-328"><a href="#cb47-328" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: true</span></span>
+<span id="cb47-329"><a href="#cb47-329" aria-hidden="true" tabindex="-1"></a><span class="co"># Trying to add strings and numbers</span></span>
+<span id="cb47-330"><a href="#cb47-330" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">+</span> number_string</span>
+<span id="cb47-331"><a href="#cb47-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-332"><a href="#cb47-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-333"><a href="#cb47-333" aria-hidden="true" tabindex="-1"></a>Booleans are another data type and the denotes <span class="in">`True`</span>/<span class="in">`False`</span> values. </span>
+<span id="cb47-333"><a href="#cb47-333" aria-hidden="true" tabindex="-1"></a><span class="fu">### Booleans</span></span>
 <span id="cb47-334"><a href="#cb47-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-337"><a href="#cb47-337" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-338"><a href="#cb47-338" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_boolean</span></span>
-<span id="cb47-339"><a href="#cb47-339" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a boolean variable</span></span>
-<span id="cb47-340"><a href="#cb47-340" aria-hidden="true" tabindex="-1"></a>my_boolean <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb47-341"><a href="#cb47-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-342"><a href="#cb47-342" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_boolean))</span>
-<span id="cb47-343"><a href="#cb47-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-344"><a href="#cb47-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-345"><a href="#cb47-345" aria-hidden="true" tabindex="-1"></a><span class="fu">### Changing the Data Type</span></span>
+<span id="cb47-335"><a href="#cb47-335" aria-hidden="true" tabindex="-1"></a>Booleans are another data type and the denotes <span class="in">`True`</span>/<span class="in">`False`</span> values. </span>
+<span id="cb47-336"><a href="#cb47-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-339"><a href="#cb47-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-340"><a href="#cb47-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_boolean</span></span>
+<span id="cb47-341"><a href="#cb47-341" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a boolean variable</span></span>
+<span id="cb47-342"><a href="#cb47-342" aria-hidden="true" tabindex="-1"></a>my_boolean <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb47-343"><a href="#cb47-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-344"><a href="#cb47-344" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(my_boolean))</span>
+<span id="cb47-345"><a href="#cb47-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-346"><a href="#cb47-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-347"><a href="#cb47-347" aria-hidden="true" tabindex="-1"></a>Let&#39;s consider the case where you have perhaps classified the data type of variable incorrectly. In our case, <span class="in">`number_string`</span> is a string with the number <span class="in">`16`</span>. We can see that:</span>
+<span id="cb47-347"><a href="#cb47-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### Changing the Data Type</span></span>
 <span id="cb47-348"><a href="#cb47-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-351"><a href="#cb47-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-352"><a href="#cb47-352" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: number_string_data_type_1</span></span>
-<span id="cb47-353"><a href="#cb47-353" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type of number_string</span></span>
-<span id="cb47-354"><a href="#cb47-354" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(number_string))</span>
-<span id="cb47-355"><a href="#cb47-355" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-356"><a href="#cb47-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-357"><a href="#cb47-357" aria-hidden="true" tabindex="-1"></a>But we can tell Python to interpret this string as a number if we would like to, by using either the <span class="in">`int()`</span> or <span class="in">`float()`</span> functions.</span>
+<span id="cb47-349"><a href="#cb47-349" aria-hidden="true" tabindex="-1"></a>Let&#39;s consider the case where you have perhaps classified the data type of variable incorrectly. In our case, <span class="in">`number_string`</span> is a string with the number <span class="in">`16`</span>. We can see that:</span>
+<span id="cb47-350"><a href="#cb47-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-353"><a href="#cb47-353" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-354"><a href="#cb47-354" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: number_string_data_type_1</span></span>
+<span id="cb47-355"><a href="#cb47-355" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type of number_string</span></span>
+<span id="cb47-356"><a href="#cb47-356" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(number_string))</span>
+<span id="cb47-357"><a href="#cb47-357" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-358"><a href="#cb47-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-361"><a href="#cb47-361" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-362"><a href="#cb47-362" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: number_string_data_type_2</span></span>
-<span id="cb47-363"><a href="#cb47-363" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the data type of number_string to integer</span></span>
-<span id="cb47-364"><a href="#cb47-364" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="bu">int</span>(number_string)))</span>
-<span id="cb47-365"><a href="#cb47-365" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-366"><a href="#cb47-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-367"><a href="#cb47-367" aria-hidden="true" tabindex="-1"></a>Sometimes, <span class="in">`0`</span> and <span class="in">`1`</span> denote <span class="in">`False`</span> and <span class="in">`True`</span>, respectively, in the world of computers, but if we evaluate the type for <span class="in">`0`</span> or <span class="in">`1`</span>, we will know that by themselves they are integers: </span>
+<span id="cb47-359"><a href="#cb47-359" aria-hidden="true" tabindex="-1"></a>But we can tell Python to interpret this string as a number if we would like to, by using either the <span class="in">`int()`</span> or <span class="in">`float()`</span> functions.</span>
+<span id="cb47-360"><a href="#cb47-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-363"><a href="#cb47-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-364"><a href="#cb47-364" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: number_string_data_type_2</span></span>
+<span id="cb47-365"><a href="#cb47-365" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the data type of number_string to integer</span></span>
+<span id="cb47-366"><a href="#cb47-366" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="bu">int</span>(number_string)))</span>
+<span id="cb47-367"><a href="#cb47-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-368"><a href="#cb47-368" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-371"><a href="#cb47-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-372"><a href="#cb47-372" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_boolean</span></span>
-<span id="cb47-373"><a href="#cb47-373" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the data type of 1</span></span>
-<span id="cb47-374"><a href="#cb47-374" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="dv">1</span>))</span>
-<span id="cb47-375"><a href="#cb47-375" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-376"><a href="#cb47-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-377"><a href="#cb47-377" aria-hidden="true" tabindex="-1"></a>Thus, if we wanted to have <span class="in">`0`</span> or <span class="in">`1`</span> evaluated as booleans rather than integers, then we can use the <span class="in">`bool()`</span> function.</span>
+<span id="cb47-369"><a href="#cb47-369" aria-hidden="true" tabindex="-1"></a>Sometimes, <span class="in">`0`</span> and <span class="in">`1`</span> denote <span class="in">`False`</span> and <span class="in">`True`</span>, respectively, in the world of computers, but if we evaluate the type for <span class="in">`0`</span> or <span class="in">`1`</span>, we will know that by themselves they are integers: </span>
+<span id="cb47-370"><a href="#cb47-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-373"><a href="#cb47-373" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-374"><a href="#cb47-374" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_boolean</span></span>
+<span id="cb47-375"><a href="#cb47-375" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the data type of 1</span></span>
+<span id="cb47-376"><a href="#cb47-376" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="dv">1</span>))</span>
+<span id="cb47-377"><a href="#cb47-377" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb47-378"><a href="#cb47-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-381"><a href="#cb47-381" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-382"><a href="#cb47-382" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: boolean_boolean</span></span>
-<span id="cb47-383"><a href="#cb47-383" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the data type for 1 as a boolean</span></span>
-<span id="cb47-384"><a href="#cb47-384" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="bu">bool</span>(<span class="dv">1</span>)))</span>
-<span id="cb47-385"><a href="#cb47-385" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-386"><a href="#cb47-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-387"><a href="#cb47-387" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb47-388"><a href="#cb47-388" aria-hidden="true" tabindex="-1"></a><span class="fu"># Boolean addition</span></span>
-<span id="cb47-389"><a href="#cb47-389" aria-hidden="true" tabindex="-1"></a>Interestingly, because booleans are <span class="in">`0`</span> and <span class="in">`1`</span> under the hood, they can be added together and the end result is a integer data type.</span>
-<span id="cb47-390"><a href="#cb47-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-393"><a href="#cb47-393" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb47-394"><a href="#cb47-394" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summing_booleans</span></span>
-<span id="cb47-395"><a href="#cb47-395" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding together two Trues and a False</span></span>
-<span id="cb47-396"><a href="#cb47-396" aria-hidden="true" tabindex="-1"></a><span class="va">True</span> <span class="op">+</span> <span class="va">True</span> <span class="op">+</span> <span class="va">False</span></span>
-<span id="cb47-397"><a href="#cb47-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-398"><a href="#cb47-398" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type for adding together two Trues and a False</span></span>
-<span id="cb47-399"><a href="#cb47-399" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="va">True</span> <span class="op">+</span> <span class="va">True</span> <span class="op">+</span> <span class="va">False</span>))</span>
-<span id="cb47-400"><a href="#cb47-400" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb47-401"><a href="#cb47-401" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb47-402"><a href="#cb47-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-403"><a href="#cb47-403" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb47-404"><a href="#cb47-404" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](02_variables-Answer_key.qmd#exercise-2)</span></span>
-<span id="cb47-405"><a href="#cb47-405" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>How would you determine the data type on <span class="in">`your_number`</span> and what data type is it?</span>
-<span id="cb47-406"><a href="#cb47-406" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb47-407"><a href="#cb47-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-408"><a href="#cb47-408" aria-hidden="true" tabindex="-1"></a><span class="fu">## Other Data Type</span></span>
+<span id="cb47-379"><a href="#cb47-379" aria-hidden="true" tabindex="-1"></a>Thus, if we wanted to have <span class="in">`0`</span> or <span class="in">`1`</span> evaluated as booleans rather than integers, then we can use the <span class="in">`bool()`</span> function.</span>
+<span id="cb47-380"><a href="#cb47-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-383"><a href="#cb47-383" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-384"><a href="#cb47-384" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: boolean_boolean</span></span>
+<span id="cb47-385"><a href="#cb47-385" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the data type for 1 as a boolean</span></span>
+<span id="cb47-386"><a href="#cb47-386" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="bu">bool</span>(<span class="dv">1</span>)))</span>
+<span id="cb47-387"><a href="#cb47-387" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb47-388"><a href="#cb47-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-389"><a href="#cb47-389" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb47-390"><a href="#cb47-390" aria-hidden="true" tabindex="-1"></a><span class="fu"># Boolean addition</span></span>
+<span id="cb47-391"><a href="#cb47-391" aria-hidden="true" tabindex="-1"></a>Interestingly, because booleans are <span class="in">`0`</span> and <span class="in">`1`</span> under the hood, they can be added together and the end result is a integer data type.</span>
+<span id="cb47-392"><a href="#cb47-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-395"><a href="#cb47-395" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb47-396"><a href="#cb47-396" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: summing_booleans</span></span>
+<span id="cb47-397"><a href="#cb47-397" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding together two Trues and a False</span></span>
+<span id="cb47-398"><a href="#cb47-398" aria-hidden="true" tabindex="-1"></a><span class="va">True</span> <span class="op">+</span> <span class="va">True</span> <span class="op">+</span> <span class="va">False</span></span>
+<span id="cb47-399"><a href="#cb47-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-400"><a href="#cb47-400" aria-hidden="true" tabindex="-1"></a><span class="co"># Data type for adding together two Trues and a False</span></span>
+<span id="cb47-401"><a href="#cb47-401" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="va">True</span> <span class="op">+</span> <span class="va">True</span> <span class="op">+</span> <span class="va">False</span>))</span>
+<span id="cb47-402"><a href="#cb47-402" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb47-403"><a href="#cb47-403" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb47-404"><a href="#cb47-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-405"><a href="#cb47-405" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb47-406"><a href="#cb47-406" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](02_variables-Answer_key.qmd#exercise-2)</span></span>
+<span id="cb47-407"><a href="#cb47-407" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>How would you determine the data type on <span class="in">`your_number`</span> and what data type is it?</span>
+<span id="cb47-408"><a href="#cb47-408" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb47-409"><a href="#cb47-409" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-410"><a href="#cb47-410" aria-hidden="true" tabindex="-1"></a>There exists several more data types that we will discuss in depth in later lessons:</span>
+<span id="cb47-410"><a href="#cb47-410" aria-hidden="true" tabindex="-1"></a><span class="fu">## Other Data Type</span></span>
 <span id="cb47-411"><a href="#cb47-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-412"><a href="#cb47-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">list</span><span class="co">](06_lesson.qmd)</span></span>
-<span id="cb47-413"><a href="#cb47-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">dictionary</span><span class="co">](07_lesson.qmd)</span></span>
-<span id="cb47-414"><a href="#cb47-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">tuple</span><span class="co">](08_lesson.qmd)</span></span>
-<span id="cb47-415"><a href="#cb47-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">set</span><span class="co">](09_lesson.qmd)</span></span>
-<span id="cb47-416"><a href="#cb47-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-417"><a href="#cb47-417" aria-hidden="true" tabindex="-1"></a><span class="fu">## Variable Inspector</span></span>
-<span id="cb47-418"><a href="#cb47-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-419"><a href="#cb47-419" aria-hidden="true" tabindex="-1"></a>If we right click on some empty space within the Jupyter Lab interface, we can open up the <span class="in">`Variable Inspector`</span>. This is a helpful tool to see all of the variables that you have created and their data types.</span>
-<span id="cb47-420"><a href="#cb47-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-421"><a href="#cb47-421" aria-hidden="true" tabindex="-1"></a>::: {#fig-jupyter_right_click .figure}</span>
-<span id="cb47-422"><a href="#cb47-422" aria-hidden="true" tabindex="-1"></a><span class="al">![](../img/jupyter_lab_right_click.png)</span></span>
-<span id="cb47-423"><a href="#cb47-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-424"><a href="#cb47-424" aria-hidden="true" tabindex="-1"></a>Options after right-clicking within Jupyter Lab.</span>
-<span id="cb47-425"><a href="#cb47-425" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb47-412"><a href="#cb47-412" aria-hidden="true" tabindex="-1"></a>There exists several more data types that we will discuss in depth in later lessons:</span>
+<span id="cb47-413"><a href="#cb47-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-414"><a href="#cb47-414" aria-hidden="true" tabindex="-1"></a>Table: More Python data types. {#tbl-more_data_types}</span>
+<span id="cb47-415"><a href="#cb47-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-416"><a href="#cb47-416" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Type       <span class="pp">|</span> What it is                             <span class="pp">|</span></span>
+<span id="cb47-417"><a href="#cb47-417" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------|-----------------------------------------------------|</span></span>
+<span id="cb47-418"><a href="#cb47-418" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">list</span><span class="co">](06_lesson.qmd)</span>       <span class="pp">|</span> An ordered, changeable collection of elements.        <span class="pp">|</span></span>
+<span id="cb47-419"><a href="#cb47-419" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">dictionary</span><span class="co">](07_lesson.qmd)</span> <span class="pp">|</span> A collection of key–value pairs.  <span class="pp">|</span></span>
+<span id="cb47-420"><a href="#cb47-420" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">tuple</span><span class="co">](08_lesson.qmd)</span>      <span class="pp">|</span> An ordered collection of elements you.   <span class="pp">|</span></span>
+<span id="cb47-421"><a href="#cb47-421" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">set</span><span class="co">](09_lesson.qmd)</span>        <span class="pp">|</span> An unordered collection of unique elements.           <span class="pp">|</span></span>
+<span id="cb47-422"><a href="#cb47-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-423"><a href="#cb47-423" aria-hidden="true" tabindex="-1"></a><span class="fu">## Variable Inspector</span></span>
+<span id="cb47-424"><a href="#cb47-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-425"><a href="#cb47-425" aria-hidden="true" tabindex="-1"></a>If we right click on some empty space within the Jupyter Lab interface, we can open up the <span class="in">`Variable Inspector`</span>. This is a helpful tool to see all of the variables that you have created and their data types.</span>
 <span id="cb47-426"><a href="#cb47-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-427"><a href="#cb47-427" aria-hidden="true" tabindex="-1"></a>Once we open up the <span class="in">`Variable Inspector`</span>, a new tab will open in our notebook. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and are not sure what they all are.</span>
-<span id="cb47-428"><a href="#cb47-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-427"><a href="#cb47-427" aria-hidden="true" tabindex="-1"></a>::: {#fig-jupyter_right_click .figure}</span>
+<span id="cb47-428"><a href="#cb47-428" aria-hidden="true" tabindex="-1"></a><span class="al">![](../img/jupyter_lab_right_click.png)</span></span>
 <span id="cb47-429"><a href="#cb47-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-430"><a href="#cb47-430" aria-hidden="true" tabindex="-1"></a>::: {#fig-jupyter_variable_inspector .figure}</span>
-<span id="cb47-431"><a href="#cb47-431" aria-hidden="true" tabindex="-1"></a><span class="al">![](../img/jupyter_lab_variable_inspector.png)</span></span>
+<span id="cb47-430"><a href="#cb47-430" aria-hidden="true" tabindex="-1"></a>Options after right-clicking within Jupyter Lab.</span>
+<span id="cb47-431"><a href="#cb47-431" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb47-432"><a href="#cb47-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-433"><a href="#cb47-433" aria-hidden="true" tabindex="-1"></a>Variable Inspector in Jupyter Lab, showing all the variables created in the current session.</span>
-<span id="cb47-434"><a href="#cb47-434" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb47-433"><a href="#cb47-433" aria-hidden="true" tabindex="-1"></a>Once we open up the <span class="in">`Variable Inspector`</span>, a new tab will open in our notebook. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and are not sure what they all are.</span>
+<span id="cb47-434"><a href="#cb47-434" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-435"><a href="#cb47-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-436"><a href="#cb47-436" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb47-437"><a href="#cb47-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-438"><a href="#cb47-438" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](03_lesson.qmd)</span></span>
-<span id="cb47-439"><a href="#cb47-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-440"><a href="#cb47-440" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
+<span id="cb47-436"><a href="#cb47-436" aria-hidden="true" tabindex="-1"></a>::: {#fig-jupyter_variable_inspector .figure}</span>
+<span id="cb47-437"><a href="#cb47-437" aria-hidden="true" tabindex="-1"></a><span class="al">![](../img/jupyter_lab_variable_inspector.png)</span></span>
+<span id="cb47-438"><a href="#cb47-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-439"><a href="#cb47-439" aria-hidden="true" tabindex="-1"></a>Variable Inspector in Jupyter Lab, showing all the variables created in the current session.</span>
+<span id="cb47-440"><a href="#cb47-440" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb47-441"><a href="#cb47-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-442"><a href="#cb47-442" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb47-443"><a href="#cb47-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-444"><a href="#cb47-444" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](03_lesson.qmd)</span></span>
+<span id="cb47-445"><a href="#cb47-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-446"><a href="#cb47-446" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
