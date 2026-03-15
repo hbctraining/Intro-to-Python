@@ -74,6 +74,9 @@ This library is widely used in data science and machine learning for tasks such 
 
 Within the `Pandas` library, there are built-in functions to load datasets from various file formats, such as csv (comma separated values) or excel files (.xlsx). The most commonly used function for loading data is `pandas.read_csv()`, which allows you to read a CSV file and create a DataFrame.
 
+When working with large datasets, you will very likely be working with "metadata" file which contains the information about each sample in your dataset. The metadata is very important information and we encourage you to think about creating a document with as much metadata you can record before you bring the data into R. [Here is some additional reading on metadata](https://datamanagement.hms.harvard.edu/metadata-overview) from the [HMS Data Management Working Group](https://datamanagement.hms.harvard.edu/).
+
+
 We have a file in which we identify information about the data or metadata. Our metadata is also stored in a CSV file. In this file, each row corresponds to a sample and each column contains some information about each sample.
 
 ```{python}

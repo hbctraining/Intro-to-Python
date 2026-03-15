@@ -179,6 +179,10 @@ Table: Table of updated values of `number`, `doubled`, and `total` at each itera
 3. ...
 :::
 
+::: callout-warning
+Add a section on list comprehensions here.
+:::
+
 ## `while` Loops
 
 `while` loops are similar to `for` loops in that they continuously execute a block of code as long as a certain condition is true. The general syntax of a `while` loop in Python is as follows:
@@ -194,7 +198,7 @@ while condition:
 The important distinction here is that we must updated our condition within the loop in order to keep iterating through our loop. We do not have a tangible end to the `while` unlike the `for` loop, where we stop iterating once we make it to the end of the `sequence` supplied in the statement.
 
 
-### Subsection 2A
+### Creating a `while` Loop
 
 `while` loops are typically used when we want to repeat a block of code an unknown number of times, or when we want to repeat a block of code until a certain condition is met. For example, if we wanted to keep doubling a number until it is greater than 100, we could use a `while` loop as follows:
 
