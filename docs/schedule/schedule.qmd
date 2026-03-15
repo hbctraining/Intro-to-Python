@@ -68,7 +68,7 @@ I. Please **study the contents** and **work through all the code** within the fo
         - Learning Objective 3
       :::
 
-   2. [Libraries](../lessons/11_lesson.qmd)
+   2. [Loading and Installing Libraries](../lessons/07_libraries.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -94,9 +94,9 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [Installing Packages](../lessons/12_lesson.qmd) | Instructor_name |
+| 10:30 - 10:55 | [`NumPy` Library](../lessons/12_lesson.qmd) | Instructor_name |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [`Pandas` and `NumPy`](../lessons/13_lesson.qmd) | Instructor_name |
+| 11:00 - 11:55 | [`Pandas` Library](../lessons/13_lesson.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
 
 ### Before the next class:

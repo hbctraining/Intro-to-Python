@@ -233,6 +233,6 @@ If your input is 70, the output should now be 294.3.
 
 ***
 
-[Next Lesson >>](07_lesson.qmd)
+[Next Lesson >>](07_libraries.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)
