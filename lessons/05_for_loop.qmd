@@ -1,0 +1,235 @@
+---
+title: "`for` Loops"
+description: |
+  Write a description of the lesson here. 
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
+categories: 
+  - category_1
+  - category_2
+  - category_3
+  - category_4
+keywords:
+  - keyword_1
+  - keyword_2
+  - keyword_3
+  - keyword_4
+  - keyword_5
+  - keyword_6
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+
+```
+
+Approximate time: XX minutes
+
+## Learning Objectives 
+
+In this lesson, we will:
+
+- Learning Objective 1
+- Learning Objective 2
+- Learning Objective 3
+
+## Overview of lesson
+
+One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops to automate this process. In this lesson, we will learn about two types of loops: `for` loops and `while` loops.
+
+## `for` Loops
+
+`for` loops are used to iterate over a collection of values, most commonly a list. An example of when this may be useful would be if we wanted to print out the names of all the species in a list. With the current skills we have learned, we could accomplish this task by writing the following code:
+
+```{python}
+#| label: for_loop_alternative
+#| eval: false
+species = ["human", "mouse", "corn", "yeast"] 
+
+print(species[0])
+print(species[1])
+print(species[2])
+print(species[3])
+``` 
+
+However, this is not very efficient, especially if we had a long list of species or we were unsure how many elements were in the list. Instead, we can use a `for` loop to accomplish the same task in a less repetitive manner.
+
+To create a `for` loop, we need to specify a sequence to loop over and the variable that will take on the value of each element. We will then iterate through the sequence, assigning the variable to each element in the sequence in turn, and execute the code block within the loop for each element. The general syntax of a `for` loop in Python is as follows:
+
+```{python}
+#| label: for_loop_syntax
+#| eval: false
+for variable in sequence:
+    # code to be executed
+```
+
+
+### Creating a `for` Loop 
+
+And so if we wanted to print out the names of all the species in a list, we could use the following code:
+
+```{python}
+#| label: for_loop_example
+species = ["human", "mouse", "corn", "yeast"] 
+
+for s in species:
+    print(s)
+```
+
+We now have this value `s`. This is a variable that takes on the value of each element in the `species` list as we iterate through it. So, in the first iteration of the loop, `s` will be equal to `"human"`, in the second iteration, `s` will be equal to `"mouse"`, and so on.
+
+We do not have to assign the sequence to a variable before we use them. For example, we could iterate over a list of numbers without doing any assignment first and run calculations on those numbers as follows:
+
+```{python}
+#| label: for_loop_example_2
+for number in [2, 3, 5]:
+  print("number", number)
+  print("squared", number ** 2)
+```
+
+### Indentation Matters
+
+As is the case with `if` statements, the code that we want to be executed within the `for` loop must be indented. If we forget to indent the code, we will get an error. For example, the following `print()` statement will throw an error because it is not indented properly.
+
+```{python}
+#| label: indentation_example
+#| error: true
+for s in species:
+print(s)
+```
+
+This is to once again emphasize that indentation is not just a matter of style in Python, but it is a fundamental part of the syntax. The indented code block is what gets executed as part of the loop, and if we forget to indent, Python does not know what to do.
+
+### Conditional Statements within `for` Loops
+
+Taking what we learned in the lesson on [conditional statements](03_conditional_statements.qmd), we can also use `if` statements within our `for` loops to perform different actions based on certain conditions. This can be useful if we want to perform a specific action for certain elements in our list. For example, if we wanted to print out a different message for humans compared to the other species, we could use the following code:
+
+```{python}
+#| label: for_loop_with_if
+for s in species:
+    if s == "human":
+        print("This is a human.")
+    else:
+        print("This is not a human.")
+```
+
+::: callout-warning
+Did not write exercises for this section yet. Will add in later.
+:::
+
+:::{.callout-tip}
+# [**Exercise 1**](05_lesson-Answer_key.qmd#exercise-1)
+1. A question to evaluate Learning Objective 1
+2. A followup question to question #1
+3. ...
+:::
+
+
+### `range()` Function
+
+A common use of `for` loops is to iterate over a sequence of numbers. We can use the `range()` function to generate a sequence of numbers that we can iterate over. The `range()` function takes three arguments: `start`, `stop`, and `step`. The `start` argument is the number that the sequence will start from, the `stop` argument is the number that the sequence will stop at (but not include), and the `step` argument is the amount by which the sequence will increment.
+
+For example, if we wanted to iterate over the indices of `species`, we could use the `range()` function as follows:
+
+```{python}
+#| label: range_example
+for i in range(0, len(species)):
+    print(i)
+```
+
+### Complex `for` Loop Example
+
+We have been using the `species` list as an example to demonstrate how `for` loops work, but we can use `for` loops to perform more complex tasks as well. For example, we can use a `for` loop to perform calculations on a list of `numbers`. If we wanted to calculate the total of the doubled values of those numbers. We can accomplish this task using a `for` loop as follows:
+
+```{python}
+numbers = [2, 5, 8, 10]
+
+total = 0  # this will hold the sum of doubled numbers
+
+for number in numbers:
+    doubled = number * 2
+    total = total + doubled   # add the doubled value to total
+
+print("Total of doubled numbers:", total)
+```
+
+We can follow along with the logic through each iteration fo the for loop to see how each of the variables are being updated at each step.
+
+Table: Table of updated values of `number`, `doubled`, and `total` at each iteration of the loop. {#tbl-for_loop_example}
+
+| Index | `number` | `doubled` | `total` |
+|-------|--------|---------|---------------|
+| 0     | 2      | 4       | 4             |
+| 1     | 5      | 10      | 14            |
+| 2     | 8      | 16      | 30            |
+| 3     | 10     | 20      | 50            |
+
+:::{.callout-tip}
+# [**Exercise 2**](05_lesson-Answer_key.qmd#exercise-2)
+1. A question to evaluate Learning Objective 2
+2. A followup question to question #1
+3. ...
+:::
+
+## `while` Loops
+
+`while` loops are similar to `for` loops in that they continuously execute a block of code as long as a certain condition is true. The general syntax of a `while` loop in Python is as follows:
+
+```{python}
+#| label: while_loop_syntax
+#| eval: false
+while condition:
+    # code to execute
+    # update condition
+```
+
+The important distinction here is that we must updated our condition within the loop in order to keep iterating through our loop. We do not have a tangible end to the `while` unlike the `for` loop, where we stop iterating once we make it to the end of the `sequence` supplied in the statement.
+
+
+### Subsection 2A
+
+`while` loops are typically used when we want to repeat a block of code an unknown number of times, or when we want to repeat a block of code until a certain condition is met. For example, if we wanted to keep doubling a number until it is greater than 100, we could use a `while` loop as follows:
+
+```{python}
+number = 1  # this will hold the current value of the number 
+while number <= 100:
+    print(number)
+    number = number * 2  # update the value of number by doubling it
+print("Last number:", number)
+```
+
+### Infinite Loop
+
+The important thing to note about `while` loops is that they can potentially run indefinitely if the condition never becomes false. Therefore, it is important to make sure that the condition will eventually become false, otherwise we will have an infinite loop. For example, the following code will run indefinitely because the condition `i < 5` will always be `True`:
+
+```{python}
+#| label: infinite_loop_example
+#| eval: false
+i = 0
+while i < 5:
+    print(i)
+```
+
+**Be sure to hit `esc` or `ctrl+c` to stop the loop if you accidentally run an infinite loop!!
+**
+
+:::{.callout-tip}
+# [**Exercise 3**](05_lesson-Answer_key.qmd#exercise-3)
+1. A question to evaluate Learning Objective 3
+2. A followup question to question #1
+3. ...
+:::
+
+***
+
+[Next Lesson >>](06_functions.qmd)
+
+[Back to Schedule](../schedule/schedule.qmd)

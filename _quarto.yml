@@ -47,7 +47,7 @@ website:
       - section: "Day 2:"
         contents:
           - lessons/04_data_structures.qmd
-          - lessons/09_lesson.qmd
+          - lessons/05_for_loop.qmd
           
       - section: "Day 2 Self-learning:"
         contents:

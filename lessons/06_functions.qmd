@@ -1,0 +1,206 @@
+---
+title: "Functions"
+description: |
+  Write a description of the lesson here. 
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
+categories: 
+  - category_1
+  - category_2
+  - category_3
+  - category_4
+keywords:
+  - keyword_1
+  - keyword_2
+  - keyword_3
+  - keyword_4
+  - keyword_5
+  - keyword_6
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+
+```
+
+Approximate time: XX minutes
+
+## Learning Objectives 
+
+In this lesson, we will:
+
+- Describe and utilize functions in Python.
+- Modify default behavior of a function using arguments.
+- Identify Python-specific sources of obtaining more information about functions.
+- Demonstrate how to create user-defined functions in Python
+
+
+## Overview of lesson
+
+When doing XYZ...
+
+## What are Functions?
+
+A key feature of Python is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually take in some sort of data structure (value, vector, dataframe etc.), process it, and return a result.
+
+We have actually been using several functions already!
+
+- `print()`: takes in a value and prints it to the console
+- `len()`: takes in a value and returns its length
+- `type()`: takes in a value and returns its type
+
+The general usage for a function is the name of the function followed by parentheses:
+
+```{python}
+#| label: function_call
+#| eval: false
+# DO NOT RUN
+# Example syntax for using a function
+function_name(input)
+```
+
+The input(s) are called **arguments**, which can include:
+
+- the physical object (any data structure) on which the function carries out a task
+- specifications that alter the way the function operates (e.g. options)
+
+Most functions can take several arguments. If you don’t specify a required argument when calling the function, you will either receive an error or the function will fall back on using a default.
+
+The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be what symbol to use in a plot. However, if you want something specific, simply change the argument yourself with a value of your choice.
+
+
+### Basic Functions
+
+Since Python is used for statistical computing, many of the base functions involve mathematical operations. For example, the `sum()` function takes in a vector of numbers and returns their sum:
+
+```{python}
+#| label: sum_example
+# Sum of numbers
+numbers = [2, 2.23, 0.77, 10, 40.2]
+total = sum(numbers)
+print(total)
+```
+
+Another example is the `round()` function, which rounds a number to a specified number of decimal places:
+
+```{python}
+#| label: round_example
+# Rounding a number
+num = 3.14159
+rounded_num = round(num)
+print(rounded_num)
+```
+
+The output we get is `3`, which is the default behavior of the `round()` function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.
+
+### Seeking Help on Arguments for Functions
+
+If you want to know more about the arguments that a function takes in, **Python’s built-in `help()` function** is a great first step. This function provides documentation for any function you pass to it. For example, `help(round)` will give you information about the `round()` function, including its arguments and usage.
+
+```{python}
+#| label: help_round
+help(round)
+```
+
+From this output we can see that the `round()` function takes two arguments: `number` (the number to be rounded) and `ndigits` (the number of decimal places to round to). The `ndigits` argument has a default value of `0`, which is why we got `3` when we ran the example without specifying it.
+
+:::{.callout-tip}
+# [**Exercise 1**](06_functions-Answer_key.qmd#exercise-1)
+1. Round the `num` variable to 2 decimal places using the `round()` function.
+2. What happens when you specify a negative value for the `ndigits` argument in the `round()` function? Try it out and explain the output.
+3. What happens if you apply the `round()` function to the `numbers` list? Try it out and explain the output.
+4. Apply the `sorted()` function to the `numbers` list. What does it do? What are the arguments for the `sorted()` function? Use the `help()` function to find out.
+:::
+
+
+## User-defined Functions
+
+One of the great strengths of Python is the user’s ability to add functions. Sometimes there is a small task (or series of tasks) you need done and you find yourself having to repeat it multiple times. In these types of situations, it can be helpful to create your own custom function. The **structure of a function is given below**:
+
+```{python}
+#| label: function_syntax
+#| eval: false
+def function_name(argument1, argument2, ...):
+    # Code block that defines what the function does
+    return output
+```
+
+When **defining the function** you will want to provide the **list of arguments** required (inputs and/or options to modify behaviour of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a vector, a logical, etc), and it’s not necessary to define what it is in any way.
+
+Then, indented under the function definition, you will write the code that carries out whatever task the function is designed to do. This is where the function is **executing code on the arguments supplied**.
+
+Finally, you can **“return” the value of the object from the function**, meaning pass the value of it into the global environment. The important idea behind functions is that objects that are created within the function are local to the environment of the function – they don’t exist outside of the function.
+
+### Creating a Function
+
+Let’s try creating a simple example function. This function will take in a numeric value as input, and return the squared value.
+
+```{python}
+#| label: function_example
+# Create a function called square_it which takes the value x as input 
+def square_it(x):
+    # Squares the value of x and assigns it to the object called square
+    square = x * x
+    # Returns the value of square to the console
+    return square
+```
+
+Now, we can use this function as any other base R functions. We type out the name of the function, and inside the parentheses we provide a numeric value `x`:
+
+```{python}
+#| label: function_usage
+square_it(5)
+```
+
+Pretty simple, right? In this case, we only had one line of code that was run, but in theory you could have many lines of code to get obtain the final results that you want to “return” to the user.
+
+:::{.callout-tip}
+# [**Exercise 2**](06_functions-Answer_key.qmd#exercise-2)
+5. Write a function called `multiply_it`, which takes two inputs: a numeric value ``x``, and a numeric value y. The function will return the product of these two numeric values, which is `x * y`. 
+
+For example, `multiply_it(x=4, y=6)` will return output `24`.
+:::
+
+## More Practice with Functions
+
+:::{.callout-tip}
+# [**Exercise 3**](06_functions-Answer_key.qmd#exercise-3)
+
+
+6. **Custom Functions** - Create a function `temp_conv()`, which converts the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: 
+
+- first convert from Fahrenheit to Celsius, then
+- convert from Celsius to Kelvin
+
+```{python}
+#| label: temp_conv
+#| eval: false
+# The formula for celsius to farenheight: 
+temp_c = (temp_f - 32) * 5 / 9
+
+# The formula for celsius to kelvin
+temp_k = temp_c + 273.15
+```
+
+
+Test your function. If your input is 70, the result of `temp_conv(70)` should be 294.2611.
+
+
+7. **Nesting Functions** - Now we want to round the temperature in Kelvin (output of `temp_conv()`) to a single decimal place. Use the `round()` function with the newly-created `temp_conv()` function to achieve this in one line of code.
+
+If your input is 70, the output should now be 294.3.
+:::
+
+***
+
+[Next Lesson >>](07_lesson.qmd)
+
+[Back to Schedule](../schedule/schedule.qmd)

@@ -1,0 +1,133 @@
+---
+title: "Functions - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+
+```
+
+# Exercise 1
+
+1. Round the `num` variable to 2 decimal places using the `round()` function.
+
+```{python}
+#| label: exercise_1
+num = 3.14159
+rounded_num = round(num, 2)
+print(rounded_num)
+```
+
+2. What happens when you specify a negative value for the `ndigits` argument in the `round()` function? Try it out and explain the output.
+
+```{python}
+#| label: exercise_2
+rounded_num = round(num, -1)
+print(rounded_num)
+```
+
+When you specify a negative value for the `ndigits` argument in the `round()` function, it rounds the number to the left of the decimal point. In this case, we are rounding to the nearest 10, so 3.14159 gets rounded to 0.0.
+
+3. What happens if you apply the `round()` function to the `numbers` list? Try it out and explain the output.
+
+```{python}
+#| label: exercise_3
+#| error: true
+numbers = [2, 2.23, 0.77, 10, 40.2]
+rounded_numbers = round(numbers)
+print(rounded_numbers)
+```
+
+We get an error, because the `round()` function is not designed to work with lists. It expects a single number as input. To round each number in the list, we would need to apply the `round()` function to each element individually, perhaps using a loop or a list comprehension.
+
+4. Apply the `sorted()` function to the `numbers` list. What does it do? What are the arguments for the `sorted()` function? Use the `help()` function to find out.
+
+```{python}
+#| label: sorted_help
+help(sorted)
+```
+
+The default value for the argument `reverse` is `False`, which means that the `sorted()` function will sort the numbers in ascending order by default.
+
+```{python}
+#| label: exercise_4_sorted
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
+```
+
+If we set `reverse=True`, it will sort the numbers in descending order.
+
+```{python}
+#| label: exercise_4_sorted_rev
+sorted_numbers = sorted(numbers, reverse=True)
+print(sorted_numbers)
+```
+
+# Exercise 2
+
+5. Write a function called `multiply_it`, which takes two inputs: a numeric value ``x``, and a numeric value y. The function will return the product of these two numeric values, which is `x * y`. 
+
+For example, `multiply_it(x=4, y=6)` will return output `24`.
+
+```{python}
+#| label: exercise_5
+def multiply_it(x, y):
+    return x * y 
+
+# Example x = 4, y = 6
+result = multiply_it(x=4, y=6)
+print(result)
+```
+
+# Exercise 3
+
+6. **Custom Functions** - Create a function `temp_conv()`, which converts the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: 
+
+- first convert from Fahrenheit to Celsius, then
+- convert from Celsius to Kelvin
+
+```{python}
+#| label: temp_conv_equation
+#| eval: false
+# The formula for celsius to farenheight: 
+temp_c = (temp_f - 32) * 5 / 9
+
+# The formula for celsius to kelvin
+temp_k = temp_c + 273.15
+```
+
+```{python}
+#| label: temp_conv
+def temp_conv(temp_f):
+    temp_c = (temp_f - 32) * 5 / 9
+    temp_k = temp_c + 273.15
+    return temp_k
+```
+
+Test your function. If your input is 70, the result of `temp_conv(70)` should be 294.2611.
+
+```{python}
+#| label: temp_conv_test
+result = temp_conv(70)
+print(result)
+```
+
+
+7. **Nesting Functions** - Now we want to round the temperature in Kelvin (output of `temp_conv()`) to a single decimal place. Use the `round()` function with the newly-created `temp_conv()` function to achieve this in one line of code.
+
+```{python}
+#| label: temp_conv_rounded
+round(temp_conv(70), 1)
+```
+
+If your input is 70, the output should now be 294.3.
