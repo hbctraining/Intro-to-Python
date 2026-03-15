@@ -154,7 +154,7 @@ Have not written exercises for this lesson
 :::
 
 :::{.callout-tip}
-# [**Exercise 1**](03_conditional_statements.qmd#exercise-1)
+# [**Exercise 1**](03_lesson-Answer_key.qmd#exercise-1)
 1. A question to evaluate Learning Objective 1
 2. A followup question to question #1
 3. ...
@@ -224,7 +224,7 @@ else:
 ``` 
 
 :::{.callout-tip}
-# [**Exercise 2**](03_conditional_statements.qmd#exercise-2)
+# [**Exercise 2**](03_lesson-Answer_key.qmd#exercise-2)
 1. A question to evaluate Learning Objective 2
 2. A followup question to question #1
 3. ...
@@ -295,7 +295,7 @@ else:
 ``` 
 
 :::{.callout-tip}
-# [**Exercise 3**](03_conditional_statements.qmd#exercise-3)
+# [**Exercise 3**](03_lesson-Answer_key.qmd#exercise-3)
 1. A question to evaluate Learning Objective 3
 2. A followup question to question #1
 3. ...

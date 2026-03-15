@@ -1,5 +1,5 @@
 ---
-title: "Lesson 10"
+title: "Data Wrangling"
 description: |
   Write a description of the lesson here. 
 author:
@@ -45,7 +45,19 @@ In this lesson, we will:
 
 When doing XYZ...
 
-## Topic 1
+## Merging DataFrames
+
+```{python}
+#| label: wrangling_dataframes
+# Example code for wrangling DataFrames
+# Read in metadata
+metadata <- read.csv("data/mouse_exp_design.csv")
+# Read in rpkm_ordered
+rpkm_ordered  <- read.csv("data/ordered_counts_rpkm.csv",
+                          header=T, row.names=1)
+# Merge metadata and rpkm_ordered
+merged_df <- merge(metadata, rpkm_ordered, by.x="sample", by.y="row.names")
+```
 
 ### Subsection 1A
 
@@ -58,7 +70,9 @@ When doing XYZ...
 3. ...
 :::
 
-## Topic 2
+## Wrangling DataFrames
+
+
 
 ### Subsection 2A
 

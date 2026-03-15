@@ -40,9 +40,10 @@ Approximate time: XX minutes
 
 In this lesson, we will:
 
-- Learning Objective 1
-- Learning Objective 2
-- Learning Objective 3
+- Load and inspect data in a `Pandas` DataFrame.
+- Subset and index DataFrames in several different ways.
+- Add new columns to a DataFrame based on existing data.
+- Perform useful operations on DataFrames to summarize and manipulate data.
 
 ## Overview of lesson
 
@@ -113,6 +114,10 @@ Suppose we had a larger file, we might not want to display all the contents in t
 #| tbl-cap: First six rows of the metadata DataFrame using the `head()` function
 metadata.head()
 ```
+
+::: callout-warning
+Have not made exercises for the entire lesson
+:::
 
 :::{.callout-tip}
 # [**Exercise 1**](09_pandas_dataframes-Answer_key.qmd#exercise-1)
@@ -403,6 +408,6 @@ Now we know how many samples are classified as WT and how many are classified as
 
 ***
 
-[Next Lesson >>](10_lesson.qmd)
+[Next Lesson >>](10_data_wrangling.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)

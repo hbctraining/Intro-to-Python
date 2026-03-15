@@ -178,6 +178,8 @@ The menu bar at the top of Jupyter Lab provides access to various functions and 
 TODO: Copy pasted from CCB: https://ccb-hms.github.io/workbench-python-workshop/01-introduction.html
 :::
 
+Table: Jupyter Lab menu options and descriptions. {#tbl-jupyter_menu}
+
 | Menu     | Description                                                                                                                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | File     | Actions related to files and directories such as New, Open, Close, Save, etc. The File menu also includes the Shut Down action used to shut down the JupyterLab server.                                   |

@@ -73,7 +73,7 @@ Table: Common channels for Python libraries. {#tbl-python_channels}
 Now that we have an understanding of what libraries are, we can talk about how to install them. There are many different ways to install packages in Python, but we will focus on two methods: installing from the Anaconda Navigator and installing from the command line using `pip` or `conda`.
 
 ::: callout-warning
-Make an aside lesson on how to do this in terminal
+Make a tabset on how to do this in terminal
 :::
 
 For this workshop, we will be using the Anaconda Navigator to install packages. The Anaconda Navigator is a graphical user interface that allows you to manage your Python environments and packages without needing to use the command line. To install a package from the Anaconda Navigator, you can follow these steps:
@@ -91,7 +91,7 @@ My python environment are really filled out so I don't have a screenshot of thes
 
 ::: callout-note
 # Extra information in the environments tab
-If you  lick on the "Channels" button you can see the channels that are being used to search for packages. You can add additional channels here if you want to search for packages that are not available in the default channels. For example, if you want to search for bioinformatics tools, you can add the `bioconda` channel.
+If you  click on the "Channels" button you can see the channels that are being used to search for packages. You can add additional channels here if you want to search for packages that are not available in the default channels. For example, if you want to search for bioinformatics tools, you can add the `bioconda` channel.
 
 Additionally, you can click on the "Not installed" filter to see a list of packages that are not currently installed in your environment. This can be a useful way to find new packages to install and explore.
 :::
@@ -172,6 +172,6 @@ import seaborn as sns
 
 ***
 
-[Next Lesson >>](08_lesson.qmd)
+[Next Lesson >>](08_numpy_arrays.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)

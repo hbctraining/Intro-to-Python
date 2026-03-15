@@ -49,7 +49,7 @@ II. **Submit your work**:
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
 | 10:30 - 10:55 | [Data Structures](../lessons/04_data_structures.qmd) | Instructor_name |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [For Loops](../lessons/09_lesson.qmd) | Instructor_name |
+| 11:00 - 11:55 | [For Loops](../lessons/05_for_loop.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
 
 ### Before the next class:
@@ -103,7 +103,7 @@ II. **Submit your work**:
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Data Wrangling](../lessons/14_lesson.qmd)
+   1. [Data Wrangling](../lessons/10_data_wrangling.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.

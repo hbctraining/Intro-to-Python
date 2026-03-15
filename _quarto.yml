@@ -23,7 +23,7 @@ website:
       - text: "HBC"
         href: https://bioinformatics.sph.harvard.edu/
       - text: "GitHub"
-        href: https://github.com/hbctraining/Intro-to-scRNAseq-Quarto
+        href: https://github.com/hbctraining/Intro-to-Python
       - text: "Contact us"
         href: mailto:hbctraining@hsph.harvard.edu
   
@@ -56,12 +56,12 @@ website:
           
       - section: "Day 3:"
         contents:
-          - lessons/12_lesson.qmd
-          - lessons/13_lesson.qmd
+          - lessons/08_numpy_arrays.qmd
+          - lessons/09_pandas_dataframes.qmd
 
       - section: "Day 3 Self-learning:"
         contents:
-          - lessons/14_lesson.qmd
+          - lessons/10_data_wrangling.qmd
           - lessons/15_lesson.qmd
           
       - section: "Day 4:"
