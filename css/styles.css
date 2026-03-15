@@ -1,22 +1,29 @@
-/* Alternative rows in tables are gray */
+/* ============================================================
+   GENERAL TABLE + QUARTO STYLING
+   ============================================================ */
+
+/* Alternative rows in Bootstrap-styled tables are gray */
 .table tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
 
-/* For Quarto code output blocks */
+/* For Quarto code output blocks (including Pandas tables) */
 .cell-output,
 .cell-output-stdout,
 .cell-output-stderr,
 .cell-output-display {
-  background-color: #f5f5f5 !important;  /* Light gray */
+  background-color: #f5f5f5 !important;  /* Light gray background */
   padding: 0.5em 1em;
   border-radius: 5px;
   margin-bottom: 1em;
 }
 
 
-/* Stretch left footer across all columns for Quarto footers */
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
 footer.footer .nav-footer {
   display: block !important;
   max-width: 100vw;
@@ -46,14 +53,17 @@ footer.footer .nav-footer-right {
 }
 
 
+/* ============================================================
+   NAVBAR (HARVARD CRIMSON THEME)
+   ============================================================ */
+
 /* Harvard Crimson: #A51C30 */
-/* For Quarto Bootstrap dark navbars: */
 .navbar,
 .navbar-dark {
   background-color: #a51c30 !important;
 }
 
-/* For navbar items and hover/focus states */
+/* Navbar items and hover/focus states */
 .navbar .nav-link,
 .navbar .navbar-brand {
   color: #fff !important;
@@ -61,17 +71,21 @@ footer.footer .nav-footer-right {
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  color: #ffd700 !important;   /* gold/yellow hover, optional */
+  color: #ffd700 !important;   /* gold/yellow hover */
 }
 
-/* If your navbar is light/white by default, also force text to white: */
+/* If navbar is light by default, also force text to white */
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
   color: #fff !important;
 }
 
 
-/* Center all images that are direct children of the main content (not inside tables or callouts) */
+/* ============================================================
+   IMAGES & TITLE BLOCK
+   ============================================================ */
+
+/* Center images that are direct children of main content / Quarto figures */
 main img,
 .quarto-figure img {
   display: block;
@@ -81,8 +95,7 @@ main img,
   margin-bottom: 1em;
 }
 
-
-/* Remove the box styling from the title block */
+/* Remove box styling from title block */
 .quarto-title-block {
   background: none !important;
   box-shadow: none !important;
@@ -92,8 +105,7 @@ main img,
   text-align: left !important;
 }
 
-
-/* Hide only the author, affiliation, date, subtitle, etc */
+/* Hide author, affiliation, date, subtitle, etc. */
 .quarto-title-author,
 .quarto-title-affiliation,
 .quarto-title-date,
@@ -114,14 +126,16 @@ img {
 }
 
 
-/* Hide breadcrumbs for both possible classnames */
+/* Hide breadcrumbs */
 .quarto-breadcrumbs,
 .quarto-page-breadcrumbs {
   display: none !important;
 }
 
 
-/* --- Refined, crimson-themed Quarto Tabsets --- */
+/* ============================================================
+   TABSETS
+   ============================================================ */
 
 .panel-tabset {
   border: 1px solid #e0e0e0;        /* lighter outline */
@@ -180,10 +194,15 @@ img {
 }
 
 
-/* --- Styled Tables --- */
+/* ============================================================
+   TABLES
+   ============================================================ */
 
-/* NOTE: do NOT force width: 100% here.
-   That breaks horizontal scrolling of very wide tables. */
+/* 
+   Base table styling (applies to markdown tables AND Pandas).
+   NOTE: we intentionally do NOT set width: 100% here so that
+   very wide tables can scroll inside their containers.
+*/
 table {
   border-collapse: collapse;
   border: 1px solid #d0d0d0;      /* outer border */
@@ -208,7 +227,7 @@ table th {
   color: #333;
 }
 
-/* Crimson header row */
+/* Crimson header row styling */
 table thead th {
   background: #a51c30 !important;     /* crimson */
   color: #ffffff !important;          /* white text */
@@ -216,14 +235,21 @@ table thead th {
   border: 1px solid #8b1628 !important;  /* darker crimson border */
 }
 
-/* Markdown/Quarto tables: full content width only when inside Quarto's wrapper.
-   This avoids stretching Pandas DataFrames. */
+/* 
+   Make only Quarto/markdown tables fill the content width.
+   Pandas DataFrames use class="dataframe" and will be excluded
+   so they can scroll horizontally instead.
+*/
 .quarto-table table:not(.dataframe) {
   width: 100%;
 }
 
 
-/* Captions left-aligned, no special background */
+/* ============================================================
+   CAPTIONS
+   ============================================================ */
+
+/* Table captions: left-aligned, no special background */
 .quarto-float-tbl .quarto-float-caption,
 .quarto-float .quarto-float-caption,
 table caption {
@@ -232,14 +258,16 @@ table caption {
   display: block !important;
   box-sizing: border-box !important;
   margin-bottom: 0.5em;
-  padding: 0.4em 0;     /* no background color; just spacing */
+  padding: 0.4em 0;     /* spacing only, no background color */
 }
 
 
-/* --- Figures --- */
+/* ============================================================
+   FIGURES
+   ============================================================ */
 
 .quarto-figure,
-.figure,          /* your custom .figure block */
+.figure,          /* custom .figure block */
 figure {
   display: flex !important;
   flex-direction: column !important;
@@ -257,12 +285,15 @@ figure {
   margin-right: auto;
 }
 
-/* Figure captions: visually left-aligned inside centered figure */
+/* 
+   Figure captions:
+   - left-aligned text inside a horizontally centered figure.
+*/
 .quarto-figure .figure-caption,
 .figure .figure-caption,
 figure figcaption {
   text-align: left !important;
-  align-self: flex-start !important; /* keep caption left-aligned inside centered flex container */
+  align-self: flex-start !important;
 }
 
 /* Ensure captions don't overflow when left-aligned in narrow columns */
@@ -279,7 +310,9 @@ figure figcaption {
 }
 
 
-/* --- Columns Layout --- */
+/* ============================================================
+   COLUMNS LAYOUT
+   ============================================================ */
 
 .columns {
   display: flex !important;
@@ -296,26 +329,32 @@ figure figcaption {
 /* .columns { min-height: 220px; } */
 
 
-/* ----------------------------------------------------------
-   Wide Pandas DataFrames:
-   - Gray output box constrained to page width.
-   - Inner DataFrame table can be wider.
-   - Horizontal scroll inside the box.
------------------------------------------------------------*/
+/* ============================================================
+   WIDE PANDAS DATAFRAMES: HORIZONTAL SCROLL
+   ============================================================ */
 
-/* Constrain output boxes to content width and allow horizontal scroll */
+/* 
+   Constrain output boxes to the page/content width and allow
+   horizontal scrolling when their contents (e.g., Pandas
+   DataFrames) are wider than the page.
+*/
 .cell-output-display {
   max-width: 100% !important;
   overflow-x: auto !important;
 }
 
-/* Pandas DataFrame tables should use intrinsic width, not stretch */
+/* 
+   Pandas DataFrame tables (class="dataframe") should:
+   - Use intrinsic width (no stretching to 100%),
+   - Be allowed to be wider than their container;
+     the container scrolls horizontally.
+*/
 .cell-output-display table.dataframe {
   width: auto !important;
   max-width: none !important;
 }
 
-/* Some variants wrap the dataframe in another div; handle those too */
+/* Handle the case where Pandas/Quarto wraps the dataframe in an extra div */
 .cell-output-display > div > table.dataframe {
   width: auto !important;
   max-width: none !important;
