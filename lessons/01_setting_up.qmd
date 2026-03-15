@@ -151,7 +151,7 @@ Even though Jupyter Lab opens your web browser, it is not actually accessing the
 On the left-hand side of Jupyter Lab, we have access to the file navigator. This allows us to navigate through the files on our computer and open them in Jupyter Lab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder titled, "intro_python", click the "New Folder" button in the file navigator. 
 
 :::{.callout-tip}
-# [**Exercise 1**](01_setting_up-Answer_key.qmd#exercise-1)
+# **Exercise 1**
 
 To organize your working directory for a particular analysis, you should separate the original data (raw data) from intermediate datasets. For instance, you may want to create:
 

@@ -5111,7 +5111,7 @@ justify-content: center !important;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/03_conditional_statements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 04</span></a>
+ <span class="menu-text">Conditional Statements</span></a>
   </div>
 </li>
       </ul>
@@ -5133,8 +5133,8 @@ justify-content: center !important;
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/09_lesson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 09</span></a>
+  <a href="../lessons/05_for_loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>for</code> Loops</span></a>
   </div>
 </li>
       </ul>
@@ -5150,14 +5150,14 @@ justify-content: center !important;
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/10_lesson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 10</span></a>
+  <a href="../lessons/06_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/11_lesson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 11</span></a>
+  <a href="../lessons/07_libraries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading and Installing Libraries</span></a>
   </div>
 </li>
       </ul>
@@ -5188,7 +5188,7 @@ justify-content: center !important;
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Day 3 Self-learning::</span></a>
+ <span class="menu-text">Day 3 Self-learning:</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -5437,7 +5437,7 @@ White space
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Python uses white-space to define scope as we will <a href="05_lessons.qmd">see later</a>, but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:</p>
+<p>Python uses white-space to define scope, but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:</p>
 <div id="white_space_example_1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No whitespace on either side of =</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="dv">3</span></span>
@@ -5595,7 +5595,7 @@ Nested functions
 <div id="cell-integer_float_addition" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add integer and float together</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">+</span> <span class="fl">3.14</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="integer_float_addition" class="cell-output cell-output-display" data-execution_count="16">
+<div id="integer_float_addition" class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>8.14</code></pre>
 </div>
 </div>
@@ -5662,7 +5662,7 @@ Single- and double-quotes
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[21]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[48]</span><span class="ansi-green-fg">, line 2</span>
 <span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Trying to add strings and numbers</span>
 <span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-yellow-bg">my_number</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">+</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">number_string</span>
 
@@ -6377,7 +6377,7 @@ Figure 2: Variable Inspector in Jupyter Lab, showing all the variables created 
 <span id="cb49-147"><a href="#cb49-147" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-148"><a href="#cb49-148" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
 <span id="cb49-149"><a href="#cb49-149" aria-hidden="true" tabindex="-1"></a><span class="fu"># White space</span></span>
-<span id="cb49-150"><a href="#cb49-150" aria-hidden="true" tabindex="-1"></a>Python uses white-space to define scope as we will <span class="co">[</span><span class="ot">see later</span><span class="co">](05_lessons.qmd)</span>, but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:</span>
+<span id="cb49-150"><a href="#cb49-150" aria-hidden="true" tabindex="-1"></a>Python uses white-space to define scope, but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:</span>
 <span id="cb49-151"><a href="#cb49-151" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb49-154"><a href="#cb49-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb49-155"><a href="#cb49-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: white_space_example_1</span></span>

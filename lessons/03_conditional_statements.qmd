@@ -207,18 +207,6 @@ elif name == "Bob":
     print("Hello, Bob!")
 ```
 
-You are not allowed to have an `elif` or `else` statement without a preceding `if` statement. However, you can have as many `elif` statements as you want in between the `if` and `else` statements. You are not required to include an `else` statement, but if you do, then it must be the last block in the sequence.
-
-```{python}
-#| label: elif_out_of_order
-name = "Charlie"
-if name == "Alice":
-    print("Hello, Alice!")
-elif name == "Bob":
-    print("Hello, Bob!")
-else:
-    print("You aren't Alice or Bob!")
-```
 
 ### Order Matters
 

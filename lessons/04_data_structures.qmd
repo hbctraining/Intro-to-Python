@@ -203,7 +203,6 @@ We can even have lists of lists! For example, we could have a list that contains
 
 ```{python}
 #| label: nested_list_example
-#| echo: false
 # Create a nested list that contains both glengths and species
 nested_list = [glengths, species]
 nested_list

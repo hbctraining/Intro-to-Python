@@ -206,6 +206,8 @@ while number <= 100:
 print("Last number:", number)
 ```
 
+Why is our last number 128 and not 64? This is because the condition `number <= 100` is still true when `number` is equal to 64, so we execute the code block one more time, which doubles `number` to 128. After that, the condition `number <= 100` is no longer true, so we exit the loop and print the last number.
+
 ### Infinite Loop
 
 The important thing to note about `while` loops is that they can potentially run indefinitely if the condition never becomes false. Therefore, it is important to make sure that the condition will eventually become false, otherwise we will have an infinite loop. For example, the following code will run indefinitely because the condition `i < 5` will always be `True`:

@@ -133,7 +133,7 @@ print(our_sum)
 
 :::{.callout-note}
 # White space
-Python uses white-space to define scope as we will [see later](05_lessons.qmd), but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:
+Python uses white-space to define scope, but when assigning values to a variable, Python has no set rules how to do this. The assignments below are all treated the same within Python:
 
 ```{python}
 #| label: white_space_example_1

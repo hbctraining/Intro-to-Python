@@ -51,8 +51,8 @@ website:
           
       - section: "Day 2 Self-learning:"
         contents:
-          - lessons/10_lesson.qmd
-          - lessons/11_lesson.qmd
+          - lessons/06_functions.qmd
+          - lessons/07_libraries.qmd
           
       - section: "Day 3:"
         contents:

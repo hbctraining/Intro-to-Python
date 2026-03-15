@@ -5108,8 +5108,8 @@ justify-content: center !important;
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/09_lesson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 09</span></a>
+  <a href="../lessons/05_for_loop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><code>for</code> Loops</span></a>
   </div>
 </li>
       </ul>
@@ -5125,14 +5125,14 @@ justify-content: center !important;
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/10_lesson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 10</span></a>
+  <a href="../lessons/06_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lessons/11_lesson.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lesson 11</span></a>
+  <a href="../lessons/07_libraries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loading and Installing Libraries</span></a>
   </div>
 </li>
       </ul>
@@ -5356,14 +5356,14 @@ Table 1: Python data structures.
 <p>To create a list, we ues the <code>[]</code> key. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There is no limit on the number of values that can be included in a list, and they can be of any data type.</p>
 <div id="cell-list_example" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="list_example" class="cell-output cell-output-display" data-execution_count="2">
+<div id="list_example" class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>[1, 6, 7]</code></pre>
 </div>
 </div>
 <p>If we inspect the <code>type()</code>, we can see that it is a list data structure:</p>
 <div id="cell-list_type_example" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>([<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="list_type_example" class="cell-output cell-output-display" data-execution_count="3">
+<div id="list_type_example" class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>list</code></pre>
 </div>
 </div>
@@ -5371,7 +5371,7 @@ Table 1: Python data structures.
 <div id="cell-list_mixed_example" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="st">&quot;hello&quot;</span>, <span class="fl">3.14</span>, <span class="va">True</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>list1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="list_mixed_example" class="cell-output cell-output-display" data-execution_count="4">
+<div id="list_mixed_example" class="cell-output cell-output-display" data-execution_count="26">
 <pre><code>[1, &#39;hello&#39;, 3.14, True]</code></pre>
 </div>
 </div>
@@ -5406,7 +5406,7 @@ Table 1: Python data structures.
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the updated list</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>glengths</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="list_append" class="cell-output cell-output-display" data-execution_count="6">
+<div id="list_append" class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>[4.6, 3000, 50000, 12000]</code></pre>
 </div>
 </div>
@@ -5416,7 +5416,7 @@ Table 1: Python data structures.
 <div id="cell-list_len_after_append" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the number of elements in glengths after appending a new element</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(glengths)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="list_len_after_append" class="cell-output cell-output-display" data-execution_count="7">
+<div id="list_len_after_append" class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>4</code></pre>
 </div>
 </div>
@@ -5459,7 +5459,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-species_elem_0" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first element of species</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="species_elem_0" class="cell-output cell-output-display" data-execution_count="8">
+<div id="species_elem_0" class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>&#39;ecoli&#39;</code></pre>
 </div>
 </div>
@@ -5467,7 +5467,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-species_elem_1" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="species_elem_1" class="cell-output cell-output-display" data-execution_count="9">
+<div id="species_elem_1" class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>&#39;human&#39;</code></pre>
 </div>
 </div>
@@ -5491,7 +5491,7 @@ R is one-indexed
 <div id="cell-glengths_last_elem" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the last element of glengths</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>glengths[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="glengths_last_elem" class="cell-output cell-output-display" data-execution_count="10">
+<div id="glengths_last_elem" class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>12000</code></pre>
 </div>
 </div>
@@ -5517,23 +5517,26 @@ R is one-indexed
 <h3 class="anchored" data-anchor-id="nested-lists">Nested Lists</h3>
 <p>We can even have lists of lists! For example, we could have a list that contains both our <code>glengths</code> and <code>species</code> lists:</p>
 <div id="cell-nested_list_example" class="cell" data-execution_count="12">
-<div id="nested_list_example" class="cell-output cell-output-display" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a nested list that contains both glengths and species</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>nested_list <span class="op">=</span> [glengths, species]</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>nested_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="nested_list_example" class="cell-output cell-output-display" data-execution_count="34">
 <pre><code>[[4.6, 3000, 50000, 12000], [&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;]]</code></pre>
 </div>
 </div>
 <p>If we wanted to access the first element of the <code>nested_list</code>, we would use <code>nested_list[0]</code>, which would give us the <code>glengths</code> list. If we wanted to access the second element of the <code>nested_list</code>, we would use <code>nested_list[1]</code>, which would give us the <code>species</code> list.</p>
 <div id="cell-nested_list_access" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access species inside nested_list</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="nested_list_access" class="cell-output cell-output-display" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access species inside nested_list</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="nested_list_access" class="cell-output cell-output-display" data-execution_count="35">
 <pre><code>[&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;]</code></pre>
 </div>
 </div>
 <p>But perhaps we wanted to access the second element of the <code>species</code> list, which is <code>human</code>. To do this, we would first access the <code>species</code> list with <code>nested_list[1]</code>, and then access the second element of that list with <code>[1]</code>. So the code to access <code>human</code> would be <code>nested_list[1][1]</code>.</p>
 <div id="cell-nested_list_access_second_element" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species inside nested_list</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>][<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="nested_list_access_second_element" class="cell-output cell-output-display" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species inside nested_list</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>][<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="nested_list_access_second_element" class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>&#39;human&#39;</code></pre>
 </div>
 </div>
@@ -5548,17 +5551,17 @@ R is one-indexed
 <p>Slicing is a way to access a range of elements in a list. We can use slicing to access a subset of the elements in a list. The syntax for slicing is <code>list[start:stop]</code>, where <code>start</code> is the index of the first element we want to access and <code>stop</code> is the index of the first element we do not want to access.</p>
 <p>So if we wanted to access the first three elements we would call <code>species[0:3]</code>.</p>
 <div id="cell-slicing_example" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three elements of species</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="slicing_example" class="cell-output cell-output-display" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three elements of species</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="slicing_example" class="cell-output cell-output-display" data-execution_count="37">
 <pre><code>[&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;]</code></pre>
 </div>
 </div>
 <p>If you wanted to access from <code>start</code> all the way to the end of the list, you can omit the <code>stop</code> index. For example, if we wanted to access from the second element to the end of the list, we would use <code>species[1:]</code>.</p>
 <div id="cell-slicing_example_to_end" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get all elements from the second element to the end</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="slicing_example_to_end" class="cell-output cell-output-display" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get all elements from the second element to the end</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="slicing_example_to_end" class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>[&#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;]</code></pre>
 </div>
 </div>
@@ -5600,18 +5603,18 @@ Hint
 <p>Earlier, we talked about strings as a data type that is used to represent text. However, strings are actually a special type of list! Each character in a string is an element in the list, and we can access them with indexing and slicing just like we would with any other list. This is one of many ways to access a substring of a string.</p>
 <p>For example, if we have a string <code>s = &quot;hello&quot;</code>, we can access the first character with <code>s[0]</code>, which would give us <code>h</code>.</p>
 <div id="cell-string_slicing_example" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three characters of a string</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&quot;hello&quot;</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">0</span>:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="string_slicing_example" class="cell-output cell-output-display" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three characters of a string</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&quot;hello&quot;</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">0</span>:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="string_slicing_example" class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>&#39;hel&#39;</code></pre>
 </div>
 </div>
 <p>We can also slice the string to get a subset of the characters. For example, <code>s[1:4]</code> would give us <code>ell</code>.</p>
 <div id="cell-string_slicing_example_2" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get characters from index 1 to index 3</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>:<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="string_slicing_example_2" class="cell-output cell-output-display" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get characters from index 1 to index 3</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>:<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="string_slicing_example_2" class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>&#39;ell&#39;</code></pre>
 </div>
 </div>
@@ -5624,15 +5627,15 @@ Hint
 <h3 class="anchored" data-anchor-id="creating-a-dictionary">Creating a Dictionary</h3>
 <p>We can create a dictionary using curly braces <code>{}</code> and separating the keys and values with colons <code>:</code>. For example, we can create a dictionary called <code>genome_dict</code> like this:</p>
 <div id="cell-create_genome_dict" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary with species as keys and genome lengths as values</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>genome_dict <span class="op">=</span> {</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ecoli&quot;</span>: <span class="fl">4.6</span>,</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;human&quot;</span>: <span class="dv">3000</span>,</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corn&quot;</span>: <span class="dv">50000</span>,</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;yeast&quot;</span>: <span class="dv">12000</span></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>genome_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="create_genome_dict" class="cell-output cell-output-display" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary with species as keys and genome lengths as values</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>genome_dict <span class="op">=</span> {</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ecoli&quot;</span>: <span class="fl">4.6</span>,</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;human&quot;</span>: <span class="dv">3000</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corn&quot;</span>: <span class="dv">50000</span>,</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;yeast&quot;</span>: <span class="dv">12000</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>genome_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="create_genome_dict" class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>{&#39;ecoli&#39;: 4.6, &#39;human&#39;: 3000, &#39;corn&#39;: 50000, &#39;yeast&#39;: 12000}</code></pre>
 </div>
 </div>
@@ -5674,8 +5677,8 @@ Table 3: Dictionary, where keys are species name and values are length of the s
 </div>
 <p>And if we investigate the <code>type()</code> of <code>genome_dict</code>, we can see that it is a dictionary data structure:</p>
 <div id="cell-dict_type" class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(genome_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="dict_type" class="cell-output cell-output-display" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(genome_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dict_type" class="cell-output cell-output-display" data-execution_count="42">
 <pre><code>dict</code></pre>
 </div>
 </div>
@@ -5684,10 +5687,10 @@ Table 3: Dictionary, where keys are species name and values are length of the s
 <h3 class="anchored" data-anchor-id="accessing-keys-and-values">Accessing <code>keys</code> and <code>values</code></h3>
 <p>In a dictionary, we can access the keys and values separately. We can use the <code>keys()</code> method to get a list of all the keys in the dictionary, and the <code>values()</code> method to get a list of all the values in the dictionary. For example, to get the keys and values of our <code>genome_dict</code>, we would use the following code:</p>
 <div id="dict_keys_values" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the keys of the dictionary</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.keys()) </span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the values of the dictionary</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.values())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the keys of the dictionary</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.keys()) </span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the values of the dictionary</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.values())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>dict_keys([&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;])
 dict_values([4.6, 3000, 50000, 12000])</code></pre>
@@ -5695,9 +5698,9 @@ dict_values([4.6, 3000, 50000, 12000])</code></pre>
 </div>
 <p>This is how we grab <em>all</em> the keys and values in a dictionary. However, if we want to access the value for a specific key, we can use the syntax <code>dict[key]</code>. For example, to get the genome length for <code>human</code>, we would use <code>genome_dict[&quot;human&quot;]</code>.</p>
 <div id="cell-dict_human_key" class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the value for the key &quot;human&quot;</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>genome_dict[<span class="st">&quot;human&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="dict_human_key" class="cell-output cell-output-display" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the value for the key &quot;human&quot;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>genome_dict[<span class="st">&quot;human&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="dict_human_key" class="cell-output cell-output-display" data-execution_count="44">
 <pre><code>3000</code></pre>
 </div>
 </div>
@@ -6177,364 +6180,363 @@ dict_values([4.6, 3000, 50000, 12000])</code></pre>
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb40" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Data Structures&quot;</span></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Write a description of the lesson here. </span></span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Noor Sohail</span></span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Will Gammerdinger</span></span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2026-03-14&quot;</span></span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
-<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_1</span></span>
-<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_2</span></span>
-<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_3</span></span>
-<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_4</span></span>
-<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
-<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_1</span></span>
-<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_2</span></span>
-<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_3</span></span>
-<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_4</span></span>
-<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_5</span></span>
-<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_6</span></span>
-<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a><span class="an">license:</span><span class="co"> &quot;CC-BY-4.0&quot;</span></span>
-<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
-<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a><span class="co">  markdown: </span></span>
-<span id="cb40-24"><a href="#cb40-24" aria-hidden="true" tabindex="-1"></a><span class="co">    wrap: 72</span></span>
-<span id="cb40-25"><a href="#cb40-25" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-29"><a href="#cb40-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-30"><a href="#cb40-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load_libraries_data</span></span>
-<span id="cb40-31"><a href="#cb40-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb40-32"><a href="#cb40-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries and data</span></span>
-<span id="cb40-33"><a href="#cb40-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-34"><a href="#cb40-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-35"><a href="#cb40-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-36"><a href="#cb40-36" aria-hidden="true" tabindex="-1"></a>Approximate time: XX minutes</span>
-<span id="cb40-37"><a href="#cb40-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-38"><a href="#cb40-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
-<span id="cb40-39"><a href="#cb40-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-40"><a href="#cb40-40" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
-<span id="cb40-41"><a href="#cb40-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-42"><a href="#cb40-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create lists and dictionaries.</span>
-<span id="cb40-43"><a href="#cb40-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Access elements in lists with slicing and indexing.</span>
-<span id="cb40-44"><a href="#cb40-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Access values in dictionaries with keys.</span>
-<span id="cb40-45"><a href="#cb40-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-46"><a href="#cb40-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
-<span id="cb40-47"><a href="#cb40-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-48"><a href="#cb40-48" aria-hidden="true" tabindex="-1"></a>When doing XYZ...</span>
-<span id="cb40-49"><a href="#cb40-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-50"><a href="#cb40-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Structures</span></span>
-<span id="cb40-51"><a href="#cb40-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-52"><a href="#cb40-52" aria-hidden="true" tabindex="-1"></a>There exists several more types of variables, commonly referred to as data structures. They can contain multiple values and are more complex than the data types we have discussed so far. </span>
-<span id="cb40-53"><a href="#cb40-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-54"><a href="#cb40-54" aria-hidden="true" tabindex="-1"></a>Table: Python data structures. {#tbl-data_structures}</span>
-<span id="cb40-55"><a href="#cb40-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-56"><a href="#cb40-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Structures       <span class="pp">|</span> What it is                             <span class="pp">|</span></span>
-<span id="cb40-57"><a href="#cb40-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------|-----------------------------------------------------|</span></span>
-<span id="cb40-58"><a href="#cb40-58" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> list       <span class="pp">|</span> An ordered, changeable collection of elements.        <span class="pp">|</span></span>
-<span id="cb40-59"><a href="#cb40-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> dictionary <span class="pp">|</span> A collection of key–value pairs.  <span class="pp">|</span></span>
-<span id="cb40-60"><a href="#cb40-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> tuple      <span class="pp">|</span> An ordered collection of elements you.   <span class="pp">|</span></span>
-<span id="cb40-61"><a href="#cb40-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> set        <span class="pp">|</span> An unordered collection of unique elements.           <span class="pp">|</span></span>
-<span id="cb40-62"><a href="#cb40-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-63"><a href="#cb40-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-64"><a href="#cb40-64" aria-hidden="true" tabindex="-1"></a>We will expand more on lists and dictionaries in this lessons.</span>
-<span id="cb40-65"><a href="#cb40-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-66"><a href="#cb40-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lists</span></span>
-<span id="cb40-67"><a href="#cb40-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-68"><a href="#cb40-68" aria-hidden="true" tabindex="-1"></a>Lists are a data structure that can be perhaps a bit daunting at first, but soon become very useful. A list is a data structure that can hold any number of any types of other data structures. </span>
-<span id="cb40-69"><a href="#cb40-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-70"><a href="#cb40-70" aria-hidden="true" tabindex="-1"></a>The analogy for a list is that you have a a box has different compartments; these compartments in a list are called **elements**. Each element contains a single value, and there is no limit to how many elements you can have. A list is assigned to a single variable, because regardless of how many elements it contains, in the end it is still a single entity (box).</span>
-<span id="cb40-71"><a href="#cb40-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-72"><a href="#cb40-72" aria-hidden="true" tabindex="-1"></a>Lists are useful for making iterative processes more efficient. For example, if you have a task that you want to repeat multiple times, you can put all the elements you want to perform the task on in a list and then perform the task on the list instead of each item individually. **This is one of the greatest strengths of using a programming language, automating repetitive tasks!**</span>
-<span id="cb40-73"><a href="#cb40-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-74"><a href="#cb40-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating a List</span></span>
-<span id="cb40-75"><a href="#cb40-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-76"><a href="#cb40-76" aria-hidden="true" tabindex="-1"></a>To create a list, we ues the <span class="in">`[]`</span> key. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There is no limit on the number of values that can be included in a list, and they can be of any data type.</span>
-<span id="cb40-77"><a href="#cb40-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-80"><a href="#cb40-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-81"><a href="#cb40-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_example</span></span>
-<span id="cb40-82"><a href="#cb40-82" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
-<span id="cb40-83"><a href="#cb40-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-84"><a href="#cb40-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-85"><a href="#cb40-85" aria-hidden="true" tabindex="-1"></a>If we inspect the <span class="in">`type()`</span>, we can see that it is a list data structure:</span>
-<span id="cb40-86"><a href="#cb40-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-89"><a href="#cb40-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-90"><a href="#cb40-90" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_type_example</span></span>
-<span id="cb40-91"><a href="#cb40-91" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>([<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>])</span>
-<span id="cb40-92"><a href="#cb40-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-93"><a href="#cb40-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-94"><a href="#cb40-94" aria-hidden="true" tabindex="-1"></a>We are not limited to including just one data type in a list. We can include any number of any data types in a list:</span>
-<span id="cb40-95"><a href="#cb40-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-98"><a href="#cb40-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-99"><a href="#cb40-99" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_mixed_example  </span></span>
-<span id="cb40-100"><a href="#cb40-100" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="st">&quot;hello&quot;</span>, <span class="fl">3.14</span>, <span class="va">True</span>]</span>
-<span id="cb40-101"><a href="#cb40-101" aria-hidden="true" tabindex="-1"></a>list1</span>
-<span id="cb40-102"><a href="#cb40-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-103"><a href="#cb40-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-104"><a href="#cb40-104" aria-hidden="true" tabindex="-1"></a><span class="fu">### Length of a List</span></span>
-<span id="cb40-105"><a href="#cb40-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-106"><a href="#cb40-106" aria-hidden="true" tabindex="-1"></a>Let us create a list of genome lengths in kilobases, which we will call <span class="in">`glengths`</span>. We also know that the species corresponding to these genome lengths are <span class="in">`ecoli`</span>, <span class="in">`human`</span>, and <span class="in">`corn`</span>. We can create two lists, one for the genome lengths and one for the species:</span>
-<span id="cb40-107"><a href="#cb40-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-108"><a href="#cb40-108" aria-hidden="true" tabindex="-1"></a>It is often useful to know how many elements are in a list. We can use the <span class="in">`len()`</span> function to determine the number of elements in a list. The <span class="in">`len()`</span> function takes a single argument, which is the list we want to determine the length of. For example, to determine how many elements are in our <span class="in">`glengths`</span> and <span class="in">`species`</span> lists, we would use the following code:</span>
-<span id="cb40-109"><a href="#cb40-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-112"><a href="#cb40-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-113"><a href="#cb40-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: len_function</span></span>
-<span id="cb40-114"><a href="#cb40-114" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric list as an object called glengths</span></span>
-<span id="cb40-115"><a href="#cb40-115" aria-hidden="true" tabindex="-1"></a>glengths <span class="op">=</span> [<span class="fl">4.6</span>, <span class="dv">3000</span>, <span class="dv">50000</span>]</span>
-<span id="cb40-116"><a href="#cb40-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-117"><a href="#cb40-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list of species and assign it to a variable called species</span></span>
-<span id="cb40-118"><a href="#cb40-118" aria-hidden="true" tabindex="-1"></a>species <span class="op">=</span> [<span class="st">&quot;ecoli&quot;</span>, <span class="st">&quot;human&quot;</span>, <span class="st">&quot;corn&quot;</span>]</span>
-<span id="cb40-119"><a href="#cb40-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-120"><a href="#cb40-120" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the number of elements in glengths and species</span></span>
-<span id="cb40-121"><a href="#cb40-121" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(glengths))</span>
-<span id="cb40-122"><a href="#cb40-122" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(species))</span>
-<span id="cb40-123"><a href="#cb40-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-124"><a href="#cb40-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-125"><a href="#cb40-125" aria-hidden="true" tabindex="-1"></a><span class="fu">### Adding Elements to a List</span></span>
-<span id="cb40-126"><a href="#cb40-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-127"><a href="#cb40-127" aria-hidden="true" tabindex="-1"></a>Perhaps we have found a new genome and we want to add its length to our list of genome lengths. We can use the <span class="in">`append()`</span> function to add an element. The <span class="in">`append()`</span> function takes a single argument, which is the element we want to add to the list. </span>
-<span id="cb40-128"><a href="#cb40-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-129"><a href="#cb40-129" aria-hidden="true" tabindex="-1"></a>For example, if we wanted to add the length of the yeast genome, which is 12,000 kb, to our list of genome lengths, we would use the following code:</span>
-<span id="cb40-130"><a href="#cb40-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-133"><a href="#cb40-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-134"><a href="#cb40-134" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_append</span></span>
-<span id="cb40-135"><a href="#cb40-135" aria-hidden="true" tabindex="-1"></a><span class="co"># Append a new genome length to glengths</span></span>
-<span id="cb40-136"><a href="#cb40-136" aria-hidden="true" tabindex="-1"></a>glengths.append(<span class="dv">12000</span>)</span>
-<span id="cb40-137"><a href="#cb40-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-138"><a href="#cb40-138" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the updated list</span></span>
-<span id="cb40-139"><a href="#cb40-139" aria-hidden="true" tabindex="-1"></a>glengths</span>
-<span id="cb40-140"><a href="#cb40-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-141"><a href="#cb40-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-142"><a href="#cb40-142" aria-hidden="true" tabindex="-1"></a>Notice that we used <span class="in">`append()`</span> to add an element to the list, but we did not assign it to a new variable. This is because the <span class="in">`append()`</span> function modifies the original list in place, so there is no need to assign it to a new variable. Functions that modify the original object are called **in-place functions**.</span>
-<span id="cb40-143"><a href="#cb40-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-144"><a href="#cb40-144" aria-hidden="true" tabindex="-1"></a>Additionally, notice that we used the syntax <span class="in">`glengths.append(12000)`</span> instead of <span class="in">`append(glengths, 12000)`</span>. This is because <span class="in">`append()`</span> is a method that belongs to the list object, while <span class="in">`len()`</span> is a built-in function that can be used on many different types of objects. Essentially, since <span class="in">`append()`</span> is a method that is specific to lists, we use the syntax <span class="in">`list.method()`</span>. As <span class="in">`len()`</span> is a function that can be used on many different types of objects, we use the syntax <span class="in">`function(object)`</span>.</span>
-<span id="cb40-145"><a href="#cb40-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-146"><a href="#cb40-146" aria-hidden="true" tabindex="-1"></a>Now that we have added a new genome length to <span class="in">`glengths`</span>, we can see that there are 4 elements in our <span class="in">`glengths`</span> list:</span>
-<span id="cb40-147"><a href="#cb40-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-150"><a href="#cb40-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-151"><a href="#cb40-151" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_len_after_append</span></span>
-<span id="cb40-152"><a href="#cb40-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the number of elements in glengths after appending a new element</span></span>
-<span id="cb40-153"><a href="#cb40-153" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(glengths)</span>
-<span id="cb40-154"><a href="#cb40-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-155"><a href="#cb40-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-156"><a href="#cb40-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### Indexing</span></span>
-<span id="cb40-157"><a href="#cb40-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-158"><a href="#cb40-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-159"><a href="#cb40-159" aria-hidden="true" tabindex="-1"></a>There may be times when we want to access a specific element in a list. We can do this with indexing. Python uses what is called **zero-based indexing**, which means that the _first element_ of a list is accessed with _index 0_, the _second element_ with _index 1_, and so on. </span>
-<span id="cb40-160"><a href="#cb40-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-161"><a href="#cb40-161" aria-hidden="true" tabindex="-1"></a>Table: Indices of list <span class="in">`species`</span>, showing how the first element is indexed at zero. {#tbl-indexing}</span>
-<span id="cb40-162"><a href="#cb40-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-163"><a href="#cb40-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Index <span class="pp">|</span> Value <span class="pp">|</span></span>
-<span id="cb40-164"><a href="#cb40-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-------|</span></span>
-<span id="cb40-165"><a href="#cb40-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0     <span class="pp">|</span> ecoli <span class="pp">|</span></span>
-<span id="cb40-166"><a href="#cb40-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1     <span class="pp">|</span> human <span class="pp">|</span></span>
-<span id="cb40-167"><a href="#cb40-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2     <span class="pp">|</span> corn  <span class="pp">|</span></span>
-<span id="cb40-168"><a href="#cb40-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-169"><a href="#cb40-169" aria-hidden="true" tabindex="-1"></a>We can access individual elements of a list using square brackets <span class="in">`[]`</span> and the index of the element we want to access. For example, to access the first element of the <span class="in">`species`</span> list, we would use <span class="in">`species[0]`</span>.</span>
-<span id="cb40-170"><a href="#cb40-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-173"><a href="#cb40-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-174"><a href="#cb40-174" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: species_elem_0</span></span>
-<span id="cb40-175"><a href="#cb40-175" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first element of species</span></span>
-<span id="cb40-176"><a href="#cb40-176" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>]</span>
-<span id="cb40-177"><a href="#cb40-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-178"><a href="#cb40-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-179"><a href="#cb40-179" aria-hidden="true" tabindex="-1"></a>Now if we wanted to access the **second** element of the <span class="in">`species`</span> list, we would use <span class="in">`species[1]`</span>. This can be a bit confusing at first, but will become easier with practice.</span>
-<span id="cb40-180"><a href="#cb40-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-183"><a href="#cb40-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-184"><a href="#cb40-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: species_elem_1</span></span>
-<span id="cb40-185"><a href="#cb40-185" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species</span></span>
-<span id="cb40-186"><a href="#cb40-186" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>]</span>
-<span id="cb40-187"><a href="#cb40-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb40-188"><a href="#cb40-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-189"><a href="#cb40-189" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot;}</span>
-<span id="cb40-190"><a href="#cb40-190" aria-hidden="true" tabindex="-1"></a><span class="fu"># R is one-indexed</span></span>
-<span id="cb40-191"><a href="#cb40-191" aria-hidden="true" tabindex="-1"></a>If you have used R before, you may be used to one-based indexing, which means that the first element of a list is accessed with index 1. As you have now seen, in Python, the first element is accessed with index 0. So if you are going back and forth between R and Python, it is important to remember that the indexing is different in the two languages.</span>
-<span id="cb40-192"><a href="#cb40-192" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb40-193"><a href="#cb40-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-194"><a href="#cb40-194" aria-hidden="true" tabindex="-1"></a>If you want to access the last element of a list, you can use the index <span class="in">`-1`</span>. This is a special index that always refers to the last element of the list, regardless of how many elements are in the list. For example, to access the last element of the <span class="in">`glengths`</span> list, we would use <span class="in">`glengths[-1]`</span>.</span>
-<span id="cb40-195"><a href="#cb40-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-198"><a href="#cb40-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-199"><a href="#cb40-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: glengths_last_elem</span></span>
-<span id="cb40-200"><a href="#cb40-200" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the last element of glengths</span></span>
-<span id="cb40-201"><a href="#cb40-201" aria-hidden="true" tabindex="-1"></a>glengths[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb40-202"><a href="#cb40-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-203"><a href="#cb40-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-204"><a href="#cb40-204" aria-hidden="true" tabindex="-1"></a>We should see the 12,000 kb genome length that we added in the previous section with the <span class="in">`append()`</span> function.</span>
-<span id="cb40-205"><a href="#cb40-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-206"><a href="#cb40-206" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb40-207"><a href="#cb40-207" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](04_data_structures-Answer_key.qmd#exercise-1)</span></span>
-<span id="cb40-208"><a href="#cb40-208" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How would you access the fourth element of the <span class="in">`species`</span> list and what is it?</span>
-<span id="cb40-209"><a href="#cb40-209" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Add <span class="in">`&quot;yeast&quot;`</span> to the <span class="in">`species`</span> list and print the updated list.</span>
-<span id="cb40-210"><a href="#cb40-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-213"><a href="#cb40-213" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-214"><a href="#cb40-214" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: hidden_exercise_2</span></span>
-<span id="cb40-215"><a href="#cb40-215" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb40-216"><a href="#cb40-216" aria-hidden="true" tabindex="-1"></a><span class="co"># Append yeast to the species list</span></span>
-<span id="cb40-217"><a href="#cb40-217" aria-hidden="true" tabindex="-1"></a>species.append(<span class="st">&quot;yeast&quot;</span>)</span>
-<span id="cb40-218"><a href="#cb40-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-219"><a href="#cb40-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-220"><a href="#cb40-220" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb40-221"><a href="#cb40-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-222"><a href="#cb40-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Nested Lists</span></span>
-<span id="cb40-223"><a href="#cb40-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-224"><a href="#cb40-224" aria-hidden="true" tabindex="-1"></a>We can even have lists of lists! For example, we could have a list that contains both our <span class="in">`glengths`</span> and <span class="in">`species`</span> lists:</span>
-<span id="cb40-225"><a href="#cb40-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-228"><a href="#cb40-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-229"><a href="#cb40-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nested_list_example</span></span>
-<span id="cb40-230"><a href="#cb40-230" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb40-231"><a href="#cb40-231" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a nested list that contains both glengths and species</span></span>
-<span id="cb40-232"><a href="#cb40-232" aria-hidden="true" tabindex="-1"></a>nested_list <span class="op">=</span> [glengths, species]</span>
-<span id="cb40-233"><a href="#cb40-233" aria-hidden="true" tabindex="-1"></a>nested_list</span>
-<span id="cb40-234"><a href="#cb40-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb40-235"><a href="#cb40-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-236"><a href="#cb40-236" aria-hidden="true" tabindex="-1"></a>If we wanted to access the first element of the <span class="in">`nested_list`</span>, we would use <span class="in">`nested_list[0]`</span>, which would give us the <span class="in">`glengths`</span> list. If we wanted to access the second element of the <span class="in">`nested_list`</span>, we would use <span class="in">`nested_list[1]`</span>, which would give us the <span class="in">`species`</span> list.</span>
-<span id="cb40-237"><a href="#cb40-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-240"><a href="#cb40-240" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-241"><a href="#cb40-241" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nested_list_access</span></span>
-<span id="cb40-242"><a href="#cb40-242" aria-hidden="true" tabindex="-1"></a><span class="co"># Access species inside nested_list</span></span>
-<span id="cb40-243"><a href="#cb40-243" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>]  </span>
-<span id="cb40-244"><a href="#cb40-244" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-245"><a href="#cb40-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-246"><a href="#cb40-246" aria-hidden="true" tabindex="-1"></a>But perhaps we wanted to access the second element of the <span class="in">`species`</span> list, which is <span class="in">`human`</span>. To do this, we would first access the <span class="in">`species`</span> list with <span class="in">`nested_list[1]`</span>, and then access the second element of that list with <span class="in">`[1]`</span>. So the code to access <span class="in">`human`</span> would be <span class="in">`nested_list[1][1]`</span>.</span>
-<span id="cb40-247"><a href="#cb40-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-250"><a href="#cb40-250" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-251"><a href="#cb40-251" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nested_list_access_second_element</span></span>
-<span id="cb40-252"><a href="#cb40-252" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species inside nested_list</span></span>
-<span id="cb40-253"><a href="#cb40-253" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>][<span class="dv">1</span>]</span>
-<span id="cb40-254"><a href="#cb40-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-255"><a href="#cb40-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-256"><a href="#cb40-256" aria-hidden="true" tabindex="-1"></a>This stucture is actually quite similar to how matrices are structured (which we will discuss how to utilize matrices with <span class="in">`numpy`</span> in a future lesson). In a matrix, you have rows and columns, and you can access elements by specifying the row and column indices. In a nested list, you have lists within lists, and you can access elements by specifying the indices of the outer list and then the inner list.</span>
-<span id="cb40-257"><a href="#cb40-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-258"><a href="#cb40-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## Accessing Multiple Elements in a List</span></span>
-<span id="cb40-259"><a href="#cb40-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-260"><a href="#cb40-260" aria-hidden="true" tabindex="-1"></a>While we can directly access individual elements in a list with indexing, we may want to access multiple elements at once. We can do this with slicing.</span>
-<span id="cb40-261"><a href="#cb40-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-262"><a href="#cb40-262" aria-hidden="true" tabindex="-1"></a><span class="fu">### Slicing</span></span>
-<span id="cb40-263"><a href="#cb40-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-264"><a href="#cb40-264" aria-hidden="true" tabindex="-1"></a>Slicing is a way to access a range of elements in a list. We can use slicing to access a subset of the elements in a list. The syntax for slicing is <span class="in">`list[start:stop]`</span>, where <span class="in">`start`</span> is the index of the first element we want to access and <span class="in">`stop`</span> is the index of the first element we do not want to access. </span>
-<span id="cb40-265"><a href="#cb40-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-266"><a href="#cb40-266" aria-hidden="true" tabindex="-1"></a>So if we wanted to access the first three elements we would call <span class="in">`species[0:3]`</span>.</span>
-<span id="cb40-267"><a href="#cb40-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-270"><a href="#cb40-270" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-271"><a href="#cb40-271" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: slicing_example</span></span>
-<span id="cb40-272"><a href="#cb40-272" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three elements of species</span></span>
-<span id="cb40-273"><a href="#cb40-273" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>:<span class="dv">3</span>]</span>
-<span id="cb40-274"><a href="#cb40-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb40-275"><a href="#cb40-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-276"><a href="#cb40-276" aria-hidden="true" tabindex="-1"></a>If you wanted to access from <span class="in">`start`</span> all the way to the end of the list, you can omit the <span class="in">`stop`</span> index. For example, if we wanted to access from the second element to the end of the list, we would use <span class="in">`species[1:]`</span>.</span>
-<span id="cb40-277"><a href="#cb40-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-280"><a href="#cb40-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-281"><a href="#cb40-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: slicing_example_to_end</span></span>
-<span id="cb40-282"><a href="#cb40-282" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get all elements from the second element to the end</span></span>
-<span id="cb40-283"><a href="#cb40-283" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>:]</span>
-<span id="cb40-284"><a href="#cb40-284" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-285"><a href="#cb40-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-286"><a href="#cb40-286" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb40-287"><a href="#cb40-287" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](04_data_structures-Answer_key.qmd#exercise-2)</span></span>
-<span id="cb40-288"><a href="#cb40-288" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How might you access the last two elements of the <span class="in">`species`</span> list using slicing?</span>
-<span id="cb40-289"><a href="#cb40-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-290"><a href="#cb40-290" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb40-291"><a href="#cb40-291" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hint </span></span>
-<span id="cb40-292"><a href="#cb40-292" aria-hidden="true" tabindex="-1"></a>Recall that we can use _negative indexing_ to access elements from the end of the list.</span>
-<span id="cb40-293"><a href="#cb40-293" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb40-294"><a href="#cb40-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-295"><a href="#cb40-295" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>You can actually slice with <span class="in">`steps`</span> using the syntax <span class="in">`list[start:stop:step]`</span>. This allows you to access every <span class="in">`step`</span>-th element in the range from <span class="in">`start`</span> to <span class="in">`stop`</span>. How would you access every other element in the <span class="in">`species`</span> list using slicing?</span>
-<span id="cb40-296"><a href="#cb40-296" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb40-297"><a href="#cb40-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-298"><a href="#cb40-298" aria-hidden="true" tabindex="-1"></a><span class="fu">## Strings are Lists!</span></span>
-<span id="cb40-299"><a href="#cb40-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-300"><a href="#cb40-300" aria-hidden="true" tabindex="-1"></a>Earlier, we talked about strings as a data type that is used to represent text. However, strings are actually a special type of list! Each character in a string is an element in the list, and we can access them with indexing and slicing just like we would with any other list. This is one of many ways to access a substring of a string.</span>
-<span id="cb40-301"><a href="#cb40-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-302"><a href="#cb40-302" aria-hidden="true" tabindex="-1"></a>For example, if we have a string <span class="in">`s = &quot;hello&quot;`</span>, we can access the first character with <span class="in">`s[0]`</span>, which would give us <span class="in">`h`</span>. </span>
-<span id="cb40-303"><a href="#cb40-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-306"><a href="#cb40-306" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-307"><a href="#cb40-307" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_slicing_example</span></span>
-<span id="cb40-308"><a href="#cb40-308" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three characters of a string</span></span>
-<span id="cb40-309"><a href="#cb40-309" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&quot;hello&quot;</span></span>
-<span id="cb40-310"><a href="#cb40-310" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">0</span>:<span class="dv">3</span>]</span>
-<span id="cb40-311"><a href="#cb40-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-312"><a href="#cb40-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-313"><a href="#cb40-313" aria-hidden="true" tabindex="-1"></a>We can also slice the string to get a subset of the characters. For example, <span class="in">`s[1:4]`</span> would give us <span class="in">`ell`</span>.</span>
-<span id="cb40-314"><a href="#cb40-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-317"><a href="#cb40-317" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-318"><a href="#cb40-318" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_slicing_example_2</span></span>
-<span id="cb40-319"><a href="#cb40-319" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get characters from index 1 to index 3</span></span>
-<span id="cb40-320"><a href="#cb40-320" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>:<span class="dv">4</span>]</span>
-<span id="cb40-321"><a href="#cb40-321" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-322"><a href="#cb40-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-323"><a href="#cb40-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-324"><a href="#cb40-324" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dictionaries</span></span>
-<span id="cb40-325"><a href="#cb40-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-326"><a href="#cb40-326" aria-hidden="true" tabindex="-1"></a>Dictionaries are another data structure that are quite similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary is unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. </span>
-<span id="cb40-327"><a href="#cb40-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-328"><a href="#cb40-328" aria-hidden="true" tabindex="-1"></a>So let us begin by creating a dictionary that contains the species names as keys and their corresponding genome lengths as values. This is a more intuitive way to organize our data, as we can easily access the genome length for a specific species by using the species name as the key.</span>
-<span id="cb40-329"><a href="#cb40-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-330"><a href="#cb40-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating a Dictionary</span></span>
-<span id="cb40-331"><a href="#cb40-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-332"><a href="#cb40-332" aria-hidden="true" tabindex="-1"></a>We can create a dictionary using curly braces <span class="in">`{}`</span> and separating the keys and values with colons <span class="in">`:`</span>. For example, we can create a dictionary called <span class="in">`genome_dict`</span> like this:</span>
-<span id="cb40-333"><a href="#cb40-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-334"><a href="#cb40-334" aria-hidden="true" tabindex="-1"></a><span class="in">````{python}</span></span>
-<span id="cb40-335"><a href="#cb40-335" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_genome_dict</span></span>
-<span id="cb40-336"><a href="#cb40-336" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary with species as keys and genome lengths as values</span></span>
-<span id="cb40-337"><a href="#cb40-337" aria-hidden="true" tabindex="-1"></a>genome_dict <span class="op">=</span> {</span>
-<span id="cb40-338"><a href="#cb40-338" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ecoli&quot;</span>: <span class="fl">4.6</span>,</span>
-<span id="cb40-339"><a href="#cb40-339" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;human&quot;</span>: <span class="dv">3000</span>,</span>
-<span id="cb40-340"><a href="#cb40-340" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corn&quot;</span>: <span class="dv">50000</span>,</span>
-<span id="cb40-341"><a href="#cb40-341" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;yeast&quot;</span>: <span class="dv">12000</span></span>
-<span id="cb40-342"><a href="#cb40-342" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb40-343"><a href="#cb40-343" aria-hidden="true" tabindex="-1"></a>genome_dict</span>
-<span id="cb40-344"><a href="#cb40-344" aria-hidden="true" tabindex="-1"></a><span class="in">````</span>  </span>
-<span id="cb40-345"><a href="#cb40-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-346"><a href="#cb40-346" aria-hidden="true" tabindex="-1"></a>We can represent our dictionary similarly to how we did with the list, but this time we will have keys instead of indices.</span>
-<span id="cb40-347"><a href="#cb40-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-348"><a href="#cb40-348" aria-hidden="true" tabindex="-1"></a>Table: Dictionary, where keys are species name and values are length of the species&#39; genome in kilobases. {#tbl-dict}</span>
-<span id="cb40-349"><a href="#cb40-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-350"><a href="#cb40-350" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Key   <span class="pp">|</span> Value <span class="pp">|</span></span>
-<span id="cb40-351"><a href="#cb40-351" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-------|</span></span>
-<span id="cb40-352"><a href="#cb40-352" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ecoli <span class="pp">|</span> 4.6   <span class="pp">|</span></span>
-<span id="cb40-353"><a href="#cb40-353" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> human <span class="pp">|</span> 3000  <span class="pp">|</span></span>
-<span id="cb40-354"><a href="#cb40-354" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> corn  <span class="pp">|</span> 50000 <span class="pp">|</span></span>
-<span id="cb40-355"><a href="#cb40-355" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> yeast <span class="pp">|</span> 12000 <span class="pp">|</span></span>
-<span id="cb40-356"><a href="#cb40-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-357"><a href="#cb40-357" aria-hidden="true" tabindex="-1"></a>And if we investigate the <span class="in">`type()`</span> of <span class="in">`genome_dict`</span>, we can see that it is a dictionary data structure:</span>
-<span id="cb40-358"><a href="#cb40-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-361"><a href="#cb40-361" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-362"><a href="#cb40-362" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dict_type</span></span>
-<span id="cb40-363"><a href="#cb40-363" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(genome_dict)</span>
-<span id="cb40-364"><a href="#cb40-364" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-365"><a href="#cb40-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-366"><a href="#cb40-366" aria-hidden="true" tabindex="-1"></a><span class="fu">### Accessing `keys` and `values`</span></span>
-<span id="cb40-367"><a href="#cb40-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-368"><a href="#cb40-368" aria-hidden="true" tabindex="-1"></a>In a dictionary, we can access the keys and values separately. We can use the <span class="in">`keys()`</span> method to get a list of all the keys in the dictionary, and the <span class="in">`values()`</span> method to get a list of all the values in the dictionary. For example, to get the keys and values of our <span class="in">`genome_dict`</span>, we would use the following code:</span>
-<span id="cb40-369"><a href="#cb40-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-372"><a href="#cb40-372" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-373"><a href="#cb40-373" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dict_keys_values</span></span>
-<span id="cb40-374"><a href="#cb40-374" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the keys of the dictionary</span></span>
-<span id="cb40-375"><a href="#cb40-375" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.keys()) </span>
-<span id="cb40-376"><a href="#cb40-376" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the values of the dictionary</span></span>
-<span id="cb40-377"><a href="#cb40-377" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.values())</span>
-<span id="cb40-378"><a href="#cb40-378" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-379"><a href="#cb40-379" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-380"><a href="#cb40-380" aria-hidden="true" tabindex="-1"></a>This is how we grab _all_ the keys and values in a dictionary. However, if we want to access the value for a specific key, we can use the syntax <span class="in">`dict[key]`</span>. For example, to get the genome length for <span class="in">`human`</span>, we would use <span class="in">`genome_dict[&quot;human&quot;]`</span>.</span>
-<span id="cb40-381"><a href="#cb40-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-384"><a href="#cb40-384" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb40-385"><a href="#cb40-385" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dict_human_key</span></span>
-<span id="cb40-386"><a href="#cb40-386" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the value for the key &quot;human&quot;</span></span>
-<span id="cb40-387"><a href="#cb40-387" aria-hidden="true" tabindex="-1"></a>genome_dict[<span class="st">&quot;human&quot;</span>]</span>
-<span id="cb40-388"><a href="#cb40-388" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb40-389"><a href="#cb40-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-390"><a href="#cb40-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-391"><a href="#cb40-391" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb40-392"><a href="#cb40-392" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 3**](04_data_structures-Answer_key.qmd#exercise-3)</span></span>
-<span id="cb40-393"><a href="#cb40-393" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>How would you access the genome length for <span class="in">`corn`</span> in the <span class="in">`genome_dict`</span> dictionary?</span>
-<span id="cb40-394"><a href="#cb40-394" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb40-395"><a href="#cb40-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-396"><a href="#cb40-396" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb40-397"><a href="#cb40-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-398"><a href="#cb40-398" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](05_for_loop.qmd)</span></span>
-<span id="cb40-399"><a href="#cb40-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-400"><a href="#cb40-400" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
+<div class="sourceCode" id="cb41" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Data Structures&quot;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Write a description of the lesson here. </span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Noor Sohail</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Will Gammerdinger</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2026-03-14&quot;</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_1</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_2</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_3</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_4</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_1</span></span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_2</span></span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_3</span></span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_4</span></span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_5</span></span>
+<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_6</span></span>
+<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a><span class="an">license:</span><span class="co"> &quot;CC-BY-4.0&quot;</span></span>
+<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
+<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a><span class="co">  markdown: </span></span>
+<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a><span class="co">    wrap: 72</span></span>
+<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-29"><a href="#cb41-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-30"><a href="#cb41-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load_libraries_data</span></span>
+<span id="cb41-31"><a href="#cb41-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb41-32"><a href="#cb41-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries and data</span></span>
+<span id="cb41-33"><a href="#cb41-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-34"><a href="#cb41-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-35"><a href="#cb41-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-36"><a href="#cb41-36" aria-hidden="true" tabindex="-1"></a>Approximate time: XX minutes</span>
+<span id="cb41-37"><a href="#cb41-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-38"><a href="#cb41-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
+<span id="cb41-39"><a href="#cb41-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-40"><a href="#cb41-40" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
+<span id="cb41-41"><a href="#cb41-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-42"><a href="#cb41-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create lists and dictionaries.</span>
+<span id="cb41-43"><a href="#cb41-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Access elements in lists with slicing and indexing.</span>
+<span id="cb41-44"><a href="#cb41-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Access values in dictionaries with keys.</span>
+<span id="cb41-45"><a href="#cb41-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-46"><a href="#cb41-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
+<span id="cb41-47"><a href="#cb41-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-48"><a href="#cb41-48" aria-hidden="true" tabindex="-1"></a>When doing XYZ...</span>
+<span id="cb41-49"><a href="#cb41-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-50"><a href="#cb41-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Structures</span></span>
+<span id="cb41-51"><a href="#cb41-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-52"><a href="#cb41-52" aria-hidden="true" tabindex="-1"></a>There exists several more types of variables, commonly referred to as data structures. They can contain multiple values and are more complex than the data types we have discussed so far. </span>
+<span id="cb41-53"><a href="#cb41-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-54"><a href="#cb41-54" aria-hidden="true" tabindex="-1"></a>Table: Python data structures. {#tbl-data_structures}</span>
+<span id="cb41-55"><a href="#cb41-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-56"><a href="#cb41-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Structures       <span class="pp">|</span> What it is                             <span class="pp">|</span></span>
+<span id="cb41-57"><a href="#cb41-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------|-----------------------------------------------------|</span></span>
+<span id="cb41-58"><a href="#cb41-58" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> list       <span class="pp">|</span> An ordered, changeable collection of elements.        <span class="pp">|</span></span>
+<span id="cb41-59"><a href="#cb41-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> dictionary <span class="pp">|</span> A collection of key–value pairs.  <span class="pp">|</span></span>
+<span id="cb41-60"><a href="#cb41-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> tuple      <span class="pp">|</span> An ordered collection of elements you.   <span class="pp">|</span></span>
+<span id="cb41-61"><a href="#cb41-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> set        <span class="pp">|</span> An unordered collection of unique elements.           <span class="pp">|</span></span>
+<span id="cb41-62"><a href="#cb41-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-63"><a href="#cb41-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-64"><a href="#cb41-64" aria-hidden="true" tabindex="-1"></a>We will expand more on lists and dictionaries in this lessons.</span>
+<span id="cb41-65"><a href="#cb41-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-66"><a href="#cb41-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lists</span></span>
+<span id="cb41-67"><a href="#cb41-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-68"><a href="#cb41-68" aria-hidden="true" tabindex="-1"></a>Lists are a data structure that can be perhaps a bit daunting at first, but soon become very useful. A list is a data structure that can hold any number of any types of other data structures. </span>
+<span id="cb41-69"><a href="#cb41-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-70"><a href="#cb41-70" aria-hidden="true" tabindex="-1"></a>The analogy for a list is that you have a a box has different compartments; these compartments in a list are called **elements**. Each element contains a single value, and there is no limit to how many elements you can have. A list is assigned to a single variable, because regardless of how many elements it contains, in the end it is still a single entity (box).</span>
+<span id="cb41-71"><a href="#cb41-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-72"><a href="#cb41-72" aria-hidden="true" tabindex="-1"></a>Lists are useful for making iterative processes more efficient. For example, if you have a task that you want to repeat multiple times, you can put all the elements you want to perform the task on in a list and then perform the task on the list instead of each item individually. **This is one of the greatest strengths of using a programming language, automating repetitive tasks!**</span>
+<span id="cb41-73"><a href="#cb41-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-74"><a href="#cb41-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating a List</span></span>
+<span id="cb41-75"><a href="#cb41-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-76"><a href="#cb41-76" aria-hidden="true" tabindex="-1"></a>To create a list, we ues the <span class="in">`[]`</span> key. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There is no limit on the number of values that can be included in a list, and they can be of any data type.</span>
+<span id="cb41-77"><a href="#cb41-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-80"><a href="#cb41-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-81"><a href="#cb41-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_example</span></span>
+<span id="cb41-82"><a href="#cb41-82" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
+<span id="cb41-83"><a href="#cb41-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-84"><a href="#cb41-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-85"><a href="#cb41-85" aria-hidden="true" tabindex="-1"></a>If we inspect the <span class="in">`type()`</span>, we can see that it is a list data structure:</span>
+<span id="cb41-86"><a href="#cb41-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-89"><a href="#cb41-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-90"><a href="#cb41-90" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_type_example</span></span>
+<span id="cb41-91"><a href="#cb41-91" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>([<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>])</span>
+<span id="cb41-92"><a href="#cb41-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-93"><a href="#cb41-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-94"><a href="#cb41-94" aria-hidden="true" tabindex="-1"></a>We are not limited to including just one data type in a list. We can include any number of any data types in a list:</span>
+<span id="cb41-95"><a href="#cb41-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-98"><a href="#cb41-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-99"><a href="#cb41-99" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_mixed_example  </span></span>
+<span id="cb41-100"><a href="#cb41-100" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="st">&quot;hello&quot;</span>, <span class="fl">3.14</span>, <span class="va">True</span>]</span>
+<span id="cb41-101"><a href="#cb41-101" aria-hidden="true" tabindex="-1"></a>list1</span>
+<span id="cb41-102"><a href="#cb41-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-103"><a href="#cb41-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-104"><a href="#cb41-104" aria-hidden="true" tabindex="-1"></a><span class="fu">### Length of a List</span></span>
+<span id="cb41-105"><a href="#cb41-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-106"><a href="#cb41-106" aria-hidden="true" tabindex="-1"></a>Let us create a list of genome lengths in kilobases, which we will call <span class="in">`glengths`</span>. We also know that the species corresponding to these genome lengths are <span class="in">`ecoli`</span>, <span class="in">`human`</span>, and <span class="in">`corn`</span>. We can create two lists, one for the genome lengths and one for the species:</span>
+<span id="cb41-107"><a href="#cb41-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-108"><a href="#cb41-108" aria-hidden="true" tabindex="-1"></a>It is often useful to know how many elements are in a list. We can use the <span class="in">`len()`</span> function to determine the number of elements in a list. The <span class="in">`len()`</span> function takes a single argument, which is the list we want to determine the length of. For example, to determine how many elements are in our <span class="in">`glengths`</span> and <span class="in">`species`</span> lists, we would use the following code:</span>
+<span id="cb41-109"><a href="#cb41-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-112"><a href="#cb41-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-113"><a href="#cb41-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: len_function</span></span>
+<span id="cb41-114"><a href="#cb41-114" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric list as an object called glengths</span></span>
+<span id="cb41-115"><a href="#cb41-115" aria-hidden="true" tabindex="-1"></a>glengths <span class="op">=</span> [<span class="fl">4.6</span>, <span class="dv">3000</span>, <span class="dv">50000</span>]</span>
+<span id="cb41-116"><a href="#cb41-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-117"><a href="#cb41-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list of species and assign it to a variable called species</span></span>
+<span id="cb41-118"><a href="#cb41-118" aria-hidden="true" tabindex="-1"></a>species <span class="op">=</span> [<span class="st">&quot;ecoli&quot;</span>, <span class="st">&quot;human&quot;</span>, <span class="st">&quot;corn&quot;</span>]</span>
+<span id="cb41-119"><a href="#cb41-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-120"><a href="#cb41-120" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the number of elements in glengths and species</span></span>
+<span id="cb41-121"><a href="#cb41-121" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(glengths))</span>
+<span id="cb41-122"><a href="#cb41-122" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(species))</span>
+<span id="cb41-123"><a href="#cb41-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-124"><a href="#cb41-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-125"><a href="#cb41-125" aria-hidden="true" tabindex="-1"></a><span class="fu">### Adding Elements to a List</span></span>
+<span id="cb41-126"><a href="#cb41-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-127"><a href="#cb41-127" aria-hidden="true" tabindex="-1"></a>Perhaps we have found a new genome and we want to add its length to our list of genome lengths. We can use the <span class="in">`append()`</span> function to add an element. The <span class="in">`append()`</span> function takes a single argument, which is the element we want to add to the list. </span>
+<span id="cb41-128"><a href="#cb41-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-129"><a href="#cb41-129" aria-hidden="true" tabindex="-1"></a>For example, if we wanted to add the length of the yeast genome, which is 12,000 kb, to our list of genome lengths, we would use the following code:</span>
+<span id="cb41-130"><a href="#cb41-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-133"><a href="#cb41-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-134"><a href="#cb41-134" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_append</span></span>
+<span id="cb41-135"><a href="#cb41-135" aria-hidden="true" tabindex="-1"></a><span class="co"># Append a new genome length to glengths</span></span>
+<span id="cb41-136"><a href="#cb41-136" aria-hidden="true" tabindex="-1"></a>glengths.append(<span class="dv">12000</span>)</span>
+<span id="cb41-137"><a href="#cb41-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-138"><a href="#cb41-138" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the updated list</span></span>
+<span id="cb41-139"><a href="#cb41-139" aria-hidden="true" tabindex="-1"></a>glengths</span>
+<span id="cb41-140"><a href="#cb41-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-141"><a href="#cb41-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-142"><a href="#cb41-142" aria-hidden="true" tabindex="-1"></a>Notice that we used <span class="in">`append()`</span> to add an element to the list, but we did not assign it to a new variable. This is because the <span class="in">`append()`</span> function modifies the original list in place, so there is no need to assign it to a new variable. Functions that modify the original object are called **in-place functions**.</span>
+<span id="cb41-143"><a href="#cb41-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-144"><a href="#cb41-144" aria-hidden="true" tabindex="-1"></a>Additionally, notice that we used the syntax <span class="in">`glengths.append(12000)`</span> instead of <span class="in">`append(glengths, 12000)`</span>. This is because <span class="in">`append()`</span> is a method that belongs to the list object, while <span class="in">`len()`</span> is a built-in function that can be used on many different types of objects. Essentially, since <span class="in">`append()`</span> is a method that is specific to lists, we use the syntax <span class="in">`list.method()`</span>. As <span class="in">`len()`</span> is a function that can be used on many different types of objects, we use the syntax <span class="in">`function(object)`</span>.</span>
+<span id="cb41-145"><a href="#cb41-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-146"><a href="#cb41-146" aria-hidden="true" tabindex="-1"></a>Now that we have added a new genome length to <span class="in">`glengths`</span>, we can see that there are 4 elements in our <span class="in">`glengths`</span> list:</span>
+<span id="cb41-147"><a href="#cb41-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-150"><a href="#cb41-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-151"><a href="#cb41-151" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_len_after_append</span></span>
+<span id="cb41-152"><a href="#cb41-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the number of elements in glengths after appending a new element</span></span>
+<span id="cb41-153"><a href="#cb41-153" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(glengths)</span>
+<span id="cb41-154"><a href="#cb41-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-155"><a href="#cb41-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-156"><a href="#cb41-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### Indexing</span></span>
+<span id="cb41-157"><a href="#cb41-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-158"><a href="#cb41-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-159"><a href="#cb41-159" aria-hidden="true" tabindex="-1"></a>There may be times when we want to access a specific element in a list. We can do this with indexing. Python uses what is called **zero-based indexing**, which means that the _first element_ of a list is accessed with _index 0_, the _second element_ with _index 1_, and so on. </span>
+<span id="cb41-160"><a href="#cb41-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-161"><a href="#cb41-161" aria-hidden="true" tabindex="-1"></a>Table: Indices of list <span class="in">`species`</span>, showing how the first element is indexed at zero. {#tbl-indexing}</span>
+<span id="cb41-162"><a href="#cb41-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-163"><a href="#cb41-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Index <span class="pp">|</span> Value <span class="pp">|</span></span>
+<span id="cb41-164"><a href="#cb41-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-------|</span></span>
+<span id="cb41-165"><a href="#cb41-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0     <span class="pp">|</span> ecoli <span class="pp">|</span></span>
+<span id="cb41-166"><a href="#cb41-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1     <span class="pp">|</span> human <span class="pp">|</span></span>
+<span id="cb41-167"><a href="#cb41-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2     <span class="pp">|</span> corn  <span class="pp">|</span></span>
+<span id="cb41-168"><a href="#cb41-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-169"><a href="#cb41-169" aria-hidden="true" tabindex="-1"></a>We can access individual elements of a list using square brackets <span class="in">`[]`</span> and the index of the element we want to access. For example, to access the first element of the <span class="in">`species`</span> list, we would use <span class="in">`species[0]`</span>.</span>
+<span id="cb41-170"><a href="#cb41-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-173"><a href="#cb41-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-174"><a href="#cb41-174" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: species_elem_0</span></span>
+<span id="cb41-175"><a href="#cb41-175" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first element of species</span></span>
+<span id="cb41-176"><a href="#cb41-176" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>]</span>
+<span id="cb41-177"><a href="#cb41-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-178"><a href="#cb41-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-179"><a href="#cb41-179" aria-hidden="true" tabindex="-1"></a>Now if we wanted to access the **second** element of the <span class="in">`species`</span> list, we would use <span class="in">`species[1]`</span>. This can be a bit confusing at first, but will become easier with practice.</span>
+<span id="cb41-180"><a href="#cb41-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-183"><a href="#cb41-183" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-184"><a href="#cb41-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: species_elem_1</span></span>
+<span id="cb41-185"><a href="#cb41-185" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species</span></span>
+<span id="cb41-186"><a href="#cb41-186" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>]</span>
+<span id="cb41-187"><a href="#cb41-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb41-188"><a href="#cb41-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-189"><a href="#cb41-189" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot;}</span>
+<span id="cb41-190"><a href="#cb41-190" aria-hidden="true" tabindex="-1"></a><span class="fu"># R is one-indexed</span></span>
+<span id="cb41-191"><a href="#cb41-191" aria-hidden="true" tabindex="-1"></a>If you have used R before, you may be used to one-based indexing, which means that the first element of a list is accessed with index 1. As you have now seen, in Python, the first element is accessed with index 0. So if you are going back and forth between R and Python, it is important to remember that the indexing is different in the two languages.</span>
+<span id="cb41-192"><a href="#cb41-192" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb41-193"><a href="#cb41-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-194"><a href="#cb41-194" aria-hidden="true" tabindex="-1"></a>If you want to access the last element of a list, you can use the index <span class="in">`-1`</span>. This is a special index that always refers to the last element of the list, regardless of how many elements are in the list. For example, to access the last element of the <span class="in">`glengths`</span> list, we would use <span class="in">`glengths[-1]`</span>.</span>
+<span id="cb41-195"><a href="#cb41-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-198"><a href="#cb41-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-199"><a href="#cb41-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: glengths_last_elem</span></span>
+<span id="cb41-200"><a href="#cb41-200" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the last element of glengths</span></span>
+<span id="cb41-201"><a href="#cb41-201" aria-hidden="true" tabindex="-1"></a>glengths[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb41-202"><a href="#cb41-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-203"><a href="#cb41-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-204"><a href="#cb41-204" aria-hidden="true" tabindex="-1"></a>We should see the 12,000 kb genome length that we added in the previous section with the <span class="in">`append()`</span> function.</span>
+<span id="cb41-205"><a href="#cb41-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-206"><a href="#cb41-206" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb41-207"><a href="#cb41-207" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](04_data_structures-Answer_key.qmd#exercise-1)</span></span>
+<span id="cb41-208"><a href="#cb41-208" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How would you access the fourth element of the <span class="in">`species`</span> list and what is it?</span>
+<span id="cb41-209"><a href="#cb41-209" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Add <span class="in">`&quot;yeast&quot;`</span> to the <span class="in">`species`</span> list and print the updated list.</span>
+<span id="cb41-210"><a href="#cb41-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-213"><a href="#cb41-213" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-214"><a href="#cb41-214" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: hidden_exercise_2</span></span>
+<span id="cb41-215"><a href="#cb41-215" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb41-216"><a href="#cb41-216" aria-hidden="true" tabindex="-1"></a><span class="co"># Append yeast to the species list</span></span>
+<span id="cb41-217"><a href="#cb41-217" aria-hidden="true" tabindex="-1"></a>species.append(<span class="st">&quot;yeast&quot;</span>)</span>
+<span id="cb41-218"><a href="#cb41-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-219"><a href="#cb41-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-220"><a href="#cb41-220" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb41-221"><a href="#cb41-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-222"><a href="#cb41-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Nested Lists</span></span>
+<span id="cb41-223"><a href="#cb41-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-224"><a href="#cb41-224" aria-hidden="true" tabindex="-1"></a>We can even have lists of lists! For example, we could have a list that contains both our <span class="in">`glengths`</span> and <span class="in">`species`</span> lists:</span>
+<span id="cb41-225"><a href="#cb41-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-228"><a href="#cb41-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-229"><a href="#cb41-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nested_list_example</span></span>
+<span id="cb41-230"><a href="#cb41-230" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a nested list that contains both glengths and species</span></span>
+<span id="cb41-231"><a href="#cb41-231" aria-hidden="true" tabindex="-1"></a>nested_list <span class="op">=</span> [glengths, species]</span>
+<span id="cb41-232"><a href="#cb41-232" aria-hidden="true" tabindex="-1"></a>nested_list</span>
+<span id="cb41-233"><a href="#cb41-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb41-234"><a href="#cb41-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-235"><a href="#cb41-235" aria-hidden="true" tabindex="-1"></a>If we wanted to access the first element of the <span class="in">`nested_list`</span>, we would use <span class="in">`nested_list[0]`</span>, which would give us the <span class="in">`glengths`</span> list. If we wanted to access the second element of the <span class="in">`nested_list`</span>, we would use <span class="in">`nested_list[1]`</span>, which would give us the <span class="in">`species`</span> list.</span>
+<span id="cb41-236"><a href="#cb41-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-239"><a href="#cb41-239" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-240"><a href="#cb41-240" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nested_list_access</span></span>
+<span id="cb41-241"><a href="#cb41-241" aria-hidden="true" tabindex="-1"></a><span class="co"># Access species inside nested_list</span></span>
+<span id="cb41-242"><a href="#cb41-242" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>]  </span>
+<span id="cb41-243"><a href="#cb41-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-244"><a href="#cb41-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-245"><a href="#cb41-245" aria-hidden="true" tabindex="-1"></a>But perhaps we wanted to access the second element of the <span class="in">`species`</span> list, which is <span class="in">`human`</span>. To do this, we would first access the <span class="in">`species`</span> list with <span class="in">`nested_list[1]`</span>, and then access the second element of that list with <span class="in">`[1]`</span>. So the code to access <span class="in">`human`</span> would be <span class="in">`nested_list[1][1]`</span>.</span>
+<span id="cb41-246"><a href="#cb41-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-249"><a href="#cb41-249" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-250"><a href="#cb41-250" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: nested_list_access_second_element</span></span>
+<span id="cb41-251"><a href="#cb41-251" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species inside nested_list</span></span>
+<span id="cb41-252"><a href="#cb41-252" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>][<span class="dv">1</span>]</span>
+<span id="cb41-253"><a href="#cb41-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-254"><a href="#cb41-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-255"><a href="#cb41-255" aria-hidden="true" tabindex="-1"></a>This stucture is actually quite similar to how matrices are structured (which we will discuss how to utilize matrices with <span class="in">`numpy`</span> in a future lesson). In a matrix, you have rows and columns, and you can access elements by specifying the row and column indices. In a nested list, you have lists within lists, and you can access elements by specifying the indices of the outer list and then the inner list.</span>
+<span id="cb41-256"><a href="#cb41-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-257"><a href="#cb41-257" aria-hidden="true" tabindex="-1"></a><span class="fu">## Accessing Multiple Elements in a List</span></span>
+<span id="cb41-258"><a href="#cb41-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-259"><a href="#cb41-259" aria-hidden="true" tabindex="-1"></a>While we can directly access individual elements in a list with indexing, we may want to access multiple elements at once. We can do this with slicing.</span>
+<span id="cb41-260"><a href="#cb41-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-261"><a href="#cb41-261" aria-hidden="true" tabindex="-1"></a><span class="fu">### Slicing</span></span>
+<span id="cb41-262"><a href="#cb41-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-263"><a href="#cb41-263" aria-hidden="true" tabindex="-1"></a>Slicing is a way to access a range of elements in a list. We can use slicing to access a subset of the elements in a list. The syntax for slicing is <span class="in">`list[start:stop]`</span>, where <span class="in">`start`</span> is the index of the first element we want to access and <span class="in">`stop`</span> is the index of the first element we do not want to access. </span>
+<span id="cb41-264"><a href="#cb41-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-265"><a href="#cb41-265" aria-hidden="true" tabindex="-1"></a>So if we wanted to access the first three elements we would call <span class="in">`species[0:3]`</span>.</span>
+<span id="cb41-266"><a href="#cb41-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-269"><a href="#cb41-269" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-270"><a href="#cb41-270" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: slicing_example</span></span>
+<span id="cb41-271"><a href="#cb41-271" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three elements of species</span></span>
+<span id="cb41-272"><a href="#cb41-272" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>:<span class="dv">3</span>]</span>
+<span id="cb41-273"><a href="#cb41-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb41-274"><a href="#cb41-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-275"><a href="#cb41-275" aria-hidden="true" tabindex="-1"></a>If you wanted to access from <span class="in">`start`</span> all the way to the end of the list, you can omit the <span class="in">`stop`</span> index. For example, if we wanted to access from the second element to the end of the list, we would use <span class="in">`species[1:]`</span>.</span>
+<span id="cb41-276"><a href="#cb41-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-279"><a href="#cb41-279" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-280"><a href="#cb41-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: slicing_example_to_end</span></span>
+<span id="cb41-281"><a href="#cb41-281" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get all elements from the second element to the end</span></span>
+<span id="cb41-282"><a href="#cb41-282" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>:]</span>
+<span id="cb41-283"><a href="#cb41-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-284"><a href="#cb41-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-285"><a href="#cb41-285" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb41-286"><a href="#cb41-286" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](04_data_structures-Answer_key.qmd#exercise-2)</span></span>
+<span id="cb41-287"><a href="#cb41-287" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How might you access the last two elements of the <span class="in">`species`</span> list using slicing?</span>
+<span id="cb41-288"><a href="#cb41-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-289"><a href="#cb41-289" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
+<span id="cb41-290"><a href="#cb41-290" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hint </span></span>
+<span id="cb41-291"><a href="#cb41-291" aria-hidden="true" tabindex="-1"></a>Recall that we can use _negative indexing_ to access elements from the end of the list.</span>
+<span id="cb41-292"><a href="#cb41-292" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb41-293"><a href="#cb41-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-294"><a href="#cb41-294" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>You can actually slice with <span class="in">`steps`</span> using the syntax <span class="in">`list[start:stop:step]`</span>. This allows you to access every <span class="in">`step`</span>-th element in the range from <span class="in">`start`</span> to <span class="in">`stop`</span>. How would you access every other element in the <span class="in">`species`</span> list using slicing?</span>
+<span id="cb41-295"><a href="#cb41-295" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb41-296"><a href="#cb41-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-297"><a href="#cb41-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## Strings are Lists!</span></span>
+<span id="cb41-298"><a href="#cb41-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-299"><a href="#cb41-299" aria-hidden="true" tabindex="-1"></a>Earlier, we talked about strings as a data type that is used to represent text. However, strings are actually a special type of list! Each character in a string is an element in the list, and we can access them with indexing and slicing just like we would with any other list. This is one of many ways to access a substring of a string.</span>
+<span id="cb41-300"><a href="#cb41-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-301"><a href="#cb41-301" aria-hidden="true" tabindex="-1"></a>For example, if we have a string <span class="in">`s = &quot;hello&quot;`</span>, we can access the first character with <span class="in">`s[0]`</span>, which would give us <span class="in">`h`</span>. </span>
+<span id="cb41-302"><a href="#cb41-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-305"><a href="#cb41-305" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-306"><a href="#cb41-306" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_slicing_example</span></span>
+<span id="cb41-307"><a href="#cb41-307" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three characters of a string</span></span>
+<span id="cb41-308"><a href="#cb41-308" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&quot;hello&quot;</span></span>
+<span id="cb41-309"><a href="#cb41-309" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">0</span>:<span class="dv">3</span>]</span>
+<span id="cb41-310"><a href="#cb41-310" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-311"><a href="#cb41-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-312"><a href="#cb41-312" aria-hidden="true" tabindex="-1"></a>We can also slice the string to get a subset of the characters. For example, <span class="in">`s[1:4]`</span> would give us <span class="in">`ell`</span>.</span>
+<span id="cb41-313"><a href="#cb41-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-316"><a href="#cb41-316" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-317"><a href="#cb41-317" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_slicing_example_2</span></span>
+<span id="cb41-318"><a href="#cb41-318" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get characters from index 1 to index 3</span></span>
+<span id="cb41-319"><a href="#cb41-319" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>:<span class="dv">4</span>]</span>
+<span id="cb41-320"><a href="#cb41-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-321"><a href="#cb41-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-322"><a href="#cb41-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-323"><a href="#cb41-323" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dictionaries</span></span>
+<span id="cb41-324"><a href="#cb41-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-325"><a href="#cb41-325" aria-hidden="true" tabindex="-1"></a>Dictionaries are another data structure that are quite similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary is unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. </span>
+<span id="cb41-326"><a href="#cb41-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-327"><a href="#cb41-327" aria-hidden="true" tabindex="-1"></a>So let us begin by creating a dictionary that contains the species names as keys and their corresponding genome lengths as values. This is a more intuitive way to organize our data, as we can easily access the genome length for a specific species by using the species name as the key.</span>
+<span id="cb41-328"><a href="#cb41-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-329"><a href="#cb41-329" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating a Dictionary</span></span>
+<span id="cb41-330"><a href="#cb41-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-331"><a href="#cb41-331" aria-hidden="true" tabindex="-1"></a>We can create a dictionary using curly braces <span class="in">`{}`</span> and separating the keys and values with colons <span class="in">`:`</span>. For example, we can create a dictionary called <span class="in">`genome_dict`</span> like this:</span>
+<span id="cb41-332"><a href="#cb41-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-333"><a href="#cb41-333" aria-hidden="true" tabindex="-1"></a><span class="in">````{python}</span></span>
+<span id="cb41-334"><a href="#cb41-334" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_genome_dict</span></span>
+<span id="cb41-335"><a href="#cb41-335" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary with species as keys and genome lengths as values</span></span>
+<span id="cb41-336"><a href="#cb41-336" aria-hidden="true" tabindex="-1"></a>genome_dict <span class="op">=</span> {</span>
+<span id="cb41-337"><a href="#cb41-337" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ecoli&quot;</span>: <span class="fl">4.6</span>,</span>
+<span id="cb41-338"><a href="#cb41-338" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;human&quot;</span>: <span class="dv">3000</span>,</span>
+<span id="cb41-339"><a href="#cb41-339" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corn&quot;</span>: <span class="dv">50000</span>,</span>
+<span id="cb41-340"><a href="#cb41-340" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;yeast&quot;</span>: <span class="dv">12000</span></span>
+<span id="cb41-341"><a href="#cb41-341" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb41-342"><a href="#cb41-342" aria-hidden="true" tabindex="-1"></a>genome_dict</span>
+<span id="cb41-343"><a href="#cb41-343" aria-hidden="true" tabindex="-1"></a><span class="in">````</span>  </span>
+<span id="cb41-344"><a href="#cb41-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-345"><a href="#cb41-345" aria-hidden="true" tabindex="-1"></a>We can represent our dictionary similarly to how we did with the list, but this time we will have keys instead of indices.</span>
+<span id="cb41-346"><a href="#cb41-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-347"><a href="#cb41-347" aria-hidden="true" tabindex="-1"></a>Table: Dictionary, where keys are species name and values are length of the species&#39; genome in kilobases. {#tbl-dict}</span>
+<span id="cb41-348"><a href="#cb41-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-349"><a href="#cb41-349" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Key   <span class="pp">|</span> Value <span class="pp">|</span></span>
+<span id="cb41-350"><a href="#cb41-350" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-------|</span></span>
+<span id="cb41-351"><a href="#cb41-351" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ecoli <span class="pp">|</span> 4.6   <span class="pp">|</span></span>
+<span id="cb41-352"><a href="#cb41-352" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> human <span class="pp">|</span> 3000  <span class="pp">|</span></span>
+<span id="cb41-353"><a href="#cb41-353" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> corn  <span class="pp">|</span> 50000 <span class="pp">|</span></span>
+<span id="cb41-354"><a href="#cb41-354" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> yeast <span class="pp">|</span> 12000 <span class="pp">|</span></span>
+<span id="cb41-355"><a href="#cb41-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-356"><a href="#cb41-356" aria-hidden="true" tabindex="-1"></a>And if we investigate the <span class="in">`type()`</span> of <span class="in">`genome_dict`</span>, we can see that it is a dictionary data structure:</span>
+<span id="cb41-357"><a href="#cb41-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-360"><a href="#cb41-360" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-361"><a href="#cb41-361" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dict_type</span></span>
+<span id="cb41-362"><a href="#cb41-362" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(genome_dict)</span>
+<span id="cb41-363"><a href="#cb41-363" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-364"><a href="#cb41-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-365"><a href="#cb41-365" aria-hidden="true" tabindex="-1"></a><span class="fu">### Accessing `keys` and `values`</span></span>
+<span id="cb41-366"><a href="#cb41-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-367"><a href="#cb41-367" aria-hidden="true" tabindex="-1"></a>In a dictionary, we can access the keys and values separately. We can use the <span class="in">`keys()`</span> method to get a list of all the keys in the dictionary, and the <span class="in">`values()`</span> method to get a list of all the values in the dictionary. For example, to get the keys and values of our <span class="in">`genome_dict`</span>, we would use the following code:</span>
+<span id="cb41-368"><a href="#cb41-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-371"><a href="#cb41-371" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-372"><a href="#cb41-372" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dict_keys_values</span></span>
+<span id="cb41-373"><a href="#cb41-373" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the keys of the dictionary</span></span>
+<span id="cb41-374"><a href="#cb41-374" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.keys()) </span>
+<span id="cb41-375"><a href="#cb41-375" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the values of the dictionary</span></span>
+<span id="cb41-376"><a href="#cb41-376" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(genome_dict.values())</span>
+<span id="cb41-377"><a href="#cb41-377" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-378"><a href="#cb41-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-379"><a href="#cb41-379" aria-hidden="true" tabindex="-1"></a>This is how we grab _all_ the keys and values in a dictionary. However, if we want to access the value for a specific key, we can use the syntax <span class="in">`dict[key]`</span>. For example, to get the genome length for <span class="in">`human`</span>, we would use <span class="in">`genome_dict[&quot;human&quot;]`</span>.</span>
+<span id="cb41-380"><a href="#cb41-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-383"><a href="#cb41-383" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb41-384"><a href="#cb41-384" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dict_human_key</span></span>
+<span id="cb41-385"><a href="#cb41-385" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the value for the key &quot;human&quot;</span></span>
+<span id="cb41-386"><a href="#cb41-386" aria-hidden="true" tabindex="-1"></a>genome_dict[<span class="st">&quot;human&quot;</span>]</span>
+<span id="cb41-387"><a href="#cb41-387" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb41-388"><a href="#cb41-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-389"><a href="#cb41-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-390"><a href="#cb41-390" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb41-391"><a href="#cb41-391" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 3**](04_data_structures-Answer_key.qmd#exercise-3)</span></span>
+<span id="cb41-392"><a href="#cb41-392" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>How would you access the genome length for <span class="in">`corn`</span> in the <span class="in">`genome_dict`</span> dictionary?</span>
+<span id="cb41-393"><a href="#cb41-393" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb41-394"><a href="#cb41-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-395"><a href="#cb41-395" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb41-396"><a href="#cb41-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-397"><a href="#cb41-397" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](05_for_loop.qmd)</span></span>
+<span id="cb41-398"><a href="#cb41-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-399"><a href="#cb41-399" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
