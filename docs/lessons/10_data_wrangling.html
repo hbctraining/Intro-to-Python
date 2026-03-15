@@ -4827,7 +4827,6 @@ main img,
 display: block;
 margin-left: auto;
 margin-right: auto;
-
 margin-top: 1em;
 margin-bottom: 1em;
 }
@@ -4913,9 +4912,8 @@ max-width: 100%;
 width: 100%;
 }
 
-table {
 
-width: 100%;
+table {
 border-collapse: collapse;
 border: 1px solid #d0d0d0; 
 border-radius: 6px;
@@ -4942,6 +4940,10 @@ background: #a51c30 !important;
 color: #ffffff !important; 
 font-weight: 700 !important; 
 border: 1px solid #8b1628 !important; 
+}
+
+.quarto-table table:not(.dataframe) {
+width: 100%;
 }
 
 .quarto-float-tbl .quarto-float-caption,
@@ -5004,18 +5006,16 @@ justify-content: center !important;
 
 
 
-.cell-output,
 .cell-output-display {
-max-width: 100%;
-overflow-x: auto; 
+max-width: 100% !important;
+overflow-x: auto !important;
 }
 
-table.dataframe {
-width: auto !important; 
-max-width: none !important; 
+.cell-output-display table.dataframe {
+width: auto !important;
+max-width: none !important;
 }
 
-.cell-output-display > table.dataframe,
 .cell-output-display > div > table.dataframe {
 width: auto !important;
 max-width: none !important;
@@ -5634,8 +5634,6 @@ Table 2: Metadata for 12 samples, where rows are samples and columns are differ
 <hr>
 <p><a href="../lessons/11_lesson.html">Next Lesson &gt;&gt;</a></p>
 <p><a href="../schedule/schedule.html">Back to Schedule</a></p>
-<hr>
-<p><em>These materials have been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
 
 
 <!-- -->
@@ -6257,10 +6255,6 @@ Table 2: Metadata for 12 samples, where rows are samples and columns are differ
 <span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](11_lesson.qmd)</span></span>
 <span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
-<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a>*These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
