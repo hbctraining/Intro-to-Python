@@ -1,0 +1,358 @@
+---
+title: "Data Structures"
+description: |
+  Write a description of the lesson here. 
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
+categories: 
+  - category_1
+  - category_2
+  - category_3
+  - category_4
+keywords:
+  - keyword_1
+  - keyword_2
+  - keyword_3
+  - keyword_4
+  - keyword_5
+  - keyword_6
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{python}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+
+```
+
+Approximate time: XX minutes
+
+## Learning Objectives 
+
+In this lesson, we will:
+
+- Create lists and dictionaries.
+- Access elements in lists with slicing and indexing.
+- Access values in dictionaries with keys.
+
+## Overview of lesson
+
+When doing XYZ...
+
+## Data Structures
+
+There exists several more types of variables, commonly referred to as data structures. They can contain multiple values and are more complex than the data types we have discussed so far. 
+
+Table: Python data structures. {#tbl-data_structures}
+
+| Data Structures       | What it is                             |
+|------------|-----------------------------------------------------|
+| list       | An ordered, changeable collection of elements.        |
+| dictionary | A collection of key–value pairs.  |
+| tuple      | An ordered collection of elements you.   |
+| set        | An unordered collection of unique elements.           |
+
+
+We will expand more on lists and dictionaries in this lessons.
+
+## Lists
+
+Lists are a data structure that can be perhaps a bit daunting at first, but soon become very useful. A list is a data structure that can hold any number of any types of other data structures. 
+
+The analogy for a list is that you have a a box has different compartments; these compartments in a list are called **elements**. Each element contains a single value, and there is no limit to how many elements you can have. A list is assigned to a single variable, because regardless of how many elements it contains, in the end it is still a single entity (box).
+
+Lists are useful for making iterative processes more efficient. For example, if you have a task that you want to repeat multiple times, you can put all the elements you want to perform the task on in a list and then perform the task on the list instead of each item individually. **This is one of the greatest strengths of using a programming language, automating repetitive tasks!**
+
+### Creating a List
+
+To create a list, we ues the `[]` key. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There is no limit on the number of values that can be included in a list, and they can be of any data type.
+
+```{python}
+#| label: list_example
+[1, 6, 7]
+```
+
+If we inspect the `type()`, we can see that it is a list data structure:
+
+```{python}
+#| label: list_type_example
+type([1, 6, 7])
+```
+
+We are not limited to including just one data type in a list. We can include any number of any data types in a list:
+
+```{python}
+#| label: list_mixed_example  
+list1 = [1, "hello", 3.14, True]
+list1
+```
+
+### Length of a List
+
+Let us create a list of genome lengths in kilobases, which we will call `glengths`. We also know that the species corresponding to these genome lengths are `ecoli`, `human`, and `corn`. We can create two lists, one for the genome lengths and one for the species:
+
+It is often useful to know how many elements are in a list. We can use the `len()` function to determine the number of elements in a list. The `len()` function takes a single argument, which is the list we want to determine the length of. For example, to determine how many elements are in our `glengths` and `species` lists, we would use the following code:
+
+```{python}
+#| label: len_function
+# Create a numeric list as an object called glengths
+glengths = [4.6, 3000, 50000]
+
+# Create a list of species and assign it to a variable called species
+species = ["ecoli", "human", "corn"]
+
+# Calculate the number of elements in glengths and species
+print(len(glengths))
+print(len(species))
+```
+
+### Adding Elements to a List
+
+Perhaps we have found a new genome and we want to add its length to our list of genome lengths. We can use the `append()` function to add an element. The `append()` function takes a single argument, which is the element we want to add to the list. 
+
+For example, if we wanted to add the length of the yeast genome, which is 12,000 kb, to our list of genome lengths, we would use the following code:
+
+```{python}
+#| label: list_append
+# Append a new genome length to glengths
+glengths.append(12000)
+
+# Print the updated list
+glengths
+```
+
+Notice that we used `append()` to add an element to the list, but we did not assign it to a new variable. This is because the `append()` function modifies the original list in place, so there is no need to assign it to a new variable. Functions that modify the original object are called **in-place functions**.
+
+Additionally, notice that we used the syntax `glengths.append(12000)` instead of `append(glengths, 12000)`. This is because `append()` is a method that belongs to the list object, while `len()` is a built-in function that can be used on many different types of objects. Essentially, since `append()` is a method that is specific to lists, we use the syntax `list.method()`. As `len()` is a function that can be used on many different types of objects, we use the syntax `function(object)`.
+
+Now that we have added a new genome length to `glengths`, we can see that there are 4 elements in our `glengths` list:
+
+```{python}
+#| label: list_len_after_append
+# Calculate the number of elements in glengths after appending a new element
+len(glengths)
+```
+
+### Indexing
+
+
+There may be times when we want to access a specific element in a list. We can do this with indexing. Python uses what is called **zero-based indexing**, which means that the _first element_ of a list is accessed with _index 0_, the _second element_ with _index 1_, and so on. 
+
+Table: Indices of list `species`, showing how the first element is indexed at zero. {#tbl-indexing}
+
+| Index | Value |
+|-------|-------|
+| 0     | ecoli |
+| 1     | human |
+| 2     | corn  |
+
+We can access individual elements of a list using square brackets `[]` and the index of the element we want to access. For example, to access the first element of the `species` list, we would use `species[0]`.
+
+```{python}
+#| label: species_elem_0
+# Access the first element of species
+species[0]
+```
+
+Now if we wanted to access the **second** element of the `species` list, we would use `species[1]`. This can be a bit confusing at first, but will become easier with practice.
+
+```{python}
+#| label: species_elem_1
+# Access the second element of species
+species[1]
+``` 
+
+::: {.callout-note collapse="true"}
+# R is one-indexed
+If you have used R before, you may be used to one-based indexing, which means that the first element of a list is accessed with index 1. As you have now seen, in Python, the first element is accessed with index 0. So if you are going back and forth between R and Python, it is important to remember that the indexing is different in the two languages.
+:::
+
+If you want to access the last element of a list, you can use the index `-1`. This is a special index that always refers to the last element of the list, regardless of how many elements are in the list. For example, to access the last element of the `glengths` list, we would use `glengths[-1]`.
+
+```{python}
+#| label: glengths_last_elem
+# Access the last element of glengths
+glengths[-1]
+```
+
+We should see the 12,000 kb genome length that we added in the previous section with the `append()` function.
+
+:::{.callout-tip}
+# [**Exercise 1**](04_data_structures-Answer_key.qmd#exercise-1)
+1. How would you access the fourth element of the `species` list and what is it?
+2. Add `"yeast"` to the `species` list and print the updated list.
+
+```{python}
+#| label: hidden_exercise_2
+#| echo: false
+# Append yeast to the species list
+species.append("yeast")
+```
+
+:::
+
+### Nested Lists
+
+We can even have lists of lists! For example, we could have a list that contains both our `glengths` and `species` lists:
+
+```{python}
+#| label: nested_list_example
+#| echo: false
+# Create a nested list that contains both glengths and species
+nested_list = [glengths, species]
+nested_list
+``` 
+
+If we wanted to access the first element of the `nested_list`, we would use `nested_list[0]`, which would give us the `glengths` list. If we wanted to access the second element of the `nested_list`, we would use `nested_list[1]`, which would give us the `species` list.
+
+```{python}
+#| label: nested_list_access
+# Access species inside nested_list
+nested_list[1]  
+```
+
+But perhaps we wanted to access the second element of the `species` list, which is `human`. To do this, we would first access the `species` list with `nested_list[1]`, and then access the second element of that list with `[1]`. So the code to access `human` would be `nested_list[1][1]`.
+
+```{python}
+#| label: nested_list_access_second_element
+# Access the second element of species inside nested_list
+nested_list[1][1]
+```
+
+This stucture is actually quite similar to how matrices are structured (which we will discuss how to utilize matrices with `numpy` in a future lesson). In a matrix, you have rows and columns, and you can access elements by specifying the row and column indices. In a nested list, you have lists within lists, and you can access elements by specifying the indices of the outer list and then the inner list.
+
+## Accessing Multiple Elements in a List
+
+While we can directly access individual elements in a list with indexing, we may want to access multiple elements at once. We can do this with slicing.
+
+### Slicing
+
+Slicing is a way to access a range of elements in a list. We can use slicing to access a subset of the elements in a list. The syntax for slicing is `list[start:stop]`, where `start` is the index of the first element we want to access and `stop` is the index of the first element we do not want to access. 
+
+So if we wanted to access the first three elements we would call `species[0:3]`.
+
+```{python}
+#| label: slicing_example
+# Create a slice to get the first three elements of species
+species[0:3]
+``` 
+
+If you wanted to access from `start` all the way to the end of the list, you can omit the `stop` index. For example, if we wanted to access from the second element to the end of the list, we would use `species[1:]`.
+
+```{python}
+#| label: slicing_example_to_end
+# Create a slice to get all elements from the second element to the end
+species[1:]
+```
+
+:::{.callout-tip}
+# [**Exercise 2**](04_data_structures-Answer_key.qmd#exercise-2)
+3. How might you access the last two elements of the `species` list using slicing?
+
+::: callout-tip
+# Hint 
+Recall that we can use _negative indexing_ to access elements from the end of the list.
+:::
+
+4. You can actually slice with `steps` using the syntax `list[start:stop:step]`. This allows you to access every `step`-th element in the range from `start` to `stop`. How would you access every other element in the `species` list using slicing?
+:::
+
+## Strings are Lists!
+
+Earlier, we talked about strings as a data type that is used to represent text. However, strings are actually a special type of list! Each character in a string is an element in the list, and we can access them with indexing and slicing just like we would with any other list. This is one of many ways to access a substring of a string.
+
+For example, if we have a string `s = "hello"`, we can access the first character with `s[0]`, which would give us `h`. 
+
+```{python}
+#| label: string_slicing_example
+# Create a slice to get the first three characters of a string
+s = "hello"
+s[0:3]
+```
+
+We can also slice the string to get a subset of the characters. For example, `s[1:4]` would give us `ell`.
+
+```{python}
+#| label: string_slicing_example_2
+# Create a slice to get characters from index 1 to index 3
+s[1:4]
+```
+
+
+## Dictionaries
+
+Dictionaries are another data structure that are quite similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary is unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. 
+
+So let us begin by creating a dictionary that contains the species names as keys and their corresponding genome lengths as values. This is a more intuitive way to organize our data, as we can easily access the genome length for a specific species by using the species name as the key.
+
+### Creating a Dictionary
+
+We can create a dictionary using curly braces `{}` and separating the keys and values with colons `:`. For example, we can create a dictionary called `genome_dict` like this:
+
+````{python}
+#| label: create_genome_dict
+# Create a dictionary with species as keys and genome lengths as values
+genome_dict = {
+    "ecoli": 4.6,
+    "human": 3000,
+    "corn": 50000,
+    "yeast": 12000
+}
+genome_dict
+````  
+
+We can represent our dictionary similarly to how we did with the list, but this time we will have keys instead of indices.
+
+Table: Dictionary, where keys are species name and values are length of the species' genome in kilobases. {#tbl-dict}
+
+| Key   | Value |
+|-------|-------|
+| ecoli | 4.6   |
+| human | 3000  |
+| corn  | 50000 |
+| yeast | 12000 |
+
+And if we investigate the `type()` of `genome_dict`, we can see that it is a dictionary data structure:
+
+```{python}
+#| label: dict_type
+type(genome_dict)
+```
+
+### Accessing `keys` and `values`
+
+In a dictionary, we can access the keys and values separately. We can use the `keys()` method to get a list of all the keys in the dictionary, and the `values()` method to get a list of all the values in the dictionary. For example, to get the keys and values of our `genome_dict`, we would use the following code:
+
+```{python}
+#| label: dict_keys_values
+# Get the keys of the dictionary
+print(genome_dict.keys()) 
+# Get the values of the dictionary
+print(genome_dict.values())
+```
+
+This is how we grab _all_ the keys and values in a dictionary. However, if we want to access the value for a specific key, we can use the syntax `dict[key]`. For example, to get the genome length for `human`, we would use `genome_dict["human"]`.
+
+```{python}
+#| label: dict_human_key
+# Access the value for the key "human"
+genome_dict["human"]
+```
+
+
+:::{.callout-tip}
+# [**Exercise 3**](04_data_structures-Answer_key.qmd#exercise-3)
+5. How would you access the genome length for `corn` in the `genome_dict` dictionary?
+:::
+
+***
+
+[Next Lesson >>](05_lesson.qmd)
+
+[Back to Schedule](../schedule/schedule.qmd)

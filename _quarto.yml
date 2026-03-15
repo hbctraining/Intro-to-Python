@@ -34,25 +34,19 @@ website:
     collapse-level: 1     # At what header level to start collapsing
     # contents: auto      # Creates automatic TOC from page headers (no sections)
     contents:
-      - section: "Pre-reading:"
-        contents:
-        - lessons/01_lesson.qmd
-        - lessons/02_lesson.qmd
-        - lessons/03_lesson.qmd
 
       - section: "Day 1:"
         contents:
-          - lessons/04_lesson.qmd
-          - lessons/05_lesson.qmd
+          - lessons/01_setting_up.qmd
+          - lessons/02_variables.qmd
       
       - section: "Day 1 Self-learning:"
         contents:
-          - lessons/06_lesson.qmd
-          - lessons/07_lesson.qmd
+          - lessons/03_conditional_statements.qmd
           
       - section: "Day 2:"
         contents:
-          - lessons/08_lesson.qmd
+          - lessons/04_data_structures.qmd
           - lessons/09_lesson.qmd
           
       - section: "Day 2 Self-learning:"
@@ -65,7 +59,7 @@ website:
           - lessons/12_lesson.qmd
           - lessons/13_lesson.qmd
 
-      - section: "Day 3 Self-learning::"
+      - section: "Day 3 Self-learning:"
         contents:
           - lessons/14_lesson.qmd
           - lessons/15_lesson.qmd

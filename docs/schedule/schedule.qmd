@@ -21,7 +21,7 @@ toc: false
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Lesson 06](../lessons/06_lesson.qmd)
+   1. [Conditional Statements](../lessons/03_conditional_statements.qmd)
       
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -59,16 +59,16 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [Lesson 08](../lessons/08_lesson.qmd) | Instructor_name |
+| 10:30 - 10:55 | [Data Structures](../lessons/04_data_structures.qmd) | Instructor_name |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [Lesson 09](../lessons/09_lesson.qmd) | Instructor_name |
+| 11:00 - 11:55 | [For Loops](../lessons/09_lesson.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
 
 ### Before the next class:
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Lesson 10](../lessons/10_lesson.qmd)
+   1. [Functions](../lessons/10_lesson.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -80,7 +80,7 @@ I. Please **study the contents** and **work through all the code** within the fo
         - Learning Objective 3
       :::
 
-   2. [Lesson 11](../lessons/11_lesson.qmd)
+   2. [Libraries](../lessons/11_lesson.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -106,16 +106,16 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [Lesson 12](../lessons/12_lesson.qmd) | Instructor_name |
+| 10:30 - 10:55 | [Installing Packages](../lessons/12_lesson.qmd) | Instructor_name |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [Lesson 13](../lessons/13_lesson.qmd) | Instructor_name |
+| 11:00 - 11:55 | [Pandas and NumPy](../lessons/13_lesson.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
 
 ### Before the next class:
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Lesson 14](../lessons/14_lesson.qmd)
+   1. [Data Wrangling](../lessons/14_lesson.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -127,7 +127,7 @@ I. Please **study the contents** and **work through all the code** within the fo
         - Learning Objective 3
       :::
 
-   2. [Lesson 15](../lessons/15_lesson.qmd)
+   2. [Simple MatPlotLib Plots](../lessons/15_lesson.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -154,7 +154,7 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [Lesson 16](../lessons/16_lesson.qmd) | Instructor_name |
+| 10:30 - 10:55 | [Seaborn Plots](../lessons/16_lesson.qmd) | Instructor_name |
 | 10:55 - 11:00 | Break | |
 | 11:00 - 11:55 | [Lesson 17](../lessons/17_lesson.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |

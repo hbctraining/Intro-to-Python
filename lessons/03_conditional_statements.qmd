@@ -1,0 +1,320 @@
+---
+title: "Conditional Statements"
+description: |
+  Write a description of the lesson here. 
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
+categories: 
+  - category_1
+  - category_2
+  - category_3
+  - category_4
+keywords:
+  - keyword_1
+  - keyword_2
+  - keyword_3
+  - keyword_4
+  - keyword_5
+  - keyword_6
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+
+```
+
+Approximate time: XX minutes
+
+## Learning Objectives 
+
+In this lesson, we will:
+
+- Create conditional statements using `if`, `elif`, and `else`
+- Use the `in` operator to check for membership in a collection
+- Use logical operators to test multiple conditions at the same time
+
+## Overview of lesson
+
+When doing XYZ...
+
+## `if` Statements
+
+In Python, `if` is one of those key words that is off limits for variable names. It is used to create conditional statements, which allow us to execute certain blocks of code only if the specified conditions are met. 
+
+Essentially, we are evaluating whether or not a condition is `True` or `False` (boolean) and then executing code based on that result.
+
+### Syntax of `if` Statements
+
+When we want to check a condition, we can use an `if` statement. Typically we are checking if a variable is:
+
+- Greater than `>` or less than `<` a certain value
+- Greater than or _equal_ to `>=` or less than or _equal_ to `<=` a certain value
+- Equal to `==` a certain value
+- Not equal to `!=` a certain value
+
+The basic syntax looks like this:   
+
+```{python}
+#| label: if_statement_syntax
+#| eval: false
+if condition:
+    # code to execute if condition is true
+``` 
+
+So if we wanted to test `x` to see if it is greater than 10, we could write:
+
+```{python}
+#| label: if_statement_example
+x = 15
+if x > 10:
+    print("x is greater than 10")
+``` 
+
+`if` statements are not exclusive to numeric comparisons, we can also check if a string is equal `==` to another string, if a list contains a certain value, and so on. So we can also write:
+
+```{python}
+#| label: if_statement_string_example
+name = "Alice"
+if name == "Alice":
+    print("Hello, Alice!")
+``` 
+
+Additionally, we are not limited to only one line of code in the code block. We can have as many lines of code as we want, as long as they are all indented at the same level.
+
+```{python}
+#| label: if_statement_multiple_lines
+name = "Alice"
+if name == "Alice":
+    print("Hello, Alice!")
+    print("Welcome to the Python training!")
+``` 
+
+### Indentation Matters
+
+You may have noticed that the code block is indented. This is not just for readability, it is actually required in Python. The indentation tells Python which lines of code belong to the `if` statement. If you forget to indent, you will get an error.
+
+```{python}
+#| label: if_statement_indentation_error
+#| error: true
+x = 15
+if x > 10:
+print("x is greater than 10")
+``` 
+
+
+We can also have nested `if` statements. Notice that the level of indentation is increased for the inner `if` statement and will continue to increase for each additional level of nesting. For example:
+
+```{python}
+#| label: nested_if_statement
+x = 15
+if x > 10:
+    print("x is greater than 10")
+    if x < 20:
+        print("x is also less than 20")
+``` 
+
+### `in` Operator
+
+The `in` operator allows us to check if a value is present in a collection, such as a list or a string. For example, if we wanted to check if the letter "a" is in the string "hello", we could write:
+
+```{python}
+#| label: in_operator_example
+if "o" in "hello":
+    print("The letter 'o' is in the string 'hello'")
+```
+
+This can also be used to check if a value is in a list. We will discuss lists in more detail in the following lesson, but for now we can assess whether or not a value is in a list like so:
+
+```{python}
+#| label: in_operator_list_example
+my_list = [1, 2, 3, 4, 5]
+3 in my_list
+``` 
+
+As you saw, the `in` operator returns a boolean value (`True` or `False`) that indicates whether or not the value belongs to the list. This can be very useful for conditional statements, as we can use it to check if a value is in a list before trying to access it, which can help prevent errors. For example:
+
+```{python}
+#| label: in_operator_conditional_example
+my_list = [1, 2, 3, 4, 5]
+x = 3
+if x in my_list:
+    print(x, "is in the list!")
+```
+
+::: callout-warning
+Have not written exercises for this lesson
+:::
+
+:::{.callout-tip}
+# [**Exercise 1**](03_conditional_statements.qmd#exercise-1)
+1. A question to evaluate Learning Objective 1
+2. A followup question to question #1
+3. ...
+:::
+
+## Multiple Conditions with `elif` and `else`
+
+We can join together the functionality of multiple `if` statements using `elif` and `else`. This allows us to check multiple conditions in a more efficient way without having to nest multiple `if` statements.
+
+### `else` Statements
+
+Sometimes you may want to have a "catch-all" block of code that executes when the `if` statement is not met. This is where `else` comes in! We can build upon the "Alice" example from above and add an `else` statement to handle the case where `name != "Alice"`:
+
+```{python}
+#| label: if_else_example
+name = "Will"
+if name == "Alice":
+    print("Hello, Alice!")
+else:
+    print("You aren't Alice!")
+``` 
+
+
+### `elif` Statements
+
+Somewhat similarly to `else`, `elif` (short for "else if") allows us to check multiple conditions in a sequence. The `elif` block will only be evaluated if the previous `if` or `elif` conditions were `False`. This allows us to check for multiple conditions without having to nest multiple `if` statements. For example:
+
+```{python}
+#| label: elif_example
+name = "Bob"
+if name == "Alice":
+    print("Hello, Alice!")
+elif name == "Bob":
+    print("Hello, Bob!")
+else:
+    print("You aren't Alice or Bob!")
+```
+
+You are not allowed to have an `elif` or `else` statement without a preceding `if` statement. However, you can have as many `elif` statements as you want in between the `if` and `else` statements. You are not required to include an `else` statement, but if you do, then it must be the last block in the sequence.
+
+```{python}
+#| label: multiple_elif_example
+#| error: true
+name = "Charlie"
+if name == "Alice":
+    print("Hello, Alice!")
+else:
+    print("You aren't Alice or Bob!")
+elif name == "Bob":
+    print("Hello, Bob!")
+```
+
+You are not allowed to have an `elif` or `else` statement without a preceding `if` statement. However, you can have as many `elif` statements as you want in between the `if` and `else` statements. You are not required to include an `else` statement, but if you do, then it must be the last block in the sequence.
+
+```{python}
+#| label: elif_out_of_order
+name = "Charlie"
+if name == "Alice":
+    print("Hello, Alice!")
+elif name == "Bob":
+    print("Hello, Bob!")
+else:
+    print("You aren't Alice or Bob!")
+```
+
+### Order Matters
+
+Another nuanced, but important point is that when we use `if`, `elif`, and `else` statements together, the order of the conditions matters. **Python will evaluate the conditions in the order they are written**, and once it finds a condition that is `True`, it will execute that block of code and skip the rest. For example:
+
+```{python}
+#| label: elif_order_example
+x = 15
+if x > 10:
+    print("x is greater than 10")
+elif x > 5:
+    print("x is greater than 5 but not greater than 10")
+else:
+    print("x is 5 or less")
+``` 
+
+:::{.callout-tip}
+# [**Exercise 2**](03_conditional_statements.qmd#exercise-2)
+1. A question to evaluate Learning Objective 2
+2. A followup question to question #1
+3. ...
+:::
+
+## Logical Operators
+
+Perhaps we wanted to test if two things were `True` at the same time, or if at least one of two things were `True`. This is where logical operators come in. 
+
+The `and` operator allows us to check if two conditions are both `True`, while the `or` operator allows us to check if at least one of two conditions is `True`. For example:
+
+### `and` Operator
+
+Let us use the example from earlier where we were checking if `x` was greater than 10 and less than 20. We can use the `and` operator to check both conditions at the same time:
+
+```{python}
+#| label: and_operator_example
+x = 15
+if x > 10 and x < 20:
+    print("x is greater than 10 and less than 20 ")
+elif x > 5:
+    print("x is greater than 5 but not greater than 10")
+else:
+    print("x is 5 or less")
+``` 
+
+
+### `or` Operator
+
+If we wanted to check if `x` was either less than 5 or greater than 10, we could use the `or` operator:
+
+```{python}
+#| label: or_operator_example
+x = 15
+if x < 5 or x > 10:
+    print("x is either less than 5 or greater than 10")
+else:
+    print("x is between 5 and 10")
+```
+
+### `not` Operator
+
+The `not` operator allows us to check if a condition is `False`. For example, if we wanted to check if `x` is not greater than 10, we could write: 
+
+```{python}
+#| label: not_operator_example
+x = 15
+if not x > 10:
+    print("x is not greater than 10")
+else:
+    print("x is greater than 10")
+```
+
+This is sometimes more intuitive to read than writing `if x <= 10:`. 
+
+
+### Combining Logical Operators
+
+We can also combine logical operators to check multiple conditions at the same time. For example, if we wanted to check if `x` is greater than 10 and less than 20, or if `x` is equal to 5, we could write:
+
+```{python}
+#| label: combined_logical_operators_example
+x = 15
+if (x > 10 and x < 20) or x == 5:
+    print("x is either greater than 10 and less than 20, or x is equal to 5")
+else:
+    print("x does not meet either condition")
+``` 
+
+:::{.callout-tip}
+# [**Exercise 3**](03_conditional_statements.qmd#exercise-3)
+1. A question to evaluate Learning Objective 3
+2. A followup question to question #1
+3. ...
+:::
+
+***
+
+[Next Lesson >>](04_data_structures.qmd)
+
+[Back to Schedule](../schedule/schedule.qmd)

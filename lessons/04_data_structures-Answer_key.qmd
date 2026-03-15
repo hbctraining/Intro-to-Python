@@ -1,0 +1,85 @@
+---
+title: "Data Structures - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{python}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+glengths = [4.6, 3000, 50000]
+glengths.append(12000)
+
+species = ["ecoli", "human", "corn"]
+
+genome_dict = {
+    "ecoli": 4.6,
+    "human": 3000,
+    "corn": 50000,
+    "yeast": 12000
+}
+```
+
+# Exercise 1
+
+1. How would you access the fourth element of the `species` list and what is it?
+
+```{python}
+#| label: exercise_1
+#| error: true
+# Access the fourth element of the species list
+species[3]
+```
+
+We only have 3 elements in our `species` list, so trying to access the fourth element with `species[3]` will result in an error. If you try to access an index that is out of range for a list, you will get an `IndexError`. This is because the indices for our `species` list only go up to 2 (since we have 3 elements, and indexing starts at 0).
+
+2. Add `"yeast"` to the `species` list and print the updated list.
+
+```{python}
+#| label: exercise_2
+# Append yeast to the species list
+species.append("yeast")
+print(species)
+```
+
+# Exercise 2
+
+3. How might you access the last two elements of the `species` list using slicing?
+
+::: callout-tip
+# Hint 
+Recall that we can use _negative indexing_ to access elements from the end of the list.
+:::
+
+```{python}
+#| label: exercise_3
+# Access the last two elements of the species list using slicing
+species[-2:]
+species[-2:len(species)]
+```
+
+4. You can actually slice with `steps` using the syntax `list[start:stop:step]`. This allows you to access every `step`-th element in the range from `start` to `stop`. How would you access every other element in the `species` list using slicing?
+
+```{python}
+#| label: exercise_4
+# Access every other element in the species list using slicing
+print(species[::2])
+print(species[0:4:2])
+```
+
+# Exercise 3
+
+5. How would you access the genome length for `corn` in the `genome_dict` dictionary?
+
+```{python}
+#| label: exercise_5
+# Access the value for the key "corn"
+genome_dict["corn"]
+```

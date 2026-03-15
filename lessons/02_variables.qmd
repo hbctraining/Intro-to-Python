@@ -216,12 +216,12 @@ Now that we have a basic understanding of what a variable is, let's discuss the 
 
 Table: Common Python data types. {#tbl-common_data_types}
 
-| Type  | Description                                   |
-|-------|-----------------------------------------------|
-| int   | Integers                                     |
-| float | Floating point numbers (numbers with decimals) |
-| bool  | Booleans (True/False)                        |
-| str   | Strings                                      |
+| Type  | Description                                      | Example          |
+|-------|--------------------------------------------------|------------------|
+| int   | Integers (whole numbers)                         | 7, -3, 42        |
+| float | Floating point numbers (numbers with decimals)   | 3.14, 0.5        |
+| bool  | Booleans (True/False values)                     | True, False      |
+| str   | Strings (text)                                   | "hello", "3"     |
 
 We can determine what type of data type a variable is by using the `type()` function.
 
@@ -235,6 +235,17 @@ print(type(my_number))
 # Nested functions
 When we have functions nested inside of one another, the innermost function is evaluated first and the output from it is passed to the next outer function until you reach the outermost function. In the example above, `my_number` is evaluated by the `type()` function and the output of the `type()` function is then passed onto the `print()` function.
 :::
+
+### Integers and Floats
+
+Integers are whole numbers and floats are numbers with decimals. Both of these data types can be used in mathematical operations together. For example, we can add together an integer and a float:
+
+```{python}
+#| label: integer_float_addition
+# Add integer and float together
+5 + 3.14
+```
+
 
 ### Strings
 
@@ -355,18 +366,6 @@ print(type(True + True + False))
 4. How would you determine the data type on `your_number` and what data type is it?
 :::
 
-## Other Data Type
-
-There exists several more data types that we will discuss in depth in later lessons:
-
-Table: More Python data types. {#tbl-more_data_types}
-
-| Type       | What it is                             |
-|------------|-----------------------------------------------------|
-| [list](06_lesson.qmd)       | An ordered, changeable collection of elements.        |
-| [dictionary](07_lesson.qmd) | A collection of key–value pairs.  |
-| [tuple](08_lesson.qmd)      | An ordered collection of elements you.   |
-| [set](09_lesson.qmd)        | An unordered collection of unique elements.           |
 
 ## Variable Inspector
 
@@ -389,6 +388,6 @@ Variable Inspector in Jupyter Lab, showing all the variables created in the curr
 
 ***
 
-[Next Lesson >>](03_lesson.qmd)
+[Next Lesson >>](03_conditional_statements.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)

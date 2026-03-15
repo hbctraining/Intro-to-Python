@@ -1,9 +1,9 @@
 ---
-title: "Lesson 03 - Answer Key"
+title: "Conditional Statements - Answer Key"
 author:
-  - author_1
-  - author_2
-date: "YYYY-MM-DD"
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-14"
 license: "CC-BY-4.0"
 editor_options: 
   markdown: 
