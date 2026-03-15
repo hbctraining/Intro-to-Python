@@ -94,9 +94,9 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [`NumPy` Library](../lessons/12_lesson.qmd) | Instructor_name |
+| 10:30 - 10:55 | [`NumPy` Arrays](../lessons/08_numpy_arrays.qmd) | Instructor_name |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [`Pandas` Library](../lessons/13_lesson.qmd) | Instructor_name |
+| 11:00 - 11:55 | [`Pandas` DataFrames](../lessons/09_pandas_dataframes.qmd) | Instructor_name |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
 
 ### Before the next class:

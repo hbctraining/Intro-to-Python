@@ -1,0 +1,59 @@
+---
+title: "`Pandas` DataFrames - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-15"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+
+# Interfacing with R quarto and python futzing
+library(reticulate)
+use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
+```
+
+```{python}
+#| label: load_libraries_data_py
+#| echo: false
+# Load libraries and data
+import pandas as pd
+metadata = pd.read_csv("data/mouse_exp_design.csv")
+```
+
+# Exercise 1
+
+1. Print the last 6 lines of the metadata data frame using `tail()` function.
+
+```{python}
+#| label: exercise_1
+metadata.tail()
+```
+
+
+2. A followup question to question #1
+
+3. ...
+
+# Exercise 2
+
+1. A question to evaluate Learning Objective 2
+
+2. A followup question to question #1
+
+3. ...
+
+# Exercise 3
+
+1. A question to evaluate Learning Objective 3
+
+2. A followup question to question #1
+
+3. ...

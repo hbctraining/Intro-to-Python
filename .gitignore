@@ -1,4 +1,5 @@
 /.quarto/
 .DS_Store
 lessons/data
+lesons/data.zip
 lessons/results
