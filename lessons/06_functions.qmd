@@ -120,6 +120,38 @@ From this output we can see that the `round()` function takes two arguments: `nu
 4. Apply the `sorted()` function to the `numbers` list. What does it do? What are the arguments for the `sorted()` function? Use the `help()` function to find out.
 :::
 
+## Methods for Data Structures
+
+When we were working with lists earlier, we made use of the `list.append()` function. This is an example of a **method**, which is a function that is associated with a specific data structure. In this case, the `append()` method is associated with lists and allows us to add an element to the end of the list.
+
+Lists are not the only data structure that has methods. For example, strings have a method called `upper()`, which converts all characters in the string to uppercase:
+
+```{python}
+#| label: string_upper
+my_string = "hello world"
+my_string.upper()
+```
+
+Each data structure has its own set of methods that are designed to perform specific tasks related to that data structure. To find out what methods are available for a particular data structure, you can use the `dir()` function. For example, `dir(list)` will show you all the methods that are available for lists.
+
+```{python}
+#| label: dir_list
+dir(list)
+```
+
+So now we can see that there are many methods available for lists, including `list.sort()`, `list.reverse()`, etc. Let us try out this sorting method on the `numbers` list.
+
+```{python}
+#| label: list_sort
+numbers.sort()
+numbers
+```
+
+In the exercise, we used the `sorted()` function to sort this list in both ascending and descending order with . However, there is also a `list.sort()` method that can be used to sort a list in place. The difference between the two is that `sorted()` returns a new sorted list, while `list.sort()` modifies the original list.
+
+Even though there are slight differences between these two functions, they are both ultimately accomplishing the same objective of sorting the list. This is a good example of how there can be multiple functions that accomplish the same task, but they may have different arguments or operate in slightly different ways. 
+
+**Most importantly, this is another reminder that there is no one “right” way to do something in Python!**
 
 ## User-defined Functions
 

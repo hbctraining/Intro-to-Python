@@ -56,7 +56,7 @@ II. **Submit your work**:
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Functions](../lessons/10_lesson.qmd)
+   1. [Functions](../lessons/06_functions.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
