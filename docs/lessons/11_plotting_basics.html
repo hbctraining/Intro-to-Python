@@ -8,11 +8,11 @@
 
 <meta name="author" content="Noor Sohail">
 <meta name="author" content="Will Gammerdinger">
-<meta name="dcterms.date" content="2026-03-15">
-<meta name="keywords" content="keyword_1, keyword_2, keyword_3, keyword_4, keyword_5, keyword_6">
-<meta name="description" content="Write a description of the lesson here.">
+<meta name="dcterms.date" content="2026-03-16">
+<meta name="keywords" content="Figures, Scatterplots, Aesthetics, Themes, Plot customization">
+<meta name="description" content="This lesson introduces data visualization in Python using Matplotlib and Seaborn, showing how to build scatterplots, adjust aesthetics, and customize labels to create clear figures.">
 
-<title>Plotting Basics with MatPlotlib and Seaborn – Introduction to Python</title>
+<title>Plotting Basics with Matplotlib and Seaborn – Introduction to Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -3933,7 +3933,7 @@ var data = {
 
 
 }
-,"blob":{"1":"2","10":"G-68JBPLLNLG|GT-M399CZS","11":true,"14":"63b1","15":"0","16":"ChEI8LHZzQYQnangwYn80s+OARIdAH5Ei7Bo5/wQz2jyunwhGU8HHxrhIfhV0ZZJ+7EaAo2/","17":"","19":"dataLayer","20":"","21":"www.googletagmanager.com","22":"eyIwIjoiVVMiLCIxIjoiVVMtTUEiLCIyIjpmYWxzZSwiMyI6IiIsIjQiOiIiLCI1Ijp0cnVlLCI2IjpmYWxzZSwiNyI6ImFkX3N0b3JhZ2V8YW5hbHl0aWNzX3N0b3JhZ2V8YWRfdXNlcl9kYXRhfGFkX3BlcnNvbmFsaXphdGlvbiIsIjgiOiIifQ","23":"google.tagmanager.debugui2.queue","24":"tagassistant.google.com","27":0.005,"3":"www.googletagmanager.com","30":"US","31":"US-MA","32":true,"34":"G-68JBPLLNLG","35":"G","36":"https://adservice.google.com/pagead/regclk","37":"__TAGGY_INSTALLED","38":"cct.google","39":"googTaggyReferrer","40":"https://cct.google/taggy/agent.js","41":"google.tagmanager.ta.prodqueue","42":0.01,"43":"{\"keys\":[{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BLNfLXaj4LC6DwYzGB6bpAjV4M0CVAR/6V/FAU/hMOEXRq0f3mYhyy2yY7se4j5nYnk9B2L6TtgbheVlljtrsrE=\",\"version\":0},\"id\":\"d41fd37d-1a53-4d33-a6a2-6ff5f2369f1e\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BJKGUC2k2ZcV+0EG0jYtnyLaP7waYArXGp3TlYsOqVwMnVrfiH92s1EHfHeORP/QizVV9X5+eDZNuuvi74HUHgs=\",\"version\":0},\"id\":\"ca163ca1-c6f9-4d07-85c5-a7c68958e40a\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BLiSK3Ub1Q6wvc2qtFVdmLT2GBHHNLsEM4ks06BWSCUzlLstpW3ZQDKcASLyP7p2ftgZ060zEjUVLSuzI8YYFRM=\",\"version\":0},\"id\":\"c6d8ae93-f700-4cc2-b2dd-310e8b4bd202\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BIl5ZFsZ870at7Yt/XlQJEcuVGGk5WW+gkvhRQMODfT/XETgjUYAJ2wXVlAiokQ2PJioDGJR7MV1pLZ+B0Fvax8=\",\"version\":0},\"id\":\"8c9fc9c9-d49b-4795-ba6a-6376e8e592b5\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BJbRULrQtnw5guG2tQAfCqtShUKSPuDcVnGFYW1D/5cKMH5ERno/HYrIogrVKtjvDh5oGvZJIwYEfzlzzTHCwbE=\",\"version\":0},\"id\":\"40712da1-3dfd-4fab-97eb-f4447c4a41cd\"}]}","44":"102015666~103116026~103200004","45":true,"46":{"1":"1000","10":"63b0","11":"63a0","14":"1000","16":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","17":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","2":"9","20":"5000","21":"5000","22":"4.2.0","23":"0.0.0","25":"1","26":"4000","27":"100","3":"5","4":"ad_storage|analytics_storage|ad_user_data|ad_personalization","44":"15000","48":"30000","5":"ad_storage|analytics_storage|ad_user_data","6":"1","61":"1000","62":"A6ONHRY7/bvBro+IMZd/a6LNjn7SSv999SkN/hFAE9L6vMr34dNgfdSVdYmv4U+NHZg1sxd38RtciRpRUtIRPgQAAACCeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2hhcmVkV29ya2VyRXh0ZW5kZWRMaWZldGltZSIsImV4cGlyeSI6MTc3NjcyOTYwMCwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==","63":"1000","66":"100","7":"10"},"48":true,"5":"G-68JBPLLNLG","55":["G-68JBPLLNLG"],"56":[{"1":403,"3":0.5,"4":115938465,"5":115938466,"6":0,"7":2},{"1":404,"3":0.5,"4":115938468,"5":115938469,"6":0,"7":1},{"1":454,"2":true},{"1":490,"2":true},{"1":457,"2":true},{"1":479,"2":true},{"1":483,"2":true},{"1":447,"2":true},{"1":408,"3":0.001,"4":117266400,"5":117266401,"6":117266402,"7":1},{"1":497,"2":true},{"1":439,"2":true},{"1":417,"2":true},{"1":420,"2":true},{"1":451,"2":true},{"1":442,"2":true},{"1":507,"2":true},{"1":411,"3":1,"4":117484252,"5":117484253,"6":117650706,"7":1},{"1":450,"3":0.01,"4":117227714,"5":117227715,"6":117227716,"7":3},{"1":458,"3":0.001,"4":116991816,"5":116991817,"6":0,"7":1},{"1":444,"3":0.01,"4":117384405,"5":117384406,"6":117884344,"7":1},{"1":498,"3":0.2,"4":115616985,"5":115616986,"6":0,"7":1},{"1":465,"3":0.01,"4":117512542,"5":117512543,"6":0,"7":3},{"1":426,"2":true},{"1":460,"3":0.001,"4":117395003,"5":117395004,"6":117395005,"7":1},{"1":406,"2":true},{"1":486,"2":true},{"1":463,"2":true},{"1":412,"2":true},{"1":441,"2":true}],"59":["G-68JBPLLNLG"],"6":"123131330"}
+,"blob":{"1":"2","10":"G-68JBPLLNLG|GT-M399CZS","11":true,"14":"63b1","15":"0","16":"ChEI8LHZzQYQnangwYn80s+OARIdAH5Ei7Bo5/wQz2jyunwhGU8HHxrhIfhV0ZZJ+7EaAo2/","17":"","19":"dataLayer","20":"","21":"www.googletagmanager.com","22":"eyIwIjoiVVMiLCIxIjoiVVMtTUEiLCIyIjpmYWxzZSwiMyI6IiIsIjQiOiIiLCI1Ijp0cnVlLCI2IjpmYWxzZSwiNyI6ImFkX3N0b3JhZ2V8YW5hbHl0aWNzX3N0b3JhZ2V8YWRfdXNlcl9kYXRhfGFkX3BlcnNvbmFsaXphdGlvbiIsIjgiOiIifQ","23":"google.tagmanager.debugui2.queue","24":"tagassistant.google.com","27":0.005,"3":"www.googletagmanager.com","30":"US","31":"US-MA","32":true,"34":"G-68JBPLLNLG","35":"G","36":"https://adservice.google.com/pagead/regclk","37":"__TAGGY_INSTALLED","38":"cct.google","39":"googTaggyReferrer","40":"https://cct.google/taggy/agent.js","41":"google.tagmanager.ta.prodqueue","42":0.01,"43":"{\"keys\":[{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BLNfLXaj4LC6DwYzGB6bpAjV4M0CVAR/6V/FAU/hMOEXRq0f3mYhyy2yY7se4j5nYnk9B2L6TtgbheVlljtrsrE=\",\"version\":0},\"id\":\"d41fd37d-1a53-4d33-a6a2-6ff5f2369f1e\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BJKGUC2k2ZcV+0EG0jYtnyLaP7waYArXGp3TlYsOqVwMnVrfiH92s1EHfHeORP/QizVV9X5+eDZNuuvi74HUHgs=\",\"version\":0},\"id\":\"ca163ca1-c6f9-4d07-85c5-a7c68958e40a\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BLiSK3Ub1Q6wvc2qtFVdmLT2GBHHNLsEM4ks06BWSCUzlLstpW3ZQDKcASLyP7p2ftgZ060zEjUVLSuzI8YYFRM=\",\"version\":0},\"id\":\"c6d8ae93-f700-4cc2-b2dd-310e8b4bd202\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BIl5ZFsZ870at7Yt/XlQJEcuVGGk5WW+gkvhRQMODfT/XETgjUYAJ2wXVlAiokQ2PJioDGJR7MV1pLZ+B0Fvax8=\",\"version\":0},\"id\":\"8c9fc9c9-d49b-4795-ba6a-6376e8e592b5\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BJbRULrQtnw5guG2tQAfCqtShUKSPuDcVnGFYW1D/5cKMH5ERno/HYrIogrVKtjvDh5oGvZJIwYEfzlzzTHCwbE=\",\"version\":0},\"id\":\"40712da1-3dfd-4fab-97eb-f4447c4a41cd\"}]}","44":"103116026~103200004","45":true,"46":{"1":"1000","10":"63b0","11":"63a0","14":"1000","16":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","17":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","2":"9","20":"5000","21":"5000","22":"4.2.0","23":"0.0.0","25":"1","26":"4000","27":"100","3":"5","4":"ad_storage|analytics_storage|ad_user_data|ad_personalization","44":"15000","48":"30000","5":"ad_storage|analytics_storage|ad_user_data","6":"1","61":"1000","62":"A6ONHRY7/bvBro+IMZd/a6LNjn7SSv999SkN/hFAE9L6vMr34dNgfdSVdYmv4U+NHZg1sxd38RtciRpRUtIRPgQAAACCeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2hhcmVkV29ya2VyRXh0ZW5kZWRMaWZldGltZSIsImV4cGlyeSI6MTc3NjcyOTYwMCwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==","63":"1000","66":"100","7":"10"},"48":true,"5":"G-68JBPLLNLG","55":["G-68JBPLLNLG"],"56":[{"1":403,"3":0.5,"4":115938465,"5":115938466,"6":0,"7":2},{"1":404,"3":0.5,"4":115938468,"5":115938469,"6":0,"7":1},{"1":454,"2":true},{"1":490,"2":true},{"1":457,"2":true},{"1":479,"2":true},{"1":483,"2":true},{"1":447,"2":true},{"1":408,"3":0.001,"4":117266400,"5":117266401,"6":117266402,"7":1},{"1":497,"2":true},{"1":439,"2":true},{"1":417,"2":true},{"1":420,"2":true},{"1":451,"2":true},{"1":442,"2":true},{"1":507,"2":true},{"1":411,"3":1,"4":117484252,"5":117484253,"6":117650706,"7":1},{"1":450,"3":0.01,"4":117227714,"5":117227715,"6":117227716,"7":3},{"1":458,"3":0.001,"4":116991816,"5":116991817,"6":0,"7":1},{"1":444,"3":0.01,"4":117384405,"5":117384406,"6":117884344,"7":1},{"1":498,"3":0.2,"4":115616985,"5":115616986,"6":0,"7":1},{"1":465,"3":0.01,"4":117512542,"5":117512543,"6":0,"7":3},{"1":426,"2":true},{"1":460,"3":0.001,"4":117395003,"5":117395004,"6":117395005,"7":1},{"1":406,"2":true},{"1":486,"2":true},{"1":463,"2":true},{"1":412,"2":true},{"1":441,"2":true}],"59":["G-68JBPLLNLG"],"6":"123131330"}
 ,"permissions":{
 "__c":{}
 ,
@@ -5100,7 +5100,7 @@ display: table !important;
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/10_data_wrangling.html">Day 3 Self-learning:</a></li><li class="breadcrumb-item"><a href="../lessons/11_plotting_basics.html">Plotting Basics with <code>MatPlotlib</code> and <code>Seaborn</code></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/10_data_wrangling.html">Day 3 Self-learning:</a></li><li class="breadcrumb-item"><a href="../lessons/11_plotting_basics.html">Plotting Basics with <code>Matplotlib</code> and <code>Seaborn</code></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -5124,7 +5124,7 @@ display: table !important;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/01_setting_up.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Python and Jupyter Lab</span></a>
+ <span class="menu-text">Introduction to Python and JupyterLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -5216,7 +5216,7 @@ display: table !important;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/09_pandas_dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>Pandas</code> DataFrames</span></a>
+ <span class="menu-text"><code>pandas</code> DataFrames</span></a>
   </div>
 </li>
       </ul>
@@ -5239,7 +5239,7 @@ display: table !important;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/11_plotting_basics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Plotting Basics with <code>MatPlotlib</code> and <code>Seaborn</code></span></a>
+ <span class="menu-text">Plotting Basics with <code>Matplotlib</code> and <code>Seaborn</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -5293,20 +5293,20 @@ display: table !important;
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/10_data_wrangling.html">Day 3 Self-learning:</a></li><li class="breadcrumb-item"><a href="../lessons/11_plotting_basics.html">Plotting Basics with <code>MatPlotlib</code> and <code>Seaborn</code></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/10_data_wrangling.html">Day 3 Self-learning:</a></li><li class="breadcrumb-item"><a href="../lessons/11_plotting_basics.html">Plotting Basics with <code>Matplotlib</code> and <code>Seaborn</code></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Plotting Basics with <code>MatPlotlib</code> and <code>Seaborn</code></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Plotting Basics with <code>Matplotlib</code> and <code>Seaborn</code></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
   <div class="quarto-categories">
-    <div class="quarto-category">category_1</div>
-    <div class="quarto-category">category_2</div>
-    <div class="quarto-category">category_3</div>
-    <div class="quarto-category">category_4</div>
+    <div class="quarto-category">Python programming</div>
+    <div class="quarto-category">Data visualization</div>
+    <div class="quarto-category">Matplotlib</div>
+    <div class="quarto-category">Seaborn</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    <p>Write a description of the lesson here.</p>
+    <p>This lesson introduces data visualization in Python using Matplotlib and Seaborn, showing how to build scatterplots, adjust aesthetics, and customize labels to create clear figures.</p>
   </div>
 </div>
 
@@ -5324,7 +5324,7 @@ display: table !important;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 15, 2026</p>
+      <p class="date">March 16, 2026</p>
     </div>
   </div>
   
@@ -5335,7 +5335,7 @@ display: table !important;
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
-    <p>keyword_1, keyword_2, keyword_3, keyword_4, keyword_5, keyword_6</p>
+    <p>Figures, Scatterplots, Aesthetics, Themes, Plot customization</p>
   </div>
 </div>
 
@@ -6221,262 +6221,261 @@ Figure 8: Scatterplot of age in days vs. mean expression, colored by genotype 
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
 <div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Plotting Basics with `MatPlotlib` and `Seaborn`&quot;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Plotting Basics with `Matplotlib` and `Seaborn`&quot;</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">  Write a description of the lesson here. </span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">  This lesson introduces data visualization in Python using Matplotlib and Seaborn, showing how to build scatterplots, adjust aesthetics, and customize labels to create clear figures.</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Noor Sohail</span></span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Will Gammerdinger</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2026-03-15&quot;</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_1</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_2</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_3</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - category_4</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2026-03-16&quot;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - Python programming</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - Data visualization</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Matplotlib</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - Seaborn</span></span>
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_1</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_2</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_3</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_4</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_5</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">  - keyword_6</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="an">license:</span><span class="co"> &quot;CC-BY-4.0&quot;</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co">  markdown: </span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co">    wrap: 72</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load_libraries_data</span></span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries and data</span></span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Interfacing with R quarto and python futzing</span></span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;/opt/anaconda3/envs/intro_python&quot;</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>Approximate time: XX minutes</span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain the concept of layering in plotting and how to build a plot step by step.</span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a scatterplot using <span class="in">`MatPlotLib`</span> and customize its aesthetics with <span class="in">`Seaborn`</span>.</span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Apply different themes to a plot and adjust axis labels and titles.</span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>When doing XYZ...</span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Plotting Basics</span></span>
-<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="in">`MatPlotLib`</span> is one of the most widely used plotting packages in Python. With it, we can create many different types of plots, including scatterplots, line plots, bar plots, boxplots, and more. The important thing to remember is that you can slowly build upon your plot, adding different layers of information to create a more informative and visually appealing plot. So there is no need to create a perfect plot in one step!</span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>We will start with drawing a simple x-y scatterplot of <span class="in">`mean_expression`</span> versus <span class="in">`age_in_days`</span> from <span class="in">`new_metadata`</span>.</span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### Initialize a Plot with `MatPlotLib`</span></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>First, we will import the <span class="in">`MatPlotLib`</span> library and load <span class="in">`new_metadata`</span> that we created in the previous lesson:</span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-load_new_metadata</span></span>
-<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: DataFrame containing updated metadata for each of our 12 samples.</span></span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the new metadata data frame that we created in the previous lesson</span></span>
-<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>new_metadata <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/new_metadata.csv&quot;</span>, index_col<span class="op">=</span><span class="dv">0</span>)  </span>
-<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>new_metadata</span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a>We will first initialize a plot using the <span class="in">`figure()`</span> function from <span class="in">`MatPlotLib`</span>. Let us look at some of the arguments we can use with the the <span class="in">`help()`</span> function:</span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: help_figure</span></span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at the help for the figure function</span></span>
-<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(plt.figure)</span>
-<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>So first, let&#39;s create an empty plot of size 8 inches by 6 inches:</span>
-<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-initialize_plot</span></span>
-<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: An empty plot initialized with `MatPlotLib`.</span></span>
-<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - Figures</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - Scatterplots</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - Aesthetics</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co">  - Themes</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">  - Plot customization</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="an">license:</span><span class="co"> &quot;CC-BY-4.0&quot;</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">  markdown:</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co">    wrap: 72</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load_libraries_data</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries and data</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Interfacing with R quarto and python futzing</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="fu">use_condaenv</span>(<span class="st">&quot;/opt/anaconda3/envs/intro_python&quot;</span>, <span class="at">required =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>Approximate time: XX minutes</span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain the concept of layering in plotting and how to build a plot step by step.</span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a scatterplot using <span class="in">`MatPlotLib`</span> and customize its aesthetics with <span class="in">`Seaborn`</span>.</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Apply different themes to a plot and adjust axis labels and titles.</span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>When doing XYZ...</span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Plotting Basics</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="in">`MatPlotLib`</span> is one of the most widely used plotting packages in Python. With it, we can create many different types of plots, including scatterplots, line plots, bar plots, boxplots, and more. The important thing to remember is that you can slowly build upon your plot, adding different layers of information to create a more informative and visually appealing plot. So there is no need to create a perfect plot in one step!</span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>We will start with drawing a simple x-y scatterplot of <span class="in">`mean_expression`</span> versus <span class="in">`age_in_days`</span> from <span class="in">`new_metadata`</span>.</span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="fu">### Initialize a Plot with `MatPlotLib`</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>First, we will import the <span class="in">`MatPlotLib`</span> library and load <span class="in">`new_metadata`</span> that we created in the previous lesson:</span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-load_new_metadata</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: DataFrame containing updated metadata for each of our 12 samples.</span></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the new metadata data frame that we created in the previous lesson</span></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a>new_metadata <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/new_metadata.csv&quot;</span>, index_col<span class="op">=</span><span class="dv">0</span>)  </span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a>new_metadata</span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a>We will first initialize a plot using the <span class="in">`figure()`</span> function from <span class="in">`MatPlotLib`</span>. Let us look at some of the arguments we can use with the the <span class="in">`help()`</span> function:</span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: help_figure</span></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at the help for the figure function</span></span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(plt.figure)</span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>So first, let&#39;s create an empty plot of size 8 inches by 6 inches:</span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-initialize_plot</span></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: An empty plot initialized with `MatPlotLib`.</span></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### Adding a Scatterplot Layer</span></span>
-<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a>We are once again to going to first initialize the plot with <span class="in">`figure()`</span> and then add the scatterplot layer with <span class="in">`scatter()`</span>. Next, we add a scatterplot layer using the <span class="in">`scatter()`</span> function. We have to specify the <span class="in">`x`</span> and <span class="in">`y`</span> values for our scatterplot, which will be <span class="in">`age_in_days`</span> and <span class="in">`mean_expression`</span>, respectively. </span>
-<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a>The <span class="in">`plt.figure`</span> and <span class="in">`plt.scatter`</span> calls are connected because <span class="in">`MatPlotLib`</span> commands build upon each other to. The <span class="in">`plt.figure`</span> command initializes the plot and sets the size, while the <span class="in">`plt.scatter`</span> command adds the scatterplot layer to the existing plot. By calling these functions sequentially, we can build up our plot layer by layer.</span>
-<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_scatterplot_layer</span></span>
-<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression.</span></span>
-<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot</span></span>
-<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>plt.scatter(x<span class="op">=</span>new_metadata[<span class="st">&quot;age_in_days&quot;</span>], </span>
-<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span>new_metadata[<span class="st">&quot;mean_expression&quot;</span>])</span>
-<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a>Now that we have the required fundamentals, let’s add some extras like color to the plot. We can color the points on the plot based on the genotype column with the <span class="in">`c`</span> argument. </span>
-<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_color_scatterplot_layer_error</span></span>
-<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Initial attempt to color the scatterplot of age in days vs. mean expression by genotype, which results in an error.</span></span>
-<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: true</span></span>
-<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
-<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a>plt.scatter(data <span class="op">=</span> new_metadata,</span>
-<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
-<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
-<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a>            c<span class="op">=</span><span class="st">&quot;genotype&quot;</span>)</span>
-<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a>**We are getting an error from trying to set the color.** This is because the <span class="in">`c`</span> argument in <span class="in">`scatter()`</span> expects a list of color values, but we are providing it with categorical data from the <span class="in">`genotype`</span> column. </span>
-<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a><span class="fu">### Changing Aesthetics</span></span>
-<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a>To get around the error from <span class="in">`plt.scatter`</span>, we can instead use the <span class="in">`seaborn`</span> package&#39;s <span class="in">`scatterplot()`</span> function and use the <span class="in">`hue`</span> argument instead of <span class="in">`c`</span>, which allows us to specify a categorical variable for coloring the points. The documentation for <span class="in">`seaborn.scatterplot()`</span> is quite extensive and can be found <span class="co">[</span><span class="ot">on their official website</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.scatterplot.html)</span>.</span>
-<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a>You will notice that there are a default set of colors that will be used so we do not have to specify. The legend has also been plotted for us automatically!</span>
-<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_color_scatterplot_layer</span></span>
-<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype.</span></span>
-<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
-<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
-<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
-<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
-<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>)</span>
-<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a><span class="in">`seaborn`</span> is a bit more flexible than <span class="in">`MatPlotLib`</span> and allows us to easily add more aesthetics to our plot. Oftentimes you will find yourself using a blend of both packages together to create the plot you want.</span>
-<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a>Let’s try to have both <span class="in">`celltype`</span> and <span class="in">`genotype`</span> represented on the plot. To do this we can assign the shape argument in <span class="in">`scatterplot()`</span> the <span class="in">`celltype`</span> column, so that each celltype is plotted with a different shaped data point.</span>
-<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_shape_scatterplot_layer</span></span>
-<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype.</span></span>
-<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
-<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>new_metadata,</span>
-<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
-<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
-<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
-<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>)</span>
-<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### Adding a Scatterplot Layer</span></span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a>We are once again to going to first initialize the plot with <span class="in">`figure()`</span> and then add the scatterplot layer with <span class="in">`scatter()`</span>. Next, we add a scatterplot layer using the <span class="in">`scatter()`</span> function. We have to specify the <span class="in">`x`</span> and <span class="in">`y`</span> values for our scatterplot, which will be <span class="in">`age_in_days`</span> and <span class="in">`mean_expression`</span>, respectively. </span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a>The <span class="in">`plt.figure`</span> and <span class="in">`plt.scatter`</span> calls are connected because <span class="in">`MatPlotLib`</span> commands build upon each other to. The <span class="in">`plt.figure`</span> command initializes the plot and sets the size, while the <span class="in">`plt.scatter`</span> command adds the scatterplot layer to the existing plot. By calling these functions sequentially, we can build up our plot layer by layer.</span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_scatterplot_layer</span></span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression.</span></span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot</span></span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>plt.scatter(x<span class="op">=</span>new_metadata[<span class="st">&quot;age_in_days&quot;</span>], </span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span>new_metadata[<span class="st">&quot;mean_expression&quot;</span>])</span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>Now that we have the required fundamentals, let’s add some extras like color to the plot. We can color the points on the plot based on the genotype column with the <span class="in">`c`</span> argument. </span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_color_scatterplot_layer_error</span></span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Initial attempt to color the scatterplot of age in days vs. mean expression by genotype, which results in an error.</span></span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: true</span></span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
+<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a>plt.scatter(data <span class="op">=</span> new_metadata,</span>
+<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a>            x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
+<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
+<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a>            c<span class="op">=</span><span class="st">&quot;genotype&quot;</span>)</span>
+<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a>**We are getting an error from trying to set the color.** This is because the <span class="in">`c`</span> argument in <span class="in">`scatter()`</span> expects a list of color values, but we are providing it with categorical data from the <span class="in">`genotype`</span> column. </span>
+<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a><span class="fu">### Changing Aesthetics</span></span>
+<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a>To get around the error from <span class="in">`plt.scatter`</span>, we can instead use the <span class="in">`seaborn`</span> package&#39;s <span class="in">`scatterplot()`</span> function and use the <span class="in">`hue`</span> argument instead of <span class="in">`c`</span>, which allows us to specify a categorical variable for coloring the points. The documentation for <span class="in">`seaborn.scatterplot()`</span> is quite extensive and can be found <span class="co">[</span><span class="ot">on their official website</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.scatterplot.html)</span>.</span>
+<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a>You will notice that there are a default set of colors that will be used so we do not have to specify. The legend has also been plotted for us automatically!</span>
+<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_color_scatterplot_layer</span></span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype.</span></span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>)</span>
+<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a><span class="in">`seaborn`</span> is a bit more flexible than <span class="in">`MatPlotLib`</span> and allows us to easily add more aesthetics to our plot. Oftentimes you will find yourself using a blend of both packages together to create the plot you want.</span>
+<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a>Let’s try to have both <span class="in">`celltype`</span> and <span class="in">`genotype`</span> represented on the plot. To do this we can assign the shape argument in <span class="in">`scatterplot()`</span> the <span class="in">`celltype`</span> column, so that each celltype is plotted with a different shaped data point.</span>
+<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_shape_scatterplot_layer</span></span>
+<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype.</span></span>
+<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
+<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>new_metadata,</span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>)</span>
+<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a>The data points are quite small. We can adjust the <span class="in">`s`</span> (size) of the data points within the <span class="in">`scatterplot()`</span> function. Since we do not want the size of the data points to be scaled according to a column in <span class="in">`new_metadata`</span>, we can just specify a number for this argument.</span>
-<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_size_scatterplot_layer</span></span>
-<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size.</span></span>
-<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
-<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
-<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
-<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
-<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
-<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>,</span>
-<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a>                s<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a>The data points are quite small. We can adjust the <span class="in">`s`</span> (size) of the data points within the <span class="in">`scatterplot()`</span> function. Since we do not want the size of the data points to be scaled according to a column in <span class="in">`new_metadata`</span>, we can just specify a number for this argument.</span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-add_size_scatterplot_layer</span></span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size.</span></span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
+<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>,</span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a>                s<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### Themes</span></span>
-<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>There are a variety of themes that you can apply to your plot to change the background and gridlines. The default theme is <span class="in">`darkgrid`</span>, but you can change it with the <span class="in">`set_style()`</span> function from <span class="in">`seaborn`</span>. </span>
-<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-change_theme</span></span>
-<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size and a different theme.</span></span>
-<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the theme to &quot;whitegrid&quot;</span></span>
-<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">&quot;whitegrid&quot;</span>)</span>
-<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
-<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
-<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>,</span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>                s<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a><span class="fu"># Customizing themes</span></span>
-<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>You can also customize these further with <span class="in">`rc_params`</span> if you want to adjust specific elements of the theme. The documentation for <span class="in">`set_style()`</span> can be found <span class="co">[</span><span class="ot">on their official website</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.set_style.html)</span>.</span>
-<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a><span class="fu">### Themes</span></span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>There are a variety of themes that you can apply to your plot to change the background and gridlines. The default theme is <span class="in">`darkgrid`</span>, but you can change it with the <span class="in">`set_style()`</span> function from <span class="in">`seaborn`</span>. </span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-change_theme</span></span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size and a different theme.</span></span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the theme to &quot;whitegrid&quot;</span></span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">&quot;whitegrid&quot;</span>)</span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>,</span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>                s<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a><span class="fu"># Customizing themes</span></span>
+<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>You can also customize these further with <span class="in">`rc_params`</span> if you want to adjust specific elements of the theme. The documentation for <span class="in">`set_style()`</span> can be found <span class="co">[</span><span class="ot">on their official website</span><span class="co">](https://seaborn.pydata.org/generated/seaborn.set_style.html)</span>.</span>
+<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a><span class="fu">### Changing Labels</span></span>
-<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a>Do the axis labels or the tick labels get any larger by changing themes?</span>
-<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>No, they don’t. But we can change both the x-axis labels and size labels with the <span class="in">`plt.xlabel()`</span> functions from <span class="in">`matplotlib`</span>. Since we will be adding this layer “on top”, or after theme_bw(), any features we change will override what is set by the <span class="in">`sns.set_style()`</span> layer.</span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a>Let’s increase the size of the x-axis titles to be 10.</span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-change_axis_label_size</span></span>
-<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size, a different theme, and larger axis labels.</span></span>
-<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the theme to &quot;whitegrid&quot;</span></span>
-<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">&quot;whitegrid&quot;</span>)</span>
-<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
-<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
-<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
-<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>,</span>
-<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a>                s<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the size of the axis labels</span></span>
-<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&quot;Age in Days&quot;</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a><span class="fu">### Changing Labels</span></span>
+<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a>Do the axis labels or the tick labels get any larger by changing themes?</span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a>No, they don’t. But we can change both the x-axis labels and size labels with the <span class="in">`plt.xlabel()`</span> functions from <span class="in">`matplotlib`</span>. Since we will be adding this layer “on top”, or after theme_bw(), any features we change will override what is set by the <span class="in">`sns.set_style()`</span> layer.</span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a>Let’s increase the size of the x-axis titles to be 10.</span>
+<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-change_axis_label_size</span></span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size, a different theme, and larger axis labels.</span></span>
+<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the theme to &quot;whitegrid&quot;</span></span>
+<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">&quot;whitegrid&quot;</span>)</span>
+<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a plot with a specific size</span></span>
+<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a scatterplot layer to the plot, coloring points by genotype</span></span>
+<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> new_metadata,</span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a>                x<span class="op">=</span><span class="st">&quot;age_in_days&quot;</span>, </span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span><span class="st">&quot;mean_expression&quot;</span>,</span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a>                hue<span class="op">=</span><span class="st">&quot;genotype&quot;</span>,</span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>                style<span class="op">=</span><span class="st">&quot;celltype&quot;</span>,</span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>                s<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a><span class="co"># Change the size of the axis labels</span></span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&quot;Age in Days&quot;</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](11_plotting_basics-Answer_key.qmd#exercise-1)</span></span>
-<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The current axis label text defaults to what we gave as input to <span class="in">`geom_point`</span> (i.e the column headers). We can change this by **adding additional layers** called <span class="in">`xlabel()`</span> and <span class="in">`ylabel()`</span> for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled &quot;Age (days)&quot; and the y-axis is labeled &quot;Mean expression&quot;.</span>
-<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use the <span class="in">`plt.title()`</span> layer to add a plot title of your choice. </span>
-<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>When you add the arguments <span class="in">`loc=&quot;center&quot;`</span> to the <span class="in">`plt.title()`</span> function. What does it change?</span>
-<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Try adding the layer <span class="in">`plt.legend(loc=&quot;center right&quot;)`</span> to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?</span>
-<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](12_boxplots.qmd)</span></span>
-<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](11_plotting_basics-Answer_key.qmd#exercise-1)</span></span>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The current axis label text defaults to what we gave as input to <span class="in">`geom_point`</span> (i.e the column headers). We can change this by **adding additional layers** called <span class="in">`xlabel()`</span> and <span class="in">`ylabel()`</span> for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled &quot;Age (days)&quot; and the y-axis is labeled &quot;Mean expression&quot;.</span>
+<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use the <span class="in">`plt.title()`</span> layer to add a plot title of your choice. </span>
+<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>When you add the arguments <span class="in">`loc=&quot;center&quot;`</span> to the <span class="in">`plt.title()`</span> function. What does it change?</span>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Try adding the layer <span class="in">`plt.legend(loc=&quot;center right&quot;)`</span> to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?</span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](12_boxplots.qmd)</span></span>
+<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

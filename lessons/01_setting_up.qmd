@@ -1,30 +1,29 @@
 ---
-title: "Introduction to Python and Jupyter Lab"
+title: "Introduction to Python and JupyterLab"
 description: |
-  Write a description of the lesson here. 
+  This lesson introduces Python and JupyterLab for beginners, covering how to install Anaconda, launch JupyterLab, create notebooks, and run your first Python code in an interactive environment.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-04-05"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Python basics
+  - JupyterLab
+  - Anaconda
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Python tutorial
+  - Beginner Python
+  - JupyterLab notebooks
+  - Install Anaconda
+  - Python setup
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
-Approximate time: 30 minutes
+Approximate time: XX minutes
 
 ## Learning Objectives 
 

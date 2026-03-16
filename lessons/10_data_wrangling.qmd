@@ -1,26 +1,22 @@
 ---
 title: "Data Wrangling"
 description: |
-  Write a description of the lesson here. 
+  This lesson focuses on wrangling linked datasets with pandas, including filtering, reordering, saving cleaned tables, and merging DataFrames to prepare real data for analysis.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-15"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Data wrangling
+  - Pandas
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Data cleaning
+  - Merge DataFrames
+  - Save CSV
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 

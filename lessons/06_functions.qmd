@@ -1,26 +1,21 @@
 ---
 title: "Functions"
 description: |
-  Write a description of the lesson here. 
+  This lesson explains how functions work in Python, from calling built-in functions with arguments to defining your own reusable functions to organize and simplify code.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-14"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Functions
+  - Reproducibility
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Define functions
+  - Arguments
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 

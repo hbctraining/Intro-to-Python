@@ -1,26 +1,24 @@
 ---
 title: "Loading and Installing Libraries"
 description: |
-  Write a description of the lesson here. 
+  This lesson introduces Python libraries, showing how to install packages, import them into your environment, and explore library functions to extend Python for data analysis.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-14"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Libraries
+  - Environments
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Import libraries
+  - Package management
+  - Bioconda
+  - PyPI
+  - Conda-forge
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -42,7 +40,6 @@ In this lesson, we will:
 
 - Explain different ways to install external Python libraries
 - Demonstrate how to load a library and how to find functions specific to a library
-
 
 ## Overview of lesson
 

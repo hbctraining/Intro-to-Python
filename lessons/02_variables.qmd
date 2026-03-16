@@ -1,26 +1,22 @@
 ---
 title: "Variables"
 description: |
-  Write a description of the lesson here. 
+  This lesson explains how variables work in Python, including core data types, naming rules, assignment, and how to store and print values for use in larger analyses.
 author:
   - Will Gammerdinger
   - Noor Sohail
-date: "2025-11-18"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Variables
+  - Data types
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Python variables
+  - Python data types
+  - Variable naming
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 

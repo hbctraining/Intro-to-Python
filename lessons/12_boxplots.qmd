@@ -1,26 +1,24 @@
 ---
 title: "Boxplots"
 description: |
-  Write a description of the lesson here. 
+  This lesson shows how to create and customize boxplots in Python with Matplotlib and Seaborn to visualize distributions, identify outliers, and adjust colors and styles.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-15"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Data visualization
+  - Boxplots
+  - Matplotlib
+  - Seaborn
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Aesthetics
+  - Plot styling
+  - Hex colors
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 

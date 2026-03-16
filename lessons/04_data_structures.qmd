@@ -1,26 +1,24 @@
 ---
 title: "Data Structures"
 description: |
-  Write a description of the lesson here. 
+  This lesson covers core Python data structures, focusing on lists, dictionaries, and strings, and demonstrates how to index, slice, modify, and nest them for data manipulation.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-14"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Data structures
+  - Lists
+  - Dictionaries
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Indexing
+  - Slicing
+  - Mutable objects
+  - Strings
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 

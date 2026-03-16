@@ -1,26 +1,23 @@
 ---
-title: "`Pandas` DataFrames"
+title: "`pandas` DataFrames"
 description: |
-  Write a description of the lesson here. 
+  This lesson teaches how to use pandas DataFrames in Python to load tabular data, inspect and subset rows and columns, create new variables, and summarize data.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-15"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Pandas
+  - DataFrames
+  - Tabular data
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Pandas tutorial
+  - CSV
+  - Excel
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 

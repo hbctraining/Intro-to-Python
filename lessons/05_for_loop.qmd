@@ -1,26 +1,22 @@
 ---
 title: "`for` Loops"
 description: |
-  Write a description of the lesson here. 
+  This lesson introduces loops in Python, using for and while loops to iterate over sequences so you can automate repetitive tasks and apply the same code to many values.
 author:
   - Noor Sohail
   - Will Gammerdinger
-date: "2026-03-14"
-categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+date: "2026-03-16"
+categories:
+  - Python programming
+  - Loops
+  - Automation
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - For loops
+  - While loops
+  - Iterate values
 license: "CC-BY-4.0"
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -37,9 +33,9 @@ Approximate time: XX minutes
 
 In this lesson, we will:
 
-- Learning Objective 1
-- Learning Objective 2
-- Learning Objective 3
+- Create `for` loops to iterate over sequences of values
+- Learn how to use `for` loops with different data structures
+- Understand the difference between `for` and `while` loops
 
 ## Overview of lesson
 
