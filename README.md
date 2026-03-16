@@ -1,10 +1,3 @@
----
-title: "Introduction to Python"
-sidebar: false
-toc: false
----
-
-
 | Audience | Computational skills required| Duration |
 :----------|:----------|:----------|
 | Biologists | None | 4-session workshop (8 hours of trainer-led time)|
