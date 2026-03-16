@@ -15,11 +15,7 @@ This repository has teaching materials for a hands-on workshop on **Introduction
 
 We will cover the basics of Python programming, including data types, functions, and how to use popular libraries such as `NumPy`, `pandas`, and `Matplotlib`. The goal is to give you a solid foundation in Python programming that you can build upon for your own projects. No prior programming experience is required. By the end, you should feel comfortable reading and writing basic Python code, loading and manipulating data, and generating custom visualizations.
 
-
-::: callout-note
-# Note for trainers
-Please note that the schedule linked below assumes that learners will spend between 3-5 hours on reading through and completing exercises from selected lessons between classes. The online component of the workshop focuses on more exercises and discussion/Q & A.
-:::
+> **Note for trainers:** Please note that the schedule linked below assumes that learners will spend between 3-5 hours on reading through and completing exercises from selected lessons between classes. The online component of the workshop focuses on more exercises and discussion/Q & A.
 
 ### Learning Objectives
 
