@@ -33,7 +33,7 @@
     "href": "lessons/12_boxplots.html#overview-of-lesson",
     "title": "Boxplots",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nBoxplots are a great way to visualize the distribution of your data when you are comparing different groups, such as expression levels across conditions. They can help you identify differences between conditions while also representing outliers and variability within your data. Using Matplotlib and Seaborn, we are going to build upon the foundation of plotting to create even more custom plots. In this lesson, you will practice creating boxplots and modifying their appearance to your liking.",
     "crumbs": [
       "Day 3 Self-learning:",
       "Boxplots"
@@ -99,7 +99,7 @@
     "href": "lessons/04_data_structures.html#overview-of-lesson",
     "title": "Data Structures",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nReal data comes in many shapes: a list of sample IDs, a mapping of species to genome lengths, or a sentence of free text. Choosing the right structure for each of these makes your code cleaner and sometimes even more efficient under the hood. In this lesson, you will learn how to use each structure so that you can represent your own data in ways that match how you think about it.",
     "crumbs": [
       "Day 2:",
       "Data Structures"
@@ -187,7 +187,7 @@
     "href": "lessons/07_libraries.html#overview-of-lesson",
     "title": "Loading and Installing Libraries",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nMost of the power of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading csv files, working with biological sequences, or creating complex plots. The open source community has developed a vast array of libraries to support various domains and use cases. In this way, you do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load, and explore libraries so you can tap into this broader ecosystem for your own work.",
     "crumbs": [
       "Day 2 Self-learning:",
       "Loading and Installing Libraries"
@@ -319,7 +319,7 @@
     "href": "lessons/03_conditional_statements.html#overview-of-lesson",
     "title": "Conditional Statements",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nConditional statements are what let your code make decisions. In real projects, you might only run a quality‑control step if a file exists, flag samples that fail a cutoff, or choose a different analysis path depending on user input. All of these rely on if, elif, and else to check conditions and respond accordingly.\nIn this lesson, you will learn how to express True/False logic in Python so your scripts can adapt to different datasets and scenarios instead of doing the exact same thing every time.",
     "crumbs": [
       "Day 1 Self-learning:",
       "Conditional Statements"
@@ -549,7 +549,7 @@
     "href": "lessons/01_setting_up.html#overview-of-lesson",
     "title": "Introduction to Python and JupyterLab",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nThis lesson is all about getting you to the point where you can actually run Python code on your own. We will use Anaconda and JupyterLab so that you can open a notebook, write code, and see results immediately. These same tools are widely used in research labs and data teams to explore datasets, document analyses, and share results with collaborators.\nBy the end, you will have a working Python environment that you can reuse for future projects, whether you are automating a simple task or starting a larger analysis.",
     "crumbs": [
       "Day 1:",
       "Introduction to Python and JupyterLab"
@@ -604,7 +604,7 @@
     "href": "lessons/01_setting_up.html#running-python-code",
     "title": "Introduction to Python and JupyterLab",
     "section": "Running Python Code",
-    "text": "Running Python Code\nIn the notebook, we can write Python code in the cells. To create a new cell, click the \"+\" button in the toolbar at the top of the notebook.\nNow that we are all set up, let us try running some Python code in our notebook!\nLet us start by evaluating what the sum of 3 and 5 is. We are also going to include comments in our code to describe what we are doing. This is best practice for writing code, as it allows others (and your future self) to understand what the code is doing. To write a comment in Python, we use the # symbol. Anything that follows the # symbol on a line is considered a comment and is not executed as code.\n\n# Intro to Python Lesson\n# March 2026\n# Author: Harvard Chan Bioinformatics Core\n\n\n# Add 3 and 5\n3 + 5\n\n8\n\n\nTo run a cell, you can click on the cell and then click the “Run” button in the toolbar at the top of the notebook. You can also use the keyboard shortcut Shift + Enter to run a cell.\n\n\n\n\n\n\nFigure 7: Output of running 3 + 5 in Jupyter Lab.\n\n\n\nWhat happens if we do that same command without the comment symbol #? Re-run the command after removing the # sign in the front:\n\nAdd 3 and 5\n3 + 5\n\n\n  Cell In[4], line 1\n    Add 3 and 5\n        ^\nSyntaxError: invalid syntax\n\n\n\n\nNow Python is trying to run that sentence as a command, and it doesn’t work. We get an error in the console. This means that the Python interpreter did not know what to do with that command. Reintroduce the # to re-comment the appropriate line.\nThis is a clear example of how Python has a specific syntax that must be followed for the code to run properly. We will continue to learn more about the proper format of Python code as we go through the workshop. It really is its own language just like English, but with its own grammar and rules.",
+    "text": "Running Python Code\nIn the notebook, we can write Python code in the cells. To create a new cell, click the \"+\" button in the toolbar at the top of the notebook.\nNow that we are all set up, let us try running some Python code in our notebook!\nLet us start by evaluating what the sum of 3 and 5 is. We are also going to include comments in our code to describe what we are doing. This is best practice for writing code, as it allows others (and your future self) to understand what the code is doing. To write a comment in Python, we use the # symbol. Anything that follows the # symbol on a line is considered a comment and is not executed as code.\n\n# Intro to Python Lesson\n# March 2026\n# Author: Harvard Chan Bioinformatics Core\n\n\n# Add 3 and 5\n3 + 5\n\n8\n\n\nTo run a cell, you can click on the cell and then click the “Run” button in the toolbar at the top of the notebook. You can also use the keyboard shortcut Shift + Enter to run a cell.\n\n\n\n\n\n\nFigure 7: Output of running 3 + 5 in Jupyter Lab.\n\n\n\nWhat happens if we do that same command without the comment symbol #? Re-run the command after removing the # sign in the front:\n\nAdd 3 and 5\n3 + 5\n\n\n  Cell In[2], line 1\n    Add 3 and 5\n        ^\nSyntaxError: invalid syntax\n\n\n\n\nNow Python is trying to run that sentence as a command, and it doesn’t work. We get an error in the console. This means that the Python interpreter did not know what to do with that command. Reintroduce the # to re-comment the appropriate line.\nThis is a clear example of how Python has a specific syntax that must be followed for the code to run properly. We will continue to learn more about the proper format of Python code as we go through the workshop. It really is its own language just like English, but with its own grammar and rules.",
     "crumbs": [
       "Day 1:",
       "Introduction to Python and JupyterLab"
@@ -648,7 +648,7 @@
     "href": "lessons/10_data_wrangling.html#overview-of-lesson",
     "title": "Data Wrangling",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nData wrangling is the step where messy, real‑world data is turned into something usable. In practice, this often means linking multiple tables (e.g., combining sample metadata with expression data), filtering out unwanted rows, and saving clean versions of your data for later use. pandas enables you to do all this and more when it comes to data manipulation. In this lesson, you will work with datasets and learn how to merge, filter, and reorder tables so that you can easily complete downstream analyses and create visualizations.",
     "crumbs": [
       "Day 3 Self-learning:",
       "Data Wrangling"
@@ -889,7 +889,7 @@
     "href": "lessons/06_functions.html#overview-of-lesson",
     "title": "Functions",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nFunctions allow you to bundle up a task so that you can use it again and again. In real projects, you might write a function to clean a dataset or run a standard calcluation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer, and easier to fix. It is very easy to make avoidable mistakes when you are copy-pasting code! Functions help you avoid that by letting you write the code once and reuse it as many times as you want.\nIn this lesson, you will learn how to call built‑in functions and define your own, so you can start building a small “toolbox” tailored to your own needs.",
     "crumbs": [
       "Day 2 Self-learning:",
       "Functions"
@@ -966,7 +966,7 @@
     "href": "lessons/05_for_loop.html#overview-of-lesson",
     "title": "for Loops",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nOne of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops to automate this process. In this lesson, we will learn about two types of loops: for loops and while loops.",
+    "text": "Overview of lesson\nOne of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops to automate this process. This is essential in real analyses, where you might need to process hundreds of files or thousands of values consistently and without human error. In this lesson, we will learn about two types of loops: for loops and while loops.",
     "crumbs": [
       "Day 2:",
       "`for` Loops"
@@ -1042,7 +1042,7 @@
     "href": "lessons/09_pandas_dataframes.html#overview-of-lesson",
     "title": "pandas DataFrames",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nReal-life data oftentimes comes in the form of tables of data, matrices of gene expression, or excel sheets of patient data. pandas DataFrames are Python’s way of representing this tabular data so you can clean, filter, and summarize it efficiently. Being comfortable with DataFrames will let you do tasks like quickly finding all samples from a particular condition, computing summary statistics, or preparing a clean table for plotting. In this lesson, you will practice loading data into DataFrames and performing common operations that mirror how you would explore a dataset in a spreadsheet, but with far more control and reproducibility.",
     "crumbs": [
       "Day 3:",
       "`pandas` DataFrames"
@@ -1165,7 +1165,7 @@
     "href": "lessons/11_plotting_basics.html#overview-of-lesson",
     "title": "Plotting Basics with Matplotlib and Seaborn",
     "section": "Overview of lesson",
-    "text": "Overview of lesson\nWhen doing XYZ…",
+    "text": "Overview of lesson\nPlots are one of the best ways to communication and summarize results to others. With Matplotlib and Seaborn, you can create customizable visualizations from your data. Data scientists and researchers use these tools everyday to explore trends and create publication-ready figures for presentations and manuscripts. In this lesson, you will learn the basics of building a scatterplot and adjusting aesthetics to give you the foundation for creating any plot you may want to generate in the future.",
     "crumbs": [
       "Day 3 Self-learning:",
       "Plotting Basics with `Matplotlib` and `Seaborn`"

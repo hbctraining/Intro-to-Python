@@ -40,7 +40,9 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Conditional statements are what let your code make decisions. In real projects, you might only run a quality‑control step if a file exists, flag samples that fail a cutoff, or choose a different analysis path depending on user input. All of these rely on `if`, `elif`, and `else` to check conditions and respond accordingly. 
+
+In this lesson, you will learn how to express `True`/`False` logic in Python so your scripts can adapt to different datasets and scenarios instead of doing the exact same thing every time.
 
 ## `if` Statements
 

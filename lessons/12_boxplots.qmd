@@ -43,7 +43,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Boxplots are a great way to visualize the distribution of your data when you are comparing different groups, such as expression levels across conditions. They can help you identify differences between conditions while also representing outliers and variability within your data. Using `Matplotlib` and `Seaborn`, we are going to build upon the foundation of plotting to create even more custom plots. In this lesson, you will practice creating boxplots and modifying their appearance to your liking.
 
 ## Boxplots
 

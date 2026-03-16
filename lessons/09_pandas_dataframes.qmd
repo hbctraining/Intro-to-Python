@@ -44,7 +44,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Real-life data oftentimes comes in the form of tables of data, matrices of gene expression, or excel sheets of patient data. `pandas` DataFrames are Python’s way of representing this tabular data so you can clean, filter, and summarize it efficiently. Being comfortable with DataFrames will let you do tasks like quickly finding all samples from a particular condition, computing summary statistics, or preparing a clean table for plotting. In this lesson, you will practice loading data into DataFrames and performing common operations that mirror how you would explore a dataset in a spreadsheet, but with far more control and reproducibility.
 
 ## Downloading Data
 

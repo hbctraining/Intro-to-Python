@@ -45,7 +45,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Plots are one of the best ways to communication and summarize results to others. With `Matplotlib` and `Seaborn`, you can create customizable visualizations from your data. Data scientists and researchers use these tools everyday to explore trends and create publication-ready figures for presentations and manuscripts. In this lesson, you will learn the basics of building a scatterplot and adjusting aesthetics to give you the foundation for creating any plot you may want to generate in the future.
 
 ## Plotting Basics
 

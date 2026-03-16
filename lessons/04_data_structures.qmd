@@ -41,7 +41,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Real data comes in many shapes: a list of sample IDs, a mapping of species to genome lengths, or a sentence of free text. Choosing the right structure for each of these makes your code cleaner and sometimes even more efficient under the hood. In this lesson, you will learn how to use each structure so that you can represent your own data in ways that match how you think about it.
 
 ## Data Structures
 

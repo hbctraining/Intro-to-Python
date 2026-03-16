@@ -43,7 +43,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Most of the power of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading csv files, working with biological sequences, or creating complex plots. The open source community has developed a vast array of libraries to support various domains and use cases. In this way, you do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load, and explore libraries so you can tap into this broader ecosystem for your own work.
 
 ## Libaries in Python
 

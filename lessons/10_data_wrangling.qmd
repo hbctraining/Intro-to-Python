@@ -44,7 +44,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Data wrangling is the step where messy, real‑world data is turned into something usable. In practice, this often means linking multiple tables (e.g., combining sample metadata with expression data), filtering out unwanted rows, and saving clean versions of your data for later use. `pandas` enables you to do all this and more when it comes to data manipulation. In this lesson, you will work with datasets and learn how to merge, filter, and reorder tables so that you can easily complete downstream analyses and create visualizations.
 
 ## Linked DataFrames
 

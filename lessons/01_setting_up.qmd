@@ -35,7 +35,9 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+This lesson is all about getting you to the point where you can actually **run Python code on your own**. We will use `Anaconda` and `JupyterLab` so that you can open a notebook, write code, and see results immediately. These same tools are widely used in research labs and data teams to explore datasets, document analyses, and share results with collaborators. 
+
+By the end, you will have a working Python environment that you can reuse for future projects, whether you are automating a simple task or starting a larger analysis.
 
 ## What is Python?
 

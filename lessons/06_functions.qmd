@@ -40,7 +40,9 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Functions allow you to bundle up a task so that you can use it again and again. In real projects, you might write a function to clean a dataset or run a standard calcluation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer, and easier to fix. It is very easy to make avoidable mistakes when you are copy-pasting code! Functions help you avoid that by letting you write the code once and reuse it as many times as you want.
+
+In this lesson, you will learn how to call built‑in functions and define your own, so you can start building a small “toolbox” tailored to your own needs.
 
 ## What are Functions?
 

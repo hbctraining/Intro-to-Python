@@ -39,7 +39,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops to automate this process. In this lesson, we will learn about two types of loops: `for` loops and `while` loops.
+One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops to automate this process. This is essential in real analyses, where you might need to process hundreds of files or thousands of values consistently and without human error. In this lesson, we will learn about two types of loops: `for` loops and `while` loops.
 
 ## `for` Loops
 
