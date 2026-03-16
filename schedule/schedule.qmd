@@ -115,7 +115,19 @@ I. Please **study the contents** and **work through all the code** within the fo
         - Learning Objective 3
       :::
 
-   2. [Plotting with `MatPlotLib`](../lessons/15_lesson.qmd)
+   2. [Plotting Basics with `Matplotlib` and `Seaborn`](../lessons/11_plotting_basics.qmd)
+
+      :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
+      Brief description of the lesson.
+      
+      In this lesson, you will:
+      
+        - Learning Objective 1
+        - Learning Objective 2
+        - Learning Objective 3
+      :::
+
+   3. [Boxplots](../lessons/12_boxplots.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       Brief description of the lesson.
@@ -142,10 +154,10 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [Plotting with `Seaborn`](../lessons/16_lesson.qmd) | Instructor_name |
-| 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [Lesson 17](../lessons/17_lesson.qmd) | Instructor_name |
-| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+| 10:30 - 11:25 | [Heatmaps](../lessons/13_heatmaps.qmd) | Instructor_name |
+| 11:25 - 11:30 | Break | |
+| 11:30 - 11:45 | Discussion, Q & A | Instructor_name |
+| 11:45 - 12:00 | [Wrap Up](../slides/workshop_wrapup_slides.pdf) | Instructor_name |
 
 ***
 

@@ -1,0 +1,134 @@
+---
+title: "Plotting Basics with `MatPlotlib` and `Seaborn` - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-15"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+# Interfacing with R quarto and python futzing
+library(reticulate)
+use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
+```
+
+```{python}
+#| label: load_libraries_data_py
+#| echo: false
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd 
+
+# Load the new metadata data frame that we created in the previous lesson
+new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)  
+```
+
+# Exercise 1
+
+1. The current axis label text defaults to what we gave as input to `geom_point` (i.e the column headers). We can change this by **adding additional layers** called `xlabel()` and `ylabel()` for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled "Age (days)" and the y-axis is labeled "Mean expression".
+
+```{python}
+#| label: exercise_1
+# Set the theme to "whitegrid"
+sns.set_style("whitegrid")
+
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot, coloring points by genotype
+sns.scatterplot(data = new_metadata,
+                x="age_in_days", 
+                y="mean_expression",
+                hue="genotype",
+                style="celltype",
+                s=50)
+
+# Change the size of the axis labels
+plt.xlabel("Age (Days)", fontsize=20)
+plt.ylabel("Mean expression", fontsize=20)
+``` 
+
+2. Use the `plt.title()` layer to add a plot title of your choice. 
+
+```{python}
+#| label: exercise_2
+# Set the theme to "whitegrid"
+sns.set_style("whitegrid")
+
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot, coloring points by genotype
+sns.scatterplot(data = new_metadata,
+                x="age_in_days", 
+                y="mean_expression",
+                hue="genotype",
+                style="celltype",
+                s=50)
+
+# Change the size of the axis labels
+plt.xlabel("Age (Days)", fontsize=20)
+plt.ylabel("Mean expression", fontsize=20)
+plt.title("Mean expression vs Age (Days)")
+``` 
+
+3. When you add the arguments `loc="center"` to the `plt.title()` function:
+   - What does it change?
+   - How many layers can be added to a plot, in your estimation?
+
+```{python}
+#| label: exercise_3
+# Set the theme to "whitegrid"
+sns.set_style("whitegrid")
+
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot, coloring points by genotype
+sns.scatterplot(data = new_metadata,
+                x="age_in_days", 
+                y="mean_expression",
+                hue="genotype",
+                style="celltype",
+                s=50)
+
+# Change the size of the axis labels
+plt.xlabel("Age (Days)", fontsize=20)
+plt.ylabel("Mean expression", fontsize=20)
+plt.title("Mean expression vs Age (Days)", loc="center")
+``` 
+
+4. Try adding the layer `plt.legend(loc="center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
+
+
+```{python}
+#| label: exercise_4
+# Set the theme to "whitegrid"
+sns.set_style("whitegrid")
+
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot, coloring points by genotype
+sns.scatterplot(data = new_metadata,
+                x="age_in_days", 
+                y="mean_expression",
+                hue="genotype",
+                style="celltype",
+                s=50)
+
+# Change the size of the axis labels
+plt.xlabel("Age (Days)", fontsize=20)
+plt.ylabel("Mean expression", fontsize=20)
+plt.title("Mean expression vs Age (Days)", loc="center")
+
+# Change legend location
+plt.legend(loc="center right")
+``` 

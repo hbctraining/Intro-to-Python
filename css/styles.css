@@ -198,11 +198,8 @@ img {
    TABLES
    ============================================================ */
 
-/* 
-   Base table styling (applies to markdown tables AND Pandas).
-   NOTE: we intentionally do NOT set width: 100% here so that
-   very wide tables can scroll inside their containers.
-*/
+/* Base table styling (for markdown tables AND Pandas DataFrames).
+   NOTE: no width: 100% here so wide tables can scroll. */
 table {
   border-collapse: collapse;
   border: 1px solid #d0d0d0;      /* outer border */
@@ -237,7 +234,7 @@ table thead th {
 
 /* 
    Make only Quarto/markdown tables fill the content width.
-   Pandas DataFrames use class="dataframe" and will be excluded
+   Pandas DataFrames have class "dataframe" and are excluded
    so they can scroll horizontally instead.
 */
 .quarto-table table:not(.dataframe) {
@@ -246,19 +243,22 @@ table thead th {
 
 
 /* ============================================================
-   CAPTIONS
+   CAPTIONS  (FIX: DO NOT STYLE `table caption`)
    ============================================================ */
 
-/* Table captions: left-aligned, no special background */
+/* 
+   Quarto-generated table captions:
+   - left-aligned
+   - simple spacing
+   IMPORTANT: We intentionally do NOT style `table caption`
+   because that breaks scrolling for `.table.caption-top`
+   tables like Pandas DataFrames.
+*/
 .quarto-float-tbl .quarto-float-caption,
 .quarto-float .quarto-float-caption,
-table caption {
+[id^="tbl-"][id*="-caption-"] {
   text-align: left !important;
-  width: 100% !important;
-  display: block !important;
-  box-sizing: border-box !important;
   margin-bottom: 0.5em;
-  padding: 0.4em 0;     /* spacing only, no background color */
 }
 
 
@@ -285,10 +285,7 @@ figure {
   margin-right: auto;
 }
 
-/* 
-   Figure captions:
-   - left-aligned text inside a horizontally centered figure.
-*/
+/* Figure captions: left-aligned inside centered figure */
 .quarto-figure .figure-caption,
 .figure .figure-caption,
 figure figcaption {
@@ -343,19 +340,27 @@ figure figcaption {
   overflow-x: auto !important;
 }
 
-/* 
-   Pandas DataFrame tables (class="dataframe") should:
-   - Use intrinsic width (no stretching to 100%),
-   - Be allowed to be wider than their container;
-     the container scrolls horizontally.
-*/
-.cell-output-display table.dataframe {
-  width: auto !important;
-  max-width: none !important;
+/* Also allow scroll on the immediate inner wrapper div, just in case */
+.cell-output-display > div {
+  max-width: 100% !important;
+  overflow-x: auto !important;
 }
 
-/* Handle the case where Pandas/Quarto wraps the dataframe in an extra div */
+/* 
+   Pandas DataFrame tables have:
+   class="dataframe ... table table-sm table-striped small"
+   Bootstrap's `.table` sets width:100%; override that here so the
+   DataFrame can be wider than the container and scrolls.
+*/
+.cell-output-display table.dataframe {
+  width: auto !important;         /* override Bootstrap's width: 100% */
+  max-width: none !important;
+  display: table !important;
+}
+
+/* Handle the nested case explicitly: <div><table class="dataframe ..."></table></div> */
 .cell-output-display > div > table.dataframe {
   width: auto !important;
   max-width: none !important;
+  display: table !important;
 }

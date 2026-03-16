@@ -62,12 +62,12 @@ website:
       - section: "Day 3 Self-learning:"
         contents:
           - lessons/10_data_wrangling.qmd
-          - lessons/15_lesson.qmd
+          - lessons/11_plotting_basics.qmd
+          - lessons/12_boxplots.qmd
           
       - section: "Day 4:"
         contents:
-          - lessons/16_lesson.qmd
-          - lessons/17_lesson.qmd
+          - lessons/13_heatmaps.qmd
           
 
 format:
