@@ -25,23 +25,23 @@ editor_options:
 
 Approximate time: XX minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
-- Describe what Python and Jupter Lab are
-- Familiarize ourselves with the Jupyter Lab interface
-- Interact with Python within Jupyter Lab
+- Describe what Python and JupyterLab are
+- Familiarize ourselves with the JupyterLab interface
+- Interact with Python within JupyterLab
 
 ## Overview of lesson
 
-This lesson is all about getting you to the point where you can actually **run Python code on your own**. We will use `Anaconda` and `JupyterLab` so that you can open a notebook, write code, and see results immediately. These same tools are widely used in research labs and data teams to explore datasets, document analyses, and share results with collaborators. 
+This lesson includes instructions on how to install Python, open a JupyterLab notebook, and **run Python code on your own**. We will be using `Anaconda` and JupyterLab so that you can work within the notebook ecosystem, which allows you to see the results of your code immediately. These same tools are widely used across fields for research and data scientists to explore datasets, document thought processes, and share results with collaborators.
 
-By the end, you will have a working Python environment that you can reuse for future projects, whether you are automating a simple task or starting a larger analysis.
+By the end, you will have a working Python environment that you can reuse for future projects, whether you are automating a task or starting a larger analysis!
 
 ## What is Python?
 
-[Python](https://www.python.org/) is a programming language that allows us to write code to perform various tasks. It interprets code, written in a particular syntax, to execute tasks defined by the programmer. Due to its simplicity and readability, Python is a great language for beginners, but is also powerful enough to be used to answer complex, real world questions. Therefor many fields, such as data science, machine learning, bioinformatics, and more have adopted Python a tool for their work.
+[Python](https://www.python.org/) is a programming language that allows the user to write code, in a particular syntax, to execute tasks. Due to its simplicity and readability, Python is a great language for beginners! It is also powerful enough to be used by experts to answer complex, real world questions. Therefore many fields, such as data science, machine learning, articial intelligence, bioinformatics, and more have adopted Python a tool for their work.
 
 ::: columns
 ::: column
@@ -54,23 +54,23 @@ Python logo.
 ::: column
 **The Python environment combines:**
 
-- Effective handling of big data
-- Collection of integrated tools
-- Graphical facilities
-- Simple and effective programming language
+- Efficient handling of large datasets
+- Extensive libraries for a multitude of tasks
+- Graphical interface
+- Simplistic syntax and memory management
+- Visualization methods
 :::
 :::
 
 ### Why use Python?
 
-Python has a large ecosystem of libraries that can be used for a wide range of applications, from data wrangling to bioinformatics analyses.
+Python has a large ecosystem of libraries that can be used for a wide range of applications, from cleaning dataframes (data wrangling) to building machine learning models.
 
 Among its many capabilities, Python is particularly well-suited due to:
 
 - Ease of data handling, wrangling, and storage
 - Capability to run statistical analyses with many graphical techniques
-- How it can be installed on any computer and (and it’s free!)
-- Its open source community
+- How it can be installed on any computer and (and it’s **free!**)
 
 In addition, Python has a large and active community, which means there are many resources available for learning and troubleshooting. 
 
@@ -80,14 +80,14 @@ In addition, Python has a large and active community, which means there are many
 
 ::: callout-note
 # Installing Anaconda
-Prior to today's lesson, you should have installed [Anaconda](https://www.anaconda.com/download) onto your computer. 
+Prior to today's lesson, you should have installed [Anaconda](https://www.anaconda.com/download) onto your computer. In doing so, you should now have an application called "Anaconda Navigator". 
 :::
 
-By installing Anaconda, we have also installed Python. 
+By installing Anaconda, we have also installed the Python programming language. 
 
 ### Anaconda Navigator
 
-We can get started by opening the application Anaconda Navigator, which was installed with the link above. This program allow us to interface with Python environment and applications.
+We can get started by opening the application Anaconda Navigator, which was installed with the link above. This program allow us to interface with Python environments and programs.
 
 When opening the application, the screen should look something like this:
 
@@ -97,42 +97,42 @@ When opening the application, the screen should look something like this:
 Anaconda Navigator interface.
 :::
 
-### Navigator Sections
+### Navigator sections
 
 There are four main sections of the Anaconda Navigator interface:
 
-1. **Home**: This is the default view when you open Anaconda Navigator. It provides access to applications, like Jupyter Lab, PyCharm, Spyder, and more.
-2. **Environments**: This section allows you to manage different Python environments. You can install packages and create new environments here.
+1. **Home**: This is the default view when you open Anaconda Navigator. It provides access to applications and tools, like JupyterLab, PyCharm, Spyder, and more.
+2. **Environments**: This section allows you to manage different Python environments. You can install packages and create new environments.
 3. **Learning**: Here, you can access to various resources for learning Python and data science, including tutorials, and documentation.
 4. **Community**: This section links to forums, blogs, and other resources for connecting with other Python users.
 
 ::: callout-note
 # Environments
-The environments section of Anaconda Navigator allows you to manage multiple Python environments. This is useful for keeping your projects organized and avoiding conflicts between packages. For example, if you are working on two different projects that require different versions of a package, you can create separate environments for each project to avoid conflicts.
+The environments section of Anaconda Navigator allows you to manage multiple Python environments. This is useful for keeping your projects organized and avoiding version and dependency issues. For example, if you are working on two different projects that require different versions of a package, you can create separate environments for each project to avoid conflicts.
 
 We will discuss environments in more detail later in this workshop. For now, we will be working in the base, default, environment.
 :::
 
 
-## Jupyter Lab
+## JupyterLab
 
 ::: columns
 ::: column
-One of the packages downloaded with Anaconda is [Jupyter Lab](https://jupyter.org/). These are interactive environments that allow you to create and share your Python code and visualizations. Jupyter Lab are widely used for sharing results and running analyses.
+One of the applications downloaded with Anaconda is [JupyterLab](https://jupyter.org/). These are interactive environments (notebooks) that allow you to create and share your Python code and visualizations. JupyterLab is widely used for sharing results and running analyses as you can show intermediate results from code chunks through the notebook.
 
-Rather than creating scripts that are run in a terminal, Jupyter Lab allow you to write and execute code in a more interactive way. You can write code in cells, run those cells, and immediately see the output. This makes it easier to experiment and test your code as you go.
+Rather than creating scripts that are run in a terminal, JupyterLab allow you to write and execute code in a more interactive way. You can write code in **cells**, run those cells, and immediately see the output. This makes it easier to experiment and test your code as you go.
 
 :::
 ::: column
 ::: {#fig-jupyter_lab_logo .figure}
 ![](../img/jupyter_lab_logo.jpeg){width=150px}
 
-Jupyter Lab logo.
+JupyterLab logo.
 :::
 :::
 :::
 
-Let us open Jupyter Lab by clicking the "Launch" button under the Jupyter Lab application in Anaconda Navigator. This will open a new tab in your web browser with the Jupyter Lab interface.
+Let us open JupyterLab by clicking the "Launch" button under the JupyterLab application in Anaconda Navigator. _This will open a new tab in your web browser with the JupyterLab interface._
 
 ::: callout-warning
 TODO: Make our own screenshot, I have just taken this from the this other workshop for now since I have many conda environments when I open mine. It woul dbe nice to have a similarly labeled image.
@@ -141,15 +141,15 @@ TODO: Make our own screenshot, I have just taken this from the this other worksh
 ::: {#fig-jupyter_lab_interface .figure}
 ![](../img/jupyter_lab_landing.png)
 
-Jupyter Lab interface.<br>
+JupyterLab interface.<br>
 _Source: [Python for Geographic Data Analysis](https://pythongis.org/part1/chapter-01/nb/04-using-jupyterlab.html)_
 :::
 
-Even though Jupyter Lab opens your web browser, it is not actually accessing the internet. It is running on your local computer at the port `http://localhost:8888` which is hosted on your computer and is not accessible to anyone else.
+Even though JupyterLab opens your web browser, it is not actually accessing the internet. It is running on your local computer at the port `http://localhost:8888` which is hosted on your computer and is not accessible to anyone else.
 
-### File Navigator
+### File navigator
 
-On the left-hand side of Jupyter Lab, we have access to the file navigator. This allows us to navigate through the files on our computer and open them in Jupyter Lab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder titled, "intro_python", click the "New Folder" button in the file navigator. 
+On the left-hand side of JupyterLab, we have access to the file navigator. This allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder titled, "intro_python", click the "New Folder" button in the file navigator. 
 
 :::{.callout-tip}
 # **Exercise 1**
@@ -159,27 +159,27 @@ To organize your working directory for a particular analysis, you should separat
 - `data/`: directory within your working directory that stores the raw data
 - `scripts/`: directory for your Python scripts and notebooks
 - `results/`: folder for intermediate results
-- `figures/`: directory for the plots you will generate.
+- `figures/`: directory for the plots you will generate
 
 For this exercise create each of these directories. When finished, your working directory should look like this:
 
 ::: {#fig-jupyter_file_nav .figure}
 ![](../img/jupyter_lab_file_navigator.png){width=300px}
 
-File navigator in Jupyter Lab after creating directories.
+File navigator in JupyterLab after creating directories for data management.
 :::
 
 :::
 
-### Menu Bar
+### Menu bar
 
-The menu bar at the top of Jupyter Lab provides access to various functions and features. Some of the main options include:
+The menu bar at the top of JupyterLab provides access to various functions and features. Some of the main options include:
 
 ::: callout-warning
 TODO: Copy pasted from CCB: https://ccb-hms.github.io/workbench-python-workshop/01-introduction.html
 :::
 
-Table: Jupyter Lab menu options and descriptions. {#tbl-jupyter_menu}
+Table: JupyterLab menu options and descriptions. {#tbl-jupyter_menu}
 
 | Menu     | Description                                                                                                                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -192,13 +192,11 @@ Table: Jupyter Lab menu options and descriptions. {#tbl-jupyter_menu}
 | Settings | Common JupyterLab settings can be configured using this menu. There is also an Advanced Settings Editor option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options. |
 | Help     | A list of JupyterLab and kernel help links.                                                                                                                                                                |
 
-## Creating a Python Notebook
+## Creating an interactive Python notebook (ipynb)
 
 From the menu bar, create a new notebook with `File -> New -> Notebook`. This will open a notebook in a new tab. 
 
-You may be prompted to select a kernel. A kernel refers to the environment used to execute code in the notebook. This is in reference to the environments that can be managed in Anaconda Navigator. We will discuss environments in more detail later in the workshop, but for now we will be working with base as we become familiar with Python and Jupyter Lab. So select the `Python [conda env: base]` kernel from the dropdown menu.
-
-A Jupyter Notebook is a document that contains both code and text inside cells. Cells are the building blocks of a Jupyter Notebook. They can contain code, text, or other types of content.
+You may be prompted to select a kernel. A kernel refers to the environment used to execute code in the notebook. This is in reference to the environments that can be managed in Anaconda Navigator. We will discuss environments in more detail later in the workshop, but for now we will be working with base as we become familiar with Python and JupyterLab. So select the `Python [conda env: base]` kernel from the dropdown menu.
 
 ::: {#fig-jupyter_notebook .figure}
 ![](../img/jupyter_lab_new_file.png)
@@ -208,13 +206,17 @@ Freshly created Jupyter Notebook.
 
 We can see in the File Navigator that we have a new file called `Untitled.ipynb`. The `.ipynb` extension stands for "interactive Python notebook". We can rename this file by right-clicking on it in the File Navigator and selecting "Rename". Let us rename this file to `intro_python.ipynb`.
 
-## Running Python Code
+## Running Python code
 
-In the notebook, we can write Python code in the cells. To create a new cell, click the `"+"` button in the toolbar at the top of the notebook.
+As the programmer, we will be writing text within the cells of the Jupyter Notebook. These blocks can either text (markdown) or code (Python). To create a new cell, click the `"+"` button in the toolbar at the top of the notebook.
 
-**Now that we are all set up, let us try running some Python code in our notebook!**
+::: callout-warning
+Do we want to include markdown, maybe as an aside?
+:::
 
-Let us start by evaluating what the sum of 3 and 5 is. We are also going to include comments in our code to describe what we are doing. This is best practice for writing code, as it allows others (and your future self) to understand what the code is doing. To write a comment in Python, we use the `#` symbol. Anything that follows the `#` symbol on a line is considered a comment and is not executed as code.
+**Now that we are all set up, let's run our first line of Python code!!!**
+
+We will start by evaluating what the sum of 3 and 5 is. We are also going to include **comments** in our code to describe what we are doing. This is best practice for writing code, as it allows others (and your future self) to understand what the code is doing. To write a comment in Python, we use the `#` symbol. Anything that follows the `#` symbol on a line is considered a comment and is not executed as code.
 
 ```{python}
 #| label: code_example
@@ -232,7 +234,7 @@ To run a cell, you can click on the cell and then click the "Run" button in the 
 ::: {#fig-jupyter_code_output .figure}
 ![](../img/run_three_plus_five.png)
 
-Output of running 3 + 5 in Jupyter Lab.
+Output of running 3 + 5 in JupyterLab.
 :::
 
 What happens if we do that same command without the comment symbol `#`? Re-run the command after removing the `#` sign in the front:
@@ -244,15 +246,15 @@ Add 3 and 5
 3 + 5
 ```
 
-Now Python is trying to run that sentence as a command, and it doesn’t work. We get an error in the console. This means that the Python interpreter did not know what to do with that command. Reintroduce the `#` to re-comment the appropriate line.
+Python is trying to run "Add 3 and 5" as a command, which is not valid Python syntax. We get an error in the console that tells us as much `invalid syntax`. This means that the Python interpreter did not know what to do with that command. Reintroduce the `#` to re-comment the appropriate line.
 
-This is a clear example of how Python has a specific syntax that must be followed for the code to run properly. We will continue to learn more about the proper format of Python code as we go through the workshop. It really is its own _language_ just like English, but with its own grammar and rules.
+This is a clear example of how Python has a specific syntax that must be followed for the code to run properly. We will continue to learn more about the proper format of Python code as we go through the workshop. It really is its own _language_ just like English, with its own grammar and rules.
 
-## The Importance of Comments
+## The importance of comments
 
-Before we move on to more complex concepts and getting familiar with the language, we emphasize the importance of commenting your code.
+Before we move on to more complex concepts and getting familiar with the language, we want to emphasize the importance of commenting your code.
 
-Use `#` signs to comment. Comment liberally in your Python scripts. This will help future you and other collaborators what your code was meant to do. Anything to the right of a` #` is ignored by Python. A shortcut to comment out entire chunks of code is to highlight several lines and hit `Ctrl+/` (or `Cmd+/` on a Mac).
+Use `#` signs to comment. **Comment liberally** in your Python scripts. This will help future you and other collaborators understand what your code is doing. Anything to the right of a` #` is ignored by Python. A shortcut to comment out entire chunks of code is to highlight several lines and hit `Ctrl+/` (or `Cmd+/` on a Mac).
 
 
 ***

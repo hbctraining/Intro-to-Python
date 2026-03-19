@@ -22,7 +22,7 @@ editor_options:
 
 Approximate time: 30 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -39,7 +39,7 @@ Variables are one of the most fundamental units in many programming languages. V
 
 In many cases, you will be creating variables in many different programming languages for all three of these reasons. Let's go ahead and dive into how to create variable within Python.
 
-## Assigning Variables
+## Assigning variables
 
 In Python, in order to assign a value to an object we need to use `=`. For example, you might have a number or word that you think is important that you'd like to store to use at a later time like this: 
 
@@ -62,7 +62,7 @@ When creating variables in Python, there are some rules and guidelines that you 
 
 ***Guidelines***
 
-- Make variable names meaningful. Technically, there is nothing wrong with a variable named `s5ro_l67`, but that is likely not very descriptive to yourself and others.
+- Make variable names meaningful. Technically, there is nothing wrong with a variable named `s5ro_l67`, but that is likely not very descriptive to yourself and others
 - Use camel case (`MyVariableName`) or underscores (`my_variable_name`) to denote multi-word variable names 
 - Be consistent in your style
 
@@ -85,7 +85,7 @@ You can add text around a variable within the `print()` function:
 print('I want to remember', my_number, 'for later use.')
 ```
 
-:::{.callout-note}
+::: {.callout-note}
 # The `print()` function
 You can see that when we add text around a variable, it automatically adds spaces on either side of that variable inside the `print()` function.
 :::
@@ -107,6 +107,10 @@ We can use the `print()` function to see the values of these variables:
 # Multiple variable within a print function
 print('I want to remember', my_number, 'and', your_number)
 ```
+
+::: callout-warning
+F strings could fit well here
+:::
 
 You can carry out basic arithmetic using variables. For example, if we wanted to add `my_number` and `your_number`, we could do that with:
 
@@ -182,6 +186,8 @@ our_sum = my_number + your_number
 print(our_sum)
 ```
 
+Notice that the variable `our_sum` does not change even though we updated `my_number` until we use the `=` to assign it a new value. 
+
 :::{.callout-tip}
 # [**Exercise 1**](02_variables-Answer_key.qmd#exercise-1)
 1. Create two new variables called `a`, that has the value of 5, and `b`, that has the value of 3.
@@ -206,9 +212,9 @@ print('The difference of', a, 'and', b, 'is', difference)
 ```
 :::
 
-## Types of Variables
+## Types of variables
 
-Now that we have a basic understanding of what a variable is, let's discuss the different **data types** can hold a single value. Some of these most common data types are:
+Now that we have a basic understanding of what a variable is, let's discuss the different **data types** that hold a single value. Some of these most common data types are:
 
 Table: Common Python data types. {#tbl-common_data_types}
 
@@ -217,7 +223,7 @@ Table: Common Python data types. {#tbl-common_data_types}
 | int   | Integers (whole numbers)                         | 7, -3, 42        |
 | float | Floating point numbers (numbers with decimals)   | 3.14, 0.5        |
 | bool  | Booleans (True/False values)                     | True, False      |
-| str   | Strings (text)                                   | "hello", "3"     |
+| str   | Strings or characters (text).                    | "hello", "3"     |
 
 We can determine what type of data type a variable is by using the `type()` function.
 
@@ -232,7 +238,7 @@ print(type(my_number))
 When we have functions nested inside of one another, the innermost function is evaluated first and the output from it is passed to the next outer function until you reach the outermost function. In the example above, `my_number` is evaluated by the `type()` function and the output of the `type()` function is then passed onto the `print()` function.
 :::
 
-### Integers and Floats
+### Integers and floats
 
 Integers are whole numbers and floats are numbers with decimals. Both of these data types can be used in mathematical operations together. For example, we can add together an integer and a float:
 
@@ -241,6 +247,26 @@ Integers are whole numbers and floats are numbers with decimals. Both of these d
 # Add integer and float together
 5 + 3.14
 ```
+
+::: {.callout-note collapse="true"}
+# You do not always have to `print()` your variables
+You can directly see the output for a variable to if you run a cell and the variable is the last line in the code chunk. However, this will ony work for seeing on variable at a time, so if you wanted to see two variables as the same time, we would have to use the print function. For example:
+
+```{python}
+#| label: print_example_1
+our_sum
+my_number
+```
+
+versus
+
+```{python}
+#| label: print_example_2
+print(our_sum)
+print(my_number)
+```
+
+:::
 
 
 ### Strings
@@ -299,7 +325,7 @@ my_number + number_string
 
 ### Booleans
 
-Booleans are another data type and the denotes `True`/`False` values. 
+Booleans are another data type and the denotes `True` and `False` values. 
 
 ```{python}
 #| label: create_boolean
@@ -308,6 +334,10 @@ my_boolean = True
 
 print(type(my_boolean))
 ```
+
+::: callout-warning
+Flush out the definition of boolean a bit more and why it is useful
+:::
 
 ### Changing the Data Type
 
@@ -365,21 +395,21 @@ print(type(True + True + False))
 
 ## Variable Inspector
 
-If we right click on some empty space within the Jupyter Lab interface, we can open up the `Variable Inspector`. This is a helpful tool to see all of the variables that you have created and their data types.
+If we right click on some empty space within the JupyterLab interface, we can open up the `Variable Inspector`. This is a helpful tool to see all of the variables that you have created and their data types.
 
 ::: {#fig-jupyter_right_click .figure}
 ![](../img/jupyter_lab_right_click.png)
 
-Options after right-clicking within Jupyter Lab.
+Options after right-clicking an empty spot within JupyterLab.
 :::
 
-Once we open up the `Variable Inspector`, a new tab will open in our notebook. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and are not sure what they all are.
+Once we open up the `Variable Inspector`, a new tab will open. From this tab, we can see all of the variables that we have created, their data types, and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and cannot recall what each are.
 
 
 ::: {#fig-jupyter_variable_inspector .figure}
 ![](../img/jupyter_lab_variable_inspector.png)
 
-Variable Inspector in Jupyter Lab, showing all the variables created in the current session.
+Variable Inspector in JupyterLab, showing all the variables created in the current session.
 :::
 
 ***
