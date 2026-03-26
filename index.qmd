@@ -11,14 +11,14 @@ toc: false
 
 ### Description
 
-This repository has teaching materials for a hands-on workshop on **Introduction to Python**. This workshop will take you from installing Python and writing your first lines of code, to working with real-world data, and end with producing visualizations. The focus is on practical skills and applications, with exercises and examples drawn from the life sciences. 
+This repository has teaching materials for a hands-on **Introduction to Python** workshop. This workshop will take you from installing Python and writing your first lines of code, to working with real-world data and end with producing visualizations. The focus is on practical skills and applications, with exercises and examples drawn from the life sciences. 
 
-We will cover the basics of Python programming, including data types, functions, and how to use popular libraries such as `NumPy`, `pandas`, and `Matplotlib`. The goal is to give you a solid foundation in Python programming that you can build upon for your own projects. No prior programming experience is required. By the end, you should feel comfortable reading and writing basic Python code, loading and manipulating data, and generating custom visualizations.
+We will cover the basics of Python programming, including data types, functions, and how to use popular libraries such as `NumPy`, `pandas` and `Matplotlib`. The goal is to give you a solid foundation in Python programming that you can build upon for your own projects. No prior programming experience is required. By the end, you should feel comfortable reading and writing basic Python code, loading and wrangling data and generating custom visualizations.
 
 
 ::: callout-note
 # Note for trainers
-Please note that the schedule linked below assumes that learners will spend between 3-5 hours on reading through and completing exercises from selected lessons between classes. The online component of the workshop focuses on more exercises and discussion/Q & A.
+Please note that the schedule linked below assumes that learners will spend between 3-5 hours on reading through and completing exercises from selected lessons between classes. The in-class component of the workshop focuses on more exercises and discussion/Q & A.
 :::
 
 ### Learning Objectives
@@ -27,7 +27,7 @@ In this workshop, the participants will:
 
 - Setup and install Python and Jupyter Lab
 - Write basic Python code and understand fundamental programming concepts
-- Load, manipulate, and analyze data using Python libraries and functions
+- Load and analyze data using Python libraries and functions
 - Wrangle real-world datasets
 - Create clear visualizations with `Matplotlib` and `Seaborn`
 
@@ -40,7 +40,7 @@ These materials were developed for a trainer-led workshop, but are also amenable
 
 ### Installation Requirements
 
-Download the most recent version of the **Graphical Installer** of Anaconda for the appropriate operating system of your computer using the link below:
+Download the most recent version of the **Graphical Installer** of Anaconda, Anaconda Navigator, for the appropriate operating system of your computer using the link below:
 
 - [Anaconda](https://www.anaconda.com/download/success)
 
