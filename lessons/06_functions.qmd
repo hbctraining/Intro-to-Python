@@ -26,7 +26,6 @@ editor_options:
 
 ```
 
-# Add minutes 
 Approximate time: XX minutes
 
 ## Learning Objectives 

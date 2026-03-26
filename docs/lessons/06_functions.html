@@ -5276,9 +5276,7 @@ margin-right: 0;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#add-minutes" id="toc-add-minutes" class="nav-link active" data-scroll-target="#add-minutes">Add minutes</a>
-  <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#overview-of-lesson" id="toc-overview-of-lesson" class="nav-link" data-scroll-target="#overview-of-lesson">Overview of lesson</a></li>
   <li><a href="#what-are-functions" id="toc-what-are-functions" class="nav-link" data-scroll-target="#what-are-functions">What are Functions?</a>
   <ul class="collapse">
@@ -5291,7 +5289,6 @@ margin-right: 0;
   <li><a href="#creating-a-function" id="toc-creating-a-function" class="nav-link" data-scroll-target="#creating-a-function">Creating a Function</a></li>
   </ul></li>
   <li><a href="#more-practice-with-functions" id="toc-more-practice-with-functions" class="nav-link" data-scroll-target="#more-practice-with-functions">More Practice with Functions</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -5346,8 +5343,6 @@ margin-right: 0;
 </header>
 
 
-<section id="add-minutes" class="level1">
-<h1>Add minutes</h1>
 <p>Approximate time: XX minutes</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
@@ -5564,7 +5559,6 @@ round(number, ndigits=None)
 
 <!-- -->
 
-</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>CC-BY-4.0</div></div></section></div></main> <!-- /main -->
@@ -6046,214 +6040,213 @@ round(number, ndigits=None)
 <span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Add minutes </span></span>
-<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>Approximate time: XX minutes</span>
-<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
-<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
-<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Describe and utilize functions in Python.</span>
-<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modify default behavior of a function using arguments.</span>
-<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Identify Python-specific sources of obtaining more information about functions.</span>
-<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Demonstrate how to create user-defined functions in Python</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>Approximate time: XX minutes</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Describe and utilize functions in Python.</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modify default behavior of a function using arguments.</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Identify Python-specific sources of obtaining more information about functions.</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Demonstrate how to create user-defined functions in Python</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
-<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>Functions allow you to bundle a task so that you can use it repeatedly. In a more complex project, you might write a function to clean a dataset or run a standard calculation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer, and easier to fix. It is much easier to make avoidable mistakes when you are copy-pasting code! Functions help you avoid all that by letting you write the code once and to reuse it as many times as you want.</span>
-<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>In this lesson, you will learn how to call built‑in functions and define your own so you can start building a small “toolbox” tailored to your own needs.</span>
-<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## What are Functions?</span></span>
-<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>A key feature of Python is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually receive some sort of data structure (value, vector, dataframe etc.), process it, and return a result.</span>
-<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>We have actually been using several functions already!</span>
-<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`print()`</span>: takes in a value and prints it to the console</span>
-<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`len()`</span>: takes in a value and returns its length</span>
-<span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`type()`</span>: takes in a value and returns its type</span>
-<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a>A function is generally called by using the name of the function followed by parentheses:</span>
-<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_call</span></span>
-<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a><span class="co"># DO NOT RUN</span></span>
-<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Example syntax for using a function</span></span>
-<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a>function_name(<span class="bu">input</span>)</span>
-<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a>The input(s) are called **arguments**, which can include:</span>
-<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the physical object (any data structure) on which the function carries out a task</span>
-<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>specifications that alter the way the function operates (e.g. options)</span>
-<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a>Functions can potentially take several arguments. If you don’t specify a required argument when calling the function, you will either receive an error or the function will fall back on using a default value.</span>
-<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a>The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be what symbol to use in a plot. However, if you want a more specific symbol, simply change the argument yourself with a value of your choice.</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>Functions allow you to bundle a task so that you can use it repeatedly. In a more complex project, you might write a function to clean a dataset or run a standard calculation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer, and easier to fix. It is much easier to make avoidable mistakes when you are copy-pasting code! Functions help you avoid all that by letting you write the code once and to reuse it as many times as you want.</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>In this lesson, you will learn how to call built‑in functions and define your own so you can start building a small “toolbox” tailored to your own needs.</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## What are Functions?</span></span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>A key feature of Python is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually receive some sort of data structure (value, vector, dataframe etc.), process it, and return a result.</span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>We have actually been using several functions already!</span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`print()`</span>: takes in a value and prints it to the console</span>
+<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`len()`</span>: takes in a value and returns its length</span>
+<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`type()`</span>: takes in a value and returns its type</span>
+<span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a>A function is generally called by using the name of the function followed by parentheses:</span>
+<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_call</span></span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a><span class="co"># DO NOT RUN</span></span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Example syntax for using a function</span></span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>function_name(<span class="bu">input</span>)</span>
+<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a>The input(s) are called **arguments**, which can include:</span>
+<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the physical object (any data structure) on which the function carries out a task</span>
+<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>specifications that alter the way the function operates (e.g. options)</span>
+<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a>Functions can potentially take several arguments. If you don’t specify a required argument when calling the function, you will either receive an error or the function will fall back on using a default value.</span>
+<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a>The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be what symbol to use in a plot. However, if you want a more specific symbol, simply change the argument yourself with a value of your choice.</span>
+<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-82"><a href="#cb19-82" aria-hidden="true" tabindex="-1"></a><span class="fu">### Basic Functions</span></span>
-<span id="cb19-83"><a href="#cb19-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-84"><a href="#cb19-84" aria-hidden="true" tabindex="-1"></a>Since Python is frequently used for statistical computing, many of its base functions involve mathematical operations. For example, the <span class="in">`sum()`</span> function receives a vector of numbers and returns its sum:</span>
-<span id="cb19-85"><a href="#cb19-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-88"><a href="#cb19-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-89"><a href="#cb19-89" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: sum_example</span></span>
-<span id="cb19-90"><a href="#cb19-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Sum of numbers</span></span>
-<span id="cb19-91"><a href="#cb19-91" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">2</span>, <span class="fl">2.23</span>, <span class="fl">0.77</span>, <span class="dv">10</span>, <span class="fl">40.2</span>]</span>
-<span id="cb19-92"><a href="#cb19-92" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="bu">sum</span>(numbers)</span>
-<span id="cb19-93"><a href="#cb19-93" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span>
-<span id="cb19-94"><a href="#cb19-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-95"><a href="#cb19-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a>Another example is the <span class="in">`round()`</span> function which rounds a number to a specified number of decimal places:</span>
-<span id="cb19-97"><a href="#cb19-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: round_example</span></span>
-<span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a><span class="co"># Rounding a number</span></span>
-<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="fl">3.14159</span></span>
-<span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a>rounded_num <span class="op">=</span> <span class="bu">round</span>(num)</span>
-<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rounded_num)</span>
-<span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a>The output we receive is <span class="in">`3`</span>, which is num rounded to the single digit,, this is the default behavior of the <span class="in">`round()`</span> function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.</span>
-<span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-110"><a href="#cb19-110" aria-hidden="true" tabindex="-1"></a><span class="fu">### Seeking Help on Arguments for Functions</span></span>
-<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a>If you want to know more about the arguments that a function can take, **Python’s built-in `help()` function** is a great first step. <span class="in">`help()`</span> provides documentation for any function you pass to it. For example, <span class="in">`help(round)`</span> will give you information about the <span class="in">`round()`</span> function, including its arguments and usage.</span>
-<span id="cb19-113"><a href="#cb19-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: help_round</span></span>
-<span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">round</span>)</span>
-<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a>The result shows us that the <span class="in">`round()`</span> function can take two arguments: <span class="in">`number`</span> (the number to be rounded) and <span class="in">`ndigits`</span> (the number of decimal places to round to). The <span class="in">`ndigits`</span> argument has a default value of <span class="in">`0`</span>, which is why we got <span class="in">`3`</span> when we ran the example without specifying it.</span>
-<span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-123"><a href="#cb19-123" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb19-124"><a href="#cb19-124" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](06_functions-Answer_key.qmd#exercise-1)</span></span>
-<span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Round the <span class="in">`num`</span> variable to 2 decimal places using the <span class="in">`round()`</span> function.</span>
-<span id="cb19-126"><a href="#cb19-126" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What happens when you specify a negative value for the <span class="in">`ndigits`</span> argument in the <span class="in">`round()`</span> function? Try it out and explain the output.</span>
-<span id="cb19-127"><a href="#cb19-127" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What happens if you apply the <span class="in">`round()`</span> function to the <span class="in">`numbers`</span> list? Try it out and explain the output.</span>
-<span id="cb19-128"><a href="#cb19-128" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Apply the <span class="in">`sorted()`</span> function to the <span class="in">`numbers`</span> list. What does it do? What are the arguments for the <span class="in">`sorted()`</span> function? Use the <span class="in">`help()`</span> function to find out.</span>
-<span id="cb19-129"><a href="#cb19-129" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb19-130"><a href="#cb19-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-131"><a href="#cb19-131" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methods for Data Structures</span></span>
-<span id="cb19-132"><a href="#cb19-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-133"><a href="#cb19-133" aria-hidden="true" tabindex="-1"></a>When we were working with lists earlier, we made use of the <span class="in">`list.append()`</span> function. This is an example of a **method**, which is a function that is associated with a specific data structure. In this case, the <span class="in">`append()`</span> method is associated with lists and allows us to add an element to the end of the list.</span>
-<span id="cb19-134"><a href="#cb19-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-135"><a href="#cb19-135" aria-hidden="true" tabindex="-1"></a>Lists are not the only data structure that has inate methods. For example, strings have a method called <span class="in">`upper()`</span>, which converts all characters in the string to uppercase:</span>
-<span id="cb19-136"><a href="#cb19-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-139"><a href="#cb19-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_upper</span></span>
-<span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">&quot;hello world&quot;</span></span>
-<span id="cb19-142"><a href="#cb19-142" aria-hidden="true" tabindex="-1"></a>my_string.upper()</span>
-<span id="cb19-143"><a href="#cb19-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-144"><a href="#cb19-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-145"><a href="#cb19-145" aria-hidden="true" tabindex="-1"></a>Each data structure has its own set of methods that are designed to perform specific tasks related to that data structure. To find out what methods are available for a particular data structure, you can use the <span class="in">`dir()`</span> function. For example, <span class="in">`dir(list)`</span> will show you all the methods that are available for lists.</span>
-<span id="cb19-146"><a href="#cb19-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-149"><a href="#cb19-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-150"><a href="#cb19-150" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dir_list</span></span>
-<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(<span class="bu">list</span>)</span>
-<span id="cb19-152"><a href="#cb19-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-153"><a href="#cb19-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-154"><a href="#cb19-154" aria-hidden="true" tabindex="-1"></a>We can now see that there are many methods available for lists, including <span class="in">`list.sort()`</span>, <span class="in">`list.reverse()`</span>, etc. Let us try out the <span class="in">`list.sort`</span> method on the <span class="in">`numbers`</span> list.</span>
-<span id="cb19-155"><a href="#cb19-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-158"><a href="#cb19-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_sort</span></span>
-<span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a>numbers.sort()</span>
-<span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a>numbers</span>
-<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a>In the exercise, we used the <span class="in">`sorted()`</span> function to sort this list in both ascending and descending order. However, there is also a <span class="in">`list.sort()`</span> method that can be used to sort a list in place. The difference between the two is that <span class="in">`sorted()`</span> returns a new sorted list, while <span class="in">`list.sort()`</span> modifies the original list.</span>
-<span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-166"><a href="#cb19-166" aria-hidden="true" tabindex="-1"></a>Even though there are slight differences between these two functions, they both ultimately accomplish the same objective of sorting the list. This is a good example of how there can be multiple functions that accomplish the same task, but they may have different arguments or operate in slightly different ways. </span>
-<span id="cb19-167"><a href="#cb19-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-168"><a href="#cb19-168" aria-hidden="true" tabindex="-1"></a>**Most importantly, this is another reminder that there is no one “right” way to do something in Python!**</span>
-<span id="cb19-169"><a href="#cb19-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-170"><a href="#cb19-170" aria-hidden="true" tabindex="-1"></a><span class="fu">## User-defined Functions</span></span>
-<span id="cb19-171"><a href="#cb19-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-172"><a href="#cb19-172" aria-hidden="true" tabindex="-1"></a>One of the great strengths of Python is the user’s ability to add functions. Sometimes there is a small task (or series of tasks) you need completed and you find yourself having to repeat it multiple times. In these types of situations, it can be helpful to create your own custom function. The **structure of a function is given below**:</span>
-<span id="cb19-173"><a href="#cb19-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-176"><a href="#cb19-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-177"><a href="#cb19-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_syntax</span></span>
-<span id="cb19-178"><a href="#cb19-178" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb19-179"><a href="#cb19-179" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_name(argument1, argument2, ...):</span>
-<span id="cb19-180"><a href="#cb19-180" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code block that defines what the function does</span></span>
-<span id="cb19-181"><a href="#cb19-181" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> output</span>
-<span id="cb19-182"><a href="#cb19-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-184"><a href="#cb19-184" aria-hidden="true" tabindex="-1"></a>When you **define the function** you will need to provide the **list of arguments** required (inputs and/or options to modify behaviour of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a vector, a logical, etc), and it’s not necessary to define the type of object.</span>
-<span id="cb19-185"><a href="#cb19-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-186"><a href="#cb19-186" aria-hidden="true" tabindex="-1"></a>Then, indented under the function definition, you will write the code that carries out whatever task the function is designed to do. This is where the function is **executing code on the arguments supplied**.</span>
-<span id="cb19-187"><a href="#cb19-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-188"><a href="#cb19-188" aria-hidden="true" tabindex="-1"></a>Finally, you can **“return” the value of the object from the function**, which means to pass the value determined by the function into the global environment. A very important fact to understand about functions is that objects that are created within the function are only local to the environment of the function – they don’t exist outside of the function.</span>
-<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-190"><a href="#cb19-190" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating a Function</span></span>
-<span id="cb19-191"><a href="#cb19-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-192"><a href="#cb19-192" aria-hidden="true" tabindex="-1"></a>Let’s try creating a simple function for an example. This function will take a numeric value as input, and return the squared value.</span>
-<span id="cb19-193"><a href="#cb19-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-196"><a href="#cb19-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-197"><a href="#cb19-197" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_example</span></span>
-<span id="cb19-198"><a href="#cb19-198" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a function called square_it which takes the value x as input </span></span>
-<span id="cb19-199"><a href="#cb19-199" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square_it(x):</span>
-<span id="cb19-200"><a href="#cb19-200" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Squares the value of x and assigns it to the object called square</span></span>
-<span id="cb19-201"><a href="#cb19-201" aria-hidden="true" tabindex="-1"></a>    square <span class="op">=</span> x <span class="op">*</span> x</span>
-<span id="cb19-202"><a href="#cb19-202" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Returns the value of square to the console</span></span>
-<span id="cb19-203"><a href="#cb19-203" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> square</span>
-<span id="cb19-204"><a href="#cb19-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-205"><a href="#cb19-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-206"><a href="#cb19-206" aria-hidden="true" tabindex="-1"></a>Now, we can use this function like any other base R functions. We first type out the name of the function, add the parentheses and write we provide a numeric value <span class="in">`x`</span> inside the parentheses:</span>
-<span id="cb19-207"><a href="#cb19-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-210"><a href="#cb19-210" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-211"><a href="#cb19-211" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_usage</span></span>
-<span id="cb19-212"><a href="#cb19-212" aria-hidden="true" tabindex="-1"></a>square_it(<span class="dv">5</span>)</span>
-<span id="cb19-213"><a href="#cb19-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-214"><a href="#cb19-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-215"><a href="#cb19-215" aria-hidden="true" tabindex="-1"></a>Pretty simple, right? In this case, the function only ran a single line of code, but you could have many lines of code to get obtain the final results that you need to “return” to the user.</span>
-<span id="cb19-216"><a href="#cb19-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-217"><a href="#cb19-217" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb19-218"><a href="#cb19-218" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](06_functions-Answer_key.qmd#exercise-2)</span></span>
-<span id="cb19-219"><a href="#cb19-219" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Write a function called <span class="in">`multiply_it`</span>, which takes two inputs: a numeric value <span class="in">``x``</span>, and a numeric value y. The function will return the product of these two numeric values, which is <span class="in">`x * y`</span>. </span>
-<span id="cb19-220"><a href="#cb19-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-221"><a href="#cb19-221" aria-hidden="true" tabindex="-1"></a>For example, <span class="in">`multiply_it(x=4, y=6)`</span> will return output <span class="in">`24`</span>.</span>
-<span id="cb19-222"><a href="#cb19-222" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb19-223"><a href="#cb19-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-224"><a href="#cb19-224" aria-hidden="true" tabindex="-1"></a><span class="fu">## More Practice with Functions</span></span>
-<span id="cb19-225"><a href="#cb19-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-226"><a href="#cb19-226" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb19-227"><a href="#cb19-227" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 3**](06_functions-Answer_key.qmd#exercise-3)</span></span>
+<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### Basic Functions</span></span>
+<span id="cb19-82"><a href="#cb19-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-83"><a href="#cb19-83" aria-hidden="true" tabindex="-1"></a>Since Python is frequently used for statistical computing, many of its base functions involve mathematical operations. For example, the <span class="in">`sum()`</span> function receives a vector of numbers and returns its sum:</span>
+<span id="cb19-84"><a href="#cb19-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-87"><a href="#cb19-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-88"><a href="#cb19-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: sum_example</span></span>
+<span id="cb19-89"><a href="#cb19-89" aria-hidden="true" tabindex="-1"></a><span class="co"># Sum of numbers</span></span>
+<span id="cb19-90"><a href="#cb19-90" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">2</span>, <span class="fl">2.23</span>, <span class="fl">0.77</span>, <span class="dv">10</span>, <span class="fl">40.2</span>]</span>
+<span id="cb19-91"><a href="#cb19-91" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="bu">sum</span>(numbers)</span>
+<span id="cb19-92"><a href="#cb19-92" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total)</span>
+<span id="cb19-93"><a href="#cb19-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-94"><a href="#cb19-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-95"><a href="#cb19-95" aria-hidden="true" tabindex="-1"></a>Another example is the <span class="in">`round()`</span> function which rounds a number to a specified number of decimal places:</span>
+<span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-99"><a href="#cb19-99" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: round_example</span></span>
+<span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a><span class="co"># Rounding a number</span></span>
+<span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a>num <span class="op">=</span> <span class="fl">3.14159</span></span>
+<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a>rounded_num <span class="op">=</span> <span class="bu">round</span>(num)</span>
+<span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rounded_num)</span>
+<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a>The output we receive is <span class="in">`3`</span>, which is num rounded to the single digit,, this is the default behavior of the <span class="in">`round()`</span> function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.</span>
+<span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a><span class="fu">### Seeking Help on Arguments for Functions</span></span>
+<span id="cb19-110"><a href="#cb19-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a>If you want to know more about the arguments that a function can take, **Python’s built-in `help()` function** is a great first step. <span class="in">`help()`</span> provides documentation for any function you pass to it. For example, <span class="in">`help(round)`</span> will give you information about the <span class="in">`round()`</span> function, including its arguments and usage.</span>
+<span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-115"><a href="#cb19-115" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: help_round</span></span>
+<span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">round</span>)</span>
+<span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a>The result shows us that the <span class="in">`round()`</span> function can take two arguments: <span class="in">`number`</span> (the number to be rounded) and <span class="in">`ndigits`</span> (the number of decimal places to round to). The <span class="in">`ndigits`</span> argument has a default value of <span class="in">`0`</span>, which is why we got <span class="in">`3`</span> when we ran the example without specifying it.</span>
+<span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb19-123"><a href="#cb19-123" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](06_functions-Answer_key.qmd#exercise-1)</span></span>
+<span id="cb19-124"><a href="#cb19-124" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Round the <span class="in">`num`</span> variable to 2 decimal places using the <span class="in">`round()`</span> function.</span>
+<span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What happens when you specify a negative value for the <span class="in">`ndigits`</span> argument in the <span class="in">`round()`</span> function? Try it out and explain the output.</span>
+<span id="cb19-126"><a href="#cb19-126" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What happens if you apply the <span class="in">`round()`</span> function to the <span class="in">`numbers`</span> list? Try it out and explain the output.</span>
+<span id="cb19-127"><a href="#cb19-127" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Apply the <span class="in">`sorted()`</span> function to the <span class="in">`numbers`</span> list. What does it do? What are the arguments for the <span class="in">`sorted()`</span> function? Use the <span class="in">`help()`</span> function to find out.</span>
+<span id="cb19-128"><a href="#cb19-128" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb19-129"><a href="#cb19-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-130"><a href="#cb19-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## Methods for Data Structures</span></span>
+<span id="cb19-131"><a href="#cb19-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-132"><a href="#cb19-132" aria-hidden="true" tabindex="-1"></a>When we were working with lists earlier, we made use of the <span class="in">`list.append()`</span> function. This is an example of a **method**, which is a function that is associated with a specific data structure. In this case, the <span class="in">`append()`</span> method is associated with lists and allows us to add an element to the end of the list.</span>
+<span id="cb19-133"><a href="#cb19-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-134"><a href="#cb19-134" aria-hidden="true" tabindex="-1"></a>Lists are not the only data structure that has inate methods. For example, strings have a method called <span class="in">`upper()`</span>, which converts all characters in the string to uppercase:</span>
+<span id="cb19-135"><a href="#cb19-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-138"><a href="#cb19-138" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-139"><a href="#cb19-139" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: string_upper</span></span>
+<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">&quot;hello world&quot;</span></span>
+<span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a>my_string.upper()</span>
+<span id="cb19-142"><a href="#cb19-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-143"><a href="#cb19-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-144"><a href="#cb19-144" aria-hidden="true" tabindex="-1"></a>Each data structure has its own set of methods that are designed to perform specific tasks related to that data structure. To find out what methods are available for a particular data structure, you can use the <span class="in">`dir()`</span> function. For example, <span class="in">`dir(list)`</span> will show you all the methods that are available for lists.</span>
+<span id="cb19-145"><a href="#cb19-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-148"><a href="#cb19-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-149"><a href="#cb19-149" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: dir_list</span></span>
+<span id="cb19-150"><a href="#cb19-150" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(<span class="bu">list</span>)</span>
+<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-152"><a href="#cb19-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-153"><a href="#cb19-153" aria-hidden="true" tabindex="-1"></a>We can now see that there are many methods available for lists, including <span class="in">`list.sort()`</span>, <span class="in">`list.reverse()`</span>, etc. Let us try out the <span class="in">`list.sort`</span> method on the <span class="in">`numbers`</span> list.</span>
+<span id="cb19-154"><a href="#cb19-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-157"><a href="#cb19-157" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-158"><a href="#cb19-158" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_sort</span></span>
+<span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a>numbers.sort()</span>
+<span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a>numbers</span>
+<span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a>In the exercise, we used the <span class="in">`sorted()`</span> function to sort this list in both ascending and descending order. However, there is also a <span class="in">`list.sort()`</span> method that can be used to sort a list in place. The difference between the two is that <span class="in">`sorted()`</span> returns a new sorted list, while <span class="in">`list.sort()`</span> modifies the original list.</span>
+<span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a>Even though there are slight differences between these two functions, they both ultimately accomplish the same objective of sorting the list. This is a good example of how there can be multiple functions that accomplish the same task, but they may have different arguments or operate in slightly different ways. </span>
+<span id="cb19-166"><a href="#cb19-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-167"><a href="#cb19-167" aria-hidden="true" tabindex="-1"></a>**Most importantly, this is another reminder that there is no one “right” way to do something in Python!**</span>
+<span id="cb19-168"><a href="#cb19-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-169"><a href="#cb19-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## User-defined Functions</span></span>
+<span id="cb19-170"><a href="#cb19-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-171"><a href="#cb19-171" aria-hidden="true" tabindex="-1"></a>One of the great strengths of Python is the user’s ability to add functions. Sometimes there is a small task (or series of tasks) you need completed and you find yourself having to repeat it multiple times. In these types of situations, it can be helpful to create your own custom function. The **structure of a function is given below**:</span>
+<span id="cb19-172"><a href="#cb19-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-175"><a href="#cb19-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-176"><a href="#cb19-176" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_syntax</span></span>
+<span id="cb19-177"><a href="#cb19-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb19-178"><a href="#cb19-178" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_name(argument1, argument2, ...):</span>
+<span id="cb19-179"><a href="#cb19-179" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code block that defines what the function does</span></span>
+<span id="cb19-180"><a href="#cb19-180" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> output</span>
+<span id="cb19-181"><a href="#cb19-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-182"><a href="#cb19-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a>When you **define the function** you will need to provide the **list of arguments** required (inputs and/or options to modify behaviour of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a vector, a logical, etc), and it’s not necessary to define the type of object.</span>
+<span id="cb19-184"><a href="#cb19-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-185"><a href="#cb19-185" aria-hidden="true" tabindex="-1"></a>Then, indented under the function definition, you will write the code that carries out whatever task the function is designed to do. This is where the function is **executing code on the arguments supplied**.</span>
+<span id="cb19-186"><a href="#cb19-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-187"><a href="#cb19-187" aria-hidden="true" tabindex="-1"></a>Finally, you can **“return” the value of the object from the function**, which means to pass the value determined by the function into the global environment. A very important fact to understand about functions is that objects that are created within the function are only local to the environment of the function – they don’t exist outside of the function.</span>
+<span id="cb19-188"><a href="#cb19-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating a Function</span></span>
+<span id="cb19-190"><a href="#cb19-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-191"><a href="#cb19-191" aria-hidden="true" tabindex="-1"></a>Let’s try creating a simple function for an example. This function will take a numeric value as input, and return the squared value.</span>
+<span id="cb19-192"><a href="#cb19-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-195"><a href="#cb19-195" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-196"><a href="#cb19-196" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_example</span></span>
+<span id="cb19-197"><a href="#cb19-197" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a function called square_it which takes the value x as input </span></span>
+<span id="cb19-198"><a href="#cb19-198" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square_it(x):</span>
+<span id="cb19-199"><a href="#cb19-199" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Squares the value of x and assigns it to the object called square</span></span>
+<span id="cb19-200"><a href="#cb19-200" aria-hidden="true" tabindex="-1"></a>    square <span class="op">=</span> x <span class="op">*</span> x</span>
+<span id="cb19-201"><a href="#cb19-201" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Returns the value of square to the console</span></span>
+<span id="cb19-202"><a href="#cb19-202" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> square</span>
+<span id="cb19-203"><a href="#cb19-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-204"><a href="#cb19-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-205"><a href="#cb19-205" aria-hidden="true" tabindex="-1"></a>Now, we can use this function like any other base R functions. We first type out the name of the function, add the parentheses and write we provide a numeric value <span class="in">`x`</span> inside the parentheses:</span>
+<span id="cb19-206"><a href="#cb19-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-209"><a href="#cb19-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-210"><a href="#cb19-210" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: function_usage</span></span>
+<span id="cb19-211"><a href="#cb19-211" aria-hidden="true" tabindex="-1"></a>square_it(<span class="dv">5</span>)</span>
+<span id="cb19-212"><a href="#cb19-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-213"><a href="#cb19-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-214"><a href="#cb19-214" aria-hidden="true" tabindex="-1"></a>Pretty simple, right? In this case, the function only ran a single line of code, but you could have many lines of code to get obtain the final results that you need to “return” to the user.</span>
+<span id="cb19-215"><a href="#cb19-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-216"><a href="#cb19-216" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb19-217"><a href="#cb19-217" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](06_functions-Answer_key.qmd#exercise-2)</span></span>
+<span id="cb19-218"><a href="#cb19-218" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Write a function called <span class="in">`multiply_it`</span>, which takes two inputs: a numeric value <span class="in">``x``</span>, and a numeric value y. The function will return the product of these two numeric values, which is <span class="in">`x * y`</span>. </span>
+<span id="cb19-219"><a href="#cb19-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-220"><a href="#cb19-220" aria-hidden="true" tabindex="-1"></a>For example, <span class="in">`multiply_it(x=4, y=6)`</span> will return output <span class="in">`24`</span>.</span>
+<span id="cb19-221"><a href="#cb19-221" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb19-222"><a href="#cb19-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-223"><a href="#cb19-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## More Practice with Functions</span></span>
+<span id="cb19-224"><a href="#cb19-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-225"><a href="#cb19-225" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb19-226"><a href="#cb19-226" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 3**](06_functions-Answer_key.qmd#exercise-3)</span></span>
+<span id="cb19-227"><a href="#cb19-227" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-228"><a href="#cb19-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-229"><a href="#cb19-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-230"><a href="#cb19-230" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Custom Functions** - Create a function <span class="in">`temp_conv()`</span>, to convert the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: </span>
-<span id="cb19-231"><a href="#cb19-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-232"><a href="#cb19-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>first convert from Fahrenheit to Celsius, then</span>
-<span id="cb19-233"><a href="#cb19-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>convert from Celsius to Kelvin</span>
-<span id="cb19-234"><a href="#cb19-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-237"><a href="#cb19-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb19-238"><a href="#cb19-238" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: temp_conv</span></span>
-<span id="cb19-239"><a href="#cb19-239" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb19-240"><a href="#cb19-240" aria-hidden="true" tabindex="-1"></a><span class="co"># The formula for celsius to farenheight: </span></span>
-<span id="cb19-241"><a href="#cb19-241" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> (temp_f <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span></span>
-<span id="cb19-242"><a href="#cb19-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-243"><a href="#cb19-243" aria-hidden="true" tabindex="-1"></a><span class="co"># The formula for celsius to kelvin</span></span>
-<span id="cb19-244"><a href="#cb19-244" aria-hidden="true" tabindex="-1"></a>temp_k <span class="op">=</span> temp_c <span class="op">+</span> <span class="fl">273.15</span></span>
-<span id="cb19-245"><a href="#cb19-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-229"><a href="#cb19-229" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Custom Functions** - Create a function <span class="in">`temp_conv()`</span>, to convert the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: </span>
+<span id="cb19-230"><a href="#cb19-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-231"><a href="#cb19-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>first convert from Fahrenheit to Celsius, then</span>
+<span id="cb19-232"><a href="#cb19-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>convert from Celsius to Kelvin</span>
+<span id="cb19-233"><a href="#cb19-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-236"><a href="#cb19-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb19-237"><a href="#cb19-237" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: temp_conv</span></span>
+<span id="cb19-238"><a href="#cb19-238" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb19-239"><a href="#cb19-239" aria-hidden="true" tabindex="-1"></a><span class="co"># The formula for celsius to farenheight: </span></span>
+<span id="cb19-240"><a href="#cb19-240" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> (temp_f <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">9</span></span>
+<span id="cb19-241"><a href="#cb19-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-242"><a href="#cb19-242" aria-hidden="true" tabindex="-1"></a><span class="co"># The formula for celsius to kelvin</span></span>
+<span id="cb19-243"><a href="#cb19-243" aria-hidden="true" tabindex="-1"></a>temp_k <span class="op">=</span> temp_c <span class="op">+</span> <span class="fl">273.15</span></span>
+<span id="cb19-244"><a href="#cb19-244" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-245"><a href="#cb19-245" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-246"><a href="#cb19-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-247"><a href="#cb19-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-248"><a href="#cb19-248" aria-hidden="true" tabindex="-1"></a>Test your function. If your input is 70, the result of <span class="in">`temp_conv(70)`</span> should be 294.2611.</span>
+<span id="cb19-247"><a href="#cb19-247" aria-hidden="true" tabindex="-1"></a>Test your function. If your input is 70, the result of <span class="in">`temp_conv(70)`</span> should be 294.2611.</span>
+<span id="cb19-248"><a href="#cb19-248" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-249"><a href="#cb19-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-250"><a href="#cb19-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-251"><a href="#cb19-251" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Nesting Functions** - Now we want to round the temperature in Kelvin (output of <span class="in">`temp_conv()`</span>) to a single decimal place. Use the <span class="in">`round()`</span> function with the newly-created <span class="in">`temp_conv()`</span> function to achieve this in one line of code.</span>
-<span id="cb19-252"><a href="#cb19-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-253"><a href="#cb19-253" aria-hidden="true" tabindex="-1"></a>If your input is 70, the output should now be 294.3.</span>
-<span id="cb19-254"><a href="#cb19-254" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb19-255"><a href="#cb19-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-256"><a href="#cb19-256" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb19-257"><a href="#cb19-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-258"><a href="#cb19-258" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](07_libraries.qmd)</span></span>
-<span id="cb19-259"><a href="#cb19-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-260"><a href="#cb19-260" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
+<span id="cb19-250"><a href="#cb19-250" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Nesting Functions** - Now we want to round the temperature in Kelvin (output of <span class="in">`temp_conv()`</span>) to a single decimal place. Use the <span class="in">`round()`</span> function with the newly-created <span class="in">`temp_conv()`</span> function to achieve this in one line of code.</span>
+<span id="cb19-251"><a href="#cb19-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-252"><a href="#cb19-252" aria-hidden="true" tabindex="-1"></a>If your input is 70, the output should now be 294.3.</span>
+<span id="cb19-253"><a href="#cb19-253" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb19-254"><a href="#cb19-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-255"><a href="#cb19-255" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb19-256"><a href="#cb19-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-257"><a href="#cb19-257" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](07_libraries.qmd)</span></span>
+<span id="cb19-258"><a href="#cb19-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-259"><a href="#cb19-259" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
