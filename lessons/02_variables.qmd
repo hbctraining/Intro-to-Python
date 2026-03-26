@@ -31,17 +31,17 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Variables are one of the most fundamental units in many programming languages. Variables can be thought of as a label for an object. You can then retrieve this object for later use. Some helpful uses for variables are if:
+Variables are one of the most fundamental units in many programming languages. Variables can be thought of as a label for an object. You can then retrieve this object for later use. Some helpful uses for variables are:
 
 - The output of something processed needs to be stored for later use
 - A value is used multiple times in an analysis
 - Your code is being read by others
 
-In many cases, you will be creating variables in many different programming languages for all three of these reasons. Let's go ahead and dive into how to create variable within Python.
+You will often create variables in many different programming languages for all three of the above reasons. Let's go ahead and dive into how to create variables within Python.
 
 ## Assigning variables
 
-In Python, in order to assign a value to an object we need to use `=`. For example, you might have a number or word that you think is important that you'd like to store to use at a later time like this: 
+In Python, in order to assign a value to an object we need to use `=`. For example, you might have a number or word that you'd like to store to use at a later time like this: 
 
 ```{python}
 #| label: create_variable
@@ -58,7 +58,7 @@ When creating variables in Python, there are some rules and guidelines that you 
 - Python variables are ***case sensitive***, so `my_number` and `My_number` are different variables
 - Variables names must only consist of letters, numbers and underscores
 - Must begin with a letter or an underscore, it cannot start with a number. Starting a variable with an underscore has some special properties that are beyond the scope of this workshop
-- It cannot be a reserved keyword like `for` or `if`
+- It cannot be a reserved keyword such as `for` or `if`
 
 ***Guidelines***
 
@@ -214,7 +214,7 @@ print('The difference of', a, 'and', b, 'is', difference)
 
 ## Types of variables
 
-Now that we have a basic understanding of what a variable is, let's discuss the different **data types** that hold a single value. Some of these most common data types are:
+Now that we have a basic understanding of what a variable is, let's discuss the different **data types** that hold a single value. Some of the most common data types are:
 
 Table: Common Python data types. {#tbl-common_data_types}
 
@@ -225,7 +225,7 @@ Table: Common Python data types. {#tbl-common_data_types}
 | bool  | Booleans (True/False values)                     | True, False      |
 | str   | Strings or characters (text).                    | "hello", "3"     |
 
-We can determine what type of data type a variable is by using the `type()` function.
+We can determine data type of a variable is by using the `type()` function.
 
 ```{python}
 #| label: type_function
@@ -314,7 +314,7 @@ number_string = '12'
 print(type(number_string))
 ```
 
-And if you were to attempt to add together a string and a numeric value, integer or floating point, Python will return an error message letting you know that adding together numbers and strings is not permitted. This is even true if the string is a number like `number_string`:
+And if you were to attempt to add together a string and a numeric value, integer or floating point, Python will return an error message letting you know that adding together numbers and strings is not permitted. This is even true if the string only consists of numbers like `number_string`:
 
 ```{python}
 #| label: adding_strings_numbers
@@ -325,7 +325,7 @@ my_number + number_string
 
 ### Booleans
 
-Booleans are another data type and the denotes `True` and `False` values. 
+Booleans are another data type that denotes `True` and `False` values. 
 
 ```{python}
 #| label: create_boolean

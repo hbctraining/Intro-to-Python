@@ -1,7 +1,7 @@
 ---
 title: "`NumPy` Arrays"
 description: |
-  Write a description of the lesson here. 
+  Write a description of the lesson here.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -50,7 +50,7 @@ When doing XYZ...
 
 ## `NumPy` Library
 
-`NumPy` is a powerful library for numerical computing in Python. It is widely used for working with arrays and matrices. The implementation of these data structures has been optimized for performance, making it a popular choice for scientific computing and data analysis.
+`NumPy` is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. You can find the official documentation for `NumPy` [here](https://numpy.org/doc/stable/) and you should consult it whenever there you need to run a specific task repeatedly to see if an function already exists for that task. You can also use the `help()` function in Python to get more information about a specific `NumPy` function or data structure.
 
 ### 1-dimensional Arrays
 
@@ -65,7 +65,7 @@ arr = np.array([1, 2, 3, 4, 5])
 arr
 ```
 
-One of the key advantages of `NumPy` arrays over Python lists is that they are more efficient for numerical operations. For example, you can perform element-wise operations on `NumPy` arrays. So if we were to add two arrays together, it would add each element of the first array to the corresponding element of the second array:
+One of the key advantages of `NumPy` arrays over Python lists is their greater efficiency for numerical operations. For example, you can easily perform element-wise operations on `NumPy` arrays. So if we were to add two arrays together, it would add each element of the first array to the corresponding element of the second array:
 
 ```{python}
 #| label: elementwise_operations
@@ -89,7 +89,7 @@ result_list = list1 + list2
 result_list
 ```
 
-Instead of adding two lists together element-wise, Python concatenates them. 
+Instead of adding two lists together element-wise, Python concatenates them (in order to concatenate arrays in `NumPy`, you would use the `np.concatenate()` function).
 
 Additionally, if we were to investigate the `dtype()` of the `NumPy` array, we would find that it is a specific data type (e.g., `int64` or `float64`). So, unlike lists which can contain different data types, the elements in `NumPy` arrays are all the same data type.
 
@@ -102,7 +102,7 @@ arr.dtype
 
 ### N-dimensional Arrays
 
-These arrays are not just limited to 1 dimension; `NumPy` can handle multi-dimensional arrays as well. For example, you can create a 2-dimensional array (also known as a matrix) using the same `numpy.array()` function:
+Arrays are not just limited to 1 dimension; `NumPy` can also create and handle multi-dimensional arrays. For example, you can create a 2-dimensional array (also known as a matrix) while using the same `numpy.array()` function:
 
 ```{python}
 #| label: create_2d_array
@@ -111,7 +111,7 @@ matrix = np.array([[1, 2, 3], [4, 5, 6]])
 matrix
 ``` 
 
-This again may seem familiar to a list of lists in Python, but it is important to note that this is a `NumPy` array, which has different properties and capabilities than a list of lists. For example, you can perform matrix operations on this 2-dimensional array, such as matrix multiplication (dot product).
+This again may seem familiar to a list of lists in Python, but it is important to note this is a `NumPy` array which has different properties and capabilities than a list of lists. For example, you can perform matrix operations on this 2-dimensional array, such as matrix multiplication (dot product).
 
 ```{python}
 #| label: matrix_multiplication
@@ -123,7 +123,7 @@ result_matrix = np.dot(matrix, matrix2)
 result_matrix
 ``` 
 
-We can even initialize a matrix of zeros or ones using `numpy.zeros()` and `numpy.ones()` functions in as many dimensions as we want
+We can initialize a matrix of zeros or ones by using `numpy.zeros()` and `numpy.ones()` methods in as many dimensions as we want
 
 ::: callout-note
 # Rows then columns
@@ -155,7 +155,7 @@ matrix_arange
 
 ### Indexing and Slicing Arrays
 
-Arrays can be indexed and sliced in a similar way to lists with indices (starting at 0) and slicing syntax. So if we wanted to access the first element of a 1-dimensional array, we would use `arr1[0]`:
+Arrays can be indexed and sliced in a similar way to lists with indices (again beginning with 0) and slicing syntax. So if we wanted to access the first element of a 1-dimensional array, we would use `arr1[0]`:
 
 ```{python}
 #| label: indexing_1d_array
@@ -173,7 +173,7 @@ first_row = matrix[0]
 first_row
 ```
 
-So if we wanted to access the element in the second row and third column of the matrix, we would use `matrix[1, 2]`:
+If we wanted to access the element in the second row and third column of the matrix, we would use `matrix[1, 2]`:
 
 ```{python}
 #| label: indexing_2d_array_element
@@ -183,7 +183,7 @@ element
 ```
 
 
-So far, this is quite similar to lists. Arrays differ in that they have more advanced indexing and slicing capabilities, allowing you to select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets, as it allows you to efficiently filter and manipulate the data
+So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and manipulate the data.
 
 ```{python}
 #| label: boolean_indexing
@@ -203,7 +203,7 @@ filtered_arr
 
 ## Useful `NumPy` Functions
 
-The list of functions available in base Python is somewhat limited when it comes to numerical operations. The [`NumPy` library](https://numpy.org/doc/stable/reference/) provides a broader range of tools to perform mathematical operations. For example, you can calculate the mean, median, and standard deviation of an array using `numpy.mean()`, `numpy.median()`, and `numpy.std()` functions:
+Base Python is somewhat limited when it comes to numerical operations. The [`NumPy` library](https://numpy.org/doc/stable/reference/) provides a broader range of mathematical tools. For example, you can quickly calculate the mean, median, and standard deviation of an array with the `numpy.mean()`, `numpy.median()`, and `numpy.std()` functions:
 
 ```{python}
 #| label: numpy_functions
@@ -218,7 +218,21 @@ std_dev = np.std(arr)
 print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
 ```
 
+NumPy has other functions for performing mathematical operations on arrays, such as `numpy.sum()`, `numpy.prod()`, `numpy.cumsum()`, `numpy.cumprod()`, `numpy.square()`, `numpy.sqrt()`, `numpy.max()`, `numpy.min()`. All these functions allow you to perform operations across the entire array or along specific axes.
+
 ### Subsection 2A
+
+Useful `NumPy` functions to get the shape and dimensions of arrays include:
+
+1. `numpy.shape()`: This function returns the dimensions of the array as a tuple. For example, `numpy.shape` on a 2 x 3 2-dimensional array would return `(2, 3)`.
+2. `numpy.ndim()`: This function returns the number of dimensions of the array. 
+3. `numpy.size()`: This function returns the total number of elements in the array. For example, `numby.shape` on a 3 x 4 2-dimensional array would return `12` (3 rows x 4 columns = 12 elements).
+4. `numpy.dtype()`: This function returns the data type of the elements in the array.
+
+Other useful `NumPy` functions to change the shape of an array include:
+
+1. `numpy.T()`: This function transposes the array by swapping its rows and columns along with its associated data. For example, a 1 x 3 array like `[[1, 2, 3]]` would be transposed to a 3 x 1 array `[[1], [2], [3]]`.
+2. `numpy.newaxis()`: This function allows you to add a new axis to an array, transforming a 1D array into a 2D array or a 2D array into a 3D array. For example, `numpy.newaxis()` can convert a 1D array with three columns into a 2D array with one row and three columns.
 
 ### Subsection 2B
 

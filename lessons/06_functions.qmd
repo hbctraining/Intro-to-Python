@@ -40,13 +40,13 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Functions allow you to bundle up a task so that you can use it again and again. In real projects, you might write a function to clean a dataset or run a standard calcluation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer, and easier to fix. It is very easy to make avoidable mistakes when you are copy-pasting code! Functions help you avoid that by letting you write the code once and reuse it as many times as you want.
+Functions allow you to bundle a task so that you can use it repeatedly. In a more complex project, you might write a function to clean a dataset or run a standard calculation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer, and easier to fix. It is much easier to make avoidable mistakes when you are copy-pasting code! Functions help you avoid all that by letting you write the code once and to reuse it as many times as you want.
 
-In this lesson, you will learn how to call built‑in functions and define your own, so you can start building a small “toolbox” tailored to your own needs.
+In this lesson, you will learn how to call built‑in functions and define your own so you can start building a small “toolbox” tailored to your own needs.
 
 ## What are Functions?
 
-A key feature of Python is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually take in some sort of data structure (value, vector, dataframe etc.), process it, and return a result.
+A key feature of Python is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually receive some sort of data structure (value, vector, dataframe etc.), process it, and return a result.
 
 We have actually been using several functions already!
 
@@ -54,7 +54,7 @@ We have actually been using several functions already!
 - `len()`: takes in a value and returns its length
 - `type()`: takes in a value and returns its type
 
-The general usage for a function is the name of the function followed by parentheses:
+A function is generally called by using the name of the function followed by parentheses:
 
 ```{python}
 #| label: function_call
@@ -69,14 +69,14 @@ The input(s) are called **arguments**, which can include:
 - the physical object (any data structure) on which the function carries out a task
 - specifications that alter the way the function operates (e.g. options)
 
-Most functions can take several arguments. If you don’t specify a required argument when calling the function, you will either receive an error or the function will fall back on using a default.
+Functions can potentially take several arguments. If you don’t specify a required argument when calling the function, you will either receive an error or the function will fall back on using a default value.
 
-The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be what symbol to use in a plot. However, if you want something specific, simply change the argument yourself with a value of your choice.
+The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be what symbol to use in a plot. However, if you want a more specific symbol, simply change the argument yourself with a value of your choice.
 
 
 ### Basic Functions
 
-Since Python is used for statistical computing, many of the base functions involve mathematical operations. For example, the `sum()` function takes in a vector of numbers and returns their sum:
+Since Python is frequently used for statistical computing, many of its base functions involve mathematical operations. For example, the `sum()` function receives a vector of numbers and returns its sum:
 
 ```{python}
 #| label: sum_example
@@ -86,7 +86,7 @@ total = sum(numbers)
 print(total)
 ```
 
-Another example is the `round()` function, which rounds a number to a specified number of decimal places:
+Another example is the `round()` function which rounds a number to a specified number of decimal places:
 
 ```{python}
 #| label: round_example
@@ -96,18 +96,18 @@ rounded_num = round(num)
 print(rounded_num)
 ```
 
-The output we get is `3`, which is the default behavior of the `round()` function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.
+The output we receive is `3`, which is num rounded to the single digit,, this is the default behavior of the `round()` function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.
 
 ### Seeking Help on Arguments for Functions
 
-If you want to know more about the arguments that a function takes in, **Python’s built-in `help()` function** is a great first step. This function provides documentation for any function you pass to it. For example, `help(round)` will give you information about the `round()` function, including its arguments and usage.
+If you want to know more about the arguments that a function can take, **Python’s built-in `help()` function** is a great first step. `help()` provides documentation for any function you pass to it. For example, `help(round)` will give you information about the `round()` function, including its arguments and usage.
 
 ```{python}
 #| label: help_round
 help(round)
 ```
 
-From this output we can see that the `round()` function takes two arguments: `number` (the number to be rounded) and `ndigits` (the number of decimal places to round to). The `ndigits` argument has a default value of `0`, which is why we got `3` when we ran the example without specifying it.
+The result shows us that the `round()` function can take two arguments: `number` (the number to be rounded) and `ndigits` (the number of decimal places to round to). The `ndigits` argument has a default value of `0`, which is why we got `3` when we ran the example without specifying it.
 
 :::{.callout-tip}
 # [**Exercise 1**](06_functions-Answer_key.qmd#exercise-1)
@@ -121,7 +121,7 @@ From this output we can see that the `round()` function takes two arguments: `nu
 
 When we were working with lists earlier, we made use of the `list.append()` function. This is an example of a **method**, which is a function that is associated with a specific data structure. In this case, the `append()` method is associated with lists and allows us to add an element to the end of the list.
 
-Lists are not the only data structure that has methods. For example, strings have a method called `upper()`, which converts all characters in the string to uppercase:
+Lists are not the only data structure that has inate methods. For example, strings have a method called `upper()`, which converts all characters in the string to uppercase:
 
 ```{python}
 #| label: string_upper
@@ -136,7 +136,7 @@ Each data structure has its own set of methods that are designed to perform spec
 dir(list)
 ```
 
-So now we can see that there are many methods available for lists, including `list.sort()`, `list.reverse()`, etc. Let us try out this sorting method on the `numbers` list.
+We can now see that there are many methods available for lists, including `list.sort()`, `list.reverse()`, etc. Let us try out the `list.sort` method on the `numbers` list.
 
 ```{python}
 #| label: list_sort
@@ -144,15 +144,15 @@ numbers.sort()
 numbers
 ```
 
-In the exercise, we used the `sorted()` function to sort this list in both ascending and descending order with . However, there is also a `list.sort()` method that can be used to sort a list in place. The difference between the two is that `sorted()` returns a new sorted list, while `list.sort()` modifies the original list.
+In the exercise, we used the `sorted()` function to sort this list in both ascending and descending order. However, there is also a `list.sort()` method that can be used to sort a list in place. The difference between the two is that `sorted()` returns a new sorted list, while `list.sort()` modifies the original list.
 
-Even though there are slight differences between these two functions, they are both ultimately accomplishing the same objective of sorting the list. This is a good example of how there can be multiple functions that accomplish the same task, but they may have different arguments or operate in slightly different ways. 
+Even though there are slight differences between these two functions, they both ultimately accomplish the same objective of sorting the list. This is a good example of how there can be multiple functions that accomplish the same task, but they may have different arguments or operate in slightly different ways. 
 
 **Most importantly, this is another reminder that there is no one “right” way to do something in Python!**
 
 ## User-defined Functions
 
-One of the great strengths of Python is the user’s ability to add functions. Sometimes there is a small task (or series of tasks) you need done and you find yourself having to repeat it multiple times. In these types of situations, it can be helpful to create your own custom function. The **structure of a function is given below**:
+One of the great strengths of Python is the user’s ability to add functions. Sometimes there is a small task (or series of tasks) you need completed and you find yourself having to repeat it multiple times. In these types of situations, it can be helpful to create your own custom function. The **structure of a function is given below**:
 
 ```{python}
 #| label: function_syntax
@@ -162,15 +162,15 @@ def function_name(argument1, argument2, ...):
     return output
 ```
 
-When **defining the function** you will want to provide the **list of arguments** required (inputs and/or options to modify behaviour of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a vector, a logical, etc), and it’s not necessary to define what it is in any way.
+When you **define the function** you will need to provide the **list of arguments** required (inputs and/or options to modify behaviour of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a vector, a logical, etc), and it’s not necessary to define the type of object.
 
 Then, indented under the function definition, you will write the code that carries out whatever task the function is designed to do. This is where the function is **executing code on the arguments supplied**.
 
-Finally, you can **“return” the value of the object from the function**, meaning pass the value of it into the global environment. The important idea behind functions is that objects that are created within the function are local to the environment of the function – they don’t exist outside of the function.
+Finally, you can **“return” the value of the object from the function**, which means to pass the value determined by the function into the global environment. A very important fact to understand about functions is that objects that are created within the function are only local to the environment of the function – they don’t exist outside of the function.
 
 ### Creating a Function
 
-Let’s try creating a simple example function. This function will take in a numeric value as input, and return the squared value.
+Let’s try creating a simple function for an example. This function will take a numeric value as input, and return the squared value.
 
 ```{python}
 #| label: function_example
@@ -182,14 +182,14 @@ def square_it(x):
     return square
 ```
 
-Now, we can use this function as any other base R functions. We type out the name of the function, and inside the parentheses we provide a numeric value `x`:
+Now, we can use this function like any other base R functions. We first type out the name of the function, add the parentheses and write we provide a numeric value `x` inside the parentheses:
 
 ```{python}
 #| label: function_usage
 square_it(5)
 ```
 
-Pretty simple, right? In this case, we only had one line of code that was run, but in theory you could have many lines of code to get obtain the final results that you want to “return” to the user.
+Pretty simple, right? In this case, the function only ran a single line of code, but you could have many lines of code to get obtain the final results that you need to “return” to the user.
 
 :::{.callout-tip}
 # [**Exercise 2**](06_functions-Answer_key.qmd#exercise-2)
@@ -204,7 +204,7 @@ For example, `multiply_it(x=4, y=6)` will return output `24`.
 # [**Exercise 3**](06_functions-Answer_key.qmd#exercise-3)
 
 
-6. **Custom Functions** - Create a function `temp_conv()`, which converts the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: 
+6. **Custom Functions** - Create a function `temp_conv()`, to convert the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: 
 
 - first convert from Fahrenheit to Celsius, then
 - convert from Celsius to Kelvin

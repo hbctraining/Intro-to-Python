@@ -41,11 +41,15 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Real data comes in many shapes: a list of sample IDs, a mapping of species to genome lengths, or a sentence of free text. Choosing the right structure for each of these makes your code cleaner and sometimes even more efficient under the hood. In this lesson, you will learn how to use each structure so that you can represent your own data in ways that match how you think about it.
+Real data comes in many shapes: a list of sample IDs, a mapping of species to genome lengths, or a sentence of free text. Choosing the right structure for each of these makes your code cleaner and sometimes even more efficient under the hood. In this lesson, you will learn how to use each structure so that you can represent your own data in effective ways.
 
 ## Data Structures
 
-There exists several more types of variables, commonly referred to as data structures. They can contain multiple values and are more complex than the data types we have discussed so far. 
+There exist several more types of variables that are commonly referred to as data structures. They can contain multiple values and are more complex than the data types we have discussed so far. 
+
+::: callout-warning
+Fix tuple definition
+:::
 
 Table: Python data structures. {#tbl-data_structures}
 
@@ -53,23 +57,23 @@ Table: Python data structures. {#tbl-data_structures}
 |------------|-----------------------------------------------------|
 | list       | An ordered, changeable collection of elements.        |
 | dictionary | A collection of key–value pairs.  |
-| tuple      | An ordered collection of elements you.   |
+| tuple      | An ordered collection of elements you. TODO   |
 | set        | An unordered collection of unique elements.           |
 
 
-We will expand more on lists and dictionaries in this lessons.
+We will expand further on lists and dictionaries in this lessons.
 
 ## Lists
 
-Lists are a data structure that can be perhaps a bit daunting at first, but soon become very useful. A list is a data structure that can hold any number of any types of other data structures. 
+Lists are a data structure that can be appear a bit daunting at first, but are very useful. A list is a data structure that can hold any number of any types of other data structures. 
 
-The analogy for a list is that you have a a box has different compartments; these compartments in a list are called **elements**. Each element contains a single value, and there is no limit to how many elements you can have. A list is assigned to a single variable, because regardless of how many elements it contains, in the end it is still a single entity (box).
+A common analogy for a list is to imagine a box with different compartments that hold a single item each; each item in a compartment in a list is called an **element**. Each element consists of a single value, and there is no limit to how many elements you can have in a list. A list is assigned to a single variable, because regardless of how many elements it contains, in the end it is still a single entity (box).
 
 Lists are useful for making iterative processes more efficient. For example, if you have a task that you want to repeat multiple times, you can put all the elements you want to perform the task on in a list and then perform the task on the list instead of each item individually. **This is one of the greatest strengths of using a programming language, automating repetitive tasks!**
 
 ### Creating a List
 
-To create a list, we ues the `[]` key. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There is no limit on the number of values that can be included in a list, and they can be of any data type.
+To create a list, we use the `[]` keys. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There are no limits on the number of values that can be included in a list, and they can be of any data type.
 
 ```{python}
 #| label: list_example
@@ -93,9 +97,9 @@ list1
 
 ### Length of a List
 
-Let us create a list of genome lengths in kilobases, which we will call `glengths`. We also know that the species corresponding to these genome lengths are `ecoli`, `human`, and `corn`. We can create two lists, one for the genome lengths and one for the species:
+Let us create a list of genome lengths in kilobases, which we will call `glengths`. The species corresponding to these genome lengths are `ecoli`, `human`, and `corn`. We will create two lists, one for the genome lengths and one for the species:
 
-It is often useful to know how many elements are in a list. We can use the `len()` function to determine the number of elements in a list. The `len()` function takes a single argument, which is the list we want to determine the length of. For example, to determine how many elements are in our `glengths` and `species` lists, we would use the following code:
+It is often useful to know how many elements are in a list. We can use the `len()` function to determine the number of elements in a list. The `len()` function needs a single argument, which in this case is the list we want to determine the length of. For example, to determine how many elements are in our `glengths` and `species` lists, we would use the following code:
 
 ```{python}
 #| label: len_function
@@ -112,7 +116,7 @@ print(len(species))
 
 ### Adding Elements to a List
 
-Perhaps we have found a new genome and we want to add its length to our list of genome lengths. We can use the `append()` function to add an element. The `append()` function takes a single argument, which is the element we want to add to the list. 
+If we find a new genome and we want to add its length to our list of genome lengths. We can use the `append()` function to add an element to the end of the list. The `append()` function takes a single argument, which is the element we want to add to the list. 
 
 For example, if we wanted to add the length of the yeast genome, which is 12,000 kb, to our list of genome lengths, we would use the following code:
 
@@ -122,12 +126,12 @@ For example, if we wanted to add the length of the yeast genome, which is 12,000
 glengths.append(12000)
 
 # Print the updated list
-glengths
+print(glengths)
 ```
 
-Notice that we used `append()` to add an element to the list, but we did not assign it to a new variable. This is because the `append()` function modifies the original list in place, so there is no need to assign it to a new variable. Functions that modify the original object are called **in-place functions**.
+Notice that we used `append()` to add an element to the list, but we did not assign it to a new variable. This is because the `append()` function modifies the original list in place without a need to assign it to a new variable. Functions that modify the original object without creating a new object are called **in-place functions**.
 
-Additionally, notice that we used the syntax `glengths.append(12000)` instead of `append(glengths, 12000)`. This is because `append()` is a method that belongs to the list object, while `len()` is a built-in function that can be used on many different types of objects. Essentially, since `append()` is a method that is specific to lists, we use the syntax `list.method()`. As `len()` is a function that can be used on many different types of objects, we use the syntax `function(object)`.
+Additionally, notice that we used the syntax `glengths.append(12000)` instead of `append(glengths, 12000)`. This is because `append()` is a method that belongs only to the list object, while `len()` is a built-in function that can be used on many different types of objects. Essentially, since `append()` is a method that is specific to lists, we use the syntax `list.method()`. As `len()` is a function that can be used on many different types of objects, we use the syntax `function(object)`.
 
 Now that we have added a new genome length to `glengths`, we can see that there are 4 elements in our `glengths` list:
 
@@ -139,8 +143,7 @@ len(glengths)
 
 ### Indexing
 
-
-There may be times when we want to access a specific element in a list. We can do this with indexing. Python uses what is called **zero-based indexing**, which means that the _first element_ of a list is accessed with _index 0_, the _second element_ with _index 1_, and so on. 
+There may be times when we want to access a specific element in a list. We can do this via indexing. Python uses what is called **zero-based indexing**, which means that the _first element_ of a list is accessed with _index 0_, the _second element_ with _index 1_, and so on. 
 
 Table: Indices of list `species`, showing how the first element is indexed at zero. {#tbl-indexing}
 
@@ -150,7 +153,7 @@ Table: Indices of list `species`, showing how the first element is indexed at ze
 | 1     | human |
 | 2     | corn  |
 
-We can access individual elements of a list using square brackets `[]` and the index of the element we want to access. For example, to access the first element of the `species` list, we would use `species[0]`.
+We can access individual elements of a list using square brackets `[]` and the index of the element we want to access following the list name. For example, to access the first element of the `species` list, we would use `species[0]`.
 
 ```{python}
 #| label: species_elem_0
@@ -168,10 +171,10 @@ species[1]
 
 ::: {.callout-note collapse="true"}
 # R is one-indexed
-If you have used R before, you may be used to one-based indexing, which means that the first element of a list is accessed with index 1. As you have now seen, in Python, the first element is accessed with index 0. So if you are going back and forth between R and Python, it is important to remember that the indexing is different in the two languages.
+If you have used R before, you may be used to one-based indexing, which means that the first element of a list is accessed with index 1. As you have now seen, in Python, the first element is accessed with index 0. So when you go back and forth between R and Python, it is important to remember that the indexing is different in the two languages.
 :::
 
-If you want to access the last element of a list, you can use the index `-1`. This is a special index that always refers to the last element of the list, regardless of how many elements are in the list. For example, to access the last element of the `glengths` list, we would use `glengths[-1]`.
+When you want to access the last element of a list, you can use the index `-1`. This is a special index that always refers to the last element of the list, regardless of how many elements are in the list. For example, in order to access the last element of the `glengths` list, we would use `glengths[-1]`.
 
 ```{python}
 #| label: glengths_last_elem
@@ -222,7 +225,7 @@ But perhaps we wanted to access the second element of the `species` list, which 
 nested_list[1][1]
 ```
 
-This stucture is actually quite similar to how matrices are structured (which we will discuss how to utilize matrices with `numpy` in a future lesson). In a matrix, you have rows and columns, and you can access elements by specifying the row and column indices. In a nested list, you have lists within lists, and you can access elements by specifying the indices of the outer list and then the inner list.
+This stucture is actually quite similar to how matrices are structured (we will discuss how to utilize matrices with `numpy` in a future lesson). A matrix has rows and columns, and you can access individual elements by specifying the row and column indices. In a nested list, you have lists within lists, and you can similarly access elements by specifying the indices of the outer list and then the inner list.
 
 ## Accessing Multiple Elements in a List
 
@@ -262,7 +265,7 @@ Recall that we can use _negative indexing_ to access elements from the end of th
 
 ## Strings are Lists!
 
-Earlier, we talked about strings as a data type that is used to represent text. However, strings are actually a special type of list! Each character in a string is an element in the list, and we can access them with indexing and slicing just like we would with any other list. This is one of many ways to access a substring of a string.
+Earlier, we talked about strings as a data type that is used to represent text. However, strings are actually a special type of list! Each character in a string is an element (of the data type `character`) in the list, and we can access them with indexing and slicing just like we would with any other list. This is one of many ways to access a substring of a string.
 
 For example, if we have a string `s = "hello"`, we can access the first character with `s[0]`, which would give us `h`. 
 
@@ -284,9 +287,9 @@ s[1:4]
 
 ## Dictionaries
 
-Dictionaries are another data structure that are quite similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary is unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. 
+Dictionaries are another data structure that are similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary is unique and must be unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. 
 
-So let us begin by creating a dictionary that contains the species names as keys and their corresponding genome lengths as values. This is a more intuitive way to organize our data, as we can easily access the genome length for a specific species by using the species name as the key.
+So let us begin by creating a dictionary that contains the species names as keys and their corresponding genome lengths as values. This can be a more intuitive way to organize our data, as in this case we can access the genome length for a specific species by using the species name as the key instead of using the index.
 
 ### Creating a Dictionary
 
@@ -304,7 +307,7 @@ genome_dict = {
 genome_dict
 ````  
 
-We can represent our dictionary similarly to how we did with the list, but this time we will have keys instead of indices.
+We can represent our dictionary in a table similarly to how we did with the list, but this time we will use keys instead of indices.
 
 Table: Dictionary, where keys are species name and values are length of the species' genome in kilobases. {#tbl-dict}
 
