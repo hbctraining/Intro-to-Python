@@ -76,11 +76,11 @@ In addition, Python has a large and active community, which means there are many
 
 ## Anaconda
 
-[Anaconda](https://www.anaconda.com/) is a popular distribution of Python. When you install Anaconda, you get a Python environment as well as many useful libraries and tools for data science and scientific computing. It provides an easy way to manage Python environments and packages.
+[Anaconda](https://www.anaconda.com/) is a popular distribution of Python. When you install Anaconda, you get a Python environment as well as many useful libraries and tools for data science and scientific computing. It also provides an easy way to manage Python environments and packages.
 
 ::: callout-note
 # Installing Anaconda
-Prior to today's lesson, you should already have installed [Anaconda](https://www.anaconda.com/download) onto your computer. You should now have an application called "Anaconda Navigator". 
+You should already have installed [Anaconda](https://www.anaconda.com/download) onto your computer prior to today's lesson. You should now have an application called "Anaconda Navigator". 
 :::
 
 Python is installed along with Anaconda, so you do not need to install Python separately.
@@ -118,7 +118,7 @@ We will discuss environments in more detail later in this workshop. For now, we 
 
 ::: columns
 ::: column
-One of the applications downloaded with Anaconda is [JupyterLab](https://jupyter.org/). JupyterLab allows users to create interactive environments (notebooks) that allow you to create and share your Python code and visualizations. JupyterLab is widely used for sharing results and running analyses since you can show any intermediate results from code chunks through the notebook.
+One of the applications downloaded with Anaconda is [JupyterLab](https://jupyter.org/). JupyterLab allows users to create interactive environments (notebooks) that allow you to create and share your Python code and visualizations. JupyterLab is widely used for sharing results and running analyses since you can see intermediate results from code chunks through the notebook.
 
 JupyterLab allows you to write and execute code in a more interactive way than just running scripts in a terminal. You can write code in **cells**, run those cells, and immediately see the output. This makes it easier to experiment and test your code as you go.
 
@@ -132,7 +132,7 @@ JupyterLab logo.
 :::
 :::
 
-Let us open JupyterLab by clicking the "Launch" button under the JupyterLab application in Anaconda Navigator. _This will open a new tab in your web browser with the JupyterLab interface._
+We will open JupyterLab by clicking the "Launch" button under the JupyterLab application in Anaconda Navigator. _This will open a new tab in your web browser with the JupyterLab interface._
 
 ::: callout-warning
 TODO: Make our own screenshot, I have just taken this from the this other workshop for now since I have many conda environments when I open mine. It woul dbe nice to have a similarly labeled image.
@@ -149,7 +149,7 @@ Even though JupyterLab opens your web browser, it is not actually accessing the 
 
 ### File navigator
 
-On the left-hand side of JupyterLab we can access the file navigator which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder click the "New Folder" button in the file navigator and title it intro_python. 
+The navigation panel on the left-hand side allows us to access the file navigator which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder click the "New Folder" button in the file navigator and title it intro_python. 
 
 :::{.callout-tip}
 # **Exercise 1**
@@ -229,7 +229,7 @@ We will start by calculating the sum of 3 and 5. We are also going to include **
 3 + 5
 ```
 
-You can run a cell by clicking on the cell and then clicking the "Run" button in the toolbar at the top of the notebook. You can also use the keyboard shortcut `Shift + Enter` to run a cell.
+You can run a cell by clicking on the cell and then clicking the "Run" button in the toolbar at the top of the notebook. You can also run cells with the keyboard shortcut `Shift + Enter`.
 
 ::: {#fig-jupyter_code_output .figure}
 ![](../img/run_three_plus_five.png)
@@ -237,7 +237,7 @@ You can run a cell by clicking on the cell and then clicking the "Run" button in
 Output of running 3 + 5 in JupyterLab.
 :::
 
-What happens if we do that same command without the comment symbol `#`? Re-run the command after removing the `#` sign in the front:
+What happens if we run that same command without the comment symbol `#`? Re-run the command after removing the `#` sign in the front:
 
 ```{python}
 #| label: rm_comment_error
@@ -246,7 +246,7 @@ Add 3 and 5
 3 + 5
 ```
 
-Python is trying to run the text "Add 3 and 5" as a command, which is not valid Python syntax. Aa a result, we get an `invalid syntax` error in the console. This error means that the Python interpreter did not know what to do with that command. Readd the `#` to re-comment the appropriate line.
+Python is trying to run the text "Add 3 and 5" as a command, which is not valid Python syntax. As a result we get an `invalid syntax` error in the console. This error means that the Python interpreter did not know what to do with that command. Re-add the `#` to re-comment the appropriate line.
 
 This is a clear example of how Python requires a specific syntax that must be followed for the code to run properly. We will continue to learn more about the syntax and structure of Python code as we go through the workshop. It really is its own _language_, just like English, with its own grammar and rules.
 
