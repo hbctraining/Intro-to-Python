@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Python and JupyterLab"
 description: |
-  This lesson introduces Python and JupyterLab for beginners, which covers how to install Anaconda, launch JupyterLab, create notebooks, and run your first Python code in an interactive environment.
+  This lesson introduces Python and JupyterLab for beginners, which covers how to install Anaconda, launch JupyterLab, create notebooks and run your first Python code in an interactive environment.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -35,13 +35,13 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-This lesson includes instructions on how to install Python, open a JupyterLab notebook, and **run Python code on your own**. We will be using `Anaconda` and JupyterLab so that you can work within the notebook ecosystem, which allows you to see the results of your code immediately. These same tools are widely used across fields for research and data scientists to explore datasets, document thought processes, and share results with collaborators.
+This lesson includes instructions on how to install Python, open a JupyterLab notebook and **run Python code on your own**. We will be using `Anaconda` and JupyterLab so that you can work within the notebook ecosystem, which allows you to see the results of your code immediately. These same tools are widely used across fields for research and data scientists to explore datasets, document code and share results with collaborators.
 
 By the end, you will have a working Python environment that you can reuse for future projects, whether you are automating a task or starting a larger analysis!
 
 ## What is Python?
 
-[Python](https://www.python.org/) is a programming language that allows the user to write code to execute tasks. Python is a great language for beginners due to its simplicity and readability! It is also powerful enough to be used by experts to answer complex, real world questions. Therefore many fields, such as data science, machine learning, artificial intelligence, bioinformatics, and more have adopted Python as a tool for their work.
+[Python](https://www.python.org/) is a programming language that allows the user to write code to execute tasks. Python is a great language for beginners due to its simplicity and readability! It is also powerful enough to be used by experts to answer complex, real world questions. Therefore many fields, such as data science, machine learning, artificial intelligence, bioinformatics and many more have adopted Python as a tool for their work.
 
 ::: columns
 ::: column
@@ -68,9 +68,9 @@ Python has a large ecosystem of libraries that can be used for a wide range of a
 
 Among its many capabilities, Python is particularly well-suited for:
 
-- Data handling, wrangling, and storage
+- Data handling, wrangling and storage
 - Statistical analyses with many graphical techniques
-- Accessibility as it can be installed on any computer and (and it’s **free!**)
+- Accessibility as it can be installed on any computer and it’s **free!**
 
 In addition, Python has a large and active community, which means there are many resources available for learning and troubleshooting. 
 
@@ -101,10 +101,10 @@ Anaconda Navigator interface.
 
 There are four main sections of the Anaconda Navigator interface:
 
-1. **Home**: This is the default view when you open Anaconda Navigator. It provides access to applications and tools, like JupyterLab, PyCharm, Spyder, and more.
+1. **Home**: This is the default view when you open Anaconda Navigator. It provides access to applications and tools, like JupyterLab, PyCharm, Spyder and more.
 2. **Environments**: This section allows you to manage different Python environments. You can install packages and create new environments.
-3. **Learning**: Here, you can access to various resources for learning Python and data science, including tutorials, and documentation.
-4. **Community**: This section links to forums, blogs, and other resources for connecting with other Python users.
+3. **Learning**: Here, you can access to various resources for learning Python and data science, including tutorials and documentation.
+4. **Community**: This section links to forums, blogs and other resources for connecting with other Python users.
 
 ::: callout-note
 # Environments
@@ -120,7 +120,7 @@ We will discuss environments in more detail later in this workshop. For now, we 
 ::: column
 One of the applications downloaded with Anaconda is [JupyterLab](https://jupyter.org/). JupyterLab allows users to create interactive environments (notebooks) that allow you to create and share your Python code and visualizations. JupyterLab is widely used for sharing results and running analyses since you can show any intermediate results from code chunks through the notebook.
 
-JupyterLab allows you to write and execute code in a more interactive way than just running scripts in a terminal. You can write code in **cells**, run those cells, and immediately see the output. This makes it easier to experiment and test your code as you go.
+JupyterLab allows you to write and execute code in a more interactive way than just running scripts in a terminal. You can write code in **cells**, run those cells and immediately see the output. This makes it easier to experiment and test your code as you go.
 
 :::
 ::: column
@@ -149,7 +149,7 @@ Even though JupyterLab opens your web browser, it is not actually accessing the 
 
 ### File navigator
 
-On the left-hand side of JupyterLab we can access the file navigator which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder click the "New Folder" button in the file navigator and title it intro_python. 
+On the left-hand side of JupyterLab we can access the file navigator which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder click the "New Folder" button in the file navigator and title it `intro_python`. 
 
 :::{.callout-tip}
 # **Exercise 1**
@@ -183,14 +183,14 @@ Table: JupyterLab menu options and descriptions. {#tbl-jupyter_menu}
 
 | Menu     | Description                                                                                                                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| File     | Actions related to files and directories such as New, Open, Close, Save, etc. The File menu also includes the Shut Down action used to shut down the JupyterLab server.                                   |
-| Edit     | Actions related to editing documents such as Undo, Cut, Copy, Paste, etc.                                                                                                             |
-| View     | Actions that alter the appearance of JupyterLab and enable access to different windows.                                                                                                                                                           |
-| Run      | Actions for running code in different ways such as through notebooks and code consoles (discussed below).                                                                                                   |
-| Kernel   | Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.                                                                                                                   |
-| Tabs     | A list of the open documents and activities in the main work area.                                                                                                                                         |
-| Settings | Common JupyterLab settings can be configured using this menu. There is also an Advanced Settings Editor option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options. |
-| Help     | A list of links for help with JupyterLab and kernels.                                                                                                                                                                |
+| **File**     | Actions related to files and directories such as New, Open, Close, Save, etc. The **File** menu also includes the Shut Down action used to shut down the JupyterLab server.                                   |
+| **Edit**     | Actions related to editing documents such as Undo, Cut, Copy, Paste, etc.                                                                                                             |
+| **View**     | Actions that alter the appearance of JupyterLab and enable access to different windows.                                                                                                                                                           |
+| **Run**      | Actions for running code in different ways such as through notebooks and code consoles (discussed below).                                                                                                   |
+| **Kernel**   | Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.                                                                                                                   |
+| **Tabs**     | A list of the open documents and activities in the main work area.                                                                                                                                         |
+| **Settings** | Common JupyterLab settings can be configured using this menu. There is also an Advanced Settings Editor option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options. |
+| **Help**     | A list of links for help with JupyterLab and kernels.                                                                                                                                                                |
 
 ## Creating an interactive Python notebook (ipynb)
 
@@ -246,15 +246,15 @@ Add 3 and 5
 3 + 5
 ```
 
-Python is trying to run the text "Add 3 and 5" as a command, which is not valid Python syntax. Aa a result, we get an `invalid syntax` error in the console. This error means that the Python interpreter did not know what to do with that command. Readd the `#` to re-comment the appropriate line.
+Python is trying to run the text "Add 3 and 5" as a command, which is not valid Python syntax. As a result, we get an `invalid syntax` error in the console. This error means that the Python interpreter did not know what to do with that command. Readd the `#` to re-comment the appropriate line.
 
 This is a clear example of how Python requires a specific syntax that must be followed for the code to run properly. We will continue to learn more about the syntax and structure of Python code as we go through the workshop. It really is its own _language_, just like English, with its own grammar and rules.
 
 ## The importance of comments
 
-Before we move on to more complex concepts and getting familiar with the language, we want to reemphasize the importance of commenting your code.
+Before we move on to more complex concepts and getting familiar with the language, we want to re-emphasize the importance of commenting your code.
 
-Use `#` signs to comment. **Comment liberally** in your Python scripts. This will help future you and other collaborators understand what your code is doing. Anything to the right of a` #` is ignored by Python. A shortcut to comment out entire chunks of code is to highlight several lines and hit `Ctrl+/` (or `Cmd+/` on a Mac).
+Use `#` signs to comment. **Comment liberally** in your Python scripts. This will help future you and other collaborators understand what your code is doing. Anything to the right of a` #` is ignored by Python. A shortcut to comment out entire chunks of code is to highlight several lines and hit <kbd>Ctrl</kbd> + <kbd>/</kbd> (or <kbd>Cmd</kbd> + <kbd>/</kbd> on a Mac).
 
 
 ***
