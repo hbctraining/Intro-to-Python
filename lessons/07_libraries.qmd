@@ -43,19 +43,19 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Most of the power of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading csv files, working with biological sequences, or creating complex plots. The open source community has developed a vast array of libraries to support various domains and use cases. In this way, you do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load, and explore libraries so you can tap into this broader ecosystem for your own work.
+Much of the power and appeal of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading csv files, working with biological sequences, or creating complex plots. The open source community has developed a vast array of libraries to support various domains and use cases. You do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load, and explore libraries so you can tap into this broader ecosystem for your own work.
 
 ## Libaries in Python
 
-**Libraries** are collections of Python functions, data, and compiled code in a well-defined format, created to add specific functionality. Just as we created our own functions in the previous lesson, other users have created functions that they have shared with the community in the form of libraries. These packages can be installed and loaded into your Python environment to use the functions that they contain.
+**Libraries** are collections of Python functions, data, and compiled code in a well-defined format, created to add specific functionality. Just as we created our own functions in the previous lesson, other users have created packages of functions they have shared with the community in the form of libraries. These packages can be installed and loaded into your Python environment so you can use the functions that they contain.
 
-There are a set of **standard (or base)** packages which are considered part of the Python source code and automatically available as part of your Python installation. Base packages contain the **basic functions** that allow Python to work, and enable standard statistical and graphical functions on datasets; for example, all of the functions that we have been using so far in our examples.
+There are a set of **standard (or base)** packages which are considered part of the Python source code and automatically available as part of your Python installation. Base packages contain the **basic functions** that allow Python to work, and enable standard statistical and graphical functions on datasets; for example, all of the functions that we have been using so far in our examples are basic functions.
 
-The directories in Python where the packages are stored are called the libraries. The terms _package and library_ are sometimes used synonymously and there has been discussion amongst the community to resolve this. 
+Libraries are directories where packages for Python are stored. Note that the terms _package and library_ are sometimes used interchangably and there has been some discussion amongst the community to resolve this. 
 
 ### Channels for Python Libraries
 
-There are many different channels for Python libraries. You can think of these as different places where Python libraries are stored and can be accessed from. Some of the most common channels include:
+There are many different channels for Python libraries. You can think of these as different places where Python libraries are stored and can be accessed from. Some of the most commonly used channels include:
 
 Table: Common channels for Python libraries. {#tbl-python_channels}
 
@@ -67,20 +67,20 @@ Table: Common channels for Python libraries. {#tbl-python_channels}
 
 ## Package Installation from the Anaconda Navigator
 
-Now that we have an understanding of what libraries are, we can talk about how to install them. There are many different ways to install packages in Python, but we will focus on two methods: installing from the Anaconda Navigator and installing from the command line using `pip` or `conda`.
+Now that we have an understanding of what libraries are, we can talk about how to install them. There are many different ways to install packages in Python, but we will focus on two means: installing from the Anaconda Navigator and installing from the command line using `pip` or `conda`.
 
 ::: callout-warning
 Make a tabset on how to do this in terminal
 :::
 
-For this workshop, we will be using the Anaconda Navigator to install packages. The Anaconda Navigator is a graphical user interface that allows you to manage your Python environments and packages without needing to use the command line. To install a package from the Anaconda Navigator, you can follow these steps:
+For this workshop, we will use the Anaconda Navigator to install packages. The Anaconda Navigator is a graphical user interface that allows you to manage your Python environments and packages without needing to use the command line. To install a package from the Anaconda Navigator, you can follow these steps:
 
 1. Open the Anaconda Navigator.
 2. Click on the "Environments" tab on the left side of the screen.
-3. Select the environment you want to install the package in. In our case, we will use the `"base (root)"` environment.
+3. Select the environment you want to install the package in. In this case, we will use the `"base (root)"` environment.
 4. Search for the package you want to install in the search bar. For example, we want to install the `numpy` package.
 5. Once you find the package, click on the checkbox next to it to select it for installation.
-6. Click on the "Apply" button to start the installation process. The Anaconda Navigator will handle the installation for you and will let you know when it is complete
+6. Click on the "Apply" button to start the installation process. The Anaconda Navigator will handle the installation and will let you know when it is complete
 
 ::: callout-warning
 My python environment are really filled out so I don't have a screenshot of these steps.
@@ -88,15 +88,15 @@ My python environment are really filled out so I don't have a screenshot of thes
 
 ::: callout-note
 # Extra information in the environments tab
-If you  click on the "Channels" button you can see the channels that are being used to search for packages. You can add additional channels here if you want to search for packages that are not available in the default channels. For example, if you want to search for bioinformatics tools, you can add the `bioconda` channel.
+If you click on the "Channels" button you can see the channels that are currently being used to search for packages. You can add additional channels here to search for packages that are not available in the default channels. For example, if you want to search for bioinformatics tools, you can add the `bioconda` channel.
 
-Additionally, you can click on the "Not installed" filter to see a list of packages that are not currently installed in your environment. This can be a useful way to find new packages to install and explore.
+Additionally, you can click on the "Not installed" filter to see a list of packages that are not currently installed in your environment. This can be a useful way to find new packages to explore and install.
 :::
 
 
-We only need to install a package once on our computer. However, to use the package, we need to load the library every time we start a new Python session. You can think of this as **installing a bulb** versus **turning on the light**.
+We only need to install a package once on our computer. However, in order to use the package, we need to load the library every time we start a new Python session. You can think of this as **installing a bulb** versus **turning on the light**.
 
-So now we will never have to install `numpy` again for whenever we are using `base(root)`
+So now we will never have to install `numpy` again for whenever we are using the `base(root)` environment.
 
 
 :::{.callout-tip}
@@ -109,14 +109,14 @@ So now we will never have to install `numpy` again for whenever we are using `ba
 
 ## Importing Libraries
 
-Now that we have installed the libraries we want to use, we need to import them into our Python environment in order to use the functions that they contain. To import a library, we can use the `import` statement followed by the name of the library. For example, to import the `numpy` library, we would use the following code:
+Now that we have installed the libraries we want to use, we need to import them into our Python environment in order to access their functions. To do so, we can use the `import` statement followed by the name of the library. For example, to import the `numpy` library, we would use the following code:
 
 ```{python}
 #| label: import_numpy
 import numpy
 ```
 
-We will know that the library has been imported successfully if we do not get any error messages when we run this code. Once we have imported the library, we can use the functions that it contains by prefixing the function name with the library name and a dot. For example, to use the `array()` function from the `numpy` library, we would use the following code:
+We will know that the library has been imported successfully if we do not get any error messages when we run this code. Once we have imported the library, we can use the functions that the library contains by prefixing the function name with the library name and a dot. For example, to use the `array()` function from the `numpy` library, we would use the following code:
 
 ```{python}
 #| label: numpy_array
@@ -126,14 +126,14 @@ print(my_array)
 
 ### Library Aliases
 
-It is common practice to import libraries with an alias, which is a shorter name that we can use to refer to the library. This can make our code more concise and easier to read. To import a library with an alias, we can use the `as` keyword followed by the alias we want to use. For example, it is common to import the `numpy` library with the alias `np`, so we would use the following code:
+It is common practice to import libraries with an alias, which is a shorter name that we can use to refer to the library. This can make our code more concise and easier to read. We can import a library with an alias, by using the `as` keyword followed by the alias we want to use. For example, it is common to import the `numpy` library with the alias `np`. We can do the same with the following code:
 
 ```{python}
 #| label: import_numpy_alias
 import numpy as np
 ``` 
 
-Now we can try creating `my_array` again using the alias instead of the full library name:
+Now we can try creating `my_array` again with alias instead of the full library name:
 
 ```{python}
 #| label: numpy_array_alias
@@ -141,7 +141,7 @@ my_array = np.array([1, 2, 3, 4, 5])
 print(my_array)
 ``` 
 
-It does not really matter what you set this alias to be. For example, you could import `numpy` as `meow_math` and it would work just fine.
+It does not really matter what you set this alias to be as long as it does not conflict with existing names. For example, you could import `numpy` as `meow_math` and it would work just fine.
 
 ```{python}
 #| label: numpy_array_meow_math
