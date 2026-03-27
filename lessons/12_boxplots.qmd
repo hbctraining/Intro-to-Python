@@ -43,7 +43,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Boxplots are a great way to visualize the distribution of your data when you are comparing different groups, such as expression levels across conditions. They can help you identify differences between conditions while also representing outliers and variability within your data. Using `Matplotlib` and `Seaborn`, we are going to build upon the foundation of plotting to create even more custom plots. In this lesson, you will practice creating boxplots and modifying their appearance to your liking.
+Boxplots are a great way to visualize the distribution of your data when you are comparing different groups such as expression levels across conditions. They can help you identify differences between conditions while also representing outliers and variability within your data. Using `Matplotlib` and `Seaborn`, we will build upon our foundations of plotting to create even more custom plots. In this lesson, you will practice creating boxplots and modifying their appearance.
 
 ## Boxplots
 
@@ -56,7 +56,7 @@ A boxplot provides a graphical view of the distribution of data based on a five 
 
 ::: {.callout-note}
 # Outliers in boxplots
-In this case, **outliers** are determined using the interquartile range (IQR), which is defined as: Q3 - Q1. Any values that exceeds 1.5 x IQR below Q1 or above Q3 are considered outliers and are represented as points above or below the whiskers. 
+In this case, **outliers** are determined by using the interquartile range (IQR) (which is Q3 - Q1). Any values that exceeds 1.5 x IQR below Q1 or above Q3 are considered outliers and are represented as points above or below the whiskers. 
 :::
 
 
@@ -70,10 +70,9 @@ Generate a boxplot using the data in the `new_metadata` dataframe. Create a ggpl
 
 3. Add a title to your plot.
 
-4. Add labels, "Genotype" for the x-axis and "Mean expression" for the y-axis.
+4. Add labels for the axes, "Genotype" for the x-axis and "Mean expression" for the y-axis.
 
 5. Make the following `theme()` changes:
-
     - Use the `white` theme to make the background white.
     - Change the size of your axes labels to 15.
     - Change the size of your plot title to 20.
@@ -124,7 +123,7 @@ Let’s say you wanted to have the `KO` boxplots displayed first on the left sid
 :::{.callout-tip}
 # [**Exercise 2**](12_lesson-Answer_key.qmd#exercise-2)
 
-Luckily there is another argument in `sns.boxplot()` called `order` that allows you to specify the order of the categories on the x-axis.
+Luckily there is another argument we can use in `sns.boxplot()` called `order` that allows you to specify the order of the categories on the x-axis.
 
 6. Use the `order` argument to change the order of the genotypes on the x-axis such that `KO` is on the left and `Wt` is on the right.
 :::
@@ -155,9 +154,9 @@ plt.ylabel("Mean expression", fontsize=15, loc="center")
 
 ## Changing default colors
 
-So far, you may have noticed that Python has been using some default colors for the points and boxes in our plots. You can change these default colors by using the `palette` argument in `sns.boxplot()` and `sns.scatterplot()`.
+You may have noticed that Python has been using the default colors for the points and boxes in our plots. You can change these default colors by using the `palette` argument in `sns.boxplot()` and `sns.scatterplot()`.
 
-You can color the boxplot differently by using some specific layers:
+You can color the boxplot differently by using specific layers:
 
 :::{.callout-tip}
 # [**Exercise 3**](12_lesson-Answer_key.qmd#exercise-3)
@@ -192,7 +191,7 @@ plt.ylabel("Mean expression", fontsize=15, loc="center")
 ```
 
 
-You are not restricted to using colors by writing them out as character vectors. You have the choice of a lot of colors in Python, and you can do so by using their *hexadecimal code*. For example, "#FF0000" would be red and "#00FF00" would be green similarly, "#FFFFFF" would be white and "#000000" would be black. [Here](https://htmlcolorcodes.com/) is a website that you can use to find the hexadecimal code for your favorite colors.
+You are not restricted to only using written colors. You have the choice of a lot of colors in Python, and you can use any of them by using their *hexadecimal code*. For example, "#FF0000" would be red and "#00FF00" would be green similarly, "#FFFFFF" would be white and "#000000" would be black. [Here](https://htmlcolorcodes.com/) is a website that you can use to find the hexadecimal code for your favorite colors.
 
 ::: {.callout-tip}
 # [**Exercise 4**](12_lesson-Answer_key.qmd#exercise-4)

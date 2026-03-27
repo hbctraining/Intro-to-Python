@@ -58,7 +58,7 @@ rpkm_ordered = pd.read_csv("data/ordered_counts_rpkm.csv", index_col=0)
 rpkm_ordered.head()
 ```
 
-First let us identify the top 6 most highly expressed genes across all of our samples. We can do this by calculating the average expression for each gene across all samples and then selecting the top 6 genes with the highest average expression:
+First we will identify the 6 most highly expressed genes across all of our samples. We can do this by calculating the average expression for each gene across all samples and then selecting the top 6 genes with the highest average expression:
 
 ```{python}
 #| label: top_genes
@@ -70,7 +70,7 @@ important_genes = gene_means.sort_values(ascending=False).head(6).index
 important_genes
 ```
 
-We can plot the gene expression for each of these genes across all of the samples using a heatmap. A heatmap is a graphical representation of data where individual values are represented as colors. In this case, we can use a heatmap to visualize the expression levels of our important genes across all of our samples.
+We can plot the gene expression for each of these genes across all of the samples by using a heatmap. A heatmap is a graphical representation of data where individual values are represented as colors. In this case, we will use a heatmap to visualize the expression levels of our important genes across all of our samples.
 
 ```{python}
 #| label: fig-top_genes_heatmap
@@ -88,7 +88,7 @@ sns.clustermap(important_genes_data,
 
 ```
 
-But we have no idea which samples are which in this heatmap! We can add some extra information to our heatmap by adding a color bar that indicates the `age` of the mouse for each sample. To do this, we need to load in our metadata data frame that contains the age information for each sample:
+However, we have no idea which samples are which in this heatmap! We will add some extra information to our heatmap by adding a color bar that indicates the `age` of the mouse for each sample. To do so, we will need to load in our metadata DataFrame that contains the age information for each sample:
 
 ```{python}
 #| label: load_metadata
@@ -97,7 +97,7 @@ new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)
 new_metadata.head()
 ```
 
-Now we can add a color bar to our heatmap that indicates the age of the mouse for each sample:
+Now we will add a color bar to our heatmap that indicates the age of the mouse for each sample:
 
 ```{python}
 #| label: fig-top_genes_heatmap_age

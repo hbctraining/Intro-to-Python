@@ -68,7 +68,7 @@ new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)
 new_metadata
 ```
 
-We will first initialize a plot using the `figure()` function from `MatPlotLib`. Let us look at some of the arguments we can use with the the `help()` function:
+We will first initialize a plot by using the `figure()` function from `MatPlotLib`. Let us look at some of the arguments we can use with the `help()` function:
 
 ```{python}
 #| label: help_figure
@@ -77,7 +77,7 @@ We will first initialize a plot using the `figure()` function from `MatPlotLib`.
 help(plt.figure)
 ```
 
-So first, let's create an empty plot of size 8 inches by 6 inches:
+So first, we'll create an empty plot of size 8 inches by 6 inches:
 
 ```{python}
 #| label: fig-initialize_plot
@@ -89,9 +89,9 @@ plt.figure(figsize=(8, 6))
 
 ### Adding a Scatterplot Layer
 
-We are once again to going to first initialize the plot with `figure()` and then add the scatterplot layer with `scatter()`. Next, we add a scatterplot layer using the `scatter()` function. We have to specify the `x` and `y` values for our scatterplot, which will be `age_in_days` and `mean_expression`, respectively. 
+We will once again first initialize the plot with `figure()` and then add the scatterplot layer to the plot with `scatter()`. We need to specify the `x` and `y` values for our scatterplot, which in this case will be `age_in_days` for `x` and `mean_expression` for `y`. 
 
-The `plt.figure` and `plt.scatter` calls are connected because `MatPlotLib` commands build upon each other to. The `plt.figure` command initializes the plot and sets the size, while the `plt.scatter` command adds the scatterplot layer to the existing plot. By calling these functions sequentially, we can build up our plot layer by layer.
+The `plt.figure` and `plt.scatter` calls are connected because `MatPlotLib` commands build upon each other. The `plt.figure` command initializes the plot and sets the size, while the `plt.scatter` command adds the scatterplot layer to the existing plot. When we call these functions sequentially, we are building our plot layer by layer.
 
 ```{python}
 #| label: fig-add_scatterplot_layer
@@ -104,7 +104,7 @@ plt.scatter(x=new_metadata["age_in_days"],
             y=new_metadata["mean_expression"])
 ```
 
-Now that we have the required fundamentals, let’s add some extras like color to the plot. We can color the points on the plot based on the genotype column with the `c` argument. 
+Now that we have the required fundamentals, let’s add some extra details like color to the plot. We can color the points on the plot based on the genotype column with the `c` argument. 
 
 ```{python}
 #| label: fig-add_color_scatterplot_layer_error
@@ -124,9 +124,9 @@ plt.scatter(data = new_metadata,
 
 ### Changing Aesthetics
 
-To get around the error from `plt.scatter`, we can instead use the `seaborn` package's `scatterplot()` function and use the `hue` argument instead of `c`, which allows us to specify a categorical variable for coloring the points. The documentation for `seaborn.scatterplot()` is quite extensive and can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.scatterplot.html).
+To work around the error from `plt.scatter`, we will instead use the `seaborn` package's `scatterplot()` function and use the `hue` argument instead of `c`, which allows us to specify a categorical variable in order to color the plot points. The documentation for `seaborn.scatterplot()` is quite extensive and can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.scatterplot.html).
 
-You will notice that there are a default set of colors that will be used so we do not have to specify. The legend has also been plotted for us automatically!
+You will notice that there are a default set of colors that we can use so we do not have to specify a color. The legend has also been automatically plotted for us!
 
 ```{python}
 #| label: fig-add_color_scatterplot_layer
@@ -144,7 +144,7 @@ sns.scatterplot(data = new_metadata,
 
 `seaborn` is a bit more flexible than `MatPlotLib` and allows us to easily add more aesthetics to our plot. Oftentimes you will find yourself using a blend of both packages together to create the plot you want.
 
-Let’s try to have both `celltype` and `genotype` represented on the plot. To do this we can assign the shape argument in `scatterplot()` the `celltype` column, so that each celltype is plotted with a different shaped data point.
+Let’s try to have both `celltype` and `genotype` represented on the plot. We can assign the `celltype` column to the shape argument in `scatterplot()`, so each celltype is plotted with a different shaped data point.
 
 ```{python}
 #| label: fig-add_shape_scatterplot_layer
@@ -161,7 +161,7 @@ sns.scatterplot(data=new_metadata,
 ```
 
 
-The data points are quite small. We can adjust the `s` (size) of the data points within the `scatterplot()` function. Since we do not want the size of the data points to be scaled according to a column in `new_metadata`, we can just specify a number for this argument.
+The data points are quite small. We can also adjust the `s` (size) of the data points within the `scatterplot()` function. Since we do not want the size of the data points to be scaled according to a column in `new_metadata`, we will just specify a number for this argument.
 
 ```{python}
 #| label: fig-add_size_scatterplot_layer
@@ -204,7 +204,7 @@ sns.scatterplot(data = new_metadata,
 
 ::: callout-note
 # Customizing themes
-You can also customize these further with `rc_params` if you want to adjust specific elements of the theme. The documentation for `set_style()` can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.set_style.html).
+You can also customize themes further with `rc_params` when you want to adjust specific elements of the theme. The documentation for `set_style()` can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.set_style.html).
 :::
 
 
@@ -212,7 +212,7 @@ You can also customize these further with `rc_params` if you want to adjust spec
 
 Do the axis labels or the tick labels get any larger by changing themes?
 
-No, they don’t. But we can change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top”, or after theme_bw(), any features we change will override what is set by the `sns.set_style()` layer.
+No, they don’t. We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, theme_bw(), any features we change will override what is set by the `sns.set_style()` layer.
 
 Let’s increase the size of the x-axis titles to be 10.
 
@@ -240,7 +240,7 @@ plt.xlabel("Age in Days", fontsize=20)
 
 :::{.callout-tip}
 # [**Exercise 1**](11_plotting_basics-Answer_key.qmd#exercise-1)
-1. The current axis label text defaults to what we gave as input to `geom_point` (i.e the column headers). We can change this by **adding additional layers** called `xlabel()` and `ylabel()` for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled "Age (days)" and the y-axis is labeled "Mean expression".
+1. The current axis label text defaults to our input to `geom_point` (i.e the column headers). We can change this by **adding additional layers** called `xlabel()` and `ylabel()` for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled "Age (days)" and the y-axis is labeled "Mean expression".
 
 2. Use the `plt.title()` layer to add a plot title of your choice. 
 
