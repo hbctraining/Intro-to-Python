@@ -151,6 +151,12 @@ Even though JupyterLab opens your web browser, it is not actually accessing the 
 
 The navigation panel on the left-hand side allows us to access the file navigator which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder click the "New Folder" button in the file navigator and title it `intro_python`. 
 
+::: {#fig-Create_intro_python .figure}
+![](../img/Create_intro_python.gif){width=600px}
+
+Creating `intro_python` directory.
+:::
+
 :::{.callout-tip}
 # **Exercise 1**
 
@@ -206,7 +212,13 @@ You may be prompted to select a kernel for the new notebook. A kernel refers to 
 Freshly created Jupyter Notebook.
 :::
 
-We can see in the File Navigator that we have a new file called `Untitled.ipynb`. The `.ipynb` extension stands for "interactive Python notebook". We can rename this file by right-clicking on it in the File Navigator and selecting "Rename". Let us rename this file to `intro_python.ipynb`.
+We can see in the File Navigator that we have a new file called `Untitled.ipynb`. The `.ipynb` extension stands for "interactive Python notebook". We can rename this file by right-clicking on it in the File Navigator and selecting "Rename". Let us rename this file to `intro_python.ipynb` and place it within out `scripts` directory.
+
+::: {#fig-Create_intro_python .figure}
+![](../img/Create_notebook.gif){width=600px}
+
+Creating Jupyter notebook, renaming it and placing it within our `scripts` directory.
+:::
 
 ## Running Python code
 
