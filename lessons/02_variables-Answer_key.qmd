@@ -47,7 +47,7 @@ print("The difference of", a, "and", b, "is", difference)
 
 # Exercise 2
 
-4. How would you determine the data type on `your_number` and what data type is it?
+1. How would you determine the data type on `your_number` and what data type is it?
 
 ```{python}
 #| label: exercise_2_4

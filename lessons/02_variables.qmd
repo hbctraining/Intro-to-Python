@@ -69,7 +69,7 @@ When creating variables in Python, there are some rules and guidelines that you 
 There is an [official Python style guide](https://peps.python.org/pep-0008/) that has much more detailed guidelines.
 :::
 
-If we would like to see the the value of a variable we have created, we can use the the `print()` function:
+If we would like to see the value of a variable we have created, we can use the the `print()` function:
 
 ```{python}
 #| label: print_function
@@ -341,7 +341,7 @@ Flush out the definition of boolean a bit more and why it is useful
 
 ### Changing the Data Type
 
-Let's consider the case where you have perhaps classified the data type of variable incorrectly. In our case, `number_string` is a string with the number `16`. We can see that:
+Let's consider the case where you have perhaps classified the data type of variable incorrectly. In our case, `number_string` is a string with the number `12`. We can see that:
 
 ```{python}
 #| label: number_string_data_type_1
@@ -389,7 +389,7 @@ print(type(True + True + False))
 
 :::{.callout-tip}
 # [**Exercise 2**](02_variables-Answer_key.qmd#exercise-2)
-4. How would you determine the data type on `your_number` and what data type is it?
+1. How would you determine the data type on `your_number` and what data type is it?
 :::
 
 
@@ -403,7 +403,7 @@ If we right click on some empty space within the JupyterLab interface, we can op
 Options after right-clicking an empty spot within JupyterLab.
 :::
 
-Once we open up the `Variable Inspector`, a new tab will open. From this tab, we can see all of the variables that we have created, their data types, and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and cannot recall what each are.
+Once we open up the `Variable Inspector`, a new tab will open. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and cannot recall what each are.
 
 
 ::: {#fig-jupyter_variable_inspector .figure}
