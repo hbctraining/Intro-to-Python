@@ -1,7 +1,7 @@
 ---
 title: "Conditional Statements"
 description: |
-  This lesson introduces conditional logic in Python, showing how to use if, elif, else, comparison operators, and logical operators to evaluate conditions.
+  This lesson introduces conditional logic in Python, showing how to use if, elif, else, comparison operators and logical operators to evaluate conditions.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -11,8 +11,9 @@ categories:
   - Conditionals
   - Boolean logic
 keywords:
-  - If statements
-  - Elif else
+  - if statements
+  - elif
+  - else
   - Comparison operators
   - Boolean logic
 license: "CC-BY-4.0"
@@ -34,15 +35,54 @@ Approximate time: XX minutes
 
 In this lesson, we will:
 
-- Create conditional statements using `if`, `elif`, and `else`
+- Create conditional statements using `if`, `elif` and `else`
 - Use the `in` operator to check for membership in a collection
 - Use logical operators to test multiple conditions at the same time
 
 ## Overview of lesson
 
-Conditional statements are what let your code make decisions. In real projects, you might only run a quality‑control step if a file exists, flag samples that fail a cutoff, or choose a different analysis path depending on user input. All of these rely on `if`, `elif`, and `else` to check conditions and respond accordingly. 
+Conditional statements are what lets your code make decisions. In real projects, you might only run a quality‑control step if a file exists, flag samples that fail a cutoff or choose a different analysis path depending on user input. All of these rely on `if`, `elif` and `else` to check conditions and respond accordingly. 
 
-In this lesson, you will learn how to express `True`/`False` logic in Python so your scripts can adapt to different scenarios and datasets instead of inflexibility repeating the exact steps.
+In this lesson, you will learn how to express `True`/`False` logic in Python so your scripts can adapt to different scenarios and datasets instead of inflexibly repeating the exact steps.
+
+## Boolean logic
+
+`if` statements will rely on the use of boolean logic. Typically we are checking if a variable is:
+
+- Greater than `>` or less than `<` a certain value
+- Greater than or _equal_ to `>=` or less than or _equal_ to `<=` a certain value
+- Equal to `==` a certain value
+- Not equal to `!=` a certain value
+
+Let's see this in action by testing :
+
+```{python}
+#| label: conditional_test_1
+# Set x equal to 15
+x = 15
+
+# Test if x is greater than 15
+print(x > 15)
+``` 
+
+We could test if `x` is less than or equal to `15` as well:
+
+```{python}
+#| label: conditional_test_2
+# Test if x is less than or equal to 15
+print(x <= 15)
+``` 
+
+We can also compare strings with these conditional statements:
+
+```{python}
+#| label: conditional_test_string
+# Set the string 'Anja' to a variable called my_name
+my_name = 'Anja'
+
+# Test if my_name variable is equal to 'Anja'
+print(my_name == 'Anja')
+``` 
 
 ## `if` Statements
 
@@ -52,18 +92,12 @@ Essentially, we are evaluating whether or not a condition is `True` or `False` (
 
 ### Syntax of `if` Statements
 
-When we want to check a condition, we can use an `if` statement. Typically we are checking if a variable is:
-
-- Greater than `>` or less than `<` a certain value
-- Greater than or _equal_ to `>=` or less than or _equal_ to `<=` a certain value
-- Equal to `==` a certain value
-- Not equal to `!=` a certain value
-
-The basic syntax looks like this:   
+When we want to check a condition, we can use an `if` statement. The basic syntax looks like this:   
 
 ```{python}
 #| label: if_statement_syntax
 #| eval: false
+# DO NOT RUN
 if condition:
     # code to execute if condition is true
 ``` 
@@ -72,28 +106,41 @@ So if we wanted to check if `x` is greater than 10, we could write:
 
 ```{python}
 #| label: if_statement_example
-x = 15
+# Check if x is greater than 10
 if x > 10:
-    print("x is greater than 10")
+    # If true, print out 'x is greater than 10'
+    print('x is greater than 10')
 ``` 
 
-`if` statements are not exclusively numerical comparisons, we can also check if a string is equal `==` to another string, if a list contains a certain value, and so on. So we can also write:
+However, if the boolean logic returns false, then the conditional code will not be executed and thus nothing will be returned:
+
+```{python}
+#| label: if_statement_fail_example
+# Check if x is greater than 10
+if x <= 10:
+    # If true, print out 'x is greater than 10'
+    print('x is greater than 10')
+``` 
+
+`if` statements are not exclusively numerical comparisons, we can check any boolean logic. So we could also test our `my_name` string from earlier:
 
 ```{python}
 #| label: if_statement_string_example
-name = "Alice"
-if name == "Alice":
-    print("Hello, Alice!")
+# Check if my_name is equal to 'Anja'
+if my_name == "Anja":
+    # If true, then print out this message
+    print("Hello, Anja!")
 ``` 
 
 Additionally, we are not limited to only one line of code in a single code block. We can have as many lines of code as we want in a block, as long as they are all indented at the same level.
 
 ```{python}
 #| label: if_statement_multiple_lines
-name = "Alice"
-if name == "Alice":
-    print("Hello, Alice!")
-    print("Welcome to the Python training!")
+# If my_name is equal to Anja 
+if my_name == 'Anja':
+    # If true, print out these two statements
+    print('Hello, Anja!')
+    print('Welcome to the Python training!')
 ``` 
 
 ### Indentation Matters
@@ -103,8 +150,10 @@ You may have noticed that the code block is indented. This is not just for the r
 ```{python}
 #| label: if_statement_indentation_error
 #| error: true
-x = 15
+# If x is greater than 10
 if x > 10:
+# If true, then print this statement
+# Note that it is not properly indented
 print("x is greater than 10")
 ``` 
 
@@ -113,20 +162,25 @@ We can also use nested `if` statements. Notice that the level of indentation is 
 
 ```{python}
 #| label: nested_if_statement
-x = 15
+# If x is greater than 10
 if x > 10:
+    # Print out this message
     print("x is greater than 10")
+    # If x is less than 20
     if x < 20:
+        # Print out this message
         print("x is also less than 20")
 ``` 
 
 ### `in` Operator
 
-The `in` operator allows us to check if a value is present in a collection such as a list or a string. For example, if we wanted to check if the letter "a" is in the string "hello", we could write:
+The `in` operator allows us to check if a value is present in a collection such as a list or a string. For example, if we wanted to check if the letter "o" is in the string "hello", we could write:
 
 ```{python}
 #| label: in_operator_example
+# Check if the letter "o" exists in "hello"
 if "o" in "hello":
+    # If true, print out this message
     print("The letter 'o' is in the string 'hello'")
 ```
 
@@ -134,7 +188,10 @@ if "o" in "hello":
 
 ```{python}
 #| label: in_operator_list_example
+# Create a list of integers called my_list
 my_list = [1, 2, 3, 4, 5]
+
+# Test if 3 is in my_list
 3 in my_list
 ``` 
 
@@ -169,11 +226,17 @@ Sometimes you may want to have a "catch-all" block of code that executes when th
 
 ```{python}
 #| label: if_else_example
-name = "Will"
-if name == "Alice":
-    print("Hello, Alice!")
+# Change my_name to a different name
+my_name = 'Noor'
+
+# Check if my_name matches 'Anja'
+if my_name == 'Anja':
+    # If true, print this message
+    print('Hello, Anja!')
+# Otherwise, do this
 else:
-    print("You aren't Alice!")
+    # Print this message
+    print("You are not Anja!")
 ``` 
 
 
@@ -181,45 +244,69 @@ else:
 
 Somewhat similarly to `else`, `elif` (short for "else if") allows us to check multiple conditions in a sequence. The `elif` block will only be evaluated if the previous `if` or `elif` conditions were `False`. This allows us to check for multiple conditions without nesting multiple `if` statements. For example:
 
-## Is this intented to be an incorrect example? If so, we should add a callout to explain the error.
 ```{python}
 #| label: elif_example
-name = "Bob"
-if name == "Alice":
-    print("Hello, Alice!")
-elif name == "Bob":
-    print("Hello, Bob!")
+# Check if my_name matches 'Anja'
+if my_name == 'Anja':
+    # If true, print this message
+    print('Hello, Anja!')
+# Otherwise, check if my_name matches 'Noor'
+elif my_name == 'Noor':
+    # If true, print this message
+    print('Hello, Noor!')
+# Otherwise
 else:
-    print("You aren't Alice or Bob!")
+    # Print this message
+    print("You aren't Anja or Noor!")
 ```
 
-You are not allowed to have an `elif` or `else` statement without a preceding `if` statement. However, you can have as many `elif` statements as you want in between the `if` and `else` statements. You are not required to include an `else` statement, but if you do, then it must be the last block in the sequence.
+:::{.callout-note}
+#### Placement of `elif` statements matter
+
+You are not allowed to have an `elif` or `else` statement without a preceding `if` statement. However, you can have as many `elif` statements as you want in between the `if` and `else` statements. You are not required to include an `else` statement, but if you do, then it must be the last block in the sequence and it closes the `if`/`elif`/`else` chain.
+
+In this example below, we will see that we have an `if`/`else` pair of statements, is followed by an `elif` statement. But the `if`/`else` pair of statements is a complete chain and now we have an `elif` without a preceeding `if` statement. This will return an error.
 
 ```{python}
 #| label: multiple_elif_example
 #| error: true
-name = "Charlie"
-if name == "Alice":
-    print("Hello, Alice!")
+# Change my_name to a different name
+my_name = 'Juan'
+
+# Check if my_name matches 'Anja'
+if my_name == 'Anja':
+    # If true, print this message
+    print('Hello, Anja!')
+# Otherwise
 else:
+    # Print this message
     print("You aren't Alice or Bob!")
-elif name == "Bob":
+# Otherwise, check if my_name matches 'Noor'
+# Note that this syntax of putting elif after the else is going to return an error on line 14
+elif name == "Noor":
+    # If true, print this message
     print("Hello, Bob!")
 ```
 
+:::
 
 ### Order Matters
 
-Another nuanced, but important point is that when we use `if`, `elif`, and `else` statements together, the order of the conditions matters. **Python will evaluate the conditions in the order they are written**, and once it finds a condition that is `True`, it will execute that block of code and skip the rest. For example:
+Another nuanced, but important point is that when we use `if`, `elif`, and `else` statements together, the order of the conditions matters. **Python will evaluate the conditions in the order they are written** and once it finds a condition that is `True`, it will execute that block of code and skip the rest. For example:
 
 ```{python}
 #| label: elif_order_example
-x = 15
+# Check if x is greater than 10
 if x > 10:
+    # If true, print this message
     print("x is greater than 10")
+# Otherwise, check if x is greater than 5
 elif x > 5:
+    # If true, print this message
     print("x is greater than 5 but not greater than 10")
+# Otherwise
 else:
+    # Print this message
     print("x is 5 or less")
 ``` 
 
@@ -242,13 +329,8 @@ Let's use the example from earlier where we checked if `x` was greater than 10 a
 
 ```{python}
 #| label: and_operator_example
-x = 15
-if x > 10 and x < 20:
-    print("x is greater than 10 and less than 20 ")
-elif x > 5:
-    print("x is greater than 5 but not greater than 10")
-else:
-    print("x is 5 or less")
+# Test if x is greater than 10 and x is less than 20
+x > 10 and x < 20
 ``` 
 
 
@@ -258,11 +340,8 @@ If we wanted to check if `x` was either less than 5 or greater than 10, we could
 
 ```{python}
 #| label: or_operator_example
-x = 15
-if x < 5 or x > 10:
-    print("x is either less than 5 or greater than 10")
-else:
-    print("x is between 5 and 10")
+# Test if x is less than 5 or x is greater than 10
+x < 5 or x > 10
 ```
 
 ### `not` Operator
@@ -271,28 +350,32 @@ The `not` operator allows us to check if a condition is `False` and returns a `T
 
 ```{python}
 #| label: not_operator_example
-x = 15
-if not x > 10:
-    print("x is not greater than 10")
-else:
-    print("x is greater than 10")
+# Test if x is NOT greater than 10
+not x > 10
 ```
 
-This is sometimes more intuitive to read than writing `if x <= 10:`. 
-
+This is sometimes more intuitive to read than writing `x <= 10:`. 
 
 ### Combining Logical Operators
 
-We can also combine logical operators to check multiple conditions at the same time. For example, if we wanted to check if `x` is greater than 10 and less than 20, or if `x` is equal to 5, we could write:
+We can also combine logical operators using parentheses to check multiple conditions at the same time. When we do this we need to be careful how we group those `and` and `or` statements together. Given these two statements when `x` is `15`, the first example will return `True`: 
 
 ```{python}
-#| label: combined_logical_operators_example
+#| label: combined_logical_operators_example_1
+# Set x to 15
 x = 15
-if (x > 10 and x < 20) or x == 5:
-    print("x is either greater than 10 and less than 20, or x is equal to 5")
-else:
-    print("x does not meet either condition")
+
+# Test if x is equal to 15 or if x is less than 20 and greater than 18
+x == 15 or (x < 20 and x > 18)
 ``` 
+
+While the second example will return `False`: 
+
+```{python}
+#| label: combined_logical_operators_example_2
+# Test if x is equal to 15 or less than 20 and if x is greater than 18
+(x == 15 or x < 20) and x > 18
+```
 
 :::{.callout-tip}
 # [**Exercise 3**](03_lesson-Answer_key.qmd#exercise-3)
