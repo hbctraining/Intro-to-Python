@@ -5511,10 +5511,16 @@ x is also less than 20</code></pre>
 </div>
 <p>As you saw, the <code>in</code> operator returns a boolean value (<code>True</code> or <code>False</code>) that indicates whether or not the value belongs to the list. This can be very useful for conditional statements, as we can use it to check if a value is in a list before trying to access it, which can help prevent errors. For example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="kw">in</span> my_list:</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x, <span class="st">&quot;is in the list!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list called my list with some numbers in it</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x to 3</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if x is in my_list list</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="kw">in</span> my_list:</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print out this message</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x, <span class="st">&quot;is in the list!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3 is in the list!</code></pre>
 </div>
@@ -6407,196 +6413,202 @@ Placement of <code>elif</code> statements matter
 <span id="cb43-225"><a href="#cb43-225" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-228"><a href="#cb43-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb43-229"><a href="#cb43-229" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: in_operator_conditional_example</span></span>
-<span id="cb43-230"><a href="#cb43-230" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb43-231"><a href="#cb43-231" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb43-232"><a href="#cb43-232" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="kw">in</span> my_list:</span>
-<span id="cb43-233"><a href="#cb43-233" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x, <span class="st">&quot;is in the list!&quot;</span>)</span>
-<span id="cb43-234"><a href="#cb43-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-230"><a href="#cb43-230" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list called my list with some numbers in it</span></span>
+<span id="cb43-231"><a href="#cb43-231" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb43-232"><a href="#cb43-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-233"><a href="#cb43-233" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x to 3</span></span>
+<span id="cb43-234"><a href="#cb43-234" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb43-235"><a href="#cb43-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-236"><a href="#cb43-236" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
-<span id="cb43-237"><a href="#cb43-237" aria-hidden="true" tabindex="-1"></a>Have not written exercises for this lesson</span>
-<span id="cb43-238"><a href="#cb43-238" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb43-239"><a href="#cb43-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-240"><a href="#cb43-240" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb43-241"><a href="#cb43-241" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](03_lesson-Answer_key.qmd#exercise-1)</span></span>
-<span id="cb43-242"><a href="#cb43-242" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A question to evaluate Learning Objective 1</span>
-<span id="cb43-243"><a href="#cb43-243" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A followup question to question #1</span>
-<span id="cb43-244"><a href="#cb43-244" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>...</span>
-<span id="cb43-245"><a href="#cb43-245" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb43-246"><a href="#cb43-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-247"><a href="#cb43-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## Multiple Conditions with `elif` and `else`</span></span>
-<span id="cb43-248"><a href="#cb43-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-249"><a href="#cb43-249" aria-hidden="true" tabindex="-1"></a>We can join together the functionality of multiple <span class="in">`if`</span> statements using <span class="in">`elif`</span> and <span class="in">`else`</span>. This allows us to check multiple conditions in a more efficient way without needing to nest multiple <span class="in">`if`</span> statements.</span>
-<span id="cb43-250"><a href="#cb43-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-251"><a href="#cb43-251" aria-hidden="true" tabindex="-1"></a><span class="fu">### `else` Statements</span></span>
+<span id="cb43-236"><a href="#cb43-236" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if x is in my_list list</span></span>
+<span id="cb43-237"><a href="#cb43-237" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="kw">in</span> my_list:</span>
+<span id="cb43-238"><a href="#cb43-238" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print out this message</span></span>
+<span id="cb43-239"><a href="#cb43-239" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x, <span class="st">&quot;is in the list!&quot;</span>)</span>
+<span id="cb43-240"><a href="#cb43-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-241"><a href="#cb43-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-242"><a href="#cb43-242" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb43-243"><a href="#cb43-243" aria-hidden="true" tabindex="-1"></a>Have not written exercises for this lesson</span>
+<span id="cb43-244"><a href="#cb43-244" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-245"><a href="#cb43-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-246"><a href="#cb43-246" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb43-247"><a href="#cb43-247" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](03_lesson-Answer_key.qmd#exercise-1)</span></span>
+<span id="cb43-248"><a href="#cb43-248" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A question to evaluate Learning Objective 1</span>
+<span id="cb43-249"><a href="#cb43-249" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A followup question to question #1</span>
+<span id="cb43-250"><a href="#cb43-250" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>...</span>
+<span id="cb43-251"><a href="#cb43-251" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb43-252"><a href="#cb43-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-253"><a href="#cb43-253" aria-hidden="true" tabindex="-1"></a>Sometimes you may want to have a &quot;catch-all&quot; block of code that executes when the <span class="in">`if`</span> statement is not met. This is where <span class="in">`else`</span> comes in! We can build upon the &quot;Alice&quot; example from above and add an <span class="in">`else`</span> statement to handle the case where <span class="in">`name != &quot;Alice&quot;`</span>:</span>
+<span id="cb43-253"><a href="#cb43-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## Multiple Conditions with `elif` and `else`</span></span>
 <span id="cb43-254"><a href="#cb43-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-257"><a href="#cb43-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-258"><a href="#cb43-258" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: if_else_example</span></span>
-<span id="cb43-259"><a href="#cb43-259" aria-hidden="true" tabindex="-1"></a><span class="co"># Change my_name to a different name</span></span>
-<span id="cb43-260"><a href="#cb43-260" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="st">&#39;Noor&#39;</span></span>
-<span id="cb43-261"><a href="#cb43-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-262"><a href="#cb43-262" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if my_name matches &#39;Anja&#39;</span></span>
-<span id="cb43-263"><a href="#cb43-263" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_name <span class="op">==</span> <span class="st">&#39;Anja&#39;</span>:</span>
-<span id="cb43-264"><a href="#cb43-264" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-265"><a href="#cb43-265" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Anja!&#39;</span>)</span>
-<span id="cb43-266"><a href="#cb43-266" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, do this</span></span>
-<span id="cb43-267"><a href="#cb43-267" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb43-268"><a href="#cb43-268" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
-<span id="cb43-269"><a href="#cb43-269" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;You are not Anja!&quot;</span>)</span>
-<span id="cb43-270"><a href="#cb43-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb43-271"><a href="#cb43-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-272"><a href="#cb43-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-273"><a href="#cb43-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### `elif` Statements</span></span>
-<span id="cb43-274"><a href="#cb43-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-275"><a href="#cb43-275" aria-hidden="true" tabindex="-1"></a>Somewhat similarly to <span class="in">`else`</span>, <span class="in">`elif`</span> (short for &quot;else if&quot;) allows us to check multiple conditions in a sequence. The <span class="in">`elif`</span> block will only be evaluated if the previous <span class="in">`if`</span> or <span class="in">`elif`</span> conditions were <span class="in">`False`</span>. This allows us to check for multiple conditions without nesting multiple <span class="in">`if`</span> statements. For example:</span>
-<span id="cb43-276"><a href="#cb43-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-279"><a href="#cb43-279" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-280"><a href="#cb43-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: elif_example</span></span>
-<span id="cb43-281"><a href="#cb43-281" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if my_name matches &#39;Anja&#39;</span></span>
-<span id="cb43-282"><a href="#cb43-282" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_name <span class="op">==</span> <span class="st">&#39;Anja&#39;</span>:</span>
-<span id="cb43-283"><a href="#cb43-283" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-284"><a href="#cb43-284" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Anja!&#39;</span>)</span>
-<span id="cb43-285"><a href="#cb43-285" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, check if my_name matches &#39;Noor&#39;</span></span>
-<span id="cb43-286"><a href="#cb43-286" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> my_name <span class="op">==</span> <span class="st">&#39;Noor&#39;</span>:</span>
-<span id="cb43-287"><a href="#cb43-287" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-288"><a href="#cb43-288" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Noor!&#39;</span>)</span>
-<span id="cb43-289"><a href="#cb43-289" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise</span></span>
-<span id="cb43-290"><a href="#cb43-290" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb43-291"><a href="#cb43-291" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
-<span id="cb43-292"><a href="#cb43-292" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;You aren&#39;t Anja or Noor!&quot;</span>)</span>
-<span id="cb43-293"><a href="#cb43-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb43-294"><a href="#cb43-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-295"><a href="#cb43-295" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb43-296"><a href="#cb43-296" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Placement of `elif` statements matter</span></span>
-<span id="cb43-297"><a href="#cb43-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-298"><a href="#cb43-298" aria-hidden="true" tabindex="-1"></a>You are not allowed to have an <span class="in">`elif`</span> or <span class="in">`else`</span> statement without a preceding <span class="in">`if`</span> statement. However, you can have as many <span class="in">`elif`</span> statements as you want in between the <span class="in">`if`</span> and <span class="in">`else`</span> statements. You are not required to include an <span class="in">`else`</span> statement, but if you do, then it must be the last block in the sequence and it closes the <span class="in">`if`</span>/<span class="in">`elif`</span>/<span class="in">`else`</span> chain.</span>
-<span id="cb43-299"><a href="#cb43-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-300"><a href="#cb43-300" aria-hidden="true" tabindex="-1"></a>In this example below, we will see that we have an <span class="in">`if`</span>/<span class="in">`else`</span> pair of statements, is followed by an <span class="in">`elif`</span> statement. But the <span class="in">`if`</span>/<span class="in">`else`</span> pair of statements is a complete chain and now we have an <span class="in">`elif`</span> without a preceeding <span class="in">`if`</span> statement. This will return an error.</span>
-<span id="cb43-301"><a href="#cb43-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-304"><a href="#cb43-304" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-305"><a href="#cb43-305" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: multiple_elif_example</span></span>
-<span id="cb43-306"><a href="#cb43-306" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: true</span></span>
-<span id="cb43-307"><a href="#cb43-307" aria-hidden="true" tabindex="-1"></a><span class="co"># Change my_name to a different name</span></span>
-<span id="cb43-308"><a href="#cb43-308" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="st">&#39;Juan&#39;</span></span>
-<span id="cb43-309"><a href="#cb43-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-310"><a href="#cb43-310" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if my_name matches &#39;Anja&#39;</span></span>
-<span id="cb43-311"><a href="#cb43-311" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_name <span class="op">==</span> <span class="st">&#39;Anja&#39;</span>:</span>
-<span id="cb43-312"><a href="#cb43-312" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-313"><a href="#cb43-313" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Anja!&#39;</span>)</span>
-<span id="cb43-314"><a href="#cb43-314" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise</span></span>
-<span id="cb43-315"><a href="#cb43-315" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb43-316"><a href="#cb43-316" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
-<span id="cb43-317"><a href="#cb43-317" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;You aren&#39;t Alice or Bob!&quot;</span>)</span>
-<span id="cb43-318"><a href="#cb43-318" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, check if my_name matches &#39;Noor&#39;</span></span>
-<span id="cb43-319"><a href="#cb43-319" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that this syntax of putting elif after the else is going to return an error on line 14</span></span>
-<span id="cb43-320"><a href="#cb43-320" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> name <span class="op">==</span> <span class="st">&quot;Noor&quot;</span>:</span>
-<span id="cb43-321"><a href="#cb43-321" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-322"><a href="#cb43-322" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Hello, Bob!&quot;</span>)</span>
-<span id="cb43-323"><a href="#cb43-323" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb43-324"><a href="#cb43-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-325"><a href="#cb43-325" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb43-326"><a href="#cb43-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-327"><a href="#cb43-327" aria-hidden="true" tabindex="-1"></a><span class="fu">### Order Matters</span></span>
-<span id="cb43-328"><a href="#cb43-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-329"><a href="#cb43-329" aria-hidden="true" tabindex="-1"></a>Another nuanced, but important point is that when we use <span class="in">`if`</span>, <span class="in">`elif`</span>, and <span class="in">`else`</span> statements together, the order of the conditions matters. **Python will evaluate the conditions in the order they are written** and once it finds a condition that is <span class="in">`True`</span>, it will execute that block of code and skip the rest. For example:</span>
+<span id="cb43-255"><a href="#cb43-255" aria-hidden="true" tabindex="-1"></a>We can join together the functionality of multiple <span class="in">`if`</span> statements using <span class="in">`elif`</span> and <span class="in">`else`</span>. This allows us to check multiple conditions in a more efficient way without needing to nest multiple <span class="in">`if`</span> statements.</span>
+<span id="cb43-256"><a href="#cb43-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-257"><a href="#cb43-257" aria-hidden="true" tabindex="-1"></a><span class="fu">### `else` Statements</span></span>
+<span id="cb43-258"><a href="#cb43-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-259"><a href="#cb43-259" aria-hidden="true" tabindex="-1"></a>Sometimes you may want to have a &quot;catch-all&quot; block of code that executes when the <span class="in">`if`</span> statement is not met. This is where <span class="in">`else`</span> comes in! We can build upon the &quot;Alice&quot; example from above and add an <span class="in">`else`</span> statement to handle the case where <span class="in">`name != &quot;Alice&quot;`</span>:</span>
+<span id="cb43-260"><a href="#cb43-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-263"><a href="#cb43-263" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-264"><a href="#cb43-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: if_else_example</span></span>
+<span id="cb43-265"><a href="#cb43-265" aria-hidden="true" tabindex="-1"></a><span class="co"># Change my_name to a different name</span></span>
+<span id="cb43-266"><a href="#cb43-266" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="st">&#39;Noor&#39;</span></span>
+<span id="cb43-267"><a href="#cb43-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-268"><a href="#cb43-268" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if my_name matches &#39;Anja&#39;</span></span>
+<span id="cb43-269"><a href="#cb43-269" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_name <span class="op">==</span> <span class="st">&#39;Anja&#39;</span>:</span>
+<span id="cb43-270"><a href="#cb43-270" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-271"><a href="#cb43-271" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Anja!&#39;</span>)</span>
+<span id="cb43-272"><a href="#cb43-272" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, do this</span></span>
+<span id="cb43-273"><a href="#cb43-273" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb43-274"><a href="#cb43-274" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
+<span id="cb43-275"><a href="#cb43-275" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;You are not Anja!&quot;</span>)</span>
+<span id="cb43-276"><a href="#cb43-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb43-277"><a href="#cb43-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-278"><a href="#cb43-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-279"><a href="#cb43-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### `elif` Statements</span></span>
+<span id="cb43-280"><a href="#cb43-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-281"><a href="#cb43-281" aria-hidden="true" tabindex="-1"></a>Somewhat similarly to <span class="in">`else`</span>, <span class="in">`elif`</span> (short for &quot;else if&quot;) allows us to check multiple conditions in a sequence. The <span class="in">`elif`</span> block will only be evaluated if the previous <span class="in">`if`</span> or <span class="in">`elif`</span> conditions were <span class="in">`False`</span>. This allows us to check for multiple conditions without nesting multiple <span class="in">`if`</span> statements. For example:</span>
+<span id="cb43-282"><a href="#cb43-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-285"><a href="#cb43-285" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-286"><a href="#cb43-286" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: elif_example</span></span>
+<span id="cb43-287"><a href="#cb43-287" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if my_name matches &#39;Anja&#39;</span></span>
+<span id="cb43-288"><a href="#cb43-288" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_name <span class="op">==</span> <span class="st">&#39;Anja&#39;</span>:</span>
+<span id="cb43-289"><a href="#cb43-289" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-290"><a href="#cb43-290" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Anja!&#39;</span>)</span>
+<span id="cb43-291"><a href="#cb43-291" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, check if my_name matches &#39;Noor&#39;</span></span>
+<span id="cb43-292"><a href="#cb43-292" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> my_name <span class="op">==</span> <span class="st">&#39;Noor&#39;</span>:</span>
+<span id="cb43-293"><a href="#cb43-293" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-294"><a href="#cb43-294" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Noor!&#39;</span>)</span>
+<span id="cb43-295"><a href="#cb43-295" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise</span></span>
+<span id="cb43-296"><a href="#cb43-296" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb43-297"><a href="#cb43-297" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
+<span id="cb43-298"><a href="#cb43-298" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;You aren&#39;t Anja or Noor!&quot;</span>)</span>
+<span id="cb43-299"><a href="#cb43-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-300"><a href="#cb43-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-301"><a href="#cb43-301" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb43-302"><a href="#cb43-302" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Placement of `elif` statements matter</span></span>
+<span id="cb43-303"><a href="#cb43-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-304"><a href="#cb43-304" aria-hidden="true" tabindex="-1"></a>You are not allowed to have an <span class="in">`elif`</span> or <span class="in">`else`</span> statement without a preceding <span class="in">`if`</span> statement. However, you can have as many <span class="in">`elif`</span> statements as you want in between the <span class="in">`if`</span> and <span class="in">`else`</span> statements. You are not required to include an <span class="in">`else`</span> statement, but if you do, then it must be the last block in the sequence and it closes the <span class="in">`if`</span>/<span class="in">`elif`</span>/<span class="in">`else`</span> chain.</span>
+<span id="cb43-305"><a href="#cb43-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-306"><a href="#cb43-306" aria-hidden="true" tabindex="-1"></a>In this example below, we will see that we have an <span class="in">`if`</span>/<span class="in">`else`</span> pair of statements, is followed by an <span class="in">`elif`</span> statement. But the <span class="in">`if`</span>/<span class="in">`else`</span> pair of statements is a complete chain and now we have an <span class="in">`elif`</span> without a preceeding <span class="in">`if`</span> statement. This will return an error.</span>
+<span id="cb43-307"><a href="#cb43-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-310"><a href="#cb43-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-311"><a href="#cb43-311" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: multiple_elif_example</span></span>
+<span id="cb43-312"><a href="#cb43-312" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: true</span></span>
+<span id="cb43-313"><a href="#cb43-313" aria-hidden="true" tabindex="-1"></a><span class="co"># Change my_name to a different name</span></span>
+<span id="cb43-314"><a href="#cb43-314" aria-hidden="true" tabindex="-1"></a>my_name <span class="op">=</span> <span class="st">&#39;Juan&#39;</span></span>
+<span id="cb43-315"><a href="#cb43-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-316"><a href="#cb43-316" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if my_name matches &#39;Anja&#39;</span></span>
+<span id="cb43-317"><a href="#cb43-317" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_name <span class="op">==</span> <span class="st">&#39;Anja&#39;</span>:</span>
+<span id="cb43-318"><a href="#cb43-318" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-319"><a href="#cb43-319" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, Anja!&#39;</span>)</span>
+<span id="cb43-320"><a href="#cb43-320" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise</span></span>
+<span id="cb43-321"><a href="#cb43-321" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb43-322"><a href="#cb43-322" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
+<span id="cb43-323"><a href="#cb43-323" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;You aren&#39;t Alice or Bob!&quot;</span>)</span>
+<span id="cb43-324"><a href="#cb43-324" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, check if my_name matches &#39;Noor&#39;</span></span>
+<span id="cb43-325"><a href="#cb43-325" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that this syntax of putting elif after the else is going to return an error on line 14</span></span>
+<span id="cb43-326"><a href="#cb43-326" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> name <span class="op">==</span> <span class="st">&quot;Noor&quot;</span>:</span>
+<span id="cb43-327"><a href="#cb43-327" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-328"><a href="#cb43-328" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Hello, Bob!&quot;</span>)</span>
+<span id="cb43-329"><a href="#cb43-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb43-330"><a href="#cb43-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-333"><a href="#cb43-333" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-334"><a href="#cb43-334" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: elif_order_example</span></span>
-<span id="cb43-335"><a href="#cb43-335" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if x is greater than 10</span></span>
-<span id="cb43-336"><a href="#cb43-336" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb43-337"><a href="#cb43-337" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-338"><a href="#cb43-338" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x is greater than 10&quot;</span>)</span>
-<span id="cb43-339"><a href="#cb43-339" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, check if x is greater than 5</span></span>
-<span id="cb43-340"><a href="#cb43-340" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
-<span id="cb43-341"><a href="#cb43-341" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
-<span id="cb43-342"><a href="#cb43-342" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x is greater than 5 but not greater than 10&quot;</span>)</span>
-<span id="cb43-343"><a href="#cb43-343" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise</span></span>
-<span id="cb43-344"><a href="#cb43-344" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb43-345"><a href="#cb43-345" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
-<span id="cb43-346"><a href="#cb43-346" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x is 5 or less&quot;</span>)</span>
-<span id="cb43-347"><a href="#cb43-347" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb43-348"><a href="#cb43-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-349"><a href="#cb43-349" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb43-350"><a href="#cb43-350" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](03_lesson-Answer_key.qmd#exercise-2)</span></span>
-<span id="cb43-351"><a href="#cb43-351" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A question to evaluate Learning Objective 2</span>
-<span id="cb43-352"><a href="#cb43-352" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A followup question to question #1</span>
-<span id="cb43-353"><a href="#cb43-353" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>...</span>
-<span id="cb43-354"><a href="#cb43-354" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb43-355"><a href="#cb43-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-356"><a href="#cb43-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## Logical Operators</span></span>
-<span id="cb43-357"><a href="#cb43-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-358"><a href="#cb43-358" aria-hidden="true" tabindex="-1"></a>Suppose we wanted to test if two things were <span class="in">`True`</span> at the same time, or to see if at least one of two things were <span class="in">`True`</span>. This is where logical operators are useful. </span>
-<span id="cb43-359"><a href="#cb43-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-360"><a href="#cb43-360" aria-hidden="true" tabindex="-1"></a>The <span class="in">`and`</span> operator allows us to check if two conditions are both <span class="in">`True`</span>, while the <span class="in">`or`</span> operator allows us to check if at least one of two conditions is <span class="in">`True`</span>. For example:</span>
+<span id="cb43-331"><a href="#cb43-331" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-332"><a href="#cb43-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-333"><a href="#cb43-333" aria-hidden="true" tabindex="-1"></a><span class="fu">### Order Matters</span></span>
+<span id="cb43-334"><a href="#cb43-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-335"><a href="#cb43-335" aria-hidden="true" tabindex="-1"></a>Another nuanced, but important point is that when we use <span class="in">`if`</span>, <span class="in">`elif`</span>, and <span class="in">`else`</span> statements together, the order of the conditions matters. **Python will evaluate the conditions in the order they are written** and once it finds a condition that is <span class="in">`True`</span>, it will execute that block of code and skip the rest. For example:</span>
+<span id="cb43-336"><a href="#cb43-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-339"><a href="#cb43-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-340"><a href="#cb43-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: elif_order_example</span></span>
+<span id="cb43-341"><a href="#cb43-341" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if x is greater than 10</span></span>
+<span id="cb43-342"><a href="#cb43-342" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">10</span>:</span>
+<span id="cb43-343"><a href="#cb43-343" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-344"><a href="#cb43-344" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x is greater than 10&quot;</span>)</span>
+<span id="cb43-345"><a href="#cb43-345" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, check if x is greater than 5</span></span>
+<span id="cb43-346"><a href="#cb43-346" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
+<span id="cb43-347"><a href="#cb43-347" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If true, print this message</span></span>
+<span id="cb43-348"><a href="#cb43-348" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x is greater than 5 but not greater than 10&quot;</span>)</span>
+<span id="cb43-349"><a href="#cb43-349" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise</span></span>
+<span id="cb43-350"><a href="#cb43-350" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb43-351"><a href="#cb43-351" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print this message</span></span>
+<span id="cb43-352"><a href="#cb43-352" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x is 5 or less&quot;</span>)</span>
+<span id="cb43-353"><a href="#cb43-353" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb43-354"><a href="#cb43-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-355"><a href="#cb43-355" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb43-356"><a href="#cb43-356" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](03_lesson-Answer_key.qmd#exercise-2)</span></span>
+<span id="cb43-357"><a href="#cb43-357" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A question to evaluate Learning Objective 2</span>
+<span id="cb43-358"><a href="#cb43-358" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A followup question to question #1</span>
+<span id="cb43-359"><a href="#cb43-359" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>...</span>
+<span id="cb43-360"><a href="#cb43-360" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb43-361"><a href="#cb43-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-362"><a href="#cb43-362" aria-hidden="true" tabindex="-1"></a><span class="fu">### `and` Operator</span></span>
+<span id="cb43-362"><a href="#cb43-362" aria-hidden="true" tabindex="-1"></a><span class="fu">## Logical Operators</span></span>
 <span id="cb43-363"><a href="#cb43-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-364"><a href="#cb43-364" aria-hidden="true" tabindex="-1"></a>Let&#39;s use the example from earlier where we checked if <span class="in">`x`</span> was greater than 10 and less than 20. We can use the <span class="in">`and`</span> operator to check both conditions at the same time:</span>
+<span id="cb43-364"><a href="#cb43-364" aria-hidden="true" tabindex="-1"></a>Suppose we wanted to test if two things were <span class="in">`True`</span> at the same time, or to see if at least one of two things were <span class="in">`True`</span>. This is where logical operators are useful. </span>
 <span id="cb43-365"><a href="#cb43-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-368"><a href="#cb43-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-369"><a href="#cb43-369" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: and_operator_example</span></span>
-<span id="cb43-370"><a href="#cb43-370" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is greater than 10 and x is less than 20</span></span>
-<span id="cb43-371"><a href="#cb43-371" aria-hidden="true" tabindex="-1"></a>x <span class="op">&gt;</span> <span class="dv">10</span> <span class="kw">and</span> x <span class="op">&lt;</span> <span class="dv">20</span></span>
-<span id="cb43-372"><a href="#cb43-372" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb43-373"><a href="#cb43-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-374"><a href="#cb43-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-375"><a href="#cb43-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### `or` Operator</span></span>
-<span id="cb43-376"><a href="#cb43-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-377"><a href="#cb43-377" aria-hidden="true" tabindex="-1"></a>If we wanted to check if <span class="in">`x`</span> was either less than 5 or greater than 10, we could use the <span class="in">`or`</span> operator:</span>
-<span id="cb43-378"><a href="#cb43-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-381"><a href="#cb43-381" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-382"><a href="#cb43-382" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: or_operator_example</span></span>
-<span id="cb43-383"><a href="#cb43-383" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is less than 5 or x is greater than 10</span></span>
-<span id="cb43-384"><a href="#cb43-384" aria-hidden="true" tabindex="-1"></a>x <span class="op">&lt;</span> <span class="dv">5</span> <span class="kw">or</span> x <span class="op">&gt;</span> <span class="dv">10</span></span>
-<span id="cb43-385"><a href="#cb43-385" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb43-386"><a href="#cb43-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-387"><a href="#cb43-387" aria-hidden="true" tabindex="-1"></a><span class="fu">### `not` Operator</span></span>
-<span id="cb43-388"><a href="#cb43-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-389"><a href="#cb43-389" aria-hidden="true" tabindex="-1"></a>The <span class="in">`not`</span> operator allows us to check if a condition is <span class="in">`False`</span> and returns a <span class="in">`True`</span>. For example, one way we could check if <span class="in">`x`</span> is not greater than 10 would be to write: </span>
-<span id="cb43-390"><a href="#cb43-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-393"><a href="#cb43-393" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-394"><a href="#cb43-394" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: not_operator_example</span></span>
-<span id="cb43-395"><a href="#cb43-395" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is NOT greater than 10</span></span>
-<span id="cb43-396"><a href="#cb43-396" aria-hidden="true" tabindex="-1"></a><span class="kw">not</span> x <span class="op">&gt;</span> <span class="dv">10</span></span>
-<span id="cb43-397"><a href="#cb43-397" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb43-398"><a href="#cb43-398" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-399"><a href="#cb43-399" aria-hidden="true" tabindex="-1"></a>This is sometimes more intuitive to read than writing <span class="in">`x &lt;= 10:`</span>. </span>
-<span id="cb43-400"><a href="#cb43-400" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-401"><a href="#cb43-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combining Logical Operators</span></span>
-<span id="cb43-402"><a href="#cb43-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-403"><a href="#cb43-403" aria-hidden="true" tabindex="-1"></a>We can also combine logical operators using parentheses to check multiple conditions at the same time. When we do this we need to be careful how we group those <span class="in">`and`</span> and <span class="in">`or`</span> statements together. Given these two statements when <span class="in">`x`</span> is <span class="in">`15`</span>, the first example will return <span class="in">`True`</span>: </span>
+<span id="cb43-366"><a href="#cb43-366" aria-hidden="true" tabindex="-1"></a>The <span class="in">`and`</span> operator allows us to check if two conditions are both <span class="in">`True`</span>, while the <span class="in">`or`</span> operator allows us to check if at least one of two conditions is <span class="in">`True`</span>. For example:</span>
+<span id="cb43-367"><a href="#cb43-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-368"><a href="#cb43-368" aria-hidden="true" tabindex="-1"></a><span class="fu">### `and` Operator</span></span>
+<span id="cb43-369"><a href="#cb43-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-370"><a href="#cb43-370" aria-hidden="true" tabindex="-1"></a>Let&#39;s use the example from earlier where we checked if <span class="in">`x`</span> was greater than 10 and less than 20. We can use the <span class="in">`and`</span> operator to check both conditions at the same time:</span>
+<span id="cb43-371"><a href="#cb43-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-374"><a href="#cb43-374" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-375"><a href="#cb43-375" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: and_operator_example</span></span>
+<span id="cb43-376"><a href="#cb43-376" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is greater than 10 and x is less than 20</span></span>
+<span id="cb43-377"><a href="#cb43-377" aria-hidden="true" tabindex="-1"></a>x <span class="op">&gt;</span> <span class="dv">10</span> <span class="kw">and</span> x <span class="op">&lt;</span> <span class="dv">20</span></span>
+<span id="cb43-378"><a href="#cb43-378" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb43-379"><a href="#cb43-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-380"><a href="#cb43-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-381"><a href="#cb43-381" aria-hidden="true" tabindex="-1"></a><span class="fu">### `or` Operator</span></span>
+<span id="cb43-382"><a href="#cb43-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-383"><a href="#cb43-383" aria-hidden="true" tabindex="-1"></a>If we wanted to check if <span class="in">`x`</span> was either less than 5 or greater than 10, we could use the <span class="in">`or`</span> operator:</span>
+<span id="cb43-384"><a href="#cb43-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-387"><a href="#cb43-387" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-388"><a href="#cb43-388" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: or_operator_example</span></span>
+<span id="cb43-389"><a href="#cb43-389" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is less than 5 or x is greater than 10</span></span>
+<span id="cb43-390"><a href="#cb43-390" aria-hidden="true" tabindex="-1"></a>x <span class="op">&lt;</span> <span class="dv">5</span> <span class="kw">or</span> x <span class="op">&gt;</span> <span class="dv">10</span></span>
+<span id="cb43-391"><a href="#cb43-391" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-392"><a href="#cb43-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-393"><a href="#cb43-393" aria-hidden="true" tabindex="-1"></a><span class="fu">### `not` Operator</span></span>
+<span id="cb43-394"><a href="#cb43-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-395"><a href="#cb43-395" aria-hidden="true" tabindex="-1"></a>The <span class="in">`not`</span> operator allows us to check if a condition is <span class="in">`False`</span> and returns a <span class="in">`True`</span>. For example, one way we could check if <span class="in">`x`</span> is not greater than 10 would be to write: </span>
+<span id="cb43-396"><a href="#cb43-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-399"><a href="#cb43-399" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-400"><a href="#cb43-400" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: not_operator_example</span></span>
+<span id="cb43-401"><a href="#cb43-401" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is NOT greater than 10</span></span>
+<span id="cb43-402"><a href="#cb43-402" aria-hidden="true" tabindex="-1"></a><span class="kw">not</span> x <span class="op">&gt;</span> <span class="dv">10</span></span>
+<span id="cb43-403"><a href="#cb43-403" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb43-404"><a href="#cb43-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-407"><a href="#cb43-407" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-408"><a href="#cb43-408" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combined_logical_operators_example_1</span></span>
-<span id="cb43-409"><a href="#cb43-409" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x to 15</span></span>
-<span id="cb43-410"><a href="#cb43-410" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb43-411"><a href="#cb43-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-412"><a href="#cb43-412" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is equal to 15 or if x is less than 20 and greater than 18</span></span>
-<span id="cb43-413"><a href="#cb43-413" aria-hidden="true" tabindex="-1"></a>x <span class="op">==</span> <span class="dv">15</span> <span class="kw">or</span> (x <span class="op">&lt;</span> <span class="dv">20</span> <span class="kw">and</span> x <span class="op">&gt;</span> <span class="dv">18</span>)</span>
-<span id="cb43-414"><a href="#cb43-414" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb43-415"><a href="#cb43-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-416"><a href="#cb43-416" aria-hidden="true" tabindex="-1"></a>While the second example will return <span class="in">`False`</span>: </span>
+<span id="cb43-405"><a href="#cb43-405" aria-hidden="true" tabindex="-1"></a>This is sometimes more intuitive to read than writing <span class="in">`x &lt;= 10:`</span>. </span>
+<span id="cb43-406"><a href="#cb43-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-407"><a href="#cb43-407" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combining Logical Operators</span></span>
+<span id="cb43-408"><a href="#cb43-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-409"><a href="#cb43-409" aria-hidden="true" tabindex="-1"></a>We can also combine logical operators using parentheses to check multiple conditions at the same time. When we do this we need to be careful how we group those <span class="in">`and`</span> and <span class="in">`or`</span> statements together. Given these two statements when <span class="in">`x`</span> is <span class="in">`15`</span>, the first example will return <span class="in">`True`</span>: </span>
+<span id="cb43-410"><a href="#cb43-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-413"><a href="#cb43-413" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-414"><a href="#cb43-414" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combined_logical_operators_example_1</span></span>
+<span id="cb43-415"><a href="#cb43-415" aria-hidden="true" tabindex="-1"></a><span class="co"># Set x to 15</span></span>
+<span id="cb43-416"><a href="#cb43-416" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb43-417"><a href="#cb43-417" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-420"><a href="#cb43-420" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb43-421"><a href="#cb43-421" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combined_logical_operators_example_2</span></span>
-<span id="cb43-422"><a href="#cb43-422" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is equal to 15 or less than 20 and if x is greater than 18</span></span>
-<span id="cb43-423"><a href="#cb43-423" aria-hidden="true" tabindex="-1"></a>(x <span class="op">==</span> <span class="dv">15</span> <span class="kw">or</span> x <span class="op">&lt;</span> <span class="dv">20</span>) <span class="kw">and</span> x <span class="op">&gt;</span> <span class="dv">18</span></span>
-<span id="cb43-424"><a href="#cb43-424" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb43-425"><a href="#cb43-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-426"><a href="#cb43-426" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb43-427"><a href="#cb43-427" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 3**](03_lesson-Answer_key.qmd#exercise-3)</span></span>
-<span id="cb43-428"><a href="#cb43-428" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A question to evaluate Learning Objective 3</span>
-<span id="cb43-429"><a href="#cb43-429" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A followup question to question #1</span>
-<span id="cb43-430"><a href="#cb43-430" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>...</span>
-<span id="cb43-431"><a href="#cb43-431" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb43-432"><a href="#cb43-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-433"><a href="#cb43-433" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb43-434"><a href="#cb43-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-435"><a href="#cb43-435" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](04_data_structures.qmd)</span></span>
-<span id="cb43-436"><a href="#cb43-436" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-437"><a href="#cb43-437" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
+<span id="cb43-418"><a href="#cb43-418" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is equal to 15 or if x is less than 20 and greater than 18</span></span>
+<span id="cb43-419"><a href="#cb43-419" aria-hidden="true" tabindex="-1"></a>x <span class="op">==</span> <span class="dv">15</span> <span class="kw">or</span> (x <span class="op">&lt;</span> <span class="dv">20</span> <span class="kw">and</span> x <span class="op">&gt;</span> <span class="dv">18</span>)</span>
+<span id="cb43-420"><a href="#cb43-420" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb43-421"><a href="#cb43-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-422"><a href="#cb43-422" aria-hidden="true" tabindex="-1"></a>While the second example will return <span class="in">`False`</span>: </span>
+<span id="cb43-423"><a href="#cb43-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-426"><a href="#cb43-426" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb43-427"><a href="#cb43-427" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combined_logical_operators_example_2</span></span>
+<span id="cb43-428"><a href="#cb43-428" aria-hidden="true" tabindex="-1"></a><span class="co"># Test if x is equal to 15 or less than 20 and if x is greater than 18</span></span>
+<span id="cb43-429"><a href="#cb43-429" aria-hidden="true" tabindex="-1"></a>(x <span class="op">==</span> <span class="dv">15</span> <span class="kw">or</span> x <span class="op">&lt;</span> <span class="dv">20</span>) <span class="kw">and</span> x <span class="op">&gt;</span> <span class="dv">18</span></span>
+<span id="cb43-430"><a href="#cb43-430" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-431"><a href="#cb43-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-432"><a href="#cb43-432" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb43-433"><a href="#cb43-433" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 3**](03_lesson-Answer_key.qmd#exercise-3)</span></span>
+<span id="cb43-434"><a href="#cb43-434" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A question to evaluate Learning Objective 3</span>
+<span id="cb43-435"><a href="#cb43-435" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A followup question to question #1</span>
+<span id="cb43-436"><a href="#cb43-436" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>...</span>
+<span id="cb43-437"><a href="#cb43-437" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-438"><a href="#cb43-438" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-439"><a href="#cb43-439" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb43-440"><a href="#cb43-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-441"><a href="#cb43-441" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](04_data_structures.qmd)</span></span>
+<span id="cb43-442"><a href="#cb43-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-443"><a href="#cb43-443" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

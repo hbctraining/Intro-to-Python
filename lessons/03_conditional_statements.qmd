@@ -199,9 +199,15 @@ As you saw, the `in` operator returns a boolean value (`True` or `False`) that i
 
 ```{python}
 #| label: in_operator_conditional_example
+# Create a list called my list with some numbers in it
 my_list = [1, 2, 3, 4, 5]
+
+# Set x to 3
 x = 3
+
+# Check if x is in my_list list
 if x in my_list:
+    # If true, print out this message
     print(x, "is in the list!")
 ```
 
