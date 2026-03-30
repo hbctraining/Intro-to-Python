@@ -75,7 +75,7 @@ print(sorted_numbers)
 
 # Exercise 2
 
-5. Write a function called `multiply_it`, which takes two inputs: a numeric value ``x``, and a numeric value y. The function will return the product of these two numeric values, which is `x * y`. 
+1. Write a function called `multiply_it`, which takes two inputs: a numeric value ``x``, and a numeric value y. The function will return the product of these two numeric values, which is `x * y`. 
 
 For example, `multiply_it(x=4, y=6)` will return output `24`.
 
@@ -91,7 +91,7 @@ print(result)
 
 # Exercise 3
 
-6. **Custom Functions** - Create a function `temp_conv()`, which converts the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: 
+1. **Custom Functions** - Create a function `temp_conv()`, which converts the temperature in Fahrenheit (input) to the temperature in Kelvin (output). Let’s perform a two-step calculation: 
 
 - first convert from Fahrenheit to Celsius, then
 - convert from Celsius to Kelvin
@@ -123,7 +123,7 @@ print(result)
 ```
 
 
-7. **Nesting Functions** - Now we want to round the temperature in Kelvin (output of `temp_conv()`) to a single decimal place. Use the `round()` function with the newly-created `temp_conv()` function to achieve this in one line of code.
+2. **Nesting Functions** - Now we want to round the temperature in Kelvin (output of `temp_conv()`) to a single decimal place. Use the `round()` function with the newly-created `temp_conv()` function to achieve this in one line of code.
 
 ```{python}
 #| label: temp_conv_rounded
