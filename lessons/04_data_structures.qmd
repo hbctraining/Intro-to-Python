@@ -349,6 +349,6 @@ genome_dict["human"]
 
 ***
 
-[Next Lesson >>](05_for_loop.qmd)
+[Next Lesson >>](05_loops.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)
