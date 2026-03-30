@@ -1,7 +1,7 @@
 ---
 title: "Loading and Installing Libraries"
 description: |
-  This lesson introduces Python libraries, showing how to install packages, import them into your environment, and explore library functions to extend Python for data analysis.
+  This lesson introduces Python libraries, showing how to install packages, import them into your environment and explore library functions to extend Python functionality for data analysis.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -43,13 +43,13 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Much of the power and appeal of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading csv files, working with biological sequences, or creating complex plots. The open source community has developed a vast array of libraries to support various domains and use cases. You do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load, and explore libraries so you can tap into this broader ecosystem for your own work.
+Much of the power and appeal of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading CSV files, working with biological sequences or creating complex plots. The open-source community has developed a vast array of libraries to support various domains and use cases. You do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load and explore libraries so you can tap into this broader ecosystem for your own work.
 
 ## Libaries in Python
 
-**Libraries** are collections of Python functions, data, and compiled code in a well-defined format, created to add specific functionality. Just as we created our own functions in the previous lesson, other users have created packages of functions they have shared with the community in the form of libraries. These packages can be installed and loaded into your Python environment so you can use the functions that they contain.
+**Libraries** are collections of Python functions, data and compiled code in a well-defined format, created to add specific functionality. Just as we created our own functions in the previous lesson, other users have created packages of functions they have shared with the community in the form of libraries. These packages can be installed and loaded into your Python environment so you can use the functions that they contain.
 
-There are a set of **standard (or base)** packages which are considered part of the Python source code and automatically available as part of your Python installation. Base packages contain the **basic functions** that allow Python to work, and enable standard statistical and graphical functions on datasets; for example, all of the functions that we have been using so far in our examples are basic functions.
+There are a set of **standard (or base)** packages which are considered part of the Python source code and automatically available as part of your Python installation. Base packages contain the **basic functions** that allow Python to work and enable standard statistical and graphical functions on datasets. For example, all of the functions that we have been using so far in our examples are basic functions.
 
 Libraries are directories where packages for Python are stored. Note that the terms _package and library_ are sometimes used interchangably and there has been some discussion amongst the community to resolve this. 
 
@@ -62,7 +62,7 @@ Table: Common channels for Python libraries. {#tbl-python_channels}
 | channel          | description                                                                                   |
 |------------------|-----------------------------------------------------------------------------------------------|
 | **bioconda**     | Conda channel for bioinformatics tools and libraries.<br>`scanpy`, `anndata`, etc.           |
-| **conda-forge**  | Community conda channel with many packages for science, data, and general Python use.<br>`numpy`, `pandas`, etc. |
+| **conda-forge**  | Community conda channel with many packages for science, data and general Python use.<br>`numpy`, `pandas`, etc. |
 | **PyPI**         | Main online index for Python packages, used with `pip` to install and manage libraries.<br>`scipy`, `matplotlib`, etc. |
 
 ## Package Installation from the Anaconda Navigator
@@ -113,6 +113,7 @@ Now that we have installed the libraries we want to use, we need to import them 
 
 ```{python}
 #| label: import_numpy
+# Import the numpy library
 import numpy
 ```
 
@@ -120,7 +121,10 @@ We will know that the library has been imported successfully if we do not get an
 
 ```{python}
 #| label: numpy_array
+# Use the array function from numpy to create an array from a list called my_array
 my_array = numpy.array([1, 2, 3, 4, 5])
+
+# Print my_array
 print(my_array)
 ```
 
@@ -130,6 +134,7 @@ It is common practice to import libraries with an alias, which is a shorter name
 
 ```{python}
 #| label: import_numpy_alias
+# Import numpy with the alias, np
 import numpy as np
 ``` 
 
@@ -137,7 +142,10 @@ Now we can try creating `my_array` again with alias instead of the full library 
 
 ```{python}
 #| label: numpy_array_alias
+# Use the array function from numpy, with alias np, to create an array from a list called my_array
 my_array = np.array([1, 2, 3, 4, 5])
+
+# Print my_array
 print(my_array)
 ``` 
 
@@ -154,7 +162,7 @@ However, it is good practice to use the commonly accepted aliases for libraries.
 
 :::{.callout-tip}
 # **Exercise 2**
-2. To ensure that you have successfully installed the libraries from the previous exercise, try running the import commands :
+1. To ensure that you have successfully installed the libraries from the previous exercise, try running the import commands :
 
 ```{python}
 #| label: import_libraries
