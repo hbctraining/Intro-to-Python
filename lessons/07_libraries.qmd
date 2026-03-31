@@ -153,8 +153,13 @@ It does not really matter what you set this alias to be as long as it does not c
 
 ```{python}
 #| label: numpy_array_meow_math
+#Import numpy using the alias, meow_math
 import numpy as meow_math
+
+# Create a numpy array with the meow_math alias 
 my_array = meow_math.array([1, 2, 3, 4, 5])
+
+# Print my numpy array
 print(my_array)
 ```
 
