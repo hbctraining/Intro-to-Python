@@ -58,22 +58,28 @@ The most basic data structure in `NumPy` is the 1-dimensional array, which is si
 
 ```{python}
 #| label: create_1d_array
+#Import numpy using the alias, np
 import numpy as np
 
-# Create a 1-dimensional array
+# Create a 1-dimensional numpy array called arr
 arr = np.array([1, 2, 3, 4, 5])
-arr
+
+# Print the numpy array 
+print(arr)
 ```
 
 One of the key advantages of `NumPy` arrays over Python lists is their greater efficiency for numerical operations. For example, you can easily perform element-wise operations on `NumPy` arrays. So if we were to add two arrays together, it would add each element of the first array to the corresponding element of the second array:
 
 ```{python}
 #| label: elementwise_operations
-# Create another 1-dimensional array
+# Create another 1-dimensional numpy array called arr2
 arr2 = np.array([10, 20, 30, 40, 50])
-# Perform element-wise addition
+
+# Perform element-wise addition on arr and arr2 and assign the output to result
 result = arr + arr2
-result
+
+# Print result array
+print(result)
 ```
 
 If we were to try to do this with Python lists, we would get a different result:
@@ -86,7 +92,9 @@ list2 = [10, 20, 30, 40, 50]
 
 # Attempt to perform element-wise addition (this will not work as expected)
 result_list = list1 + list2
-result_list
+
+# Print the resulting list
+print(result_list)
 ```
 
 Instead of adding two lists together element-wise, Python concatenates them (in order to concatenate arrays in `NumPy`, you would use the `np.concatenate()` function).
@@ -95,7 +103,7 @@ Additionally, if we were to investigate the `dtype()` of the `NumPy` array, we w
 
 ```{python}
 #| label: check_dtype
-# Check the data type of the NumPy array
+# Check the data type attribute of the NumPy array
 arr.dtype
 ```
 
@@ -108,7 +116,9 @@ Arrays are not just limited to 1 dimension; `NumPy` can also create and handle m
 #| label: create_2d_array
 # Create a 2-dimensional array (matrix)
 matrix = np.array([[1, 2, 3], [4, 5, 6]])
-matrix
+
+# Print out the matrix
+print(matrix)
 ``` 
 
 This again may seem familiar to a list of lists in Python, but it is important to note this is a `NumPy` array which has different properties and capabilities than a list of lists. For example, you can perform matrix operations on this 2-dimensional array, such as matrix multiplication (dot product).
@@ -120,10 +130,12 @@ matrix2 = np.array([[10, 20], [30, 40], [50, 60]])
 
 # Perform matrix multiplication
 result_matrix = np.dot(matrix, matrix2)
-result_matrix
+
+# Print out the result matrix
+print(result_matrix)
 ``` 
 
-We can initialize a matrix of zeros or ones by using `numpy.zeros()` and `numpy.ones()` methods in as many dimensions as we want
+We can initialize a matrix of zeros or ones by using `numpy.zeros()` and `numpy.ones()` methods in as many dimensions as we want. Alternatively, we could use `numpy.identity()` to create an identity matrix.
 
 ::: callout-note
 # Rows then columns
@@ -136,21 +148,30 @@ Similarly, when initializing a matrix, the first number refers to the number of 
 #| label: initialize_matrices
 # Initialize a 3x3 matrix of zeros
 zeros_matrix = np.zeros((3, 3))
-zeros_matrix 
+
+# Print the zeros_matrix
+print(zeros_matrix) 
 
 # Initialize a 2x4 matrix of ones
 ones_matrix = np.ones((2, 4))
-ones_matrix
+
+# Print the ones_matrix
+print(ones_matrix)
+
+# Initialize a 3x3 identity matrix
+identity_matrix = np.identity(3)
+print(identity_matrix)
 ```
 
 The `numpy.reshape()` function is another flexible way to create arrays of varying shapes and sizes. We can use this in conjunction with `numpy.arange()` to create an array of a specific range of numbers and then reshape it into the desired dimensions.
 
 ```{python}
 #| label: arange_function
-#| echo: false
-# Create an array of integers from 0 to 9
+# Create an array of integers from 0 to 9, then reshape it into a 2 x 5 matrix
 matrix_arange = np.arange(10).reshape((2, 5))
-matrix_arange
+
+# Print the matrix
+print(matrix_arange)
 ```
 
 ### Indexing and Slicing Arrays
@@ -159,9 +180,11 @@ Arrays can be indexed and sliced in a similar way to lists with indices (again b
 
 ```{python}
 #| label: indexing_1d_array
-# Access the first element
+# Retrieve the first element of arr
 first_element = arr[0]
-first_element
+
+# Print the retrieved element
+print(first_element)
 ```
 
 In a 2-dimensional array, the first index refers to the row and the second index refers to the column. So if we wanted to access the first row of a 2-dimensional array, we would use `matrix[0]`:
@@ -170,28 +193,35 @@ In a 2-dimensional array, the first index refers to the row and the second index
 #| label: indexing_2d_array
 # Access the first row of a 2-dimensional array
 first_row = matrix[0]
-first_row
+
+# Print the retrieved row
+print(first_row)
 ```
 
 If we wanted to access the element in the second row and third column of the matrix, we would use `matrix[1, 2]`:
 
 ```{python}
 #| label: indexing_2d_array_element
-# Access the element in the second row and third column
+# Retrieve the element in the second row and third column
 element = matrix[1, 2]
-element
+
+# Print the retrieved element
+print(element)
 ```
 
 
-So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and manipulate the data.
+So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to more easily select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and wrangle the data.
 
 ```{python}
 #| label: boolean_indexing
 # Create a 1-dimensional array
 arr = np.array([1, 2, 3, 4, 5])
+
 # Select elements greater than 3
 filtered_arr = arr[arr > 3]
-filtered_arr
+
+# Print the selected elements
+print(filtered_arr)
 ``` 
 
 :::{.callout-tip}
@@ -210,11 +240,16 @@ Base Python is somewhat limited when it comes to numerical operations. The [`Num
 # Create a 1-dimensional array
 arr = np.array([2, 7, 9.5, 5, 7, 3.2])
 
-# Calculate mean, median, and standard deviation
+# Calculate mean of arr
 mean = np.mean(arr)
+
+# Calculate median of arr
 median = np.median(arr)
+
+# Calculate standard deviation of arr
 std_dev = np.std(arr)
 
+# Print an f-string (Python inteprets items with {}) with the mean, median and standard deviation
 print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
 ```
 
