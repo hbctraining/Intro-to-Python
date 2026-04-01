@@ -79,7 +79,7 @@ We have a file in which we identify information about the data, called metadata.
 ```{python}
 #| label: load_metadata
 #| eval: false
-#Import pandas using the alias, pd
+# Import pandas using the alias, pd
 import pandas as pd
 
 # Read in the metadata
