@@ -378,7 +378,7 @@ print(type(my_boolean))
 ```
 
 ::: callout-warning
-Flush out the definition of boolean a bit more and why it is useful
+Flesh out the definition of boolean a bit more and why it is useful
 :::
 
 ### Changing the Data Type

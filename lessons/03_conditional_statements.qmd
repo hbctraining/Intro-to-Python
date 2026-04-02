@@ -29,7 +29,7 @@ editor_options:
 
 ```
 
-Approximate time: XX minutes
+Approximate time: 60 minutes
 
 ## Learning Objectives 
 
@@ -157,7 +157,6 @@ if x > 10:
 print("x is greater than 10")
 ``` 
 
-
 We can also use nested `if` statements. Notice that the level of indentation is increased for the inner `if` statement and will need to continue to increase for each additional level of nesting. For example:
 
 ```{python}
@@ -171,6 +170,13 @@ if x > 10:
         # Print out this message
         print("x is also less than 20")
 ``` 
+
+:::{.callout-tip}
+# [**Exercise 1**](03_conditional_statements-Answer_key.qmd#exercise-1)
+1. Create boolean logic to test whether `x` is ***NOT*** equal to `67`.
+
+2. Create an `if` statement that evaluates if `x` is ***NOT*** equal to `67` and if the number is not `67` then have it print "Your number is NOT 67."
+:::
 
 ### `in` Operator
 
@@ -211,15 +217,13 @@ if x in my_list:
     print(x, "is in the list!")
 ```
 
-::: callout-warning
-Have not written exercises for this lesson
-:::
-
 :::{.callout-tip}
-# [**Exercise 1**](03_lesson-Answer_key.qmd#exercise-1)
-1. A question to evaluate Learning Objective 1
-2. A followup question to question #1
-3. ...
+# [**Exercise 2**](03_conditional_statements-Answer_key.qmd#exercise-2)
+1. Set `my_name` to be equal to `Noor`. Using the `in` operator and an `if` statement, check if there is an "o" within `my_name`. If true, have it return "I have found an 'o'".
+
+*Hint: You may want to consider using single/double quotations for the entire print statement and using the other type of quotation mark around the "o". Alternatively, you can look into escaping characters in Python.*
+
+2. We can see that there are two "o"s in Noor. So, one might expect there to be two "I have found an 'o'" statements, but we only see one. Why is this?
 :::
 
 ## Multiple Conditions with `elif` and `else`
@@ -232,9 +236,6 @@ Sometimes you may want to have a "catch-all" block of code that executes when th
 
 ```{python}
 #| label: if_else_example
-# Change my_name to a different name
-my_name = 'Noor'
-
 # Check if my_name matches 'Anja'
 if my_name == 'Anja':
     # If true, print this message
@@ -316,13 +317,6 @@ else:
     print("x is 5 or less")
 ``` 
 
-:::{.callout-tip}
-# [**Exercise 2**](03_lesson-Answer_key.qmd#exercise-2)
-1. A question to evaluate Learning Objective 2
-2. A followup question to question #1
-3. ...
-:::
-
 ## Logical Operators
 
 Suppose we wanted to test if two things were `True` at the same time, or to see if at least one of two things were `True`. This is where logical operators are useful. 
@@ -384,10 +378,12 @@ While the second example will return `False`:
 ```
 
 :::{.callout-tip}
-# [**Exercise 3**](03_lesson-Answer_key.qmd#exercise-3)
-1. A question to evaluate Learning Objective 3
-2. A followup question to question #1
-3. ...
+# [**Exercise 3**](03_conditional_statements-Answer_key.qmd#exercise-3)
+1. Create an `if` statement to evaluate whether `x` is between 5 and 10, inclusive of both 5 and 10. If so, have Python print out "x is between 5 and 10".
+
+2. Extend this same conditional to if `x` is not between 5 and 10, inclusively, but is above 10, then Python it print out "x is greater than 10".
+
+3. Extend this same conditional to if `x` is not between 5 and 10, inclusively, and also not above 10, then have Python return "x is less than 5".
 :::
 
 ***

@@ -10,33 +10,111 @@ editor_options:
     wrap: 72
 ---
 
-```{r}
+```{python}
 #| label: load_libraries_data
 #| echo: false
 # Load libraries and data
+x = 15
 
+my_name = 'Anja'
 ```
 
 # Exercise 1
 
-1. A question to evaluate Learning Objective 1
+1. Create boolean logic to test whether `x` is ***NOT*** equal to `67`.
 
-2. A followup question to question #1
+```{python}
+#| label: testing_x
+# Test if x is not equal to 15
+x != 67
+```
 
-3. ...
+2. Create an `if` statement that evaluates if `x` is ***NOT*** equal to `67` and if the number is not `67` then have it print "x is NOT 67."
+
+```{python}
+#| label: if_statement_x
+# Check if x is NOT equal to 67
+if x != 67:
+    # If true, then print out 'x is NOT 67'
+    print('x is NOT 67')
+```
 
 # Exercise 2
 
-1. A question to evaluate Learning Objective 2
+1. Set `my_name` to be equal to `Noor`. Using the `in` operator and an `if` statement, check if there is an "o" within `my_name`. If true, have it return "I have found an 'o'.".
 
-2. A followup question to question #1
+*Hint: You may want to consider using single/double quotations for the entire print statement and using the other type of quotation mark around the "o". Alternatively, you can look into escaping characters in Python.*
 
-3. ...
+We can do this with mixing our quotation marks. We can put the larger print statement within `""` and the `o` within `''`. 
+
+```{python}
+#| label: in_noor_quotes
+# Set my_name equal to "Noor"
+my_name = "Noor"
+
+# Check if "o" is in my_name, which is now set to "Noor"
+if "o" in my_name:
+    # If true, then print out "I have found an 'o'."
+    print("I have found an 'o'.")
+```
+
+Alternatively, you could have tried escaping the double quotes. When you escape a character, you precede the character with a `\` and this tells Python to treat the next character as a literal character rather than the special character that closes a string.
+
+```{python}
+#| label: in_noor_escape
+# Set my_name equal to "Noor"
+my_name = "Noor"
+
+# Check if "o" is in my_name, which is now set to "Noor"
+if "o" in my_name:
+    # If true, then print out "I have found an 'o'."
+    print('I have found an \'o\'.')
+```
+
+2. We can see that there are two "o"s in Noor. So, one might expect there to be two "I have found an 'o'." statements, but we only see one. Why is this?
+
+This happens because Python is looking to evaluate whether it finds an "o" within my_name, "Noor". Once it finds the "o", it evaluates the conditional code block and exits the `if` statement. It does not continue to evaluate each position in "Noor". Since the condition is "Is there an "o" in "Noor?" and once it reaches the first "o", that resolves as `True`. There is no idea of "double `True`".
 
 # Exercise 3
 
-1. A question to evaluate Learning Objective 3
+1. Create an `if` statement to evaluate whether `x` is between 5 and 10, inclusive of both 5 and 10. If so, have Python print out "x is between 5 and 10, inclusively".
 
-2. A followup question to question #1
+```{python}
+#| label: if_statement
+# Check if x is greater than of equal to 5 AND if x is less than of equal to 10
+if x >= 5 and x <= 10:
+    # If true, print out this message
+    print("x is between 5 and 10, inclusively")
+```
 
-3. ...
+2. Extend this same conditional to if `x` is not between 5 and 10, inclusively, but is above 10, then Python it print out "x is greater than 10".
+
+```{python}
+#| label: if_elif_statement
+# Check if x is greater than of equal to 5 AND if x is less than of equal to 10
+if x >= 5 and x <= 10:
+    # If true, print out this message
+    print("x is between 5 and 10, inclusively")
+# Otherwise, check if x is greater than 10
+elif x > 10:
+    # If true, print out this message
+    print("x is greater than 10")
+```
+
+3. Extend this same conditional to if `x` is not between 5 and 10, inclusively, and also not above 10, then have Python return "x is less than 5".
+
+```{python}
+#| label: if_elif_else_statement
+# Check if x is greater than of equal to 5 AND if x is less than of equal to 10
+if x >= 5 and x <= 10:
+    # If true, print out this message
+    print("x is between 5 and 10, inclusively")
+# Otherwise, check if x is greater than 10
+elif x > 10:
+    # If true, print out this message
+    print("x is greater than 10")
+# Otherwise
+else:
+    # Print out this message
+    print("x is less than 5")  
+```
