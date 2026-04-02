@@ -29,7 +29,7 @@ editor_options:
 
 ```
 
-Approximate time: XX minutes
+Approximate time: 65 minutes
 
 ## Learning Objectives 
 
@@ -251,10 +251,7 @@ species[1:]
 # [**Exercise 2**](04_data_structures-Answer_key.qmd#exercise-2)
 1. How might you access the last two elements of the `species` list using slicing?
 
-::: callout-tip
-# Hint 
-Recall that we can use _negative indexing_ to access elements from the end of the list.
-:::
+*Hint: Recall that we can use _negative indexing_ to access elements from the end of the list.*
 
 2. You can actually slice with `steps` using the syntax `list[start:stop:step]`. This allows you to access every `step`-th element in the range from `start` to `stop`. How would you access every other element in the `species` list using slicing?
 :::

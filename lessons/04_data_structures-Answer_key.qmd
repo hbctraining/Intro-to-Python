@@ -53,10 +53,7 @@ print(species)
 
 1. How might you access the last two elements of the `species` list using slicing?
 
-::: callout-tip
-# Hint 
-Recall that we can use _negative indexing_ to access elements from the end of the list.
-:::
+*Hint: Recall that we can use _negative indexing_ to access elements from the end of the list.*
 
 ```{python}
 #| label: exercise_3
