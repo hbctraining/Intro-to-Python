@@ -1,0 +1,50 @@
+---
+title: "Variables - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdiner
+date: "2026-06-01"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{python}
+#| label: load_libraries_data
+#| echo: false
+
+```
+
+# Exercise 1
+
+1. When organizing your working directory for a particular analysis, you should separate the original data (raw data) from the intermediate datasets. For instance, you may want to create:
+
+- `data/`: directory within your working directory that stores the raw data
+- `results/`: directory for intermediate results
+- `figures/`: directory for the plots you will generate
+
+We will create all of the above directories for this exercise. You can download the `data` directory by right-clicking [here](https://www.dropbox.com/scl/fi/0c84zbbqsjemtj1zscauw/data.zip?rlkey=rndec063vjqlrx2hsvtq9q089&st=egb5wt10&dl=1) and selecting "Save Link As..". Place the ZIP file within your `intro_python` directory Within a file browser, navigate to your `intro_python` directory and double-click on the `data.zip` file in order to uncompress it. 
+
+::: {#fig-jupyter_file_nav .figure}
+![](../img/Download_data.gif){width=600px}
+
+Downloading and uncompressing the data directory
+:::
+
+Next, go ahead and add a `results` and `figures` directory within your `intro_python` directory. 
+
+::: {#fig-jupyter_file_nav .figure}
+![](../img/Creating_folders.gif){width=600px}
+
+Creating `results` and `figures` directories
+:::
+
+When finished, your working directory should look like this:
+
+::: {#fig-jupyter_file_nav .figure}
+![](../img/jupyter_lab_file_navigator.png){width=300px}
+
+File navigator in JupyterLab after creating directories for data management.
+:::
+

@@ -23,7 +23,7 @@ editor_options:
     wrap: 72
 ---
 
-Approximate time: XX minutes
+Approximate time: 30 minutes
 
 ## Learning objectives 
 
@@ -134,12 +134,8 @@ JupyterLab logo.
 
 We will open JupyterLab by clicking the "Launch" button under the JupyterLab application in Anaconda Navigator. _This will open a new tab in your web browser with the JupyterLab interface._
 
-::: callout-warning
-TODO: Make our own screenshot, I have just taken this from the this other workshop for now since I have many conda environments when I open mine. It woul dbe nice to have a similarly labeled image.
-:::
-
 ::: {#fig-jupyter_lab_interface .figure}
-![](../img/jupyter_lab_landing.png)
+![](../img/jupyter_lab_landing_annotated.png)
 
 JupyterLab interface.<br>
 _Source: [Python for Geographic Data Analysis](https://pythongis.org/part1/chapter-01/nb/04-using-jupyterlab.html)_
@@ -158,16 +154,17 @@ Creating `intro_python` directory.
 :::
 
 :::{.callout-tip}
-# **Exercise 1**
+# [**Exercise 1**](01_setting_up-Answer_key.qmd#exercise-1)
 
-When organizing your working directory for a particular analysis, you should separate the original data (raw data) from the intermediate datasets. For instance, you may want to create:
+1. When organizing your working directory for a particular analysis, you should separate the original data (raw data) from the intermediate datasets. For instance, you may want to create:
 
 - `data/`: directory within your working directory that stores the raw data
-- `scripts/`: directory for your Python scripts and notebooks
-- `results/`: folder for intermediate results
+- `results/`: directory for intermediate results
 - `figures/`: directory for the plots you will generate
 
-We will create all of the above directories for this exercise. When finished, your working directory should look like this:
+We will create all of the above directories for this exercise. You can download the `data` directory by right-clicking [here](https://www.dropbox.com/scl/fi/0c84zbbqsjemtj1zscauw/data.zip?rlkey=rndec063vjqlrx2hsvtq9q089&st=egb5wt10&dl=1) and selecting "Save Link As..". Place the ZIP file within your `intro_python` directory Within a file browser, navigate to your `intro_python` directory and double-click on the `data.zip` file in order to uncompress it. 
+
+Next, go ahead and add a `results` and `figures` directory within your `intro_python` directory. When finished, your working directory should look like this:
 
 ::: {#fig-jupyter_file_nav .figure}
 ![](../img/jupyter_lab_file_navigator.png){width=300px}
@@ -189,16 +186,16 @@ Menu bar in JupyterLab.
 
 Table: JupyterLab menu options and descriptions. {#tbl-jupyter_menu}
 
-| Menu     | Description                                                                                                                                                                                                 |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **File**     | Actions related to files and directories such as New, Open, Close, Save, etc. The **File** menu also includes the Shut Down action used to shut down the JupyterLab server.                                   |
-| **Edit**     | Actions related to editing documents such as Undo, Cut, Copy, Paste, etc.                                                                                                             |
-| **View**     | Actions that alter the appearance of JupyterLab and enable access to different windows.                                                                                                                                                           |
-| **Run**      | Actions for running code in different ways such as through notebooks and code consoles (discussed below).                                                                                                   |
-| **Kernel**   | Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.                                                                                                                   |
-| **Tabs**     | A list of the open documents and activities in the main work area.                                                                                                                                         |
-| **Settings** | Common JupyterLab settings can be configured using this menu. There is also an Advanced Settings Editor option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options. |
-| **Help**     | A list of links for help with JupyterLab and kernels.                                                                                                                                                                |
+| Menu | Description |
+|----|--------|
+| **File** | Provides options for opening, closing, saving and exporting files. |
+| **Edit** | Provides options for undo, redo and control over cells.  |
+| **View** | Provides options for controlling the appearance of JupyterLab. |
+| **Run** | Provides actions for running cells of code. |
+| **Kernel** | Provides options for handle the kernel. |
+| **Tabs** | Provides options for the tabs open in the workspace. |
+| **Settings** | Provides options for JupyterLab settings. |
+| **Help** | Provides links to reference materials for using JupyterLab |
 
 ## Creating an interactive Python notebook (ipynb)
 
@@ -212,7 +209,7 @@ You may be prompted to select a kernel for the new notebook. A kernel refers to 
 Freshly created Jupyter Notebook.
 :::
 
-We can see in the File Navigator that we have a new file called `Untitled.ipynb`. The `.ipynb` extension stands for "interactive Python notebook". We can rename this file by right-clicking on it in the File Navigator and selecting "Rename". Let us rename this file to `intro_python.ipynb` and place it within out `scripts` directory.
+We can see in the File Navigator that we have a new file called `Untitled.ipynb`. The `.ipynb` extension stands for "interactive Python notebook". We can rename this file by right-clicking on it in the File Navigator and selecting "Rename". Let us rename this file to `intro_python.ipynb`.
 
 ::: {#fig-Create_intro_python .figure}
 ![](../img/Create_notebook.gif){width=600px}
@@ -222,10 +219,11 @@ Creating Jupyter notebook, renaming it and placing it within our `scripts` direc
 
 ## Running Python code
 
-We will be writing text within the cells of the Jupyter Notebook. These blocks can either be text (markdown) or code (Python). To create a new cell, click the `"+"` button in the toolbar at the top of the notebook.
+We will be writing text within the cells of the Jupyter Notebook. These blocks can either be text (Markdown) or code (Python). To create a new cell, click the `"+"` button in the toolbar at the top of the notebook. **Each time we come across a code block in these lessons, we will click the "+" button to create a new code block in our Jupyter Notebook.** We could add all of the code to a single code block, but then we would need to re-evaluate all of the code each time we added some code. If we make new code block for each chunk of code, we only need to run the new code and not the previous code.
 
-::: callout-warning
-Do we want to include markdown, maybe as an aside?
+::: callout-note
+# Using Markdown within Jupyter Notebook
+Jupyter notebooks are capable of being rendered into HTML documents. Because of this, you can add text around your code blocks using Markdown. If you are interested in learning more about using Markdown to do this, this [Markdown basics from the Jupyter Documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) is helpful.
 :::
 
 **Now that we are all set up, let's run our first line of Python code!!!**
@@ -235,7 +233,7 @@ We will start by calculating the sum of 3 and 5. We are also going to include **
 ```{python}
 #| label: code_example
 # Intro to Python Lesson
-# March 2026
+# April 2026
 # Author: Harvard Chan Bioinformatics Core
 
 

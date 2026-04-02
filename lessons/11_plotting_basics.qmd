@@ -64,7 +64,7 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 
 # Load the new metadata data frame that we created in the previous lesson
-new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)  
+new_metadata = pd.read_csv("../data/new_metadata.csv", index_col=0)  
 new_metadata
 ```
 
