@@ -20,7 +20,7 @@ editor_options:
     wrap: 72
 ---
 
-Approximate time: 30 minutes
+Approximate time: 35 minutes
 
 ## Learning objectives 
 
@@ -72,12 +72,22 @@ There is an [official Python style guide](https://peps.python.org/pep-0008/) tha
 If we would like to see the value of a variable we have created, we can use the the `print()` function:
 
 ```{python}
-#| label: print_function
+#| label: show_my_number
+# Show my_number
+my_number
+```
+
+### Printing variables
+
+Another way you can print a variable is by putting it within a `print()` function:
+
+```{python}
+#| label: print_my_number
 # Print my_number
 print(my_number)
 ```
 
-You can add text around a variable within the `print()` function:
+Putting variables within `print()` function can be very helpful in case you want to inspect multiple variables. We will see this shortly. You can also add text around a variable within the `print()` function:
 
 ```{python}
 #| label: text_within_print
@@ -98,8 +108,6 @@ Let's go ahead and create a second number that we are interested in:
 your_number = 8.5
 ```
 
-### Printing variables
-
 We can use the `print()` function to see the values of these variables:
 
 ```{python}
@@ -108,8 +116,37 @@ We can use the `print()` function to see the values of these variables:
 print('I want to remember', my_number, 'and', your_number)
 ```
 
-::: callout-warning
-F strings could fit well here
+This is a great place to highlight why it can be advantageous to use the `print()` function over just calling variables without it. If we wanted to inspect `my_number` and `your_number`, we might be inclined to try it without the print function:
+
+```{python}
+#| label: without_print
+# Show my_number
+my_number
+
+# Show your_number
+your_number
+```
+
+Do you notice that it only has the output from `your_number`? This is because without the `print()` function. It will return variables as they are processed, but they will be overwritten, so only the final variable remains. However, if we use the `print()` function, we will retain both variables:
+
+```{python}
+#| label: with_print
+# Print my number
+print(my_number)
+
+# Print your_number
+print(your_number)
+```
+
+::: callout-note
+# f-strings
+f-strings (formatted string literals) are a concise way to build strings that include variable values or expressions. They’re prefixed with f  let you put Python expressions directly inside `{}` within the string and can support functions and methods. We can see an example below:
+
+```{python}
+#| label: f_string_example
+# f-string Example
+print(f'I want to remember {my_number} and {your_number}')
+```
 :::
 
 You can carry out basic arithmetic using variables. For example, if we wanted to add `my_number` and `your_number`, we could do that with:
@@ -139,6 +176,7 @@ Python uses white-space to define scope, but when assigning values to a variable
 #| label: white_space_example_1
 # No whitespace on either side of =
 x=3
+
 # Print the value of x
 print(x)
 ```
@@ -147,6 +185,7 @@ print(x)
 #| label: white_space_example_2
 # One space on either side of =
 x = 3
+
 # Print the value of x
 print(x)
 ```
@@ -155,6 +194,7 @@ print(x)
 #| label: white_space_example_3
 # Three spaces on either side of =
 x    =    3
+
 # Print the value of x
 print(x)
 ```
@@ -166,11 +206,13 @@ You can also assign a new value to a variable. Let's update `my_number` to be a 
 
 ```{python}
 #| label: number reassignment
-
+# Print my_number
 print(my_number)
 
+# Update the value of my_number
 my_number = 22
 
+# Print my_number after it was updated
 print(my_number)
 ```
 
@@ -218,12 +260,12 @@ Now that we have a basic understanding of what a variable is, let's discuss the 
 
 Table: Common Python data types. {#tbl-common_data_types}
 
-| Type  | Description                                      | Example          |
-|-------|--------------------------------------------------|------------------|
-| int   | Integers (whole numbers)                         | 7, -3, 42        |
-| float | Floating point numbers (numbers with decimals)   | 3.14, 0.5        |
-| bool  | Booleans (True/False values)                     | True, False      |
-| str   | Strings or characters (text).                    | "hello", "3"     |
+| Type | Description | Example |
+|-----|-----|-----|
+| int | Integers (whole numbers) | 7, -3, 42 |
+| float | Floating point numbers (numbers with decimals) | 3.14, 0.5 |
+| bool | Booleans (True/False values) | True, False |
+| str | Strings or characters (text) | "hello", "3" |
 
 We can determine data type of a variable is by using the `type()` function.
 
