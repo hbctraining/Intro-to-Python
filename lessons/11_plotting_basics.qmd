@@ -64,7 +64,7 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 
 # Load the new metadata data frame that we created in the previous lesson
-new_metadata = pd.read_csv("../data/new_metadata.csv", index_col=0)  
+new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)  
 new_metadata
 ```
 
@@ -235,6 +235,26 @@ sns.scatterplot(data = new_metadata,
 
 # Change the size of the axis labels
 plt.xlabel("Age in Days", fontsize=20)
+``` 
+
+## Saving plots
+
+If you wanted to save this plot, you can use the `savefig()` function from `matplotlib` and specify the file name and format you want to save it in. By default this function will save the last plot that was generated, so make sure to call `savefig()` after you have generated the plot you want to save. For example, to save the plot as a PNG file, you can use:
+
+```{python}
+#| label: save_plot
+#| eval: false
+# Save the plot as a PNG file
+plt.savefig("figures/scatterplot.png", format = "png")
+``` 
+
+If you wanted to specify the resolution (DPI) or the size of the saved figure, you can also include those arguments in the `savefig()` function. For example, to save the plot as a PNG file with a resolution of 300 DPI we can use:
+
+```{python}
+#| label: save_plot_dpi_size
+#| eval: false
+# Save the plot as a PNG file with specific DPI and size
+plt.savefig("figures/scatterplot_dpi.png", format = "png", dpi = 300)
 ``` 
 
 
