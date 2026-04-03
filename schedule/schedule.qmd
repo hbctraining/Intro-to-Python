@@ -154,7 +154,7 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 11:25 | [Heatmaps](../lessons/13_heatmaps.qmd) | Instructor_name |
+| 10:30 - 11:25 | [Heatmaps](../lessons/13_machine_learning.qmd) | Instructor_name |
 | 11:25 - 11:30 | Break | |
 | 11:30 - 11:45 | Discussion, Q & A | Instructor_name |
 | 11:45 - 12:00 | [Wrap Up](../slides/workshop_wrapup_slides.pdf) | Instructor_name |
