@@ -225,6 +225,6 @@ plt.ylabel("Mean expression", fontsize=15, loc="center")
 
 ***
 
-[Next Lesson >>](13_heatmaps.qmd)
+[Next Lesson >>](13_machine_learning.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)
