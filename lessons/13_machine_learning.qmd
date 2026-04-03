@@ -50,10 +50,32 @@ When doing XYZ...
 
 ## Cortical layer dataset
 
-As an example of a real-world application of machine learning, we will be using a dataset that comes from spatial locations associated with different cortical layers in the human brain. These layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and 2 white matter layers (WM1 and WM2). Each of these layers has a unique spatial location in the cortex and a unique gene expression profile.
+::: columns
 
-Here, we have created an example dataset that is based on the [paper](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full), which used spatial transcriptomics (Visium HD) to profile expression in cortical layers in the human brain across different age groups. 
+::: {.column width="25%"}
+As an example of a real-world application of machine learning, we will be using a dataset that comes from spatial locations associated with different cortical layers in the human brain. These layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer. Each of these layers has a unique spatial location.
+:::
 
+::: column
+::: {#fig-cortical_layers_paper .figure}
+![](../img/paper_cortical_layers.png){height=50}
+
+Spatial locations of the cortical layers in the human brain. <br>
+_Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
+:::
+:::
+:::
+
+Based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full), we have generated a synthetic dataset that contains the x and y coordinates of cells in the cortex with cortical layer labels. Additionally, we have included the log-normalized expression values of known marker genes for each cortical layer. 
+
+::: {#fig-cortical_marker_genes .figure}
+![](../img/paper_cortical_markers.png){width=550}
+
+Example of the spatial expression of known marker genes for each cortical layer. <br>
+_Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
+:::
+
+**We will be using this synthetic dataset to train a random forest classifier to predict the cortical layer labels based on the spatial location and gene expression of each cell.**
 
 The dataset contains spatial coordinates of cells in the cortex, as well as the cortical layer that each cell belongs to.
 
@@ -105,20 +127,30 @@ In the dataframe, you have have noted that we also have columns: `AQP4`, `HPCAL1
 ```{python}
 #| label: fig-cortical_marker_genes
 #| fig-cap: Spatial plot of the gene expression of known marker genes for each cortical layer.
-# Marker genes for each cortical layer
-genes = ["AQP4", "HPCAL1", "FREM3",
+# List of marker genes to plot
+genes = ["AQP4", "HPCAL1", "FREM3", 
          "TRABD2A", "KRT17", "MOBP"]
 
-# Plot the expression of each marker gene across the cortex
-for gene in genes:
-    plt.figure(figsize=(6, 4))
-    sns.scatterplot(data=df_cortical, 
-                    x="x", y="y", 
-                    hue=gene, 
-                    palette="viridis",
-                    edgecolor=None)
-    plt.title(f"Expression of {gene} across the cortex")
-    plt.show() 
+# Initialize a plot with rows and columns for each gene
+fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+
+# Make axes a flat list so we can index easily
+axes = axes.flatten()
+
+for i, gene in enumerate(genes):
+    ax = axes[i]
+    sns.scatterplot(
+        data=df_cortical,
+        x="x", y="y",
+        hue=gene,
+        palette="viridis",
+        edgecolor=None,
+        ax=ax
+    )
+    ax.set_title(f"Expression of {gene} across the cortex")
+
+plt.tight_layout()
+plt.show()
 ```
 
 ## Random forest classifiers
