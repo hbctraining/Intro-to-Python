@@ -367,7 +367,7 @@ my_number + number_string
 
 ### Booleans
 
-Booleans are another data type that denotes `True` and `False` values. 
+Booleans are another data type that denotes `True` and `False` values. Booleans are often used in conditional statements, which we will cover in the next lesson, but they can also be useful for other purposes. This will allow you to selectively run lines of code, only if a condition is evaluated to be `True`.
 
 ```{python}
 #| label: create_boolean
@@ -377,9 +377,14 @@ my_boolean = True
 print(type(my_boolean))
 ```
 
-::: callout-warning
-Flesh out the definition of boolean a bit more and why it is useful
-:::
+Note that the words `True` and `False` are reserved keywords in Python, so they cannot be used as variable names. Additionally, they are capitalized in Python, so if you were to write `true` or `false`, Python would not recognize those as booleans and would return an error message:
+
+```{python}
+#| label: boolean_error
+#| error: true
+# Trying to use true and false as variable names
+my_boolean = true
+```
 
 ### Changing the Data Type
 
@@ -417,7 +422,7 @@ print(type(bool(1)))
 
 :::{.callout-note}
 # Boolean addition
-Interestingly, because booleans are `0` and `1` under the hood, they can be added together and the end result is a integer data type.
+Because booleans are `0` and `1` under the hood, they can be added together and the end result is a integer data type.
 
 ```{python}
 #| label: summing_booleans
