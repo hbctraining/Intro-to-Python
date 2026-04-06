@@ -1,42 +1,71 @@
 ---
-title: "Lesson 05 - Answer Key"
+title: "Loops - Answer Key"
 author:
-  - author_1
-  - author_2
-date: "YYYY-MM-DD"
+  - Will Gammerdinger
+  - Noor Sohail
+date: "2026-04-02"
 license: "CC-BY-4.0"
 editor_options: 
   markdown: 
     wrap: 72
 ---
 
-```{r}
-#| label: load_libraries_data
-#| echo: false
-# Load libraries and data
-
-```
-
 # Exercise 1
 
-1. A question to evaluate Learning Objective 1
+1. Create a `for` loop that goes through a list that contains `True`, `4` and `pretzel`. For each element in that list have it print out the element followed by the datatype of the element.
 
-2. A followup question to question #1
-
-3. ...
+```{python}
+#| label: data_type_loop
+# Iterate through the list, assigning a new element to "element" each time through
+for element in [True, 4, "pretzel"]:
+    # Print out the element followed by the data type of the element
+    print(element, type(element))
+```
 
 # Exercise 2
 
-1. A question to evaluate Learning Objective 2
+1. Use list comprehension to sort through a list `["DNA", "RNA", "Protein"]` and only retain the elements "DNA" or "RNA".
 
-2. A followup question to question #1
-
-3. ...
+```{python}
+#| label: list_comprehension
+# 
+[molecule for molecule in ["DNA", "RNA", "Protein"] if molecule == "DNA" or molecule == "RNA"]
+```
 
 # Exercise 3
 
-1. A question to evaluate Learning Objective 3
+1. The [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) is a big open question in mathematics. It states that any positive integer will form a sequence that ends with 1, if:
 
-2. A followup question to question #1
+- On even numbers you halve the value
+- On odd numbers you triple the value and add 1. 
 
-3. ...
+Let's create a `while` loop to evaluates 17 to see each step in the path that it takes on its way to 1. With each iteration, we want:
+
+- Print the current integer being tested
+- If it is an even integer, divide it in half
+- If it is in an odd integer, multiply it by 3 and add 1
+- Exit the `while` loop when it reach 1
+
+*Hint: You will likely you want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example, 4 mod 2 would return 0 because the remainder of 4 divided by 2 is zero, while 5 mod 2 would returns 1 because the remainder of 5 divided by 2 is 1.*
+
+
+```{python}
+#| label: collatz_solution
+# Initialize the number variable
+number = 17
+
+# While number is NOT equal to one
+while number != 1:
+    print(number)
+    # If the value is even
+    if number % 2 == 0:
+        # Halve the number
+        number = number / 2
+    # If the value is odd
+    else:
+        # Multiple number by 3 and add 1
+        number = 3 * number + 1
+
+# Print the final number
+print(number)
+```

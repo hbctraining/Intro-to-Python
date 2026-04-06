@@ -27,15 +27,15 @@ editor_options:
 species = ["human", "mouse", "corn", "yeast"] 
 ```
 
-Approximate time: XX minutes
+Approximate time: 90 minutes
 
 ## Learning Objectives 
 
 In this lesson, we will:
 
 - Create `for` loops to iterate over sequences of values
-- Learn how to use `for` loops with different data structures
-- Understand the difference between `for` and `while` loops
+- Implement `for` loops within lists for list comprehension
+- Differentiate between `for` and `while` loops
 
 ## Overview of lesson
 
@@ -48,6 +48,7 @@ One of the most common problems that programming solves is the tedium of perform
 ```{python}
 #| label: for_loop_alternative
 #| eval: false
+# Print each element within species
 print(species[0])
 print(species[1])
 print(species[2])
@@ -110,6 +111,11 @@ print(organism)
 
 This is to once again emphasize that indentation is not just a matter of style in Python, but it is a fundamental part of the syntax. The indented code block is what gets executed as part of the loop, and if we forget to indent, Python does not know what to do.
 
+:::{.callout-tip}
+# [**Exercise 1**](05_loops-Answer_key.qmd#exercise-1)
+1. Create a `for` loop that goes through a list that contains `True`, `4` and `pretzel`. For each element in that list have it print out the element followed by the datatype of the element.
+:::
+
 ### Conditional Statements within `for` Loops
 
 We can use what we learned  about `if` statements in the lesson on [conditional statements](03_conditional_statements.qmd) within our `for` loops to perform different actions based on certain conditions. This can be useful if we want to perform a specific action for certain elements in our list as we iterate through the list. For example, if we wanted to print out a different message for humans compared to the other species, we could use the following code:
@@ -127,14 +133,6 @@ for organism in species:
         # Print this message
         print("This is not a human.")
 ```
-
-:::{.callout-tip}
-# [**Exercise 1**](05_loops-Answer_key.qmd#exercise-1)
-1. A question to evaluate Learning Objective 1
-2. A followup question to question #1
-3. ...
-:::
-
 
 ### `range()` Function
 
@@ -184,15 +182,45 @@ Table: Table of updated values of `number`, `doubled`, and `total` at each itera
 | 2     | 8      | 16      | 30            |
 | 3     | 10     | 20      | 50            |
 
+### List Comprehension
+
+Sometimes when working with a list, we may like to be able to apply logic to our list. Perhaps we would like to subset our list or do something when an element that meets a certain condition in our list. For this task, we can use list comprehension. The syntax for list comprehension looks like:
+
+```{python}
+#| label: list_comprehension_example
+#| eval: false
+# Example syntax for list comprehension
+# DO NOT RUN
+[ element_transformation for element in list]
+```
+
+Where:
+- `element_transformation` is what you want to happen to the element
+- `for` is initiating a `for` loop
+- `element` is what each element in the `list` will be called
+- `in list` is finishing out the `for` loop logic for the list that the `for` loop will iterate through
+
+Let's see an example of this. Let's imagine that I wanted to square the numbers in a list:
+
+```{python}
+#| label: square_list_comprehension
+[x * x for x in [1, 2, 3, 4, 5]]
+```
+
+In this case, I am looping through the list `[1, 2, 3, 4, 5]`, assigning each element to `x` and then carrying out the `element_transformation` part of multiplying `x * x`.
+
+Alternatively, we could interrogate if some element of our list meets a conditional and print it out:
+
+```{python}
+#| label: filter_list_comprehension
+[x for x in [1, 2, 3, 4, 5] if x == 2 or x == 4]
+```
+
+In this case we are looping through our list, `[1, 2, 3, 4, 5]`, assigning each element to `x`. Then asking, is `x` equal to 2 or to 4. If that conditional returns as `True`, then we proceed to our `element_transformation` part and add `x` to an outputted list.
+
 :::{.callout-tip}
 # [**Exercise 2**](05_loops-Answer_key.qmd#exercise-2)
-1. A question to evaluate Learning Objective 2
-2. A followup question to question #1
-3. ...
-:::
-
-::: callout-warning
-Add a section on list comprehensions here.
+1. Use list comprehension to sort through a list `["DNA", "RNA", "Protein"]` and only retain the elements "DNA" or "RNA".
 :::
 
 ## `while` Loops
@@ -256,9 +284,20 @@ while i < 5:
 
 :::{.callout-tip}
 # [**Exercise 3**](05_loops-Answer_key.qmd#exercise-3)
-1. A question to evaluate Learning Objective 3
-2. A followup question to question #1
-3. ...
+1. The [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) is a big open question in mathematics. It states that any positive integer will form a sequence that ends with 1, if:
+
+- On even numbers you halve the value
+- On odd numbers you triple the value and add 1. 
+
+Let's create a `while` loop to evaluates the number 17 to see each step in the path that it takes on its way to 1. With each iteration, we want:
+
+- Print the current integer being tested
+- If it is an even integer, divide it in half
+- If it is in an odd integer, multiply it by 3 and add 1
+- Exit the `while` loop when it reach 1
+
+*Hint: You will likely you want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example, 4 mod 2 would return 0 because the remainder of 4 divided by 2 is zero, while 5 mod 2 would returns 1 because the remainder of 5 divided by 2 is 1.*
+
 :::
 
 ***
