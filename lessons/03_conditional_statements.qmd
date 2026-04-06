@@ -145,7 +145,7 @@ if my_name == 'Anja':
 
 ### Indentation Matters
 
-You may have noticed that the code block is indented. This is not just for the readability, it is actually required in Python. The indentation tells Python which lines of code belong to the `if` statement. If you forget to indent, you will get an error or the code will not execute as expected.
+You may have noticed that the code block is indented. This is not just for the readability; it is actually required in Python. The indentation tells Python which lines of code belong to the `if` statement. If you forget to indent, you will get an error or the code will not execute as expected.
 
 ```{python}
 #| label: if_statement_indentation_error
@@ -232,7 +232,7 @@ We can join together the functionality of multiple `if` statements using `elif` 
 
 ### `else` Statements
 
-Sometimes you may want to have a "catch-all" block of code that executes when the `if` statement is not met. This is where `else` comes in! We can build upon the "Alice" example from above and add an `else` statement to handle the case where `name != "Alice"`:
+Sometimes you may want to have a "catch-all" block of code that executes when the `if` statement is not met. This is where `else` comes in! We can build upon the "Anja" example from above and add an `else` statement to handle the case where `name != "Anja"`:
 
 ```{python}
 #| label: if_else_example
@@ -287,12 +287,12 @@ if my_name == 'Anja':
 # Otherwise
 else:
     # Print this message
-    print("You aren't Alice or Bob!")
+    print("You aren't Anja or Noor!")
 # Otherwise, check if my_name matches 'Noor'
 # Note that this syntax of putting elif after the else is going to return an error on line 14
 elif name == "Noor":
     # If true, print this message
-    print("Hello, Bob!")
+    print("Hello, Noor!")
 ```
 
 :::
@@ -354,7 +354,7 @@ The `not` operator allows us to check if a condition is `False` and returns a `T
 not x > 10
 ```
 
-This is sometimes more intuitive to read than writing `x <= 10:`. 
+This is sometimes more intuitive to read than writing `x <= 10`. 
 
 ### Combining Logical Operators
 
