@@ -26,7 +26,7 @@ editor_options:
 
 ```
 
-Approximate time: XX minutes
+Approximate time: 60 minutes
 
 ## Learning Objectives 
 
@@ -214,8 +214,6 @@ Pretty simple, right? In this case, the function only ran a single line of code,
 
 For example, `multiply_it(x=4, y=6)` will return output `24`.
 :::
-
-## More Practice with Functions
 
 :::{.callout-tip}
 # [**Exercise 3**](06_functions-Answer_key.qmd#exercise-3)
