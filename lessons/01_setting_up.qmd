@@ -141,11 +141,11 @@ JupyterLab interface.<br>
 _Source: [Python for Geographic Data Analysis](https://pythongis.org/part1/chapter-01/nb/04-using-jupyterlab.html)_
 :::
 
-Even though JupyterLab opens your web browser, it is not actually accessing the internet. It is running on your local computer at the port `http://localhost:8888` which is only hosted on your computer and is not accessible to anyone else.
+Even though JupyterLab opens your web browser, it is not actually accessing the internet. It is running on your local computer at the port `http://localhost:8888`, which is only hosted on your computer and is not accessible to anyone else.
 
 ### File navigator
 
-The navigation panel on the left-hand side allows us to access the file navigator which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder click the "New Folder" button in the file navigator and title it `intro_python`. 
+The navigation panel on the left-hand side allows us to access the file navigator, which allows us to navigate through the files on our computer and open them in JupyterLab. To begin, let us make a new folder for this workshop in our `Desktop` folder. To create a new folder, first navigate to your Desktop in the naviation panel, then click the "New Folder" button above the file navigator and title it `intro_python`. 
 
 ::: {#fig-Create_intro_python .figure}
 ![](../img/Create_intro_python.gif){width=600px}
@@ -162,7 +162,7 @@ Creating `intro_python` directory.
 - `results/`: directory for intermediate results
 - `figures/`: directory for the plots you will generate
 
-We will create all of the above directories for this exercise. You can download the `data` directory by right-clicking [here](https://www.dropbox.com/scl/fi/0c84zbbqsjemtj1zscauw/data.zip?rlkey=rndec063vjqlrx2hsvtq9q089&st=egb5wt10&dl=1) and selecting "Save Link As..". Place the ZIP file within your `intro_python` directory Within a file browser, navigate to your `intro_python` directory and double-click on the `data.zip` file in order to uncompress it. 
+We will create all of the above directories for this exercise. You can download the `data` directory by right-clicking [here](https://www.dropbox.com/scl/fi/0c84zbbqsjemtj1zscauw/data.zip?rlkey=rndec063vjqlrx2hsvtq9q089&st=egb5wt10&dl=1) and selecting "Save Link As...". Place the ZIP file within your `intro_python` directory. Within a file browser, navigate to your `intro_python` directory and double-click on the `data.zip` file in order to uncompress it. 
 
 Next, go ahead and add a `results` and `figures` directory within your `intro_python` directory. When finished, your working directory should look like this:
 
@@ -192,7 +192,7 @@ Table: JupyterLab menu options and descriptions. {#tbl-jupyter_menu}
 | **Edit** | Provides options for undo, redo and control over cells.  |
 | **View** | Provides options for controlling the appearance of JupyterLab. |
 | **Run** | Provides actions for running cells of code. |
-| **Kernel** | Provides options for handle the kernel. |
+| **Kernel** | Provides options for handling the kernel. |
 | **Tabs** | Provides options for the tabs open in the workspace. |
 | **Settings** | Provides options for JupyterLab settings. |
 | **Help** | Provides links to reference materials for using JupyterLab |
@@ -258,7 +258,7 @@ Add 3 and 5
 3 + 5
 ```
 
-Python is trying to run the text "Add 3 and 5" as a command, which is not valid Python syntax. As a result, we get an `invalid syntax` error in the console. This error means that the Python interpreter did not know what to do with that command. Readd the `#` to re-comment the appropriate line.
+Python is trying to run the text "Add 3 and 5" as a command, which is not valid Python syntax. As a result, we get an `invalid syntax` error in the console. This error means that the Python interpreter did not know what to do with that command. Re-add the `#` to re-comment the appropriate line.
 
 This is a clear example of how Python requires a specific syntax that must be followed for the code to run properly. We will continue to learn more about the syntax and structure of Python code as we go through the workshop. It really is its own _language_, just like English, with its own grammar and rules.
 
