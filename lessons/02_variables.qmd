@@ -57,8 +57,8 @@ When creating variables in Python, there are some rules and guidelines that you 
 
 - Python variables are ***case sensitive***, so `my_number` and `My_number` are different variables
 - Variables names must only consist of letters, numbers and underscores
-- Must begin with a letter or an underscore, it cannot start with a number. Starting a variable with an underscore has some special properties that are beyond the scope of this workshop
-- It cannot be a reserved keyword such as `for` or `if`
+- Variable names must begin with a letter or an underscore; they cannot start with a number. Starting a variable with an underscore has some special properties that are beyond the scope of this workshop
+- Variable names cannot be a reserved keyword such as `for` or `if`
 
 ***Guidelines***
 
@@ -140,7 +140,7 @@ print(your_number)
 
 ::: callout-note
 # f-strings
-f-strings (formatted string literals) are a concise way to build strings that include variable values or expressions. They’re prefixed with f  let you put Python expressions directly inside `{}` within the string and can support functions and methods. We can see an example below:
+f-strings (formatted string literals) are a concise way to build strings (text values) that include variable values or expressions. They’re prefixed with f, let you put Python expressions directly inside `{}` within the string, and can support functions and methods. We can see an example below:
 
 ```{python}
 #| label: f_string_example
@@ -342,7 +342,7 @@ If you were to place a variable name within quotes, it will be evaluated as a st
 ```{python}
 #| label: quote_variable
 # Printing a variable name within quotes
-print('my_number is a string, but', my_number, 'is a variable.')
+print('my_number', 'is a string, but', my_number, 'is a variable.')
 ```
 
 Furthermore, if you were to place a numeric value within quotes, then Python will interpret that number as a string rather than as a number.
