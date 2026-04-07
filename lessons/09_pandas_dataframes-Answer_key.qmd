@@ -8,6 +8,7 @@ license: "CC-BY-4.0"
 editor_options: 
   markdown: 
     wrap: 72
+jupyter: python3
 ---
 
 ```{r}
@@ -30,7 +31,7 @@ metadata = pd.read_csv("data/mouse_exp_design.csv")
 
 # Exercise 1
 
-1. Print the last 6 lines of the metadata data frame using `tail()` function.
+1. Use the `tail()` method to inspect out `metadata` DataFrame.
 
 ```{python}
 #| label: exercise_1
@@ -38,22 +39,30 @@ metadata.tail()
 ```
 
 
-2. A followup question to question #1
-
-3. ...
-
 # Exercise 2
 
-1. A question to evaluate Learning Objective 2
+1. Retrieve the values of `metadata` where the value in the `replicate` is column is two or greater.
 
-2. A followup question to question #1
+```{python}
+#| label: metadata_replicate
+# Retrieve the columns of metadata where replicate is 2 or greater
+metadata[metadata["replicate"] >= 2]
+```
 
-3. ...
+2. Retrieve the values of `metadata` where the value in the `genotype` is not equal to `Wt`.
+
+```{python}
+#| label: metadata_genotype
+# Retrieve the columns of metadata where genotype is not 'Wt'
+metadata[metadata["genotype"] != 'Wt']
+```
 
 # Exercise 3
 
-1. A question to evaluate Learning Objective 3
+1. Use the `value_counts()` method to summarize the number of times you observe each replicate number in the `replicate` column of `metadata`.
 
-2. A followup question to question #1
-
-3. ...
+```{python}
+#| label: value_counts
+# Summarize the number of times we observe each replicate in metadata
+metadata["replicate"].value_counts()
+```

@@ -19,6 +19,7 @@ license: "CC-BY-4.0"
 editor_options:
   markdown:
     wrap: 72
+jupyter: python3
 ---
 
 ```{r}
@@ -67,23 +68,9 @@ When working with a large dataset, you will very likely work with a "metadata" f
 We have a file in which we identify information about the data, called metadata. Our metadata is also stored in a CSV file. In this file, each row corresponds to a sample and each column contains some information about each sample.
 
 ```{python}
-#| label: load_metadata
-#| eval: false
-# Import pandas using the alias, pd
-import pandas as pd
-
-# Read in the metadata
-metadata = pd.read_csv("../data/mouse_exp_design.csv")
-
-# Print out the metadata
-metadata
-```
-
-```{python}
-#| label: tbl-load_metadata_table
-#| echo: false
+#| label: tbl-load_metadata
 #| tbl-cap: DataFrame of our experimental design, including sample names, genotypes, cell types and replicate numbers for each sample.
-#Import pandas using the alias, pd
+# Import pandas using the alias, pd
 import pandas as pd
 
 # Read in the metadata
@@ -92,6 +79,7 @@ metadata = pd.read_csv("data/mouse_exp_design.csv")
 # Print out the metadata
 metadata
 ```
+
 
 The first column contains the row names and the remaining columns contain information about our samples that we can use to categorize them. For example, the second column contains genotype information for each sample. Each sample is classified in one of two categories: `Wt` (wild type) or `KO` (knockout). _What types of categories do you observe in the remaining columns?_
 
@@ -116,24 +104,18 @@ The `.shape` attribute returns the number of rows and columns in the DataFrame. 
 We do not use parentheses after `.shape` because it is an **attribute** of the DataFrame, not a method/function. In contrast, methods require parentheses to be called, even when they do not take any arguments (e.g., `metadata.head()`).
 :::
 
-If we had a larger file, we may not want to display all the contents in the console. Instead we could check the top (the first 6 lines) of this data.frame using the function `head()`:
+If we had a larger file, we may not want to display all the contents in the console. Instead we could check the top (the first 6 lines) of this data.frame using the method `head()`:
 
 ```{python}
 #| label: tbl-head_metadata
 #| tbl-cap: First six rows of the metadata DataFrame using the `head()` function
-# INspect the first 6 rows of metadata
+# Inspect the first 6 rows of metadata
 metadata.head()
 ```
 
-::: callout-warning
-Have not made exercises for the entire lesson
-:::
-
 :::{.callout-tip}
 # [**Exercise 1**](09_pandas_dataframes-Answer_key.qmd#exercise-1)
-1. Print the last 6 lines of the metadata DataFrame using `tail()` function.
-2. A followup question to question #1
-3. ...
+1. Use the `tail()` method to inspect out `metadata` DataFrame.
 :::
 
 ## Indexing and Subsetting DataFrames
@@ -156,7 +138,7 @@ We know the wild type value is in the first row if we count from the top, so we 
 ```{python}
 #| label: numerical_indexing
 # Extract the value in the first row and first column
-metadata.iloc[0, 0]
+print(metadata.iloc[0, 0])
 ```
 
 Now we will extract the value `1` from the first row and third column.
@@ -164,10 +146,10 @@ Now we will extract the value `1` from the first row and third column.
 ```{python}
 #| label: numerical_indexing_2
 # Extract the value in the first row and third column
-metadata.iloc[0, 2]
+print(metadata.iloc[0, 2])
 ```
 
-Now if you only wanted to select values based on rows, you would provide the index for the rows and leave the columns index blank (except for a colon, which stands for all columns). The key here is to include the comma, to let Python know that you are still accessing a 2-dimensional data structure:
+Now if you only wanted to select values based on rows, you would provide the index for the rows and just put a colon (`:`) for the columns. Since we can use a `:` for slicing and by leaving it blank on either side in the column slot is signifying to Python, that we should slice from the beginning until the end, or in other words all columns. We can also use `:` blank on either side for rows as well as columns. The key here is to include the comma, to let Python know that you are still accessing a 2-dimensional data structure:
 
 ```{python}
 #| label: numerical_indexing_rows
@@ -232,9 +214,13 @@ When we work with larger datasets, it can be tricky to remember the column numbe
 So first we will look at the attributes to retrieve our row names (`index`) and column names (`columns`) from our DataFrame:
 
 ```{python}
-#| label: row_col_names
+#| label: row_names
 # Get the row names
 metadata.index
+```
+
+```{python}
+#| label: col_names
 # Get the column names
 metadata.columns
 ```
@@ -300,13 +286,22 @@ logical_idx = metadata["celltype"] == "typeA"
 metadata[logical_idx]
 ```
 
-We can use those `True` and `False` values to extract the rows that correspond to the `True` values from the metadata DataFrame. The result is a dataframe that only contains rows where the celltype is `typeA`.
+We can use those `True` and `False` values to extract the rows that correspond to the `True` values from the metadata DataFrame. The result is a DataFrame that only contains rows where the celltype is `typeA`.
+
+Alternatively, you can also use a nested approach and put the logical index within the subsetting:
+
+```{python}
+#| label: tbl-conditional_subsetting_nested
+#| tbl-cap: Using a nested approach for subsetting metadata by applying a boolean mask for rows where celltype is "typeA".
+# Subset the DataFrame to return only rows where celltype is "typeA"
+metadata[metadata["celltype"] == "typeA"]
+```
 
 :::{.callout-tip}
 # [**Exercise 2**](09_pandas_dataframes-Answer_key.qmd#exercise-2)
-1. A question to evaluate Learning Objective 2
-2. A followup question to question #1
-3. ...
+1. Retrieve the values of `metadata` where the value in the `replicate` is column is two or greater.
+
+2. Retrieve the values of `metadata` where the value in the `genotype` is not equal to `Wt`.
 :::
 
 
@@ -419,13 +414,9 @@ metadata["genotype"].value_counts()
 
 Now we know how many samples are classified as `WT` and how many are classified as `KO` in our dataset.
 
-### Subsection 3B
-
 :::{.callout-tip}
 # [**Exercise 3**](09_pandas_dataframes-Answer_key.qmd#exercise-3)
-1. A question to evaluate Learning Objective 3
-2. A followup question to question #1
-3. ...
+1. Use the `value_counts()` method to summarize the number of times you observe each replicate number in the `replicate` column of `metadata`.
 :::
 
 ***
