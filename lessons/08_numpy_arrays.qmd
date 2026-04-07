@@ -1,7 +1,7 @@
 ---
 title: "`NumPy` Arrays"
 description: |
-  Write a description of the lesson here.
+  In this lesson, you will learn how to work with `NumPy` arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common NumPy functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -30,7 +30,7 @@ library(reticulate)
 use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
 ```
 
-Approximate time: XX minutes
+Approximate time: 50 minutes
 
 ## Learning Objectives 
 
@@ -39,10 +39,6 @@ In this lesson, we will:
 - Manipulate `NumPy` arrays with indexing and slicing
 - Create arrays/matrices of varying dimensions and shapes
 - Use `NumPy` functions to perform common operations
-
-## Overview of lesson
-
-When doing XYZ...
 
 ## `NumPy` Library
 
@@ -95,14 +91,13 @@ print(result_list)
 
 Instead of adding two lists together element-wise, Python concatenates them (in order to concatenate arrays in `NumPy`, you would use the `np.concatenate()` function).
 
-Additionally, if we were to investigate the `dtype()` of the `NumPy` array, we would find that it is a specific data type (e.g., `int64` or `float64`). So, unlike lists which can contain different data types, the elements in `NumPy` arrays are all the same data type.
+Attributes can be thought of as the characteristics or properties of a Python object. One attribute of interest could be the data type on a `NumPy` array. If we were to investigate the `dtype` attribute of the `NumPy` array, we would find that it is a specific data type (e.g., `int64` or `float64`).  So, unlike lists which can contain different data types, the elements in `NumPy` arrays are all the same data type.
 
 ```{python}
 #| label: check_dtype
 # Check the data type attribute of the NumPy array
-arr.dtype
+print(arr.dtype)
 ```
-
 
 ### N-dimensional Arrays
 
@@ -221,10 +216,16 @@ print(filtered_arr)
 ``` 
 
 :::{.callout-tip}
-# [**Exercise 1**](08_lesson-Answer_key.qmd#exercise-1)
-1. A question to evaluate Learning Objective 1
-2. A followup question to question #1
-3. ...
+# [**Exercise 1**](08_numpy_arrays-Answer_key.qmd#exercise-1)
+1. Create a NumPy array holding the values `1`, `14`, `22`, `47`, `58` and `67` and assign it to `exercise_array`
+
+2. Retrieve the second, third and fourth elements from `exercise_array`
+
+3. Retrieve the values less than 25 from `exercise_array`
+
+4. Reshape `exercise_array` into a matrix have three rows with two columns each and assign it to `exercise_matrix`.
+
+5. Retrieve the value in the third row, second column of `exercise_matrix`
 :::
 
 ## Useful `NumPy` Functions
@@ -251,22 +252,16 @@ print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
 
 NumPy has other functions for performing mathematical operations on arrays, such as `numpy.sum()`, `numpy.prod()`, `numpy.cumsum()`, `numpy.cumprod()`, `numpy.square()`, `numpy.sqrt()`, `numpy.max()`, `numpy.min()`. All these functions allow you to perform operations across the entire array or along specific axes.
 
-### Array manipulation
+### Summarizing arrays
 
 Arrays come with built in methods to see the general information about the array.
 
 :::{.callout-tip}
-# [**Exercise 2**](08_lesson-Answer_key.qmd#exercise-2)
+# [**Exercise 2**](08_numpy_arrays-Answer_key.qmd#exercise-2)
 1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
       - `numpy.shape()`
       - `numpy.ndim()`
       - `numpy.size()`
-      - `numpy.dtype()`
-
-- `numpy.shape()`: This function returns the dimensions of the array as a tuple. For example, `numpy.shape` on a 2 x 3 2-dimensional array would return `(2, 3)`.
-- `numpy.ndim()`: This function returns the number of dimensions of the array. 
-- `numpy.size()`: This function returns the total number of elements in the array. For example, `numby.shape` on a 3 x 4 2-dimensional array would return `12` (3 rows x 4 columns = 12 elements).
-- `numpy.dtype()`: This function returns the data type of the elements in the array.
 
 :::
 
@@ -279,6 +274,7 @@ Within `NumPy`, we can also generate random numbers which can be helpful for ran
 #| label: random_array
 # Generate a 1-dimensional array of 10 random numbers between 0 and 1
 random_array = np.random.rand(10)
+
 # Print the random array
 print(random_array)
 ```
@@ -289,6 +285,7 @@ Similarly, we can also create a random array from a specific distribution. For e
 #| label: random_normal
 # Generate a 1-dimensional array of 10 random numbers from a normal distribution with mean 0 and standard deviation 1
 random_array = np.random.normal(loc=0, scale=1, size=10)  
+
 # Print the random array
 print(random_array)
 ```

@@ -1,0 +1,95 @@
+---
+title: "NumPy Arrays - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-15"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{python}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+import numpy
+
+matrix_arange = numpy.arange(10).reshape((2, 5))
+```
+
+# Exercise 1
+
+1. Create a NumPy array holding the values `1`, `14`, `22`, `47`, `58` and `67` and assign it to `exercise_array`
+
+```{python}
+#| label: create_numpy_array
+# Create exercise_array
+exercise_array = numpy.array([1, 14, 22, 47, 58, 67])
+```
+
+2. Retrieve the second, third and fourth elements from `exercise_array`
+
+```{python}
+#| label: slice_array
+# Retrieve second, third and fourth elements from exercise_array
+print(exercise_array[1:4])
+```
+
+3. Retrieve the values less than 25 from `exercise_array`
+
+```{python}
+#| label: subset_array
+# Subset array to the values less than 25
+print(exercise_array[exercise_array < 25])
+```
+
+4. Reshape `exercise_array` into a matrix have three rows with two columns each and assign it to `exercise_matrix`.
+
+```{python}
+#| label: reshape_matrix
+# Reshape exercise_array to be a matrix of 3 rows and 2 columns
+exercise_matrix = exercise_array.reshape(3, 2)
+
+print(exercise_matrix)
+```
+
+5. Retrieve the value in the third row, second column of `exercise_matrix`
+
+```{python}
+#| label: subset_matrix
+# Retrieve the value in the third row, second column of exercise_matrix
+print(exercise_matrix[2,1])
+```
+
+# Exercise 2
+
+1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
+      - `numpy.shape()`
+      - `numpy.ndim()`
+      - `numpy.size()`
+
+- `numpy.shape()`: This function returns the dimensions of the array as a tuple. For example, `numpy.shape` on a 2 x 5 2-dimensional array would return `(2, 5)`.
+
+```{python}
+#| label: numpy_shape
+# Retrieve the dimensions of matrix_arange
+numpy.shape(matrix_arange)
+```
+
+- `numpy.ndim()`: This function returns the number of dimensions of the array. 
+
+```{python}
+#| label: numpy_ndim
+# Retrieve number of the dimensions of matrix_arange
+numpy.ndim(matrix_arange)
+```
+
+- `numpy.size()`: This function returns the total number of elements in the array. For example, `numpy.shape` on a 2 x 5 2-dimensional array would return `10` (2 rows x 5 columns = 10 elements).
+
+```{python}
+#| label: numpy_size
+# Retrieve number of elements within matrix_arange
+numpy.size(matrix_arange)
+```
