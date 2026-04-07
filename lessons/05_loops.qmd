@@ -24,7 +24,7 @@ editor_options:
 #| label: load_data
 #| echo: false
 # Load libraries and data
-species = ["human", "mouse", "corn", "yeast"] 
+species = ["ecoli", "human", "corn", "yeast"]
 ```
 
 Approximate time: 90 minutes
@@ -136,7 +136,7 @@ for organism in species:
 
 ### `range()` Function
 
-A common use of `for` loops is to iterate over a sequence of numbers. We can use the `range()` function to generate a sequence of numbers that we can iterate over. The `range()` function takes three arguments: `start`, `stop` and `step`. The `start` argument is the number that the sequence will start from, the `stop` argument is the number that the sequence will stop at (but not include) and the `step` argument is the amount by which the sequence will increment.
+A common use of `for` loops is to iterate over a sequence of numbers. We can use the `range()` function to generate a sequence of numbers that we can iterate over. The `range()` function takes three arguments: `start`, `stop` and `step`. The `start` argument is the number that the sequence will start from, the `stop` argument is the number that the sequence will stop at (but not include) and the `step` argument is the amount by which the sequence will increment. If you do not provide the `step` argument, the default is 1.
 
 For example, if we wanted to iterate over the indices of `species`, we could use the `range()` function as follows:
 
@@ -195,6 +195,7 @@ Sometimes when working with a list, we may like to be able to apply logic to our
 ```
 
 Where:
+
 - `element_transformation` is what you want to happen to the element
 - `for` is initiating a `for` loop
 - `element` is what each element in the `list` will be called
@@ -204,6 +205,7 @@ Let's see an example of this. Let's imagine that I wanted to square the numbers 
 
 ```{python}
 #| label: square_list_comprehension
+# Square all elements in a list
 [x * x for x in [1, 2, 3, 4, 5]]
 ```
 
@@ -213,6 +215,7 @@ Alternatively, we could interrogate if some element of our list meets a conditio
 
 ```{python}
 #| label: filter_list_comprehension
+# Subset a list based on a conditional statement
 [x for x in [1, 2, 3, 4, 5] if x == 2 or x == 4]
 ```
 
@@ -237,7 +240,7 @@ while condition:
     # Update condition
 ```
 
-The important distinction between `while` loops and `for` loops is that we must update our condition within the `while` loop in order to keep iterating properly through our loop. We do not have a built in tangible end to the `while` unlike the `for` loop, where we stop iterating once we make it to the end of the `sequence` supplied in the statement.
+The important distinction between `while` loops and `for` loops is that we must update our condition within the `while` loop in order to keep iterating properly through our loop. We do not have a built in tangible end to the `while` -- unlike the `for` loop, where we stop iterating once we make it to the end of the `sequence` supplied in the statement.
 
 
 ### Creating a `while` Loop
@@ -289,12 +292,12 @@ while i < 5:
 - On even numbers you halve the value
 - On odd numbers you triple the value and add 1. 
 
-Let's create a `while` loop to evaluates the number 17 to see each step in the path that it takes on its way to 1. With each iteration, we want:
+Let's create a `while` loop to evaluates the number 17 to see each step in the path that it takes on its way to 1. With each iteration, we want to:
 
 - Print the current integer being tested
 - If it is an even integer, divide it in half
 - If it is in an odd integer, multiply it by 3 and add 1
-- Exit the `while` loop when it reach 1
+- Exit the `while` loop when it reaches 1
 
 *Hint: You will likely you want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example, 4 mod 2 would return 0 because the remainder of 4 divided by 2 is zero, while 5 mod 2 would returns 1 because the remainder of 5 divided by 2 is 1.*
 
