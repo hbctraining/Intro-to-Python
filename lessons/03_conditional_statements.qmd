@@ -236,6 +236,9 @@ Sometimes you may want to have a "catch-all" block of code that executes when th
 
 ```{python}
 #| label: if_else_example
+# Set the string 'Anja' to the variable called my_name
+my_name = 'Anja'
+
 # Check if my_name matches 'Anja'
 if my_name == 'Anja':
     # If true, print this message
@@ -246,13 +249,15 @@ else:
     print("You are not Anja!")
 ``` 
 
-
 ### `elif` Statements
 
 Somewhat similarly to `else`, `elif` (short for "else if") allows us to check multiple conditions in a sequence. The `elif` block will only be evaluated if the previous `if` or `elif` conditions were `False`. This allows us to check for multiple conditions without nesting multiple `if` statements. For example:
 
 ```{python}
 #| label: elif_example
+# Set the string 'Anja' to the variable called my_name
+my_name = 'Noor'
+
 # Check if my_name matches 'Anja'
 if my_name == 'Anja':
     # If true, print this message
