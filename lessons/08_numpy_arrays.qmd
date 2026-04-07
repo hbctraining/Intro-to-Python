@@ -7,17 +7,13 @@ author:
   - Will Gammerdinger
 date: "2026-03-15"
 categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+  - Python programming
+  - numpy
+  - Arrays
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Matrix
+  - Math
+  - Indexing
 license: "CC-BY-4.0"
 editor_options: 
   markdown: 
@@ -40,9 +36,9 @@ Approximate time: XX minutes
 
 In this lesson, we will:
 
-- Learning Objective 1
-- Learning Objective 2
-- Learning Objective 3
+- Manipulate `NumPy` arrays with indexing and slicing
+- Create arrays/matrices of varying dimensions and shapes
+- Use `NumPy` functions to perform common operations
 
 ## Overview of lesson
 
@@ -255,41 +251,48 @@ print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
 
 NumPy has other functions for performing mathematical operations on arrays, such as `numpy.sum()`, `numpy.prod()`, `numpy.cumsum()`, `numpy.cumprod()`, `numpy.square()`, `numpy.sqrt()`, `numpy.max()`, `numpy.min()`. All these functions allow you to perform operations across the entire array or along specific axes.
 
-### Subsection 2A
+### Array manipulation
 
-Useful `NumPy` functions to get the shape and dimensions of arrays include:
-
-1. `numpy.shape()`: This function returns the dimensions of the array as a tuple. For example, `numpy.shape` on a 2 x 3 2-dimensional array would return `(2, 3)`.
-2. `numpy.ndim()`: This function returns the number of dimensions of the array. 
-3. `numpy.size()`: This function returns the total number of elements in the array. For example, `numby.shape` on a 3 x 4 2-dimensional array would return `12` (3 rows x 4 columns = 12 elements).
-4. `numpy.dtype()`: This function returns the data type of the elements in the array.
-
-Other useful `NumPy` functions to change the shape of an array include:
-
-1. `numpy.T()`: This function transposes the array by swapping its rows and columns along with its associated data. For example, a 1 x 3 array like `[[1, 2, 3]]` would be transposed to a 3 x 1 array `[[1], [2], [3]]`.
-2. `numpy.newaxis()`: This function allows you to add a new axis to an array, transforming a 1D array into a 2D array or a 2D array into a 3D array. For example, `numpy.newaxis()` can convert a 1D array with three columns into a 2D array with one row and three columns.
-
-### Subsection 2B
+Arrays come with built in methods to see the general information about the array.
 
 :::{.callout-tip}
 # [**Exercise 2**](08_lesson-Answer_key.qmd#exercise-2)
-1. A question to evaluate Learning Objective 2
-2. A followup question to question #1
-3. ...
+1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
+      - `numpy.shape()`
+      - `numpy.ndim()`
+      - `numpy.size()`
+      - `numpy.dtype()`
+
+- `numpy.shape()`: This function returns the dimensions of the array as a tuple. For example, `numpy.shape` on a 2 x 3 2-dimensional array would return `(2, 3)`.
+- `numpy.ndim()`: This function returns the number of dimensions of the array. 
+- `numpy.size()`: This function returns the total number of elements in the array. For example, `numby.shape` on a 3 x 4 2-dimensional array would return `12` (3 rows x 4 columns = 12 elements).
+- `numpy.dtype()`: This function returns the data type of the elements in the array.
+
 :::
 
-## Topic 3
 
-### Subsection 3A
+### Random
 
-### Subsection 3B
+Within `NumPy`, we can also generate random numbers which can be helpful for random sampling or initializing a non-zero matrix with values. These functions come from the `numpy.random` module. For example, you can generate a random array of numbers between 0 and 1 using the `numpy.random.rand()` function:
 
-:::{.callout-tip}
-# [**Exercise 3**](08_lesson-Answer_key.qmd#exercise-3)
-1. A question to evaluate Learning Objective 3
-2. A followup question to question #1
-3. ...
-:::
+```{python}
+#| label: random_array
+# Generate a 1-dimensional array of 10 random numbers between 0 and 1
+random_array = np.random.rand(10)
+# Print the random array
+print(random_array)
+```
+
+Similarly, we can also create a random array from a specific distribution. For example, you can generate a random array of numbers from a normal distribution using the `numpy.random.normal()` function:
+
+```{python}
+#| label: random_normal
+# Generate a 1-dimensional array of 10 random numbers from a normal distribution with mean 0 and standard deviation 1
+random_array = np.random.normal(loc=0, scale=1, size=10)  
+# Print the random array
+print(random_array)
+```
+
 
 ***
 
