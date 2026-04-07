@@ -7,17 +7,13 @@ author:
   - Will Gammerdinger
 date: "2026-03-14"
 categories: 
-  - category_1
-  - category_2
-  - category_3
-  - category_4
+  - Python programming
+  - Machine learning
+  - Random forests
 keywords:
-  - keyword_1
-  - keyword_2
-  - keyword_3
-  - keyword_4
-  - keyword_5
-  - keyword_6
+  - Spatial transcriptomics
+  - Decision trees
+  - Model evaluation
 license: "CC-BY-4.0"
 editor_options: 
   markdown: 
@@ -40,20 +36,40 @@ Approximate time: XX minutes
 
 In this lesson, we will:
 
-- Learning Objective 1
-- Learning Objective 2
-- Learning Objective 3
+- Load a spatial transcriptomics dataset of the human cortex
+- Train a random forest classifier to predict cortical layer labels based on spatial location and gene expression
+- Evaluate the performance of the random forest classifier
 
 ## Overview of lesson
 
 When doing XYZ...
 
+## Machine learning
+
+Machine learning is a subfield of artificial intelligence that focuses on training models to learn patterns from data and make predictions without a human explicitly programming the rules. There are many different types of machine learning algorithms, but they all share the same general steps of:
+
+1. Preparing the training and test datasets
+2. Training the model on the training data
+3. Evaluating the model's performance on the test data
+4. Using the model to make predictions on new data
+
+These algorithms can be used for a wide range of applications, including image recognition, natural language processing, and predictive modeling.
+
 ## Cortical layer dataset
+
+To provide a real-world example of how to use machine learning in research, we will be using a synthetic [Visium HD](https://www.10xgenomics.com/platforms/visium/product-family) spatial transcriptomics dataset. In this experiment, you take a piece of tissue and lay it on a grid. Then, each spot is genomically sequenced such that you know **both the spatial location and gene expression** of each spot. 
+
+::: {#fig-visium_hd .figure}
+![](../img/visium.png){width=300}
+
+Example of a Visium spatial transcriptomics dataset, where each spot has two key pieces of information: spatial location and gene expression. <br>
+_Image source: [10x Genomics](https://www.10xgenomics.com/blog/your-introduction-to-visium-hd-spatial-biology-in-high-definition)_
+::: 
 
 ::: columns
 
-::: {.column width="25%"}
-As an example of a real-world application of machine learning, we will be using a dataset that comes from spatial locations associated with different cortical layers in the human brain. These layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer. Each of these layers has a unique spatial location.
+::: column
+The human cortex is a great use case for this technology because the brain is divvied into layers 1-6 and a white matter layer. A good analogy would be to think of them as onion layers, where the layers are stacked right on top of each other spatially (x, y coordinates). There are relatively clear boundaries between each layer.
 :::
 
 ::: column
@@ -64,18 +80,15 @@ Spatial locations of the cortical layers in the human brain. <br>
 _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
 :::
 :::
+
 :::
 
-Based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full), we have generated a synthetic dataset that contains the x and y coordinates of cells in the cortex with cortical layer labels. Additionally, we have included the log-normalized expression values of known marker genes for each cortical layer. 
+**We will be using this coritcal dataset with labelled cortical layers to train a random forest classifier to predict the cortical layer labels of cells.**
 
-::: {#fig-cortical_marker_genes .figure}
-![](../img/paper_cortical_markers.png){width=550}
 
-Example of the spatial expression of known marker genes for each cortical layer. <br>
-_Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
-:::
+### Cortical information
 
-**We will be using this synthetic dataset to train a random forest classifier to predict the cortical layer labels based on the spatial location and gene expression of each cell.**
+We have created a made-up dataset (as the data has not been published yet) based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full). Where layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer. Each of these layers has a unique spatial location.
 
 The dataset contains spatial coordinates of cells in the cortex, as well as the cortical layer that each cell belongs to.
 
@@ -97,10 +110,10 @@ df_cortical.head()
 
 We have the following columns in this dataset:
 
-- `barcode`: A unique identifier for each cell
+- `barcode`: A unique identifier for each spot in the dataset
 - `x`: The x coordinate of the cell's spatial location
 - `y`: The y coordinate of the cell's spatial location
-- `layer`: The cortical layer that the cell belongs to (L1, L2, L3, L4, L5, L6, WM1, WM2)
+- `layer`: The cortical layer that the cell belongs to (L1, L2, L3, L4, L5, L6, WM)
 
 As this is a spatial dataset, we can visualize where on the tissue each cell is located by plotting the x and y coordinates of each cell and coloring the points by the cortical layer that they belong to:
 
@@ -121,6 +134,16 @@ plt.ylabel("y coordinate")
 plt.legend(title="Cortical Layer")
 plt.show()
 ```
+
+However, just using the x and y coordinates of each spot does not adequately represent the complexity of the data. We also have the expression of various genes for each spot as well. Lucky for us, the different cortical layers have known genes that are highly expressed in distinct layers. This is an additional pieces of information that we can use to predict
+
+
+::: {#fig-cortical_marker_genes .figure}
+![](../img/paper_cortical_markers.png){width=550}
+
+Example of the spatial expression of known marker genes for each cortical layer. <br>
+_Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
+:::
 
 In the dataframe, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17`, and `MOBP`. These are the log-normalized expression values for those genes in each cell. These genes are known to be highly expressed in specific cortical layers, so they can be used as markers to identify which layer a cell belongs to based on its gene expression profile. Once again we can visualize the expression of these marker genes across the cortex to see how they are distributed across the different layers:
 
@@ -152,6 +175,9 @@ for i, gene in enumerate(genes):
 plt.tight_layout()
 plt.show()
 ```
+
+**We will be using this synthetic dataset to train a random forest classifier to predict the cortical layer labels based on the spatial location and gene expression of each cell.**
+
 
 ## Random forest classifiers
 
