@@ -46,16 +46,6 @@ In this lesson, we will:
 
 Real-life data are oftentimes represented in the forms of tables of data, matrices of gene expression or Excel spreadsheets of patient data. `pandas` DataFrames are Python’s way of processing and representing this tabular data so you can clean, filter and summarize it efficiently. DataFrames enable you to do tasks, such as quickly finding all samples from a particular condition, computing summary statistics or preparing a clean table for plotting. In this lesson, you will practice loading data into DataFrames and performing common operations that mirror how you would explore a dataset in a spreadsheet, but with far more control and reproducibility.
 
-## Downloading Data
-
-First, we will download the datasets we will be working with in this lesson which is a metadata file containing information about a biological dataset. 
-
-You can [download the data folder here](https://www.dropbox.com/scl/fi/yszqm3ri6p4uf5ppuflp1/data.zip?rlkey=c496frt1ioud8rrbo9ea1614p&st=fw7fhif8&dl=1) by:
-
-1. Right-clicking the link and selecting "Save Link As..." to download the file to your computer.
-2. After downloading the file, place it in the `data` folder within the project directory
-3. Unzip the file to extract its contents.
-
 ## `Pandas` Library
 
 The `Pandas` library is a powerful tool for data wrangling and analysis in Python. It provides useful data structures and functions needed to handle tables of data, like Excel spreadsheets. The primary data structures of note in `Pandas` are Series and DataFrames.

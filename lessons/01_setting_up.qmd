@@ -214,7 +214,7 @@ We can see in the File Navigator that we have a new file called `Untitled.ipynb`
 ::: {#fig-Create_intro_python .figure}
 ![](../img/Create_notebook.gif){width=600px}
 
-Creating Jupyter notebook, renaming it and placing it within our `scripts` directory.
+Creating Jupyter notebook and renaming it.
 :::
 
 ## Running Python code
