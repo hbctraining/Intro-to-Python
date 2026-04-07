@@ -65,51 +65,111 @@ Table: Common channels for Python libraries. {#tbl-python_channels}
 | **conda-forge**  | Community conda channel with many packages for science, data and general Python use.<br>`numpy`, `pandas`, etc. |
 | **PyPI**         | Main online index for Python packages, used with `pip` to install and manage libraries.<br>`scipy`, `matplotlib`, etc. |
 
+::: callout-note
+# Installation channels
+If you click on the "Channels" button from the "Environments" tab, you can see the channels that are currently being used to search for packages. You can add additional channels here to search for packages that are not available in the default channels. For example, if you want to search for bioinformatics tools, you can add the `bioconda` channel.
+
+Additionally, you can click on the "Not installed" filter to see a list of packages that are not currently installed in your environment. This can be a useful way to find new packages to explore and install.
+:::
+
 ## Package Installation from the Anaconda Navigator
 
 Now that we have an understanding of what libraries are, we can talk about how to install them. There are many different ways to install packages in Python, but we will focus on two means: installing from the Anaconda Navigator and installing from the command line using `pip` or `conda`.
 
-::: callout-warning
-Make a tabset on how to do this in terminal
+For this workshop, we will use the Anaconda Navigator to install packages. The Anaconda Navigator is a graphical user interface that allows you to manage your Python environments and packages without needing to use the command line.
+
+### Create a new environment
+
+Generally, the recommendation is to avoid installing backages on `base (root)`. So instead we are going to create a new environment. These are like separate "workspaces" where you can install packages on one environment without affecting the other environments. This can be useful for keeping your projects organized and be consistent with package versions across projects.
+
+To begin, let's first create a new environment called `intro_python`. Navigate to the "Environments" tab in the Anaconda Navigator and click on the "Create" button. In the pop-up window, enter `intro_python` as the name of the environment and select Python 3.10 as the version. Then click on the "Create" button to create the environment.
+
+::: {#fig-create_env .fig}
+![](../img/anaconda_create_intro_python.png){width="50%"}
+
+Pop-up window for creating a new environment in Anaconda Navigator, where the name of the environment is set to `intro_python` and the Python version is set to 3.10.
 :::
 
-For this workshop, we will use the Anaconda Navigator to install packages. The Anaconda Navigator is a graphical user interface that allows you to manage your Python environments and packages without needing to use the command line. To install a package from the Anaconda Navigator, you can follow these steps:
+This step may take a few moments to install everything for your new environment. Once it is done, you should see `intro_python` listed in the "Environments" tab.
 
-1. Open the Anaconda Navigator.
-2. Click on the "Environments" tab on the left side of the screen.
-3. Select the environment you want to install the package in. In this case, we will use the `"base (root)"` environment.
-4. Search for the package you want to install in the search bar. For example, we want to install the `numpy` package.
-5. Once you find the package, click on the checkbox next to it to select it for installation.
-6. Click on the "Apply" button to start the installation process. The Anaconda Navigator will handle the installation and will let you know when it is complete
+### Installing `numpy`
 
-::: callout-warning
-My python environment are really filled out so I don't have a screenshot of these steps.
+Within our `intro_python` environment we are going to install the very popular `numpy` library (commonly used for matrix and mathematical operations). 
+
+In the search bar, type `numpy` and press enter. You should see the `numpy` package listed in the search results. There many be several packages that match your search as all potential search matches are listed in alphabetical order. You may have to scroll until you see the `numpy` package. 
+
+Click on the checkbox next to `numpy` to select it for installation, and then click on the "Apply" button to start the installation process. The Anaconda Navigator will handle the installation and will let you know when it is complete.
+
+::: {#fig-install_numpy .fig}
+![](../img/anaconda_install_numpy.png)
+
+Anaconda Navigator window for installing the `numpy` package in the `intro_python` environment.
 :::
 
-::: callout-note
-# Extra information in the environments tab
-If you click on the "Channels" button you can see the channels that are currently being used to search for packages. You can add additional channels here to search for packages that are not available in the default channels. For example, if you want to search for bioinformatics tools, you can add the `bioconda` channel.
+You may get another pop-up window asking you to confirm the installation of `numpy` and any dependencies that it may have. Dependencies are other libraries that `numpy` uses under the hood in order to function properly. Therefore, we want to install these additional packages to have a succesful installation of `numpy`. Click on the "Apply" button to confirm the installation and continue with the process.
 
-Additionally, you can click on the "Not installed" filter to see a list of packages that are not currently installed in your environment. This can be a useful way to find new packages to explore and install.
+::: {#fig-confirm_install_numpy .fig}
+![](../img/anaconda_install_dependency.png){width="50%"}
+
+Pop-up window for confirming the installation of the `numpy` package and dependencies in the `intro_python` environment.
 :::
 
 
 We only need to install a package once on our computer. However, in order to use the package, we need to load the library every time we start a new Python session. You can think of this as **installing a bulb** versus **turning on the light**.
 
-So now we will never have to install `numpy` again for whenever we are using the `base(root)` environment.
+So now we will never have to install `numpy` again for whenever we are using the `intro_python` environment.
 
 
 :::{.callout-tip}
 # **Exercise 1**
 1. Repeat the steps above to install the following package from the Anaconda Navigator:
+    - `jupyter`
     - `pandas`
     - `matplotlib`
     - `seaborn` 
+    - `scikit-learn`
+
+This installation may take quite some time as there are many dependencies that will need to be installed for each of these packages. 
+
+You will know that the installation is complete if you search installed packages and see each of these libraries with a green checkmark next to them.
 :::
 
 ## Importing Libraries
 
-Now that we have installed the libraries we want to use, we need to import them into our Python environment in order to access their functions. To do so, we can use the `import` statement followed by the name of the library. For example, to import the `numpy` library, we would use the following code:
+Now that we have installed the libraries we want to use, we need to import them into our Python environment in order to access their functions. 
+
+### Changing the kernel in Jupyter Lab
+
+First, we will open our Jupyter Lab notebook and make sure that we are using the `intro_python` environment by setting our "kernel" to `intro_python`. Kernels are another way to refer to a Python environment in Jupyter Lab.
+
+Navigate to the "Kernel" tab in the top menu and select "Change Kernel". 
+
+::: {#fig-change_kernel .fig}
+![](../img/anaconda_change_kernel.png){width="50%"}
+
+Jupyter Lab menu option for changing the kernel to `intro_python` in order to use a different Python environment.    
+:::
+
+::: {.callout-note collapse="true"}
+# Alternative way to change kernel
+To check that we are using the correct kernel, we can look at the top right corner of our Jupyter Lab notebook. It should say `Python 3 (base)` or something similar. If it does not, you can click on the kernel name and select `intro_python` from the dropdown menu to switch to the correct environment.
+:::
+
+::: callout-warning
+Ideally someone who does not have as many environment as me should make this screenshot
+:::
+
+Then select `intro_python` from the dropdown menu to switch to the correct environment.
+
+::: {#fig-change_kernel .fig}
+![](../img/anaconda_select_kernel.png){width="50%"}
+
+Dropdown menu for changing the kernel to `intro_python` to change the kernel to a different Python environment.
+:::
+
+### Importing `numpy`
+
+Now that we are in the correct environment, we can import the libraries that we want to use. To do so, we use the `import` statement followed by the name of the library. For example, to import the `numpy` library, we would use the following code:
 
 ```{python}
 #| label: import_numpy
@@ -128,7 +188,7 @@ my_array = numpy.array([1, 2, 3, 4, 5])
 print(my_array)
 ```
 
-### Library Aliases
+### Library aliases
 
 It is common practice to import libraries with an alias, which is a shorter name that we can use to refer to the library. This can make our code more concise and easier to read. We can import a library with an alias, by using the `as` keyword followed by the alias we want to use. For example, it is common to import the `numpy` library with the alias `np`. We can do the same with the following code:
 
@@ -179,6 +239,19 @@ import seaborn as sns
 ```
 
 :::
+
+### Import a submodule
+
+Some libraries are large and have many functions that are organized into submodules. For example, the `sci-kitlearn` library has many functions that are organized into submodules such as `sklearn.ensemble` and `sklearn.cluster`. If we want to use a function from a specific submodule, we can import that function directly from the library. For example, if we want to use the `RandomForestClassifier` function from the `sklearn.ensemble` submodule, we can import it with the following code:
+
+```{python}
+#| label: import_random_forest
+# Import the RandomForestClassifier function from the sklearn.ensemble submodule
+from sklearn.ensemble import RandomForestClassifier
+```
+
+This way we do not have to import the entire `sklearn` library and can just import the specific function that we need.
+
 
 ***
 
