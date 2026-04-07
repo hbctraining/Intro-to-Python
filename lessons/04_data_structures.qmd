@@ -112,7 +112,7 @@ print(len(species))
 
 ### Adding Elements to a List
 
-If we find a new genome and we want to add its length to our list of genome lengths. We can use the `append()` function to add an element to the end of the list. The `append()` function takes a single argument, which is the element we want to add to the list. 
+If we find a new genome and we want to add its length to our list of genome lengths, we can use the `append()` function to add an element to the end of the list. The `append()` function takes a single argument, which is the element we want to add to the list. 
 
 For example, if we wanted to add the length of the yeast genome, which is 12,000 kb, to our list of genome lengths, we would use the following code:
 
@@ -263,16 +263,16 @@ Earlier, we talked about strings as a data type that is used to represent text. 
 For example, if we have a string `s = "hello"`, we can access the first character with `s[0]`, which would give us `h`. 
 
 ```{python}
-#| label: string_slicing_example
-# Create a slice to get the first three characters of a string
+#| label: string_index_example
+# Use an index to get the first character of a string
 s = "hello"
-s[0:3]
+s[0]
 ```
 
 We can also slice the string to get a subset of the characters. For example, `s[1:4]` would give us `ell`.
 
 ```{python}
-#| label: string_slicing_example_2
+#| label: string_slicing_example
 # Create a slice to get characters from index 1 to index 3
 s[1:4]
 ```
@@ -280,7 +280,7 @@ s[1:4]
 
 ## Dictionaries
 
-Dictionaries are another data structure that are similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary is unique and must be unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. 
+Dictionaries are another data structure that are similar to a list. However, instead of being an ordered collection of elements, a dictionary is a collection of **key:value pairs**. Each key in a dictionary must be unique and maps to a value. This means instead of accessing elements by their integer index, we access values in a dictionary by their keys. 
 
 So let us begin by creating a dictionary that contains the species names as keys and their corresponding genome lengths as values. This can be a more intuitive way to organize our data, as in this case we can access the genome length for a specific species by using the species name as the key instead of using the index.
 
