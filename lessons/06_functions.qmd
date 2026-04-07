@@ -89,7 +89,7 @@ total = sum(numbers)
 print(total)
 ```
 
-Another example is the `round()` function which rounds a number to a specified number of decimal places:
+Another example is the `round()` function, which rounds a number to a specified number of decimal places:
 
 ```{python}
 #| label: round_example
@@ -103,7 +103,7 @@ rounded_num = round(num)
 print(rounded_num)
 ```
 
-The output we receive is `3`, which is num rounded to the single digit, this is the default behavior of the `round()` function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.
+The output we receive is `3`, which is num rounded to the single digit; this is the default behavior of the `round()` function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.
 
 ### Seeking Help on Arguments for Functions
 
@@ -203,6 +203,7 @@ Now, we can use this function like any other base Python functions. We first typ
 
 ```{python}
 #| label: function_usage
+# Run the square_it function on the number 5
 square_it(5)
 ```
 

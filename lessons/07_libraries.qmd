@@ -85,19 +85,19 @@ For this workshop, we will use the Anaconda Navigator to install packages. The A
 
 Generally, the recommendation is to avoid installing backages on `base (root)`. So instead we are going to create a new environment. These are like separate "workspaces" where you can install packages on one environment without affecting the other environments. This can be useful for keeping your projects organized and be consistent with package versions across projects.
 
-To begin, let's first create a new environment called `intro_python`. Navigate to the "Environments" tab in the Anaconda Navigator and click on the "Create" button. In the pop-up window, enter `intro_python` as the name of the environment and select Python 3.10.12 as the version. Then click on the "Create" button to create the environment.
+To begin, let's first create a new environment called `intro_python`. Navigate to the "Environments" tab in the Anaconda Navigator and click on the "Create" button. In the pop-up window, enter `intro_python` as the name of the environment and select Python 3.10.20 as the version. Then click on the "Create" button to create the environment.
 
 ::: {#fig-create_env .fig}
 ![](../img/anaconda_create_intro_python.png){width="50%"}
 
-Pop-up window for creating a new environment in Anaconda Navigator, where the name of the environment is set to `intro_python` and the Python version is set to 3.10.
+Pop-up window for creating a new environment in Anaconda Navigator, where the name of the environment is set to `intro_python` and the Python version is set to 3.10.20.
 :::
 
 This step may take a few moments to install everything for your new environment. Once it is done, you should see `intro_python` listed in the "Environments" tab.
 
 ### Installing `numpy`
 
-Within our `intro_python` environment we are going to install the very popular `numpy` library (commonly used for matrix and mathematical operations). 
+Within our `intro_python` environment, we are going to install the very popular `numpy` library (commonly used for matrix and mathematical operations). 
 
 First, change the dropdown menu to either "All" or "Not installed" instead of "Installed". Next, in the search bar, type `numpy` and press enter. You should see the `numpy` package listed in the search results. There many be several packages that match your search as all potential search matches are listed in alphabetical order. You may have to scroll until you see the `numpy` package. 
 
@@ -125,12 +125,12 @@ So now we will never have to install `numpy` again for whenever we are using the
 
 :::{.callout-tip}
 # **Exercise 1**
-1. Repeat the steps above to install the following package from the Anaconda Navigator:
+1. Repeat the steps above to install the following packages from the Anaconda Navigator:
     - `jupyter`
     - `pandas`
-    - `matplotlib`
-    - `seaborn` 
+    - `matplotlib` 
     - `scikit-learn`
+    - `seaborn`
 
 This installation may take quite some time as there are many dependencies that will need to be installed for each of these packages. 
 
@@ -193,7 +193,7 @@ It is common practice to import libraries with an alias, which is a shorter name
 
 ```{python}
 #| label: import_numpy_alias
-# Import numpy with the alias, np
+# Import numpy with the alias np
 import numpy as np
 ``` 
 
@@ -212,7 +212,7 @@ It does not really matter what you set this alias to be as long as it does not c
 
 ```{python}
 #| label: numpy_array_meow_math
-#Import numpy using the alias, meow_math
+# Import numpy using the alias, meow_math
 import numpy as meow_math
 
 # Create a numpy array with the meow_math alias 
@@ -226,7 +226,7 @@ However, it is good practice to use the commonly accepted aliases for libraries.
 
 :::{.callout-tip}
 # **Exercise 2**
-1. To ensure that you have successfully installed the libraries from the previous exercise, try running the import commands :
+1. To ensure that you have successfully installed the libraries from the previous exercise, try running the import commands:
 
 ```{python}
 #| label: import_libraries

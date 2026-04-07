@@ -36,7 +36,7 @@ x != 67
 # Check if x is NOT equal to 67
 if x != 67:
     # If true, then print out 'x is NOT 67'
-    print('x is NOT 67')
+    print('Your number is NOT 67')
 ```
 
 # Exercise 2
@@ -73,7 +73,7 @@ if "o" in my_name:
 
 2. We can see that there are two "o"s in Noor. So, one might expect there to be two "I have found an 'o'." statements, but we only see one. Why is this?
 
-This happens because Python is looking to evaluate whether it finds an "o" within my_name, "Noor". Once it finds the "o", it evaluates the conditional code block and exits the `if` statement. It does not continue to evaluate each position in "Noor". Since the condition is "Is there an "o" in "Noor?" and once it reaches the first "o", that resolves as `True`. There is no idea of "double `True`".
+This happens because Python is looking to evaluate whether it finds an "o" within my_name, "Noor". Once it finds the "o", it evaluates the conditional code block and exits the `if` statement. It does not continue to evaluate each position in "Noor". Since the condition is "Is there an "o" in "Noor?", once it reaches the first "o", that resolves as `True`. There is no idea of "double `True`".
 
 # Exercise 3
 
