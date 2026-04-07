@@ -19,7 +19,6 @@ license: "CC-BY-4.0"
 editor_options:
   markdown:
     wrap: 72
-jupyter: python3
 ---
 
 ```{r}
@@ -32,7 +31,7 @@ library(reticulate)
 use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
 ```
 
-Approximate time: XX minutes
+Approximate time: 75 minutes
 
 ## Learning Objectives 
 
@@ -41,7 +40,7 @@ In this lesson, we will:
 - Load and inspect data in a `Pandas` DataFrame
 - Subset and index DataFrames in different ways
 - Add new columns to a DataFrame based on existing data
-- Perform useful operations on DataFrames to summarize and manipulate data
+- Perform useful operations on DataFrames to summarize data
 
 ## Overview of lesson
 
