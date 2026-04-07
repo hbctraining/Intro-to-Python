@@ -299,7 +299,7 @@ Let's create a `while` loop to evaluates the number 17 to see each step in the p
 - If it is in an odd integer, multiply it by 3 and add 1
 - Exit the `while` loop when it reaches 1
 
-*Hint: You will likely you want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example, 4 mod 2 would return 0 because the remainder of 4 divided by 2 is zero, while 5 mod 2 would returns 1 because the remainder of 5 divided by 2 is 1.*
+*Hint: You will likely want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example, 4 mod 2 would return 0 because the remainder of 4 divided by 2 is zero, while 5 mod 2 would return 1 because the remainder of 5 divided by 2 is 1.*
 
 :::
 
