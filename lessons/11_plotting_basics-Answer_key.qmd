@@ -32,12 +32,12 @@ new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)
 
 # Exercise 1
 
-1. The current axis label text defaults to what we gave as input to `sns.scatterplot` (i.e the column headers). We can change this by **adding additional layers** called `plt.xlabel()` and `plt.ylabel()` for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled "Age (days)" and the y-axis is labeled "Mean expression".
+1. Add a `plt.ylabel()` layer to the current plot such that the y-axis is labeled "Mean expression".
 
 ```{python}
 #| label: exercise_1
 # Set the theme to "whitegrid"
-sns.set_style("whitegrid")
+sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
@@ -50,12 +50,12 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 
-# Add y-axis label
-plt.ylabel(ylabel = "Mean Expression",
+# Add an plt.ylabel() layers to the current plot such that the y-axis is labeled “Mean expression”.
+plt.ylabel(ylabel = "Mean expression",
            fontsize=20)
 ``` 
 
@@ -64,7 +64,7 @@ plt.ylabel(ylabel = "Mean Expression",
 ```{python}
 #| label: exercise_2
 # Set the theme to "whitegrid"
-sns.set_style("whitegrid")
+sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
@@ -77,16 +77,16 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 
-# Add y-axis label
-plt.ylabel(ylabel = "Mean Expression",
+# Add an plt.ylabel() layers to the current plot such that the y-axis is labeled “Mean expression”.
+plt.ylabel(ylabel = "Mean expression",
            fontsize=20)
 
-# Add title label to plot
-plt.title(label = "Mean expression vs Age (Days)")
+# Use the plt.title() layer to add a plot title of your choice.
+plt.title(label = "Mean expression by age")
 ``` 
 
 3. When you add the arguments `loc="right"` to the `plt.title()` function, what does it change?
@@ -94,7 +94,7 @@ plt.title(label = "Mean expression vs Age (Days)")
 ```{python}
 #| label: exercise_3
 # Set the theme to "whitegrid"
-sns.set_style("whitegrid")
+sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
@@ -107,26 +107,28 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 
-# Add y-axis label
-plt.ylabel(ylabel = "Mean Expression",
+# Add an plt.ylabel() layers to the current plot such that the y-axis is labeled “Mean expression”.
+plt.ylabel(ylabel = "Mean expression",
            fontsize=20)
 
-# Add title label to plot
-plt.title(label = "Mean expression vs Age (Days)",
+# Use the plt.title() layer to add a plot title of your choice.
+# When you add the arguments loc="right" to the plt.title() function, what does it change?
+plt.title(label = "Mean expression by age",
           loc="right")
 ``` 
 
-4. Try adding the layer `plt.legend(loc="center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
+The title of the plot is now right-aligned.
 
+4. Try adding the layer `plt.legend(loc="center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
 
 ```{python}
 #| label: exercise_4
 # Set the theme to "whitegrid"
-sns.set_style("whitegrid")
+sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
@@ -139,16 +141,16 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 
-# Add y-axis label
-plt.ylabel(ylabel = "Mean Expression",
+# Add an plt.ylabel() layers to the current plot such that the y-axis is labeled “Mean expression”.
+plt.ylabel(ylabel = "Mean expression",
            fontsize=20)
 
-# Add title label to plot
-plt.title(label = "Mean expression vs Age (Days)")
+# Use the plt.title() layer to add a plot title of your choice.
+plt.title(label = "Mean expression by age")
 
 # Change legend location
 plt.legend(loc="center right")
