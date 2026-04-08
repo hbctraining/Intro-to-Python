@@ -38,7 +38,7 @@ import pandas as pd
 metadata = pd.read_csv("data/mouse_exp_design.csv")
 ```
 
-Approximate time: XX minutes
+Approximate time: 70 minutes
 
 ## Learning Objectives 
 
