@@ -39,9 +39,9 @@ Approximate time: 40 minutes
 
 In this lesson, we will:
 
-- Explain the concept of layering in plotting and how to build a plot step by step.
-- Create a scatterplot using `MatPlotLib` and customize its aesthetics with `Seaborn`.
-- Apply different themes to a plot and adjust axis labels and titles.
+- Explain the concept of layering in plotting and how to build a plot step by step
+- Create a scatterplot using `MatPlotLib` and customize its aesthetics with `Seaborn`
+- Apply different themes to a plot and adjust axis labels and titles
 
 ## Overview of lesson
 

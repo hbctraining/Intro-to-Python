@@ -11,11 +11,11 @@ toc: false
 
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
-| 10:00 - 10:15 | [Workshop introduction](../slides/workshop_intro_slides.pdf) |  Instructor_name |
-| 10:15 - 10:45 | [Introduction to Python and Jupyter Lab](../lessons/01_setting_up.qmd) | Instructor_name |
+| 10:00 - 10:15 | [Workshop introduction](../slides/workshop_intro_slides.pdf) |  Will |
+| 10:15 - 10:45 | [Introduction to Python and Jupyter Lab](../lessons/01_setting_up.qmd) | Will |
 | 10:45 - 10:50 | Break | |
-| 10:50 - 11:25 | [Variables](../lessons/02_variables.qmd) | Instructor_name |
-| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+| 10:50 - 11:25 | [Variables](../lessons/02_variables.qmd) | Noor |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Will |
 
 ### Before the next class:
 
@@ -24,13 +24,13 @@ I. Please **study the contents** and **work through all the code** within the fo
    1. [Conditional Statements](../lessons/03_conditional_statements.qmd)
       
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
-      Brief description of the lesson.
+      This lesson introduces conditional logic in Python, showing how to use if, elif, else, comparison operators and logical operators to evaluate conditions.
       
-      In this lesson, you will:
-      
-        - Learning Objective 1
-        - Learning Objective 2
-        - Learning Objective 3
+      In this lesson, we will:
+
+        - Create conditional statements using `if`, `elif` and `else`
+        - Use the `in` operator to check for membership in a collection
+        - Use logical operators to test multiple conditions at the same time
       :::
 
 II. **Submit your work**:
@@ -47,10 +47,10 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [Data Structures](../lessons/04_data_structures.qmd) | Instructor_name |
+| 10:30 - 10:55 | [Data Structures](../lessons/04_data_structures.qmd) | Noor |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [Loops](../lessons/05_loops.qmd) | Instructor_name |
-| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+| 11:00 - 11:55 | [Loops](../lessons/05_loops.qmd) | Will |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Will |
 
 ### Before the next class:
 
@@ -59,25 +59,26 @@ I. Please **study the contents** and **work through all the code** within the fo
    1. [Functions](../lessons/06_functions.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
-      Brief description of the lesson.
+      This lesson explains how functions work in Python, from calling built-in functions with arguments to defining your own reusable functions to organize and simplify code.
       
       In this lesson, you will:
       
-        - Learning Objective 1
-        - Learning Objective 2
-        - Learning Objective 3
+        - Describe and utilize functions in Python
+        - Modify default behavior of a function using arguments
+        - Identify Python-specific sources of obtaining more information about functions
+        - Demonstrate how to create user-defined functions in Python
+
       :::
 
    2. [Loading and Installing Libraries](../lessons/07_libraries.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
-      Brief description of the lesson.
+      This lesson introduces Python libraries, showing how to install packages, import them into your environment and explore library functions to extend Python functionality for data analysis.
       
       In this lesson, you will:
       
-        - Learning Objective 1
-        - Learning Objective 2
-        - Learning Objective 3
+        - Explain different ways to install external Python libraries
+        - Demonstrate how to load a library and how to find functions specific to a library
       :::
          
 II. **Submit your work**:
@@ -94,10 +95,10 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 10:55 | [`NumPy` Arrays](../lessons/08_numpy_arrays.qmd) | Instructor_name |
+| 10:30 - 10:55 | [`NumPy` Arrays](../lessons/08_numpy_arrays.qmd) | Will |
 | 10:55 - 11:00 | Break | |
-| 11:00 - 11:55 | [`Pandas` DataFrames](../lessons/09_pandas_dataframes.qmd) | Instructor_name |
-| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Instructor_name |
+| 11:00 - 11:55 | [`Pandas` DataFrames](../lessons/09_pandas_dataframes.qmd) | Noor |
+| 11:55 - 12:00 | Overview of self-learning materials and homework submission | Will |
 
 ### Before the next class:
 
@@ -106,37 +107,38 @@ I. Please **study the contents** and **work through all the code** within the fo
    1. [Data Wrangling](../lessons/10_data_wrangling.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
-      Brief description of the lesson.
+      This lesson focuses on wrangling linked datasets with `pandas`, including filtering, reordering, saving cleaned tables and merging DataFrames to prepare real data for analysis.
       
       In this lesson, you will:
       
-        - Learning Objective 1
-        - Learning Objective 2
-        - Learning Objective 3
+        - Reorder related datasets to ensure that they are in the same order
+        - Extract specific rows from a DataFrame using the `isin` operator
+        - Save a DataFrame as a new CSV file
+        - Use the `merge()` function to combine two DataFrames
       :::
 
    2. [Plotting Basics with `Matplotlib` and `Seaborn`](../lessons/11_plotting_basics.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
-      Brief description of the lesson.
+      This lesson introduces data visualization in Python using `Matplotlib` and `Seaborn`, showing how to build scatterplots, adjust aesthetics and customize labels to create clear figures.
       
       In this lesson, you will:
       
-        - Learning Objective 1
-        - Learning Objective 2
-        - Learning Objective 3
+        - Explain the concept of layering in plotting and how to build a plot step by step
+        - Create a scatterplot using `MatPlotLib` and customize its aesthetics with `Seaborn`
+        - Apply different themes to a plot and adjust axis labels and titles
       :::
 
    3. [Boxplots](../lessons/12_boxplots.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
-      Brief description of the lesson.
+      This lesson shows how to create and customize boxplots with Matplotlib and Seaborn to visualize distributions, identify outliers and adjust colors.
       
       In this lesson, you will:
       
-        - Learning Objective 1
-        - Learning Objective 2
-        - Learning Objective 3
+        - Generate a boxplot
+        - Customize the aesthetics of a boxplot
+        - Find hexadecimal codes for colors and use them to change the colors of a boxplot
       :::
          
 II. **Submit your work**:
@@ -154,15 +156,13 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 11:25 | [Machine Learning](../lessons/13_machine_learning.qmd) | Instructor_name |
+| 10:30 - 11:25 | [Machine Learning](../lessons/13_machine_learning.qmd) | Noor |
 | 11:25 - 11:30 | Break | |
-| 11:30 - 11:45 | Discussion, Q & A | Instructor_name |
-| 11:45 - 12:00 | [Wrap Up](../slides/workshop_wrapup_slides.pdf) | Instructor_name |
+| 11:30 - 11:45 | Discussion, Q & A | All |
+| 11:45 - 12:00 | [Wrap Up](../slides/workshop_wrapup_slides.pdf) | Will |
 
 ***
 
 ## Resources
 
-- [Additional Resource 1](link_to_additonal_resource_1)
-- [Additional Resource 2](link_to_additonal_resource_2)
-- [Additional Resource 3](link_to_additonal_resource_3)
+- [Introduction to Data Analysis in Python](https://ccb-hms.github.io/workbench-python-workshop/index.html)
