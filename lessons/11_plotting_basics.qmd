@@ -60,6 +60,7 @@ First, we will import the `MatPlotLib` and `Pandas` libraries as well as load `n
 ```{python}
 #| label: tbl-load_new_metadata
 #| tbl-cap: DataFrame containing updated metadata for each of our 12 samples.
+# Import libraries
 import matplotlib.pyplot as plt
 import pandas as pd 
 
@@ -86,10 +87,9 @@ So first, we'll create an empty plot of size 8 inches by 6 inches:
 plt.figure(figsize=(8, 6))
 ```
 
-
 ### Adding a Scatterplot Layer
 
-We will once again first initialize the plot with `figure()` and then add the scatterplot layer to the plot with `scatter()`. We need to specify the `x` and `y` values for our scatterplot, which in this case will be `age_in_days` for `x` and `mean_expression` for `y`. 
+We will once again first initialize the plot with `figure()` and then add the scatterplot layer to the plot with `scatter()`. We need to specify where we are pulling the data to plot from, which in this case will be the `new_metadata` DataFrame, and the `x` and `y` values for our scatterplot, which in this case will be `age_in_days` for `x` and `mean_expression` for `y`. 
 
 The `plt.figure` and `plt.scatter` calls are connected because `MatPlotLib` commands build upon each other. The `plt.figure` command initializes the plot and sets the size, while the `plt.scatter` command adds the scatterplot layer to the existing plot. When we call these functions sequentially, we are building our plot layer by layer.
 
@@ -100,9 +100,26 @@ The `plt.figure` and `plt.scatter` calls are connected because `MatPlotLib` comm
 plt.figure(figsize=(8, 6))
 
 # Add a scatterplot layer to the plot
+plt.scatter(data = new_metadata,
+            x="age_in_days", 
+            y="mean_expression")
+```
+
+::: callout-note
+# Alternative 
+Instead of providing the `data` argument, you could specify the `x` and `y` axes as the given columns from `new_metadata`.
+
+```{python}
+#| label: fig-add_scatterplot_layer_alt
+#| eval: false
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot
 plt.scatter(x=new_metadata["age_in_days"], 
             y=new_metadata["mean_expression"])
 ```
+:::
 
 Now that we have the required fundamentals, let’s add some extra details like color to the plot. We can color the points on the plot based on the genotype column with the `c` argument. 
 
@@ -126,12 +143,14 @@ plt.scatter(data = new_metadata,
 
 To work around the error from `plt.scatter`, we will instead use the `seaborn` package's `scatterplot()` function and use the `hue` argument instead of `c`, which allows us to specify a categorical variable in order to color the plot points. The documentation for `seaborn.scatterplot()` is quite extensive and can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.scatterplot.html).
 
-You will notice that there are a default set of colors that we can use so we do not have to specify a color. The legend has also been automatically plotted for us!
+You will notice that there are a default set of colors that we can use, so we do not have to specify a color. The legend and axis labels have also been automatically plotted for us!
 
 ```{python}
 #| label: fig-add_color_scatterplot_layer
 #| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype.
+# Import library
 import seaborn as sns
+
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
 
@@ -165,7 +184,7 @@ The data points are quite small. We can also adjust the `s` (size) of the data p
 
 ```{python}
 #| label: fig-add_size_scatterplot_layer
-#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size.
+#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype, with adjusted size.
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
 
@@ -178,14 +197,13 @@ sns.scatterplot(data = new_metadata,
                 s=50)
 ```
 
-
 ### Themes
 
 There are a variety of themes that you can apply to your plot to change the background and gridlines. The default theme is `darkgrid`, but you can change it with the `set_style()` function from `seaborn`. 
 
 ```{python}
 #| label: fig-change_theme
-#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size and a different theme.
+#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype, with adjusted size and a different theme.
 
 # Set the theme to "whitegrid"
 sns.set_style(style = "whitegrid")
@@ -207,16 +225,15 @@ sns.scatterplot(data = new_metadata,
 You can also customize themes further with `rc_params` when you want to adjust specific elements of the theme. The documentation for `set_style()` can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.set_style.html).
 :::
 
-
 ### Changing Labels
 
-The axis labels and tick labels don't get any larger by changing themes? We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, `sns.set_style()`, any features we change will override what is set by the `sns.set_style()` layer.
+The axis labels and tick labels don't get any larger by changing themes. We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, `sns.set_style()`, any features we change will override what is set by the `sns.set_style()` layer.
 
 Let’s increase the size of the x-axis titles to be 20.
 
 ```{python}
 #| label: fig-change_axis_label_size
-#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size, a different theme and larger x-axis title.
+#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype, with adjusted size, a different theme and larger x-axis title.
 # Set the theme to "whitegrid"
 sns.set_style(style = "whitegrid")
 
@@ -231,7 +248,7 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 ``` 
@@ -257,7 +274,7 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 
@@ -285,7 +302,7 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis label
+# Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize=20)
 
@@ -294,7 +311,6 @@ plt.savefig(fname = "figures/scatterplot_dpi.png",
             format = "png",
             dpi = 300)
 ``` 
-
 
 :::{.callout-tip}
 # [**Exercise 1**](11_plotting_basics-Answer_key.qmd#exercise-1)
