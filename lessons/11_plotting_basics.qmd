@@ -229,7 +229,7 @@ You can also customize themes further with `rc_params` when you want to adjust s
 
 The axis labels and tick labels don't get any larger by changing themes. We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, `sns.set_style()`, any features we change will override what is set by the `sns.set_style()` layer.
 
-Let’s increase the size of the x-axis titles to be 20.
+Let’s increase the size of the x-axis title to be 20.
 
 ```{python}
 #| label: fig-change_axis_label_size
@@ -314,7 +314,7 @@ plt.savefig(fname = "figures/scatterplot_dpi.png",
 
 :::{.callout-tip}
 # [**Exercise 1**](11_plotting_basics-Answer_key.qmd#exercise-1)
-1. Add an `plt.ylabel()` layers to the current plot such that the y-axis is labeled "Mean expression".
+1. Add a `plt.ylabel()` layer to the current plot such that the y-axis is labeled "Mean expression".
 
 2. Use the `plt.title()` layer to add a plot title of your choice. 
 
