@@ -45,7 +45,7 @@ important_genes = ["ENSMUSG00000083700", "ENSMUSG00000080990",
                    "ENSMUSG00000081010", "ENSMUSG00000030970"]
 ```
 
-1. Use the `in` operator to determine if all of these genes are present in the row names of the `rpkm_ordered` data frame.
+1. Use the `isin` operator to determine which row names of the `rpkm_ordered` DataFrame match our genes of interest.
 
 ```{python}
 #| label: exercise_1
@@ -61,13 +61,15 @@ rpkm_ordered.index.isin(important_genes)
 rpkm_ordered[rpkm_ordered.index.isin(important_genes)]
 ``` 
 
-3. **Bonus question:** Extract the rows from `rpkm_ordered` that correspond to these 6 genes using `[]`, but without using the `isin` operator.
+3. **Bonus question:** Extract the rows from `rpkm_ordered` that correspond to these 6 genes using `[]`, but without using the `isin` operator.  Do you notice anything different about the output?
 
 ```{python}
 #| label: exercise_3
 # Extract rows for important genes without using isin operator
 rpkm_ordered.loc[important_genes]
 ```
+
+The rows are now in the order that we specified the genes of interest. When we used `isin` above, we got the rows in the order that they are present in the expression data.
 
 # Exercise 2
 
@@ -84,7 +86,6 @@ animals = pd.read_csv("data/animals.csv")
 animals
 ```
 
-
 2. Check to make sure that `animals` is a dataframe.
 
 ```{python}
@@ -92,7 +93,6 @@ animals
 # Check the class of animals
 type(animals)
 ```
-
 
 3. How many rows are in the `animals` dataframe? How many columns?
 
@@ -129,12 +129,12 @@ animals[animals["color"] == "Tan"]
 animals.loc[animals["color"] == "Tan"]
 ```
 
-6. Return the `speed` column for the rows with animals that are the `color` Tan.
+6. Return the rows with animals that have speed greater than 50 km/h and output only the color column. Keep the output as a DataFrame.
 
 ```{python}
 #| label: speed_column_tan
-# Return the speed column for animals with color Tan
-animals[animals["color"] == "Tan"]["speed"]
+# Return the color column for animals with speed > 50 as a DataFrame
+animals[animals["speed"] > 50]["color"].to_frame()
 ```
 
 7. Change the color of "Grey" to "Gray". 
@@ -156,7 +156,7 @@ animals_list = [animals["speed"], animals["color"]]
 animals_list
 ```
 
-9. Create a dictionary with the appropriate keys (i.e speed and color).
+9. Create a dictionary with the appropriate keys (i.e., speed and color).
 
 ```{python}
 #| label: create_dict
@@ -166,14 +166,13 @@ animals_dict = {"speed": animals["speed"],
 animals_dict
 ```
 
+### The `isin` operator, reordering and matching
 
-### The `in` operator, reordering and matching
-
-10. In the `data` directory, you should have a dataframe called `proj_summary` which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create a dataframe of control samples with the associated batch information**:
+10. In the `data` directory, you should have a table called `project-summary.txt` that contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create DataFrames for the project summary and for the control samples with the associated batch information**:
 
 ```{python}
 #| label: create_ctrl_samples_df
-# Read in proj_summary if needed
+# Read in proj_summary
 proj_summary = pd.read_table("data/project-summary.txt", 
                              header=0, index_col=0)
 
@@ -182,19 +181,20 @@ ctrl_samples = pd.DataFrame(
   data = {"date": ["01/13/2018", "03/15/2018",  "01/13/2018",
                    "09/20/2018","03/15/2018"]}, 
   index = ["sample3", "sample10", "sample8", 
-           "sample4", "sample15"]  
-                           )
+           "sample4", "sample15"])
 ```
 
 ```{python}
 #| label: tbl-proj_summary
 #| tbl-cap: DataFrame of quality metric information for an RNA-seq dataset.
+# View RNA-seq QC information
 proj_summary 
 ```
 
 ```{python}
 #| label: tbl-ctrl_samples
 #| tbl-cap: DataFrame of control samples with associated batch information.
+# View control batch information
 ctrl_samples
 ```
 
@@ -203,7 +203,8 @@ ctrl_samples
 ```{python}
 #| label: shared_ctrl_samples_proj_summary
 # Number of shared samples between ctrl_samples and proj_summary
-len(ctrl_samples.index[ctrl_samples.index.isin(proj_summary.index)])
+print(len(proj_summary.index[proj_summary.index.isin(ctrl_samples.index)]))
+print(len(ctrl_samples.index[ctrl_samples.index.isin(proj_summary.index)]))
 ```
 
 12. Keep only the rows in `proj_summary` which correspond to those in `ctrl_samples`. Do this with the `isin` operator. Save it to a variable called `proj_summary_ctrl`.
