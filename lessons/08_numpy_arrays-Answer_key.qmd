@@ -14,9 +14,9 @@ editor_options:
 #| label: load_libraries_data
 #| echo: false
 # Load libraries and data
-import numpy
+import numpy as np
 
-matrix_arange = numpy.arange(10).reshape((2, 5))
+matrix_arange = numpy.arange(10).reshape(2, 5)
 ```
 
 # Exercise 1
@@ -66,30 +66,30 @@ print(exercise_matrix[2,1])
 # Exercise 2
 
 1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
-      - `numpy.shape()`
-      - `numpy.ndim()`
-      - `numpy.size()`
+      - `np.shape()`
+      - `np.ndim()`
+      - `np.size()`
 
-- `numpy.shape()`: This function returns the dimensions of the array as a tuple. For example, `numpy.shape` on a 2 x 5 2-dimensional array would return `(2, 5)`.
+- `np.shape()`: This function returns the dimensions of the array as a tuple. For example, `np.shape` on a 2 x 5 2-dimensional array would return `(2, 5)`.
 
 ```{python}
 #| label: numpy_shape
 # Retrieve the dimensions of matrix_arange
-numpy.shape(matrix_arange)
+np.shape(matrix_arange)
 ```
 
-- `numpy.ndim()`: This function returns the number of dimensions of the array. 
+- `np.ndim()`: This function returns the number of dimensions of the array. 
 
 ```{python}
 #| label: numpy_ndim
 # Retrieve number of the dimensions of matrix_arange
-numpy.ndim(matrix_arange)
+np.ndim(matrix_arange)
 ```
 
-- `numpy.size()`: This function returns the total number of elements in the array. For example, `numpy.shape` on a 2 x 5 2-dimensional array would return `10` (2 rows x 5 columns = 10 elements).
+- `np.size()`: This function returns the total number of elements in the array. For example, `np.size` on a 2 x 5 2-dimensional array would return `10` (2 rows x 5 columns = 10 elements).
 
 ```{python}
 #| label: numpy_size
 # Retrieve number of elements within matrix_arange
-numpy.size(matrix_arange)
+np.size(matrix_arange)
 ```

@@ -31,7 +31,7 @@ metadata = pd.read_csv("data/mouse_exp_design.csv")
 
 # Exercise 1
 
-1. Use the `tail()` method to inspect out `metadata` DataFrame.
+1. Use the `tail()` method to inspect our `metadata` DataFrame.
 
 ```{python}
 #| label: exercise_1
