@@ -55,7 +55,7 @@ We will start with drawing a simple x-y scatterplot of `mean_expression` versus 
 
 ### Initialize a Plot with `MatPlotLib`
 
-First, we will import the `MatPlotLib` library and load `new_metadata` that we created in the previous lesson:
+First, we will import the `MatPlotLib` and `Pandas` libraries as well as load `new_metadata` that we created in the previous lesson:
 
 ```{python}
 #| label: tbl-load_new_metadata
@@ -142,9 +142,9 @@ sns.scatterplot(data = new_metadata,
                 hue="genotype")
 ```
 
-`seaborn` is a bit more flexible than `MatPlotLib` and allows us to easily add more aesthetics to our plot. Oftentimes you will find yourself using a blend of both packages together to create the plot you want.
+`seaborn` is a bit more flexible than `MatPlotLib` and allows us to easily add more aesthetics to our plot. You will oftentimes find yourself using a blend of both packages together to create the plot you want.
 
-Let’s try to have both `celltype` and `genotype` represented on the plot. We can assign the `celltype` column to the shape argument in `scatterplot()`, so each celltype is plotted with a different shaped data point.
+Let’s try to have both `celltype` and `genotype` represented on the plot. We can assign the `celltype` column to the `style` argument in `scatterplot()`, so each celltype is plotted with a different shaped data point.
 
 ```{python}
 #| label: fig-add_shape_scatterplot_layer
@@ -188,7 +188,7 @@ There are a variety of themes that you can apply to your plot to change the back
 #| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size and a different theme.
 
 # Set the theme to "whitegrid"
-sns.set_style("whitegrid")
+sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
@@ -210,17 +210,15 @@ You can also customize themes further with `rc_params` when you want to adjust s
 
 ### Changing Labels
 
-Do the axis labels or the tick labels get any larger by changing themes?
+The axis labels and tick labels don't get any larger by changing themes? We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, `sns.set_style()`, any features we change will override what is set by the `sns.set_style()` layer.
 
-No, they don’t. We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, theme_bw(), any features we change will override what is set by the `sns.set_style()` layer.
-
-Let’s increase the size of the x-axis titles to be 10.
+Let’s increase the size of the x-axis titles to be 20.
 
 ```{python}
 #| label: fig-change_axis_label_size
-#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size, a different theme, and larger axis labels.
+#| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype with adjusted size, a different theme and larger x-axis title.
 # Set the theme to "whitegrid"
-sns.set_style("whitegrid")
+sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
 plt.figure(figsize=(8, 6))
@@ -233,19 +231,39 @@ sns.scatterplot(data = new_metadata,
                 style="celltype",
                 s=50)
 
-# Change the size of the axis labels
-plt.xlabel("Age in Days", fontsize=20)
+# Change the size of the axis label
+plt.xlabel(xlabel = "Age in Days",
+           fontsize=20)
 ``` 
 
 ## Saving plots
 
-If you wanted to save this plot, you can use the `savefig()` function from `matplotlib` and specify the file name and format you want to save it in. By default this function will save the last plot that was generated, so make sure to call `savefig()` after you have generated the plot you want to save. For example, to save the plot as a PNG file, you can use:
+If you wanted to save this plot, you can use the `savefig()` function from `matplotlib` and specify the file name and format you want to save it in. By default, this function will save the last plot that was generated in a given code block, so make sure to call `savefig()` after you have generated the plot you want to save in the same codeblock. For example, to save the plot as a PNG file, you can use:
 
 ```{python}
 #| label: save_plot
 #| eval: false
+# Set the theme to "whitegrid"
+sns.set_style(style = "whitegrid")
+
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot, coloring points by genotype
+sns.scatterplot(data = new_metadata,
+                x="age_in_days", 
+                y="mean_expression",
+                hue="genotype",
+                style="celltype",
+                s=50)
+
+# Change the size of the axis label
+plt.xlabel(xlabel = "Age in Days",
+           fontsize=20)
+
 # Save the plot as a PNG file
-plt.savefig("figures/scatterplot.png", format = "png")
+plt.savefig(fname = "figures/scatterplot.png",
+            format = "png")
 ``` 
 
 If you wanted to specify the resolution (DPI) or the size of the saved figure, you can also include those arguments in the `savefig()` function. For example, to save the plot as a PNG file with a resolution of 300 DPI we can use:
@@ -253,20 +271,41 @@ If you wanted to specify the resolution (DPI) or the size of the saved figure, y
 ```{python}
 #| label: save_plot_dpi_size
 #| eval: false
+# Set the theme to "whitegrid"
+sns.set_style(style = "whitegrid")
+
+# Initialize a plot with a specific size
+plt.figure(figsize=(8, 6))
+
+# Add a scatterplot layer to the plot, coloring points by genotype
+sns.scatterplot(data = new_metadata,
+                x="age_in_days", 
+                y="mean_expression",
+                hue="genotype",
+                style="celltype",
+                s=50)
+
+# Change the size of the axis label
+plt.xlabel(xlabel = "Age in Days",
+           fontsize=20)
+
 # Save the plot as a PNG file with specific DPI and size
-plt.savefig("figures/scatterplot_dpi.png", format = "png", dpi = 300)
+plt.savefig(fname = "figures/scatterplot_dpi.png",
+            format = "png",
+            dpi = 300)
 ``` 
 
 
 :::{.callout-tip}
 # [**Exercise 1**](11_plotting_basics-Answer_key.qmd#exercise-1)
-1. The current axis label text defaults to our input to `geom_point` (i.e the column headers). We can change this by **adding additional layers** called `xlabel()` and `ylabel()` for the x- and y-axis, respectively. Add these layers to the current plot such that the x-axis is labeled "Age (days)" and the y-axis is labeled "Mean expression".
+1. Add an `plt.ylabel()` layers to the current plot such that the y-axis is labeled "Mean expression".
 
 2. Use the `plt.title()` layer to add a plot title of your choice. 
 
-3. When you add the arguments `loc="center"` to the `plt.title()` function. What does it change?
+3. When you add the arguments `loc="right"` to the `plt.title()` function, what does it change?
 
-4. Try adding the layer `plt.legend(loc="center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
+4. Let's remove the `loc="right"` argument from `plt.title()`. Try adding the layer `plt.legend(loc="center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
+
 :::
 
 ***
