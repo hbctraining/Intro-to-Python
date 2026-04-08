@@ -69,29 +69,15 @@ Let’s start by reading in our gene expression data (RPKM matrix) and then prev
 
 ```{python}
 #| label: load_expression_data
-#| eval: false
-# Import pandas using the alias, pd
-import pandas as pd
-
-# Read in the gene expression data
-rpkm_data = pd.read_csv("../data/counts.rpkm.csv")
-
-# Inspect the gene expression data to make sure it was read in properly
-rpkm_data.head()
-```
-
-```{python}
-#| label: tbl-load_expression_data
-#| echo: false
 #| tbl-cap: RPKM normalized expression data for 12 samples, where rows are genes and columns are samples.
-#Import pandas using the alias, pd
+# Import pandas using the alias, pd
 import pandas as pd
 
 # Read in the gene expression data
 rpkm_data = pd.read_csv("data/counts.rpkm.csv")
 
 # Inspect the gene expression data to make sure it was read in properly
-rpkm_data
+rpkm_data.head()
 ```
 
 Let's inspect the associated metadata file:
@@ -116,7 +102,7 @@ print("Dimensions of metadata:", metadata.shape)
 
 What we want to know is, **are all the samples in our metadata also in our expression data?**
 
-### The `in` Operator
+### The `isin` Operator
 
 Let’s try checking if all our metadata samples are also in our expression data. We will use the `in` operator to check for membership in a collection. 
 
@@ -138,7 +124,7 @@ Now we can check to see if `x` are in `y`:
 x in y
 ```
 
-We will get an error because we are not actually checking if a single element `x` can be found in `y`, but this code actually checks if the entire list of `x` is in `y`. Instead, the `isin` operator will actually check if each individual element of `x` is in `y`:
+We will get an error because we are not actually checking if a single element `x` can be found in `y`, but this code actually checks if the entire list of `x` is an element in `y`. Instead, the `isin` operator will actually check if each individual element of `x` is in `y`:
 
 ```{python}
 #| label: check_membership_isin
@@ -394,7 +380,7 @@ As you work more and more with different datasets, you will likely find yourself
 
 ### Reading in and inspecting data
 
-1. Using the `animals.csv`, read the `.csv` file into your environment and assign it to a variable called `animals`. **Be sure to check that your row names are the different animals.**
+1. Using the `animals.csv` within your `data` directory, read the `.csv` file into your environment and assign it to a variable called `animals`. **Be sure to check that your row names are the different animals.**
 
 2. Check to make sure that `animals` is a DataFrame.
 
@@ -414,9 +400,9 @@ As you work more and more with different datasets, you will likely find yourself
 
 9. Create a dictionary with the appropriate keys (i.e speed and color).
 
-### The `in` operator, reordering and matching
+### The `isin` operator, reordering and matching
 
-10. In your data folder you should have a DataFrame called `proj_summary` which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create a DataFrame of control samples with the associated batch information**:
+10. In the `data` directory you should have a DataFrame called `proj_summary` which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create a DataFrame of control samples with the associated batch information**:
 
 ```{python}
 #| label: create_ctrl_samples_df

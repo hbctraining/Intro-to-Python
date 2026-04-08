@@ -73,7 +73,7 @@ rpkm_ordered.loc[important_genes]
 
 ### Reading in and inspecting data
 
-4. Using the `animals.csv`, read the `.csv` file into your environment and assign it to a variable called `animals`. **Be sure to check that your row names are the different animals.**
+1. Using the `animals.csv` within your `data` directory, read the `.csv` file into your environment and assign it to a variable called `animals`. **Be sure to check that your row names are the different animals.**
 
 ```{python}
 #| label: read_in_animals_csv
@@ -85,7 +85,7 @@ animals
 ```
 
 
-5. Check to make sure that `animals` is a dataframe.
+2. Check to make sure that `animals` is a dataframe.
 
 ```{python}
 #| label: class_animals
@@ -94,7 +94,7 @@ type(animals)
 ```
 
 
-6. How many rows are in the `animals` dataframe? How many columns?
+3. How many rows are in the `animals` dataframe? How many columns?
 
 ```{python}
 #| label: dim_animals
@@ -110,18 +110,17 @@ animals.shape
 
 ### Data wrangling
 
-7. Extract the `speed` value of 40 km/h from the `animals` dataframe.
+4. Extract the `speed` value of 40 km/h from the `animals` dataframe.
 
 ```{python}
 #| label: extract_first_row_first_column
 # Various methods to extract the speed value of 40 km/h
-animals.iloc[0, 0]
-animals[animals["speed"] == 40]
+print(animals.iloc[0, 0])
 animals[animals["speed"] == 40]["speed"]
 animals["speed"].loc[animals["speed"] == 40]
 ```
 
-8. Return the rows with animals that are the `color` Tan.
+5. Return the rows with animals that are the `color` Tan.
 
 ```{python}
 #| label: rows_with_color_tan
@@ -130,7 +129,7 @@ animals[animals["color"] == "Tan"]
 animals.loc[animals["color"] == "Tan"]
 ```
 
-9. Return the `speed` column for the rows with animals that are the `color` Tan.
+6. Return the `speed` column for the rows with animals that are the `color` Tan.
 
 ```{python}
 #| label: speed_column_tan
@@ -138,7 +137,7 @@ animals.loc[animals["color"] == "Tan"]
 animals[animals["color"] == "Tan"]["speed"]
 ```
 
-10. Change the color of "Grey" to "Gray". 
+7. Change the color of "Grey" to "Gray". 
 
 ```{python}
 #| label: change_grey_to_gray
@@ -148,7 +147,7 @@ animals.loc[animals["color"] == "Grey", "color"] = "Gray"
 animals
 ```
 
-11. Create a list called `animals_list` in which the first element contains the speed column of the `animals` dataframe and the second element contains the color column of the `animals` dataframe. 
+8. Create a list called `animals_list` in which the first element contains the speed column of the `animals` dataframe and the second element contains the color column of the `animals` dataframe. 
 
 ```{python}
 #| label: create_list
@@ -157,7 +156,7 @@ animals_list = [animals["speed"], animals["color"]]
 animals_list
 ```
 
-12. Create a dictionary with the appropriate keys (i.e speed and color).
+9. Create a dictionary with the appropriate keys (i.e speed and color).
 
 ```{python}
 #| label: create_dict
@@ -170,7 +169,7 @@ animals_dict
 
 ### The `in` operator, reordering and matching
 
-13. In your data folder you should have a dataframe called `proj_summary` which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create a dataframe of control samples with the associated batch information**:
+10. In the `data` directory, you should have a dataframe called `proj_summary` which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create a dataframe of control samples with the associated batch information**:
 
 ```{python}
 #| label: create_ctrl_samples_df
@@ -199,7 +198,7 @@ proj_summary
 ctrl_samples
 ```
 
-14. How many of the `ctrl_samples` are also in the `proj_summary` dataframe? Use the `isin` operator to compare sample names.
+11. How many of the `ctrl_samples` are also in the `proj_summary` dataframe? Use the `isin` operator to compare sample names.
 
 ```{python}
 #| label: shared_ctrl_samples_proj_summary
@@ -207,8 +206,7 @@ ctrl_samples
 len(ctrl_samples.index[ctrl_samples.index.isin(proj_summary.index)])
 ```
 
-
-15. Keep only the rows in `proj_summary` which correspond to those in `ctrl_samples`. Do this with the `isin` operator. Save it to a variable called `proj_summary_ctrl`.
+12. Keep only the rows in `proj_summary` which correspond to those in `ctrl_samples`. Do this with the `isin` operator. Save it to a variable called `proj_summary_ctrl`.
 
 ```{python}
 #| label: subset_proj_summary_by_ctrl_samples
@@ -220,7 +218,7 @@ proj_summary_ctrl
 ```
 
 
-16. Use `merge()` to add a column called `batch` to the `proj_summary_ctrl` dataframe. Assign this new dataframe back to `proj_summary_ctrl`.
+13. Use `merge()` to add a column called `batch` to the `proj_summary_ctrl` dataframe. Assign this new dataframe back to `proj_summary_ctrl`.
 
 ```{python}
 #| label: add_batch_information
