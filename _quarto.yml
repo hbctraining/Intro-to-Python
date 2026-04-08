@@ -67,7 +67,7 @@ website:
           
       - section: "Day 4:"
         contents:
-          - lessons/13_heatmaps.qmd
+          - lessons/13_machine_learning.qmd
           
 
 format:

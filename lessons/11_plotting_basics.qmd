@@ -33,7 +33,7 @@ library(reticulate)
 use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
 ```
 
-Approximate time: XX minutes
+Approximate time: 40 minutes
 
 ## Learning Objectives 
 
@@ -66,6 +66,8 @@ import pandas as pd
 
 # Load the new metadata data frame that we created in the previous lesson
 new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)  
+
+# Print out new_metadata
 new_metadata
 ```
 
@@ -84,7 +86,7 @@ So first, we'll create an empty plot of size 8 inches by 6 inches:
 #| label: fig-initialize_plot
 #| fig-cap: An empty plot initialized with `MatPlotLib`.
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 ```
 
 ### Adding a Scatterplot Layer
@@ -97,12 +99,12 @@ The `plt.figure` and `plt.scatter` calls are connected because `MatPlotLib` comm
 #| label: fig-add_scatterplot_layer
 #| fig-cap: Scatterplot of age in days vs. mean expression.
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot
 plt.scatter(data = new_metadata,
-            x="age_in_days", 
-            y="mean_expression")
+            x = "age_in_days", 
+            y = "mean_expression")
 ```
 
 ::: callout-note
@@ -113,11 +115,11 @@ Instead of providing the `data` argument, you could specify the `x` and `y` axes
 #| label: fig-add_scatterplot_layer_alt
 #| eval: false
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot
-plt.scatter(x=new_metadata["age_in_days"], 
-            y=new_metadata["mean_expression"])
+plt.scatter(x = new_metadata["age_in_days"], 
+            y = new_metadata["mean_expression"])
 ```
 :::
 
@@ -128,13 +130,13 @@ Now that we have the required fundamentals, let’s add some extra details like 
 #| fig-cap: Initial attempt to color the scatterplot of age in days vs. mean expression by genotype, which results in an error.
 #| error: true
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 plt.scatter(data = new_metadata,
-            x="age_in_days", 
-            y="mean_expression",
-            c="genotype")
+            x = "age_in_days", 
+            y = "mean_expression",
+            c = "genotype")
 ```
 
 **We are getting an error from trying to set the color.** This is because the `c` argument in `scatter()` expects a list of color values, but we are providing it with categorical data from the `genotype` column. 
@@ -152,13 +154,13 @@ You will notice that there are a default set of colors that we can use, so we do
 import seaborn as sns
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 sns.scatterplot(data = new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype")
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype")
 ```
 
 `seaborn` is a bit more flexible than `MatPlotLib` and allows us to easily add more aesthetics to our plot. You will oftentimes find yourself using a blend of both packages together to create the plot you want.
@@ -169,14 +171,14 @@ Let’s try to have both `celltype` and `genotype` represented on the plot. We c
 #| label: fig-add_shape_scatterplot_layer
 #| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype.
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
-sns.scatterplot(data=new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype",
-                style="celltype")
+sns.scatterplot(data = new_metadata,
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype",
+                style = "celltype")
 ```
 
 
@@ -186,15 +188,15 @@ The data points are quite small. We can also adjust the `s` (size) of the data p
 #| label: fig-add_size_scatterplot_layer
 #| fig-cap: Scatterplot of age in days vs. mean expression, colored by genotype and shaped by celltype, with adjusted size.
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 sns.scatterplot(data = new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype",
-                style="celltype",
-                s=50)
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype",
+                style = "celltype",
+                s = 50)
 ```
 
 ### Themes
@@ -209,15 +211,15 @@ There are a variety of themes that you can apply to your plot to change the back
 sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 sns.scatterplot(data = new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype",
-                style="celltype",
-                s=50)
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype",
+                style = "celltype",
+                s = 50)
 ```
 
 ::: callout-note
@@ -238,19 +240,19 @@ Let’s increase the size of the x-axis title to be 20.
 sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 sns.scatterplot(data = new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype",
-                style="celltype",
-                s=50)
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype",
+                style = "celltype",
+                s = 50)
 
 # Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
-           fontsize=20)
+           fontsize = 20)
 ``` 
 
 ## Saving plots
@@ -264,15 +266,15 @@ If you wanted to save this plot, you can use the `savefig()` function from `matp
 sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 sns.scatterplot(data = new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype",
-                style="celltype",
-                s=50)
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype",
+                style = "celltype",
+                s = 50)
 
 # Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
@@ -292,19 +294,19 @@ If you wanted to specify the resolution (DPI) or the size of the saved figure, y
 sns.set_style(style = "whitegrid")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a scatterplot layer to the plot, coloring points by genotype
 sns.scatterplot(data = new_metadata,
-                x="age_in_days", 
-                y="mean_expression",
-                hue="genotype",
-                style="celltype",
-                s=50)
+                x = "age_in_days", 
+                y = "mean_expression",
+                hue = "genotype",
+                style = "celltype",
+                s = 50)
 
 # Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
-           fontsize=20)
+           fontsize = 20)
 
 # Save the plot as a PNG file with specific DPI and size
 plt.savefig(fname = "figures/scatterplot_dpi.png",
@@ -320,7 +322,7 @@ plt.savefig(fname = "figures/scatterplot_dpi.png",
 
 3. When you add the arguments `loc="right"` to the `plt.title()` function, what does it change?
 
-4. Let's remove the `loc="right"` argument from `plt.title()`. Try adding the layer `plt.legend(loc="center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
+4. Let's remove the `loc = "right"` argument from `plt.title()`. Try adding the layer `plt.legend(loc = "center right")` to the end of your code. What does this do? How many layers can be added to a plot, in your estimation?
 
 :::
 

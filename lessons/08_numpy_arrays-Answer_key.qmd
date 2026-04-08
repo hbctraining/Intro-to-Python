@@ -10,13 +10,22 @@ editor_options:
     wrap: 72
 ---
 
-```{python}
+```{r}
 #| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+# Interfacing with R quarto and python futzing
+library(reticulate)
+use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
+```
+
+```{python}
+#| label: load_libraries_data_python
 #| echo: false
 # Load libraries and data
 import numpy as np
 
-matrix_arange = numpy.arange(10).reshape(2, 5)
+matrix_arange = np.arange(10).reshape(2, 5)
 ```
 
 # Exercise 1
@@ -26,7 +35,7 @@ matrix_arange = numpy.arange(10).reshape(2, 5)
 ```{python}
 #| label: create_numpy_array
 # Create exercise_array
-exercise_array = numpy.array([1, 14, 22, 47, 58, 67])
+exercise_array = np.array([1, 14, 22, 47, 58, 67])
 ```
 
 2. Retrieve the second, third and fourth elements from `exercise_array`
