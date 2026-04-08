@@ -91,7 +91,7 @@ print(result_list)
 
 Instead of adding two lists together element-wise, Python concatenates them (in order to concatenate arrays in `NumPy`, you would use the `np.concatenate()` function).
 
-Attributes can be thought of as the characteristics or properties of a Python object. One attribute of interest could be the data type on a `NumPy` array. If we were to investigate the `dtype` attribute of the `NumPy` array, we would find that it is a specific data type (e.g., `int64` or `float64`).  So, unlike lists which can contain different data types, the elements in `NumPy` arrays are all the same data type.
+Attributes can be thought of as the characteristics or properties of a Python object. One attribute of interest could be the data type on a `NumPy` array. If we were to investigate the `dtype` attribute of the `NumPy` array, we would find that it is a specific data type (e.g., `int64` or `float64`).  So, unlike lists, which can contain different data types, the elements in `NumPy` arrays are all the same data type.
 
 ```{python}
 #| label: check_dtype
@@ -158,8 +158,8 @@ The `numpy.reshape()` function is another flexible way to create arrays of varyi
 
 ```{python}
 #| label: arange_function
-# Create an array of integers from 0 to 9, then reshape it into a 2 x 5 matrix
-matrix_arange = np.arange(10).reshape((2, 5))
+# Create an array of integers from 0 to 9, then reshape it into a 2x5 matrix
+matrix_arange = np.arange(10).reshape(2, 5)
 
 # Print the matrix
 print(matrix_arange)
@@ -199,7 +199,6 @@ element = matrix[1, 2]
 # Print the retrieved element
 print(element)
 ```
-
 
 So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to more easily select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and wrangle the data.
 
@@ -259,16 +258,16 @@ Arrays come with built in methods to see the general information about the array
 :::{.callout-tip}
 # [**Exercise 2**](08_numpy_arrays-Answer_key.qmd#exercise-2)
 1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
-      - `numpy.shape()`
-      - `numpy.ndim()`
-      - `numpy.size()`
+      - `np.shape()`
+      - `np.ndim()`
+      - `np.size()`
 
 :::
 
 
-### Random
+### Random numbers
 
-Within `NumPy`, we can also generate random numbers which can be helpful for random sampling or initializing a non-zero matrix with values. These functions come from the `numpy.random` module. For example, you can generate a random array of numbers between 0 and 1 using the `numpy.random.rand()` function:
+Within `NumPy`, we can also generate random numbers, which can be helpful for random sampling or initializing a non-zero matrix with values. These functions come from the `numpy.random` module. For example, you can generate a random array of numbers between 0 and 1 using the `numpy.random.rand()` function:
 
 ```{python}
 #| label: random_array
