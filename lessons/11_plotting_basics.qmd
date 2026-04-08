@@ -1,7 +1,7 @@
 ---
 title: "Plotting Basics with `Matplotlib` and `Seaborn`"
 description: |
-  This lesson introduces data visualization in Python using Matplotlib and Seaborn, showing how to build scatterplots, adjust aesthetics, and customize labels to create clear figures.
+  This lesson introduces data visualization in Python using `Matplotlib` and `Seaborn`, showing how to build scatterplots, adjust aesthetics and customize labels to create clear figures.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -49,7 +49,7 @@ Plots are one of the best ways to communication and summarize results to others.
 
 ## Plotting Basics
 
-`MatPlotLib` is one of the most widely used plotting packages in Python. With it, we can create many different types of plots, including scatterplots, line plots, bar plots, boxplots, and more. The important thing to remember is that you can slowly build upon your plot, adding different layers of information to create a more informative and visually appealing plot. So there is no need to create a perfect plot in one step!
+`MatPlotLib` is one of the most widely used plotting packages in Python. With it, we can create many different types of plots, including scatterplots, line plots, bar plots, boxplots and more. The important thing to remember is that you can slowly build upon your plot, adding different layers of information to create a more informative and visually appealing plot. So there is no need to create a perfect plot in one step!
 
 We will start with drawing a simple x-y scatterplot of `mean_expression` versus `age_in_days` from `new_metadata`.
 
