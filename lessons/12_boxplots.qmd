@@ -1,7 +1,7 @@
 ---
 title: "Boxplots"
 description: |
-  This lesson shows how to create and customize boxplots in Python with Matplotlib and Seaborn to visualize distributions, identify outliers, and adjust colors and styles.
+  This lesson shows how to create and customize boxplots with `Matplotlib` and `Seaborn` to visualize distributions, identify outliers and adjust colors.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -31,13 +31,13 @@ library(reticulate)
 use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
 ```
 
-Approximate time: XX minutes
+Approximate time: 30 minutes
 
 ## Learning Objectives 
 
 In this lesson, we will:
 
-- Generate a boxplot with Python
+- Generate a boxplot
 - Customize the aesthetics of a boxplot
 - Find hexadecimal codes for colors and use them to change the colors of a boxplot
 
@@ -56,13 +56,13 @@ A boxplot provides a graphical view of the distribution of data based on a five 
 
 ::: {.callout-note}
 # Outliers in boxplots
-In this case, **outliers** are determined by using the interquartile range (IQR) (which is Q3 - Q1). Any values that exceeds 1.5 x IQR below Q1 or above Q3 are considered outliers and are represented as points above or below the whiskers. 
+In this case, **outliers** are determined by using the interquartile range (IQR) (which is Q3 - Q1). Any values that exceeds 1.5 times the IQR below Q1 or above Q3 are considered outliers and are represented as points above or below the whiskers. 
 :::
 
 
 :::{.callout-tip}
-# [**Exercise 1**](12_lesson-Answer_key.qmd#exercise-1)
-Generate a boxplot using the data in the `new_metadata` dataframe. Create a ggplot2 code chunk with the following instructions:
+# [**Exercise 1**](12_boxplots-Answer_key.qmd#exercise-1)
+Generate a boxplot using the data in the `new_metadata` dataframe. Create a code chunk with the following instructions:
 
 1. Use the `sns.boxplot()` function to plot the differences in sample means between the Wt and KO genotypes.
 
@@ -72,18 +72,10 @@ Generate a boxplot using the data in the `new_metadata` dataframe. Create a ggpl
 
 4. Add labels for the axes, "Genotype" for the x-axis and "Mean expression" for the y-axis.
 
-5. Make the following `theme()` changes:
-    - Use the `white` theme to make the background white.
+5. Make the following aesthetic changes:
+    - Use the `white` `set_style` to make the background white.
     - Change the size of your axes labels to 15.
     - Change the size of your plot title to 20.
-    - Center the plot title.
-:::
-
-::: callout-warning
-Final plots are embedded here, need to create the answer key.
-
-Also figure captions need to be cleaned up.
-:::
 
 By the end, you should have a plot that looks something like this:
 
@@ -109,30 +101,38 @@ sns.boxplot(data = new_metadata,
             y="mean_expression",
             hue="celltype")
 
-# Add title and axis labels
-plt.title("Genotype differences in average gene expression", fontsize=20, loc="center")
-plt.xlabel("Genotype", fontsize=15)
-plt.ylabel("Mean expression", fontsize=15, loc="center")
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
 ```
+
+:::
 
 ## Changing the Order of Genotypes in the Boxplot
 
-Let’s say you wanted to have the `KO` boxplots displayed first on the left side, and `Wt` on the right. How might you go about doing this?
-
+Let’s say you wanted to have the `KO` boxplots displayed first on the left side, and `Wt` on the right. In the next exercise, we will go through how to do this
 
 :::{.callout-tip}
-# [**Exercise 2**](12_lesson-Answer_key.qmd#exercise-2)
+# [**Exercise 2**](12_boxplots-Answer_key.qmd#exercise-2)
 
-Luckily there is another argument we can use in `sns.boxplot()` called `order` that allows you to specify the order of the categories on the x-axis.
+There is another argument we can use in `sns.boxplot()` called `order` that allows you to specify the order of the categories on the x-axis.
 
-6. Use the `order` argument to change the order of the genotypes on the x-axis such that `KO` is on the left and `Wt` is on the right.
-:::
+1. Use the `order` argument to change the order of the genotypes on the x-axis such that `KO` is on the left and `Wt` is on the right.
 
+The figure should now look like the figure below:
 
 ```{python}
-#| label: fig-boxplot_exercise_2
-#| fig-cap: "Boxplot of mean expression by genotype and celltype, x-axis re-ordered."
+#| label: fig-boxplot_reorder
 #| echo: false
+#| fig-cap: "Boxplot of mean expression by genotype and celltype and with the x-axis re-ordered."
 # Set the theme to "white"
 sns.set_style("white")
 
@@ -146,11 +146,20 @@ sns.boxplot(data = new_metadata,
             hue="celltype",
             order=["KO", "Wt"])
 
-# Add title and axis labels
-plt.title("Genotype differences in average gene expression", fontsize=20, loc="center")
-plt.xlabel("Genotype", fontsize=15)
-plt.ylabel("Mean expression", fontsize=15, loc="center")
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
 ```
+
+:::
 
 ## Changing default colors
 
@@ -159,22 +168,21 @@ You may have noticed that Python has been using the default colors for the point
 You can color the boxplot differently by using specific layers:
 
 :::{.callout-tip}
-# [**Exercise 3**](12_lesson-Answer_key.qmd#exercise-3)
+# [**Exercise 3**](12_boxplots-Answer_key.qmd#exercise-3)
 
-7. Specify the argument `palette=["purple","orange"]` in your `sns.boxplot()` code chunk to change the colors of the boxes.
+1. Specify the argument `palette=["purple","orange"]` in your `sns.boxplot()` code chunk to change the colors of the boxes.
 
-8. Back in your boxplot code, change the colors in the `palette` argument to be your 2 favorite colors. Are there any colors that you tried that did not work?
-:::
+The figure should now look like the figure below:
 
 ```{python}
 #| label: fig-boxplot_exercise_3
-#| fig-cap: "Boxplot of mean expression by genotype and celltype, x-axis re-ordered."
+#| fig-cap: "Boxplot of mean expression by genotype and celltype and with the x-axis re-ordered. We have also changed the colors."
 #| echo: false
 # Set the theme to "white"
-sns.set_style("white")
+sns.set_style(style = "white")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
@@ -184,30 +192,41 @@ sns.boxplot(data = new_metadata,
             order=["KO", "Wt"],
             palette=["purple","orange"])
 
-# Add title and axis labels
-plt.title("Genotype differences in average gene expression", fontsize=20, loc="center")
-plt.xlabel("Genotype", fontsize=15)
-plt.ylabel("Mean expression", fontsize=15, loc="center")
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
 ```
 
+2. Back in your boxplot code, change the colors in the `palette` argument to be your 2 favorite colors. Are there any colors that you tried that did not work? You can try to find some named colors [here](https://matplotlib.org/stable/gallery/color/named_colors.html#css-colors) if you want to explore more colors.
+
+:::
 
 You are not restricted to only using written colors. You have the choice of a lot of colors in Python, and you can use any of them by using their *hexadecimal code*. For example, "#FF0000" would be red and "#00FF00" would be green similarly, "#FFFFFF" would be white and "#000000" would be black. [Here](https://htmlcolorcodes.com/) is a website that you can use to find the hexadecimal code for your favorite colors.
 
 ::: {.callout-tip}
-# [**Exercise 4**](12_lesson-Answer_key.qmd#exercise-4)
+# [**Exercise 4**](12_boxplots-Answer_key.qmd#exercise-4)
 
-9. Find the hexadecimal code for your 2 favorite colors (from the final exercise) and replace the color names with the hexadecimal codes within the ggplot2 code chunk.
-:::
+1. Find the hexadecimal code for your 2 favorite colors (from the previous exercise) and replace the color names with the hexadecimal codes within the ggplot2 code chunk.
+
+The figure could now look like the figure below:
 
 ```{python}
 #| label: fig-boxplot_exercise_4
-#| fig-cap: "Boxplot of mean expression by genotype and celltype, x-axis re-ordered."
+#| fig-cap: "Boxplot of mean expression by genotype and celltype and with the x-axis re-ordered. We have also used hexadecimal to pick out our favorite colors."
 #| echo: false
 # Set the theme to "white"
-sns.set_style("white")
+sns.set_style(style = "white")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
@@ -215,13 +234,22 @@ sns.boxplot(data = new_metadata,
             y="mean_expression",
             hue="celltype",
             order=["KO", "Wt"],
-            palette=["#1f67ea", "#8f8824"])
+            palette=["#6495ED", "#FFA500"])
 
-# Add title and axis labels
-plt.title("Genotype differences in average gene expression", fontsize=20, loc="center")
-plt.xlabel("Genotype", fontsize=15)
-plt.ylabel("Mean expression", fontsize=15, loc="center")
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
 ```
+
+:::
 
 ***
 

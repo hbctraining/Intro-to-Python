@@ -1,0 +1,267 @@
+---
+title: "Boxplots - Answer Key"
+author:
+  - Noor Sohail
+  - Will Gammerdinger
+date: "2026-03-15"
+license: "CC-BY-4.0"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| label: load_libraries_data
+#| echo: false
+# Load libraries and data
+# Interfacing with R quarto and python futzing
+library(reticulate)
+use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
+```
+
+```{python}
+#| label: load_libraries_data_python
+#| echo: false
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)
+```
+
+# Exercise 1
+
+Generate a boxplot using the data in the `new_metadata` dataframe. Create a code chunk with the following instructions:
+
+1. Use the `sns.boxplot()` function to plot the differences in sample means between the Wt and KO genotypes.
+
+```{python}
+#| label: boxplot_create
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression")
+```
+
+2. Use the `hue` aesthetic to look at differences in sample means between the celltypes within each genotype.
+
+```{python}
+#| label: boxplot_hue
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype")
+```
+
+3. Add a title to your plot.
+
+```{python}
+#| label: boxplot_title
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype")
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression")
+```
+
+4. Add labels for the axes, "Genotype" for the x-axis and "Mean expression" for the y-axis.
+
+```{python}
+#| label: boxplot_axes_labels
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype")
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression")
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype")
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression")
+```
+
+5. Make the following aesthetic changes:
+    - Use the `white` `set_style` to make the background white.
+    - Change the size of your axes labels to 15.
+    - Change the size of your plot title to 20.
+
+```{python}
+#| label: boxplot_aesthetic_changes
+# Set the theme to "white"
+sns.set_style(style = "white")
+
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype")
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
+```
+
+# Exercise 2
+
+There is another argument we can use in `sns.boxplot()` called `order` that allows you to specify the order of the categories on the x-axis.
+
+1. Use the `order` argument to change the order of the genotypes on the x-axis such that `KO` is on the left and `Wt` is on the right.
+
+```{python}
+#| label: boxplot_reorder
+# Set the theme to "white"
+sns.set_style(style = "white")
+
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype",
+            order=["KO", "Wt"])
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
+```
+
+# Exercise 3
+
+1. Specify the argument `palette=["purple","orange"]` in your `sns.boxplot()` code chunk to change the colors of the boxes.
+
+```{python}
+#| label: boxplot_colors
+# Set the theme to "white"
+sns.set_style(style = "white")
+
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype",
+            order=["KO", "Wt"],
+            palette=["purple", "orange"])
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
+```
+
+2. Back in your boxplot code, change the colors in the `palette` argument to be your 2 favorite colors. Are there any colors that you tried that did not work? You can try to find some named colors [here](https://matplotlib.org/stable/gallery/color/named_colors.html#css-colors) if you want to explore more colors.
+
+```{python}
+#| label: boxplot_favorite_colors
+# Set the theme to "white"
+sns.set_style(style = "white")
+
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype",
+            order=["KO", "Wt"],
+            palette=["cornflowerblue", "orange"])
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
+```
+
+`cornflowerblue` is a great color in both R and Python and it exists in both. It also pairs well with `orange` which also exists in both.
+
+# Exercise 4
+
+1. Find the hexadecimal code for your 2 favorite colors (from the previous exercise) and replace the color names with the hexadecimal codes within the ggplot2 code chunk.
+
+```{python}
+#| label: boxplot_hexadecimal_color
+# Set the theme to "white"
+sns.set_style(style = "white")
+
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Add a boxplot layer to the plot, coloring boxes by celltype
+sns.boxplot(data = new_metadata,
+            x="genotype", 
+            y="mean_expression",
+            hue="celltype",
+            order=["KO", "Wt"],
+            palette=["#6495ED", "#FFA500"])
+
+# Add plot title
+plt.title(label = "Genotype differences in average gene expression",
+          fontsize = 20)
+
+# Add x-axis label
+plt.xlabel(xlabel = "Genotype",
+           fontsize = 15)
+
+# Add y-axis label
+plt.ylabel(ylabel = "Mean expression", 
+           fontsize = 15)
+```
+
