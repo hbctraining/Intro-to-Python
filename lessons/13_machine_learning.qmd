@@ -69,7 +69,9 @@ _Image source: [10x Genomics](https://www.10xgenomics.com/blog/your-introduction
 ::: columns
 
 ::: column
-The human cortex is a great use case for this technology because the brain is divvied into layers 1-6 and a white matter layer. A good analogy would be to think of them as onion layers, where the layers are stacked right on top of each other spatially (x, y coordinates). There are relatively clear boundaries between each layer.
+The human cortex is a great use case for this technology because the brain is divvied into layers 1-6 and a white matter layer. A good analogy would be to think of them as an onion, where the layers are stacked right on top of each other spatially (x, y coordinates). 
+
+The layers are relatively distinct in their spatial locations but also have genes that are expressed highly in one layer and not the others. This makes it a great use case for machine learning because we can use both the spatial location and gene expression to predict which layer a cell belongs to.
 :::
 
 ::: column
@@ -83,14 +85,12 @@ _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026
 
 :::
 
-**We will be using this coritcal dataset with labelled cortical layers to train a random forest classifier to predict the cortical layer labels of cells.**
+**We will be using a synthetic cortical dataset with labelled cortical layers to train a random forest classifier to predict which layer a cell belongs to.**
 
 
 ### Cortical information
 
-We have created a made-up dataset (as the data has not been published yet) based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full). Where layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer. Each of these layers has a unique spatial location.
-
-The dataset contains spatial coordinates of cells in the cortex, as well as the cortical layer that each cell belongs to.
+We have created a made-up dataset (as the data has not been published yet) based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full). Where layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer. The dataset contains spatial coordinates of cells in the cortex, as well as the cortical layer that each cell belongs to.
 
 ```{python}
 #| label: tbl-load_cortical_data
@@ -104,6 +104,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 
+# Load synthetic cortical dataset
 df_cortical = pd.read_csv("data/synthetic_cortex_data.csv")
 df_cortical.head()
 ```
@@ -135,8 +136,9 @@ plt.legend(title="Cortical Layer")
 plt.show()
 ```
 
-However, just using the x and y coordinates of each spot does not adequately represent the complexity of the data. We also have the expression of various genes for each spot as well. Lucky for us, the different cortical layers have known genes that are highly expressed in distinct layers. This is an additional pieces of information that we can use to predict
+So now we have a better idea of what the cross-section of the cortex looks like and where the different layers are located.
 
+However, just using the x and y coordinates of each spot is not enough. You may have noticed that there apepars to be some mixing of layers near the boundaries. Luckily for us, the different cortical layers have known genes that are highly expressed in distinct layers. We can take a quick look at some canonical markers that are used to identify the different cortical layers:
 
 ::: {#fig-cortical_marker_genes .figure}
 ![](../img/paper_cortical_markers.png){width=550}
@@ -145,7 +147,7 @@ Example of the spatial expression of known marker genes for each cortical layer.
 _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
 :::
 
-In the dataframe, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17`, and `MOBP`. These are the log-normalized expression values for those genes in each cell. These genes are known to be highly expressed in specific cortical layers, so they can be used as markers to identify which layer a cell belongs to based on its gene expression profile. Once again we can visualize the expression of these marker genes across the cortex to see how they are distributed across the different layers:
+In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17`, and `MOBP`. These are the log-normalized expression values for those genes in each cell. Similar to the figure from above, we can visualize the expression of these marker genes in each cell (point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a cell belongs to.
 
 ```{python}
 #| label: fig-cortical_marker_genes
@@ -175,6 +177,14 @@ for i, gene in enumerate(genes):
 plt.tight_layout()
 plt.show()
 ```
+
+::: {.callout-note collapse="true"}
+# Making multiple subplots in a loop
+In the above code, we first initialized a plot with 2 rows and 3 columns - with the goal of plotting each of the 6 genes in our dataset. This creates an **array of plots** which we can then access to generate each of our plots.
+
+So we could have proceeded using the `[]` indexing we have been using for matrices, but that is more complex as we would need to keep track of both rows and columns in the for loop. Instead, we can use the `flatten()` method to convert this **2D array of plots into a list of plots**, which is easier to index in the for loop.
+
+:::
 
 **We will be using this synthetic dataset to train a random forest classifier to predict the cortical layer labels based on the spatial location and gene expression of each cell.**
 
@@ -277,6 +287,7 @@ y_pred = rf.predict(X_test)
 So now we have `y_pred`, but what is this output?
 
 ```{python}
+#| label: type_y_pred
 type(y_pred)
 ``` 
 
@@ -288,6 +299,35 @@ It is a numpy array! So we can access the first few elements to see what the pre
 y_pred[0:5]
 ```
 
+
+::: {.callout-note collapse="true"}
+# Visualizing a _single_ decision tree in the random forest
+
+```{python}
+#| label: visualize_decision_tree
+#| fig-cap: Visualization of a single decision tree from the random forest model.
+#| fig-width: 40
+#| fig-height: 15
+# Source - https://stackoverflow.com/a/61037626
+# Posted by Michael James Kali Galarnyk
+# Retrieved 2026-04-09, License - CC BY-SA 4.0
+from sklearn import tree
+
+fn = df_cortical["cell_barcode"]
+cn = df_cortical["cortical_layer"]
+
+fig, axes = plt.subplots(nrows = 1,
+                         ncols = 1,
+                         figsize = (70, 25),
+                         dpi=300)
+
+tree.plot_tree(rf.estimators_[0],
+               feature_names = fn, 
+               class_names = cn,
+               filled = True)
+```
+
+:::
 
 ## Assessing model performance
 
