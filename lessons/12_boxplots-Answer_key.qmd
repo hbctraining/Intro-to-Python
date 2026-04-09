@@ -101,9 +101,9 @@ plt.ylabel(ylabel = "Mean expression")
 ```
 
 5. Make the following aesthetic changes:
-    - Use the `white` `set_style` to make the background white.
-    - Change the size of your axes labels to 15.
-    - Change the size of your plot title to 20.
+    - Use the `white` `set_style` to make the background white
+    - Change the size of your axes labels to 15
+    - Change the size of your plot title to 20
 
 ```{python}
 #| label: boxplot_aesthetic_changes

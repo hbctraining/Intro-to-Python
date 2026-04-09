@@ -73,9 +73,9 @@ Generate a boxplot using the data in the `new_metadata` dataframe. Create a code
 4. Add labels for the axes, "Genotype" for the x-axis and "Mean expression" for the y-axis.
 
 5. Make the following aesthetic changes:
-    - Use the `white` `set_style` to make the background white.
-    - Change the size of your axes labels to 15.
-    - Change the size of your plot title to 20.
+    - Use the `white` `set_style` to make the background white
+    - Change the size of your axes labels to 15
+    - Change the size of your plot title to 20
 
 By the end, you should have a plot that looks something like this:
 
