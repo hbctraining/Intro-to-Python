@@ -5090,7 +5090,20 @@ display: table !important;
 margin-left: 0;
 margin-right: 0;
 }
-</style>
+
+
+.cell-output-stderr pre,
+.cell-output-stdout pre,
+.cell-output pre,
+pre.error {
+max-height: 300px; 
+overflow-y: auto; 
+overflow-x: auto; 
+white-space: pre; 
+border: 1px solid #ddd;
+padding: 0.5em;
+background-color: #f8f8f8;
+}</style>
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">

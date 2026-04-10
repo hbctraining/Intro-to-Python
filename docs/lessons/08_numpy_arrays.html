@@ -5074,7 +5074,20 @@ display: table !important;
 margin-left: 0;
 margin-right: 0;
 }
-</style>
+
+
+.cell-output-stderr pre,
+.cell-output-stdout pre,
+.cell-output pre,
+pre.error {
+max-height: 300px; 
+overflow-y: auto; 
+overflow-x: auto; 
+white-space: pre; 
+border: 1px solid #ddd;
+padding: 0.5em;
+background-color: #f8f8f8;
+}</style>
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -5490,7 +5503,7 @@ margin-right: 0;
  [0. 0. 0.]]</code></pre>
 </div>
 </div>
-<div id="8f67d54d" class="cell" data-execution_count="8">
+<div id="907c64f4" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 2x4 matrix of ones</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ones_matrix <span class="op">=</span> np.ones((<span class="dv">2</span>, <span class="dv">4</span>))</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -5501,7 +5514,7 @@ margin-right: 0;
  [1. 1. 1. 1.]]</code></pre>
 </div>
 </div>
-<div id="2dbcfc2d" class="cell" data-execution_count="9">
+<div id="058b2e88" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 3x3 identity matrix</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>identity_matrix <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(identity_matrix)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -5651,8 +5664,8 @@ margin-right: 0;
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[0.74051354 0.21535612 0.71327869 0.66290565 0.14076388 0.02212171
- 0.42135661 0.33916751 0.95775864 0.59550051]</code></pre>
+<pre><code>[0.57454849 0.39102917 0.30745718 0.70703186 0.55513743 0.37664958
+ 0.38619836 0.55705742 0.91974188 0.34699792]</code></pre>
 </div>
 </div>
 <p>Similarly, we can also create a random array from a specific distribution. For example, you can generate a random array of numbers from a normal distribution using the <code>numpy.random.normal()</code> function:</p>
@@ -5663,8 +5676,8 @@ margin-right: 0;
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[-0.29968713  0.13484046  1.11329953  0.53997104  0.2306406   0.36525529
-  0.90736426 -1.45845057 -0.24665934 -0.94319555]</code></pre>
+<pre><code>[-1.83189779 -0.22455958  1.27463111  0.75770171  0.44385307 -1.26212696
+  0.18722492  0.52072873  0.00622539  0.27912757]</code></pre>
 </div>
 </div>
 <hr>

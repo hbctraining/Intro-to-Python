@@ -5099,7 +5099,20 @@ display: table !important;
 margin-left: 0;
 margin-right: 0;
 }
-</style>
+
+
+.cell-output-stderr pre,
+.cell-output-stdout pre,
+.cell-output pre,
+pre.error {
+max-height: 300px; 
+overflow-y: auto; 
+overflow-x: auto; 
+white-space: pre; 
+border: 1px solid #ddd;
+padding: 0.5em;
+background-color: #f8f8f8;
+}</style>
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -5675,7 +5688,7 @@ Figure 5: Dropdown menu for changing the kernel to <code>intro_python</code> to
 </div>
 <p>This way we do not have to import the entire <code>sklearn</code> library and can just import the specific function that we need.</p>
 <hr>
-<p><a href="08_NumPy_arrays.qmd">Next Lesson &gt;&gt;</a></p>
+<p><a href="../lessons/08_numpy_arrays.html">Next Lesson &gt;&gt;</a></p>
 <p><a href="../schedule/schedule.html">Back to Schedule</a></p>
 
 
@@ -6384,7 +6397,7 @@ Figure 5: Dropdown menu for changing the kernel to <code>intro_python</code> to
 <span id="cb11-260"><a href="#cb11-260" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-261"><a href="#cb11-261" aria-hidden="true" tabindex="-1"></a>***</span>
 <span id="cb11-262"><a href="#cb11-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-263"><a href="#cb11-263" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](08_NumPy_arrays.qmd)</span></span>
+<span id="cb11-263"><a href="#cb11-263" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](08_numpy_arrays.qmd)</span></span>
 <span id="cb11-264"><a href="#cb11-264" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-265"><a href="#cb11-265" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>

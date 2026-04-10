@@ -246,6 +246,6 @@ This way we do not have to import the entire `sklearn` library and can just impo
 
 ***
 
-[Next Lesson >>](08_NumPy_arrays.qmd)
+[Next Lesson >>](08_numpy_arrays.qmd)
 
 [Back to Schedule](../schedule/schedule.qmd)
