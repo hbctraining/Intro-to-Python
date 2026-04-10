@@ -1,5 +1,5 @@
 ---
-title: "Data Structures - Answer Key"
+title: "Data structures - Answer Key"
 author:
   - Noor Sohail
   - Will Gammerdinger

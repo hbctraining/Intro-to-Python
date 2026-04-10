@@ -1,5 +1,5 @@
 ---
-title: "NumPy Arrays - Answer Key"
+title: "NumPy arrays - Answer Key"
 author:
   - Noor Sohail
   - Will Gammerdinger

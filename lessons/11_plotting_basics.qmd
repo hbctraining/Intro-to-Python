@@ -1,5 +1,5 @@
 ---
-title: "Plotting Basics with `Matplotlib` and `Seaborn`"
+title: "Plotting basics with `Matplotlib` and `Seaborn`"
 description: |
   This lesson introduces data visualization in Python using `Matplotlib` and `Seaborn`, showing how to build scatterplots, adjust aesthetics and customize labels to create clear figures.
 author:

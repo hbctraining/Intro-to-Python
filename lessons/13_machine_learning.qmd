@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning - Random Forests"
+title: "Machine learning - Random forests"
 description: |
   Write a description of the lesson here. 
 author:

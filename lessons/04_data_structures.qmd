@@ -1,5 +1,5 @@
 ---
-title: "Data Structures"
+title: "Data structures"
 description: |
   This lesson covers core Python data structures, focusing on lists, dictionaries and strings. This lesson will also demonstrate how to index, slice, modif, and nest them for data wrangling.
 author:
@@ -29,7 +29,7 @@ editor_options:
 
 ```
 
-Approximate time: 65 minutes
+Approximate time: 30 minutes
 
 ## Learning Objectives 
 

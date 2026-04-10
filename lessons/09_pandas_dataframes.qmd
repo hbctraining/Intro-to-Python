@@ -22,7 +22,7 @@ editor_options:
 jupyter: intro_python
 ---
 
-Approximate time: 75 minutes
+Approximate time: 50 minutes
 
 ## Learning Objectives 
 

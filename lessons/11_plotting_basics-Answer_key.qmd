@@ -1,5 +1,5 @@
 ---
-title: "Plotting Basics with `MatPlotlib` and `Seaborn` - Answer Key"
+title: "Plotting basics with `MatPlotlib` and `Seaborn` - Answer Key"
 author:
   - Noor Sohail
   - Will Gammerdinger

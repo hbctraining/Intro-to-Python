@@ -27,7 +27,7 @@ editor_options:
 species = ["ecoli", "human", "corn", "yeast"]
 ```
 
-Approximate time: 90 minutes
+Approximate time: 50 minutes
 
 ## Learning Objectives 
 
@@ -57,7 +57,15 @@ print(species[3])
 
 However, this is not very efficient, especially if we had a long list of species or were unsure how many elements were in the list. We can instead use a `for` loop to accomplish the same task in a less repetitive manner.
 
-To use a `for` loop, we need to specify an interval to loop over and a variable that will take the value of each element. We will then iterate through the sequence, assigning the variable to each element in the sequence in turn and then execute the code block  for each element within the loop. The general syntax of a `for` loop in Python is as follows:
+To use a `for` loop, we need to specify an interval to loop over and a variable that will take the value of each element. We will then iterate through the sequence, assigning the variable to each element in the sequence in turn and then execute the code block for each element within the loop. 
+
+::: {#fig-for_loop .figure}
+![](../img/for_loop.png){width=600px}
+
+Schematic of `for` loop process.
+:::
+
+The general syntax of a `for` loop in Python is as follows:
 
 ```{python}
 #| label: for_loop_syntax
@@ -228,7 +236,15 @@ In this case we are looping through our list, `[1, 2, 3, 4, 5]`, assigning each 
 
 ## `while` Loops
 
-Like `for` loops, `while` loops will to continue to execute a block of code as long as a certain condition is true. The general syntax of a `while` loop in Python is as follows:
+Like `for` loops, `while` loops will to continue to execute a block of code as long as a certain condition is true. 
+
+::: {#fig-while_loop .figure}
+![](../img/while_loop.png){width=600px}
+
+Schematic of `while` loop process.
+:::
+
+The general syntax of a `while` loop in Python is as follows:
 
 ```{python}
 #| label: while_loop_syntax

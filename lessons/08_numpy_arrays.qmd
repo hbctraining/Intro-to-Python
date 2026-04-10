@@ -1,5 +1,5 @@
 ---
-title: "`NumPy` Arrays"
+title: "`NumPy` arrays"
 description: |
   In this lesson, you will learn how to work with `NumPy` arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common NumPy functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.
 author:
@@ -22,7 +22,7 @@ editor_options:
 jupyter: intro_python
 ---
 
-Approximate time: 50 minutes
+Approximate time: 30 minutes
 
 ## Learning Objectives 
 

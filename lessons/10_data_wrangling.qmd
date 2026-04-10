@@ -1,5 +1,5 @@
 ---
-title: "Data Wrangling"
+title: "Data wrangling"
 description: |
   This lesson focuses on wrangling linked datasets with `pandas`, including filtering, reordering, saving cleaned tables and merging DataFrames to prepare real data for analysis.
 author:
