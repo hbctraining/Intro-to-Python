@@ -173,6 +173,9 @@ sns.scatterplot(data = new_metadata,
                 style = "celltype")
 ```
 
+::: callout-note
+You may have noticed that the figure legend moved when we added our `style` argument. This is because there is a argument (`loc`) set within `plt.legend()` which allows you to direct the placement of the legend. It can take the value of one of nine possible locations (`'upper left'`, `'upper right'`, `'lower left'`, `'lower right'`, `'upper center'`, `'lower center'`, `'center left'`, `'center right'`, `'center'`) to determine where to place the legend. However, the default is a value of `'best'` which selects one of those nine possible locations, which minimizes the overlap of the legend on top of data. As a result of adding our `style` argument, it made the legend longer, which meant that it would be better placed is a different location in the plot to minimize overlap with the data points.
+:::
 
 The data points are quite small. We can also adjust the `s` (size) of the data points within the `scatterplot()` function. Since we do not want the size of the data points to be scaled according to a column in `new_metadata`, we will just specify a number for this argument.
 
