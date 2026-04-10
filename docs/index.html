@@ -4789,6 +4789,15 @@ background-color: #f5f5f5 !important;
 padding: 0.5em 1em;
 border-radius: 5px;
 margin-bottom: 1em;
+max-width: 100%;
+overflow-x: auto;
+}
+
+.cell-output-display:has(table) {
+background-color: transparent !important;
+padding: 0 !important;
+border-radius: 0;
+box-shadow: none;
 }
 
 footer.footer .nav-footer {
@@ -4929,12 +4938,10 @@ width: 100%;
 }
 
 
-table tr:nth-child(even) {
-background-color: #f5f5f5;
-}
-table tr:nth-child(odd) {
-background-color: #ffffff;
-}
+table tr:nth-child(even) { background-color: #f5f5f5; }
+table tr:nth-child(odd) { background-color: #ffffff; }
+
+table tbody tr:hover { background-color: #fdf0f2; }
 
 table th,
 table td {
@@ -4944,19 +4951,19 @@ text-align: left;
 }
 
 table {
-border-collapse: separate; 
+border-collapse: collapse;
 border-spacing: 0;
-border: 1px solid #d0d0d0;
-border-radius: 6px;
-overflow: hidden; 
 background: #fff;
-box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
 }
+
 table thead th {
 background-color: #a51c30 !important;
 color: #ffffff !important;
 font-weight: 700 !important;
-border-color: #8b1628 !important;
+position: sticky;
+top: 0;
+z-index: 2;
+box-shadow: inset 0 -2px 0 #8b1628;
 }
 
 .quarto-float-caption,
@@ -5021,10 +5028,8 @@ width: max-content;
 
 table th,
 table td {
-white-space: normal;
-overflow-wrap: break-word;
-word-break: break-word;
-min-width: 80px;
+white-space: nowrap;
+min-width: 60px;
 }
 
 div.quarto-float:has(figure.quarto-float-tbl) {
@@ -5043,23 +5048,28 @@ margin: 0;
 figure.quarto-float-tbl > div[aria-describedby] {
 display: block;
 width: 100%;
+max-height: 450px;
 overflow-x: auto;
+overflow-y: auto;
 -webkit-overflow-scrolling: touch;
 box-sizing: border-box;
+border: 1px solid #d0d0d0;
+border-radius: 6px;
+box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
 }
 figure.quarto-float-tbl > div[aria-describedby] > table {
 margin-left: 0;
 margin-right: 0;
 }
 
-.cell-output-display {
-max-width: 100% !important;
-overflow-x: auto !important;
+.cell-output-display:has(table.dataframe) {
+max-height: 450px;
+overflow-x: auto;
+overflow-y: auto;
 -webkit-overflow-scrolling: touch;
-}
-.cell-output-display > div {
-max-width: 100% !important;
-overflow-x: auto !important;
+border: 1px solid #d0d0d0;
+border-radius: 6px;
+box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
 }
 .cell-output-display table.dataframe,
 .cell-output-display > div > table.dataframe {
@@ -5197,6 +5207,7 @@ background-color: #f8f8f8;
 <li>Load and analyze data using Python libraries and functions</li>
 <li>Wrangle real-world datasets</li>
 <li>Create clear visualizations with <code>Matplotlib</code> and <code>Seaborn</code></li>
+<li>Train a simple machine learning model using <code>scikit-learn</code></li>
 </ul>
 </section>
 <section id="lessons" class="level3">
@@ -5704,21 +5715,22 @@ background-color: #f8f8f8;
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Load and analyze data using Python libraries and functions</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wrangle real-world datasets</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create clear visualizations with <span class="in">`Matplotlib`</span> and <span class="in">`Seaborn`</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### Lessons</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>These materials were developed for a trainer-led workshop, but are also amenable to self-guided learning.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Workshop schedule (trainer-led learning)</span><span class="co">](schedule/schedule.qmd)</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Self-learning</span><span class="co">](schedule/self-learning.qmd)</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Train a simple machine learning model using <span class="in">`scikit-learn`</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Lessons</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>These materials were developed for a trainer-led workshop, but are also amenable to self-guided learning.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Workshop schedule (trainer-led learning)</span><span class="co">](schedule/schedule.qmd)</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Self-learning</span><span class="co">](schedule/self-learning.qmd)</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">### Installation Requirements</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>Download the most recent version of the **Graphical Installer** of Anaconda, Anaconda Navigator, for the appropriate operating system of your computer using the link below:</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anaconda</span><span class="co">](https://www.anaconda.com/download/success)</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Once downloaded, run the installer and follow the prompts to complete the installation. The **default settings** should work for most users, but you can customize the installation if needed. This will install a new program called Anaconda Navigator.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Installation Requirements</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>Download the most recent version of the **Graphical Installer** of Anaconda, Anaconda Navigator, for the appropriate operating system of your computer using the link below:</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anaconda</span><span class="co">](https://www.anaconda.com/download/success)</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>Once downloaded, run the installer and follow the prompts to complete the installation. The **default settings** should work for most users, but you can customize the installation if needed. This will install a new program called Anaconda Navigator.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

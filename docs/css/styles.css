@@ -18,6 +18,18 @@
   padding: 0.5em 1em;
   border-radius: 5px;
   margin-bottom: 1em;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Strip the gray box from cell outputs that contain a table —
+   the table's own scroll container handles border + shadow */
+
+.cell-output-display:has(table) {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* ============================================================
@@ -203,18 +215,16 @@ img {
 }
 
 /* ============================================================
-   TABLES: AESTHETICS ONLY
+   TABLES: AESTHETICS
    ============================================================ */
 
 /* Alternating row shading */
 
-table tr:nth-child(even) {
-  background-color: #f5f5f5;
-}
+table tr:nth-child(even) { background-color: #f5f5f5; }
+table tr:nth-child(odd)  { background-color: #ffffff; }
 
-table tr:nth-child(odd) {
-  background-color: #ffffff;
-}
+/* Hover row highlight */
+table tbody tr:hover { background-color: #fdf0f2; }
 
 /* Cell padding and borders */
 
@@ -225,23 +235,30 @@ table td {
   text-align: left;
 }
 
-/* Crimson header with rounded top corners and white text */
+/* Table base.
+   border-collapse: collapse (not separate) is required for
+   position: sticky on thead th to work correctly.
+   border-radius and box-shadow are applied to the scroll
+   containers below instead of the table element itself. */
 
 table {
-  border-collapse: separate; /* required for border-radius on thead to work */
+  border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #d0d0d0;
-  border-radius: 6px;
-  overflow: hidden;          /* clips corners cleanly */
   background: #fff;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
 }
+
+/* Crimson sticky header.
+   box-shadow replaces border-bottom because border-collapse: collapse
+   causes cell borders on sticky elements to visually disappear mid-scroll. */
 
 table thead th {
   background-color: #a51c30 !important;
   color: #ffffff !important;
   font-weight: 700 !important;
-  border-color: #8b1628 !important;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-shadow: inset 0 -2px 0 #8b1628;
 }
 
 /* ============================================================
@@ -315,23 +332,18 @@ figure figcaption {
 }
 
 /* ============================================================
-   TABLE LAYOUT: WRAPPING + SCROLLING
+   TABLE LAYOUT: SCROLLING + NO SQUASHING
    ============================================================ */
 
 /*
-  Strategy:
-  - col { width: auto } neutralises Quarto's inline <col style="width: X%">
-    which otherwise crushes narrow columns regardless of their content.
-  - table-layout: auto + width: max-content tells the browser to size the
-    table and each column purely by content. Short columns stay narrow,
-    long ones get the space they need. No column ever squashes another.
-  - Text wraps naturally in cells that genuinely have long content.
-    Cells with short content (<~30 chars) won't wrap because the column
-    will simply be wide enough to fit them on one line.
-  - min-width: 80px on cells ensures no column collapses to unreadable.
-  - The scroll container is div[aria-describedby] inside figure.quarto-float-tbl.
-    The figure and its outer div are forced to display:block (not flex) so
-    the scroll boundary starts at the true left edge of the table.
+  Changes from previous version:
+  ─ white-space: nowrap replaces normal + overflow-wrap + word-break
+                        PRIMARY fix for the squashed/crushed look
+  ─ max-height + overflow-y: auto on containers → vertical scroll
+    like kableExtra's scroll_box
+  ─ border-radius + box-shadow moved from table → scroll containers
+    (they must live on the scroll container, not the table, for
+    sticky headers to work)
 */
 
 /* 1. Neutralise Quarto's inline colgroup percentages */
@@ -347,23 +359,22 @@ table {
   width: max-content;
 }
 
-/* 3. Cell text: wrap only when content is genuinely long */
+/* 3. Cell text: nowrap is the primary fix for squashing */
 
 table th,
 table td {
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  min-width: 80px;
+  white-space: nowrap;
+  min-width: 60px;
 }
 
 /* 4. Scroll containers for Quarto captioned tables (#tbl-*)
       Structure:
-        div.quarto-float              <- display:block
-          figure.quarto-float-tbl    <- display:block (NOT flex)
-            figcaption
-            div[aria-describedby]    <- overflow-x:auto lives here
-              table                  <- margins zeroed; width:max-content */
+        div.cell-output-display       <- transparent (overridden above)
+          div.quarto-float            <- display:block
+            figure.quarto-float-tbl  <- display:block (NOT flex)
+              figcaption
+              div[aria-describedby]  <- scroll box + border lives here
+                table                <- margins zeroed; width:max-content */
 
 div.quarto-float:has(figure.quarto-float-tbl) {
   display: block !important;
@@ -383,9 +394,14 @@ figure.quarto-float-tbl {
 figure.quarto-float-tbl > div[aria-describedby] {
   display: block;
   width: 100%;
+  max-height: 450px;
   overflow-x: auto;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
 }
 
 figure.quarto-float-tbl > div[aria-describedby] > table {
@@ -393,17 +409,16 @@ figure.quarto-float-tbl > div[aria-describedby] > table {
   margin-right: 0;
 }
 
-/* 5. Scroll container for Pandas DataFrames (cell output) */
+/* 5. Scroll container for Pandas DataFrames (bare cell output) */
 
-.cell-output-display {
-  max-width: 100% !important;
-  overflow-x: auto !important;
+.cell-output-display:has(table.dataframe) {
+  max-height: 450px;
+  overflow-x: auto;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-.cell-output-display > div {
-  max-width: 100% !important;
-  overflow-x: auto !important;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.08);
 }
 
 .cell-output-display table.dataframe,
@@ -418,7 +433,6 @@ figure.quarto-float-tbl > div[aria-describedby] > table {
 /* ============================================================
    Error message handling
    ============================================================ */
-
 
 /* Make long error messages scroll instead of stretching the page */
 .cell-output-stderr pre,

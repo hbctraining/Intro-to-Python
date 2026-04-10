@@ -30,6 +30,7 @@ In this workshop, the participants will:
 - Load and analyze data using Python libraries and functions
 - Wrangle real-world datasets
 - Create clear visualizations with `Matplotlib` and `Seaborn`
+- Train a simple machine learning model using `scikit-learn`
 
 ### Lessons
 These materials were developed for a trainer-led workshop, but are also amenable to self-guided learning.

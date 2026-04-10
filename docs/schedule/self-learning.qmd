@@ -1,36 +1,37 @@
-# Workshop Name
+# Introduction to Python
 
 ## Learning Objectives
 
-- Broad Learning Objective 1
-- Broad Learning Objective 2
-- Broad Learning Objective 3
-- Broad Learning Objective 4
-  
+- Setup and install Python and Jupyter Lab
+- Write basic Python code and understand fundamental programming concepts
+- Load and analyze data using Python libraries and functions
+- Wrangle real-world datasets
+- Create clear visualizations with `Matplotlib` and `Seaborn`
+- Train a simple machine learning model using `scikit-learn`
+
 ## Installations
 
-1. [Tool 1](link_to_tool_1) 
-2. [Tool 2](link_to_tool_2)
+Download the most recent version of the **Graphical Installer** of Anaconda, Anaconda Navigator, for the appropriate operating system of your computer using the link below:
+
+- [Anaconda](https://www.anaconda.com/download/success)
+
+Once downloaded, run the installer and follow the prompts to complete the installation. The **default settings** should work for most users, but you can customize the installation if needed. This will install a new program called Anaconda Navigator.
 
 ## Lessons
 
-- [Lesson 1](../lessons/01_lesson.qmd)
-- [Lesson 2](../lessons/02_lesson.qmd)
-- [Lesson 3](../lessons/03_lesson.qmd)
-- [Lesson 4](../lessons/04_lesson.qmd)
-- [Lesson 5](../lessons/05_lesson.qmd)
-- [Lesson 6](../lessons/06_lesson.qmd)
-- [Lesson 7](../lessons/07_lesson.qmd)
-- [Lesson 8](../lessons/08_lesson.qmd)
-- [Lesson 9](../lessons/09_lesson.qmd)
-- [Lesson 10](../lessons/10_lesson.qmd)
-- [Lesson 11](../lessons/11_lesson.qmd)
-- [Lesson 12](../lessons/12_lesson.qmd)
-- [Lesson 13](../lessons/13_lesson.qmd)
-- [Lesson 14](../lessons/14_lesson.qmd)
-- [Lesson 15](../lessons/15_lesson.qmd)
-- [Lesson 16](../lessons/16_lesson.qmd)
-- [Lesson 17](../lessons/17_lesson.qmd)
+- [Introduction to Python and Jupyter Lab](../lessons/01_setting_up.qmd)
+- [Variables](../lessons/02_variables.qmd)
+- [Conditional Statements](../lessons/03_conditional_statements.qmd)
+- [Data Structures](../lessons/04_data_structures.qmd)
+- [Loops](../lessons/05_loops.qmd)
+- [Functions](../lessons/06_functions.qmd)
+- [Libraries](../lessons/07_libraries.qmd)
+- [Numpy Arrays](../lessons/08_numpy_arrays.qmd)
+- [Pandas DataFrames](../lessons/09_pandas_dataframes.qmd)
+- [Data Wrangling](../lessons/10_data_wrangling.qmd)
+- [Plotting Basics](../lessons/11_plotting_basics.qmd)
+- [Boxplots](../lessons/12_boxplots.qmd)
+- [Machine Learning - Random Forest](../lessons/13_machine_learning.qmd)
 
 
 ## Resources
@@ -38,7 +39,3 @@
 - [Additional Resource 1](link_to_additonal_resource_1)
 - [Additional Resource 2](link_to_additonal_resource_2)
 - [Additional Resource 3](link_to_additonal_resource_3)
-
-***
-
-*These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
