@@ -18,15 +18,8 @@ license: "CC-BY-4.0"
 editor_options:
   markdown:
     wrap: 72
+jupyter: intro_python
 ---
-
-```{r}
-#| label: load_libraries
-#| echo: false
-# Interfacing with R quarto and python futzing
-library(reticulate)
-use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
-```
 
 Approximate time: 70 minutes
 
@@ -38,7 +31,6 @@ In this lesson, we will:
 - Extract specific rows from a DataFrame using the `isin` operator
 - Save a DataFrame as a new CSV file
 - Use the `merge()` function to combine two DataFrames
-
 
 ## Overview of lesson
 
@@ -58,7 +50,7 @@ In our use case, we will be working with genomic data. We have **gene expression
 Let’s start by reading in our gene expression data (RPKM matrix) and then previewing the first few lines:
 
 ```{python}
-#| label: load_expression_data
+#| label: tbl-load_expression_data
 #| tbl-cap: RPKM normalized expression data for 12 samples, where rows are genes and columns are samples.
 # Import pandas using the alias pd
 import pandas as pd
@@ -73,7 +65,7 @@ rpkm_data.head()
 We will also read in a clean copy of the associated metadata file, since we do not need the extra columns we added earlier, and again preview the DataFrame:
 
 ```{python}
-#| label: load_metadata
+#| label: tbl-load_metadata
 #| tbl-cap: Metadata for 12 samples, where rows are samples and columns are different attributes of the samples.
 # Read in the metadata
 metadata = pd.read_csv("data/mouse_exp_design.csv")

@@ -3,3 +3,5 @@
 lessons/data
 lesons/data.zip
 lessons/results
+
+**/*.quarto_ipynb

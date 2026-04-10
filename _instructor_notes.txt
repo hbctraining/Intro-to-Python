@@ -1,0 +1,13 @@
+When creating the `intro_python` environment, also run the following line:
+
+```
+python -m ipykernel install --user --name intro_python --display-name "intro_python"
+```
+
+This will ensure that in the lessons 07_libraries and beyond, the 
+
+```
+jupyter: intro_python 
+```
+
+line will correctly use the conda environment.

@@ -414,3 +414,22 @@ figure.quarto-float-tbl > div[aria-describedby] > table {
   margin-left: 0;
   margin-right: 0;
 }
+
+/* ============================================================
+   Error message handling
+   ============================================================ */
+
+
+/* Make long error messages scroll instead of stretching the page */
+.cell-output-stderr pre,
+.cell-output-stdout pre,
+.cell-output pre,
+pre.error {
+  max-height: 300px;   /* adjust as you like */
+  overflow-y: auto;    /* vertical scrollbar */
+  overflow-x: auto;    /* horizontal scrollbar if needed */
+  white-space: pre;    /* keep original formatting */
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  background-color: #f8f8f8;
+}

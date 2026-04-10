@@ -8,16 +8,9 @@ license: "CC-BY-4.0"
 editor_options: 
   markdown: 
     wrap: 72
----
 
-```{r}
-#| label: load_libraries_data
-#| echo: false
-# Load libraries and data
-# Interfacing with R quarto and python futzing
-library(reticulate)
-use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
-```
+jupyter: intro_python
+---
 
 ```{python}
 #| label: load_libraries_data_python

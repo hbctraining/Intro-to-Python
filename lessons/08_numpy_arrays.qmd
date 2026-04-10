@@ -18,17 +18,9 @@ license: "CC-BY-4.0"
 editor_options: 
   markdown: 
     wrap: 72
+
+jupyter: intro_python
 ---
-
-```{r}
-#| label: load_libraries_data
-#| echo: false
-# Load libraries and data
-
-# Interfacing with R quarto and python futzing
-library(reticulate)
-use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
-```
 
 Approximate time: 50 minutes
 
@@ -142,13 +134,17 @@ zeros_matrix = np.zeros((3, 3))
 
 # Print the zeros_matrix
 print(zeros_matrix) 
+```
 
+```{python}
 # Initialize a 2x4 matrix of ones
 ones_matrix = np.ones((2, 4))
 
 # Print the ones_matrix
 print(ones_matrix)
+```
 
+```{python}
 # Initialize a 3x3 identity matrix
 identity_matrix = np.identity(3)
 print(identity_matrix)

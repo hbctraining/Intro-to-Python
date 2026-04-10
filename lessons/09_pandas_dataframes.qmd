@@ -19,17 +19,8 @@ license: "CC-BY-4.0"
 editor_options:
   markdown:
     wrap: 72
+jupyter: intro_python
 ---
-
-```{r}
-#| label: load_libraries_data
-#| echo: false
-# Load libraries and data
-
-# Interfacing with R quarto and python futzing
-library(reticulate)
-use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
-```
 
 Approximate time: 75 minutes
 
@@ -48,7 +39,7 @@ Real-life data are oftentimes represented in the forms of tables of data, matric
 
 ## `Pandas` Library
 
-The `Pandas` library is a powerful tool for data wrangling and analysis in Python. It provides useful data structures and functions needed to handle tables of data, like Excel spreadsheets. The primary data structures of note in `Pandas` are Series and DataFrames.
+The `Pandas` library is a powerful tool for data wrangling and analysis in Python. It provides useful data structures and functions needed to handle tables of data, like Excel or Google Sheets spreadsheets. The primary data structures of note in `Pandas` are Series and DataFrames.
 
 ::: callout-note
 # `Pandas` and `NumPy`
@@ -61,7 +52,7 @@ This library is widely used in data science and machine learning fields for task
 
 Within the `Pandas` library, there are built-in functions to load datasets from various file formats, such as CSV (comma separated values) or Excel files (`.xlsx`). The most commonly used function for loading data is `pandas.read_csv()`, which allows you to read a CSV file and create a DataFrame with the data.
 
-When working with a large dataset, you will very likely work with a "metadata" file that contains the information about each sample in your dataset. The metadata are very important information and we encourage you to think about creating a document with as much metadata you can record before you bring the data into Python. [Here is some additional reading on metadata](https://datamanagement.hms.harvard.edu/metadata-overview) from the [HMS Data Management Working Group](https://datamanagement.hms.harvard.edu/).
+When working with a large dataset, you will very likely work with a "metadata" file that contains the information about each sample in your dataset. This is important information and we encourage you to always generate a document with as much metadata as you can record before you bring the data into Python. Metadata can include information about the experimental design, sample characteristics, data collection methods and any other relevant information that can help you understand and analyze your data. [Here is some additional reading on metadata](https://datamanagement.hms.harvard.edu/metadata-overview) from the [HMS Data Management Working Group](https://datamanagement.hms.harvard.edu/).
 
 
 We have a file in which we identify information about the data, called metadata. Our metadata is also stored in a CSV file. In this file, each row corresponds to a sample and each column contains some information about each sample.
@@ -142,7 +133,7 @@ We know the wild type value is in the first row if we count from the top, so we 
 ```{python}
 #| label: numerical_indexing
 # Extract the value in the first row and first column
-print(metadata.iloc[0, 0])
+metadata.iloc[0, 0]
 ```
 
 Now we will extract the value `1` from the first row and third column.
@@ -150,7 +141,7 @@ Now we will extract the value `1` from the first row and third column.
 ```{python}
 #| label: numerical_indexing_2
 # Extract the value in the first row and third column
-print(metadata.iloc[0, 2])
+metadata.iloc[0, 2]
 ```
 
 If you only wanted to select values based on rows, you would provide the index for the rows and just put a colon (`:`) for the columns. The `:` with no numbers indicates to Python that we should slice from the beginning until the end, or in other words all columns. We can also use a `:` that is blank on either side for rows as well as columns. The key here is to include the comma, to let Python know that you are still accessing a 2-dimensional data structure:
@@ -357,7 +348,7 @@ metadata
 metadata.loc[metadata["replicate"] == 1, "sex"] = "female"
 
 # Print the metadata DataFrame
-print(metadata)
+metadata
 ```
 
 3. Assign the value `male` to rows where the replicate column has a value other than `1`.
@@ -369,7 +360,7 @@ print(metadata)
 metadata.loc[metadata["replicate"] != 1, "sex"] = "male"
 
 # Print the metadata DataFrame
-print(metadata)
+metadata
 ```
 
 
@@ -384,7 +375,7 @@ We can also create new columns by performing calculations on existing columns. F
 metadata["replicate_squared"] = metadata["replicate"] ** 2
 
 # Print the metadata DataFrame
-print(metadata)
+metadata
 ```
 
 We can even take the sum across multiple columns to create a new column. For example, we can create a new column called `replicate_sum` that contains the sum of the values in the `replicate` and `replicate_squared` columns for each row.
@@ -396,7 +387,7 @@ We can even take the sum across multiple columns to create a new column. For exa
 metadata["replicate_sum"] = metadata["replicate"] + metadata["replicate_squared"]
 
 # Print the metadata DataFrame
-print(metadata)
+metadata
 ```
 
 We can apply any range of mathematical operations to create new columns based on data that already exists in the DataFrame.
@@ -411,7 +402,7 @@ The `Pandas` library is filled with useful functions to wrangle dataframes. Here
 One way to quickly summarize the contents of a DataFrame is by using `value_counts()`, which counts the number of times a particular value appears in a column. We can use this function to count the number of samples that belong to each genotype category:
 
 ```{python}
-#| label: metata_value_counts
+#| label: metadata_value_counts
 # Retrieve the distribution of values in the genotype column
 metadata["genotype"].value_counts()
 ```

@@ -21,17 +21,8 @@ license: "CC-BY-4.0"
 editor_options:
   markdown:
     wrap: 72
+jupyter: intro_python
 ---
-
-```{r}
-#| label: load_libraries_data
-#| echo: false
-# Load libraries and data
-
-# Interfacing with R quarto and python futzing
-library(reticulate)
-use_condaenv("/opt/anaconda3/envs/intro_python", required = TRUE)
-```
 
 Approximate time: 40 minutes
 
@@ -87,6 +78,7 @@ So first, we'll create an empty plot of size 8 inches by 6 inches:
 #| fig-cap: An empty plot initialized with `MatPlotLib`.
 # Initialize a plot with a specific size
 plt.figure(figsize = (8, 6))
+plt.show()
 ```
 
 ### Adding a Scatterplot Layer
@@ -112,7 +104,7 @@ plt.scatter(data = new_metadata,
 Instead of providing the `data` argument, you could specify the `x` and `y` axes as the given columns from `new_metadata`.
 
 ```{python}
-#| label: fig-add_scatterplot_layer_alt
+#| label: add_scatterplot_layer_alt
 #| eval: false
 # Initialize a plot with a specific size
 plt.figure(figsize = (8, 6))
@@ -253,6 +245,7 @@ sns.scatterplot(data = new_metadata,
 # Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize = 20)
+plt.show()
 ``` 
 
 ## Saving plots

@@ -52,7 +52,7 @@ important_genes = ["ENSMUSG00000083700", "ENSMUSG00000080990",
 # Check if important genes are in rpkm_ordered
 rpkm_ordered.index.isin(important_genes)
 ``` 
-    
+
 2. Extract the rows from `rpkm_ordered` that correspond to these 6 genes using `[]` and the `isin` operator. Double check the row names to ensure that you are extracting the correct rows.
 
 ```{python}
