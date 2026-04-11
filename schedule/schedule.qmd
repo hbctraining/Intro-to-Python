@@ -162,4 +162,37 @@ II. **Submit your work**:
 
 ## Resources
 
-- [Introduction to data analysis in Python](https://ccb-hms.github.io/workbench-python-workshop/index.html)
+### Popular package resources
+
+For a brief overview, or cheat sheet, of the most commonly used Python packages in data analysis, check out the following resources:
+
+- [Pandas cheat sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+- [NumPy cheat sheet](https://www.datacamp.com/cheat-sheet/numpy-cheat-sheet-data-analysis-in-python)
+- [Matplotlib cheat sheet](https://matplotlib.org/cheatsheets/cheatsheets.pdf)
+- [Scikit-learn cheat sheet](https://www.datacamp.com/cheat-sheet/scikit-learn-cheat-sheet-python-machine-learning)
+- [Seaborn examples with code](https://seaborn.pydata.org/examples/index.html)
+
+
+### Other Python courses
+
+We acknowledge that there are many other groups that have created excellent Python courses:
+
+- [Harvard CCB - Introduction to Data Analysis in Python](https://ccb-hms.github.io/workbench-python-workshop/index.html)
+- [Google - Python Class](https://developers.google.com/edu/python)
+- [Coursera - Python for Everybody](https://www.coursera.org/specializations/python)
+
+
+### Learning more AI and ML
+
+Python is one of the most popular languages for machine learning and artificial intelligence. If you are interested in learning more about these topics, we recommend the following resources as good starting points:
+
+- [Coursera - Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
+- [fast.ai - Practical Deep Learning for Coders](https://course.fast.ai/)
+
+
+### Datasets for more practice
+
+There are many websites that aggregate interesting datasets that you can use to practice your Python skills. Here are a few popular ones:
+
+- [kaggle](https://www.kaggle.com/datasets)
+- [Hugging Face](https://huggingface.co/datasets)
