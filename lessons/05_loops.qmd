@@ -29,7 +29,7 @@ species = ["ecoli", "human", "corn", "yeast"]
 
 Approximate time: 50 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -39,11 +39,16 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops to automate this process. This is essential in real analyses, where you might need to process hundreds of files or thousands of values consistently and without human error. In this lesson, we will learn about two types of loops: `for` loops and `while` loops.
+One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops for autmoation. This is essential in a real analysis, where you might need to process hundreds of files or thousands of values consistently and without human error. 
 
-## `for` Loops
+In this lesson, we will learn about two types of loops: 
 
-`for` loops are used to iterate over a collection of values such as a list. An example of how we can use a `for` loop is if we wanted to print out the names of all the species in a list. With the current skills we have learned, we can accomplish this task by writing the following code:
+- `for` loops 
+- `while` loops.
+
+## `for` loops
+
+If we wanted to print out the names of all the species in our `species` list, we would be able to do so with the following code:
 
 ```{python}
 #| label: for_loop_alternative
@@ -55,7 +60,7 @@ print(species[2])
 print(species[3])
 ``` 
 
-However, this is not very efficient, especially if we had a long list of species or were unsure how many elements were in the list. We can instead use a `for` loop to accomplish the same task in a less repetitive manner.
+However, this is not very efficient! Especially if we had a long list of species or were unsure how many elements were in the list. We can instead use a `for` loop to accomplish the same task in a less repetitive manner by iterating over a collection.
 
 To use a `for` loop, we need to specify an interval to loop over and a variable that will take the value of each element. We will then iterate through the sequence, assigning the variable to each element in the sequence in turn and then execute the code block for each element within the loop. 
 
@@ -103,7 +108,7 @@ for number in [2, 3, 5]:
     print("squared", number ** 2)
 ```
 
-### Indentation Matters
+### Indentation matters
 
 Like with `if` statements, the code within the `for` loop must be indented to be executed correctly. If we forget to indent the code, we will get an error. For example, the following `print()` statement will throw an error because it is not indented properly.
 
@@ -113,7 +118,7 @@ Like with `if` statements, the code within the `for` loop must be indented to be
 # Iterate through species, assigning a new element to organism each time through
 for organism in species:
 # Print out organism
-# Note this will create an error because Python is expecting the line after a for loop starting to be indented
+# Error because line after for loop is not indented
 print(organism)
 ```
 
@@ -124,9 +129,9 @@ This is to once again emphasize that indentation is not just a matter of style i
 1. Create a `for` loop that goes through a list that contains `True`, `4` and `pretzel`. For each element in that list have it print out the element followed by the datatype of the element.
 :::
 
-### Conditional Statements within `for` Loops
+### Conditional statements within `for` loops
 
-We can use what we learned  about `if` statements in the lesson on [conditional statements](03_conditional_statements.qmd) within our `for` loops to perform different actions based on certain conditions. This can be useful if we want to perform a specific action for certain elements in our list as we iterate through the list. For example, if we wanted to print out a different message for humans compared to the other species, we could use the following code:
+We can use what we learned  about `if` statements in the lesson on [conditional statements](03_conditional_statements.qmd) within our `for` loops to perform different actions based on certain conditions. This can be useful if we want to perform a specific action for certain elements in our list. For example, if we wanted to print out a different message for humans compared to the other species, we could use the following code:
 
 ```{python}
 #| label: for_loop_with_if
@@ -142,9 +147,13 @@ for organism in species:
         print("This is not a human.")
 ```
 
-### `range()` Function
+### The `range()` function
 
-A common use of `for` loops is to iterate over a sequence of numbers. We can use the `range()` function to generate a sequence of numbers that we can iterate over. The `range()` function takes three arguments: `start`, `stop` and `step`. The `start` argument is the number that the sequence will start from, the `stop` argument is the number that the sequence will stop at (but not include) and the `step` argument is the amount by which the sequence will increment. If you do not provide the `step` argument, the default is 1.
+A common use of `for` loops is to iterate over a sequence of numbers. We can use the `range()` function to generate a sequence of numbers that we can iterate over. The `range()` function takes three arguments:
+
+ - `start` = number that the sequence will start from
+ - `stop` = number that the sequence will stop at _(but not include)_ 
+ - `step` = number that the sequence will increment by. If you do not provide the `step` argument, the default is 1
 
 For example, if we wanted to iterate over the indices of `species`, we could use the `range()` function as follows:
 
@@ -156,9 +165,9 @@ for i in range(0, len(species)):
     print(i)
 ```
 
-### Complex `for` Loop Example
+### Complex `for` loop example
 
-While we have been using the `species` list as an example to demonstrate how `for` loops work, we can use `for` loops to perform more complex tasks as well. For example, we can use a `for` loop to perform calculations on a list of `numbers` as well. If we wanted to calculate twice the total of the values of those numbers. We can accomplish this task by using a `for` loop as follows:
+To show how `for` loops can be used for more complex tasks, let us first create a list of `numbers`. Then using a `for` loop, double the value of each number and keep a running total of those doubled values.
 
 ```{python}
 #| label: for_loop_doubling_example
@@ -190,9 +199,11 @@ Table: Table of updated values of `number`, `doubled`, and `total` at each itera
 | 2     | 8      | 16      | 30            |
 | 3     | 10     | 20      | 50            |
 
-### List Comprehension
+### List comprehension
 
-Sometimes when working with a list, we may like to be able to apply logic to our list. Perhaps we would like to subset our list or do something when an element that meets a certain condition in our list. For this task, we can use list comprehension. The syntax for list comprehension looks like:
+There is another "pythonic" way to work with loops and lists called **list comprehension**. In one step it allows you to update or create a new list by iterating over values. Perhaps we would like to subset our list or do something when an element that meets a certain condition in our list. 
+
+The syntax for list comprehension looks like:
 
 ```{python}
 #| label: list_comprehension_example
@@ -209,7 +220,7 @@ Where:
 - `element` is what each element in the `list` will be called
 - `in list` is finishing out the `for` loop logic for the list that the `for` loop will iterate through
 
-Let's see an example of this. Let's imagine that I wanted to square the numbers in a list:
+Let's see an example of this if our goal was to square the numbers in a list:
 
 ```{python}
 #| label: square_list_comprehension
@@ -234,9 +245,9 @@ In this case we are looping through our list, `[1, 2, 3, 4, 5]`, assigning each 
 1. Use list comprehension to sort through a list `["DNA", "RNA", "Protein"]` and only retain the elements "DNA" or "RNA".
 :::
 
-## `while` Loops
+## `while` loops
 
-Like `for` loops, `while` loops will to continue to execute a block of code as long as a certain condition is true. 
+Like `for` loops, `while` loops will execute a block of code many times over. This execution will continue so long as a certain condition evalutes to true. The `while` loop will stop executing once the condition becomes false.
 
 ::: {#fig-while_loop .figure}
 ![](../img/while_loop.png){width=600px}
@@ -253,13 +264,15 @@ The general syntax of a `while` loop in Python is as follows:
 # DO NOT RUN
 while condition:
     # Code to execute
+    ...
     # Update condition
+    condition = update(condition)
 ```
 
 The important distinction between `while` loops and `for` loops is that we must update our condition within the `while` loop in order to keep iterating properly through our loop. We do not have a built in tangible end to the `while` -- unlike the `for` loop, where we stop iterating once we make it to the end of the `sequence` supplied in the statement.
 
 
-### Creating a `while` Loop
+### Creating a `while` loop
 
 `while` loops are typically used when we want to repeat a block of code an unknown number of times or when we want to repeat a block of code until a certain condition is met. For example, if we wanted to keep doubling a number until it is greater than 100, we could use a `while` loop as follows:
 
@@ -279,9 +292,11 @@ while number <= 100:
 print("Last number:", number)
 ```
 
-Why is our last number 128 and not 64? This is because the condition `number <= 100` is still true when `number` is equal to 64, so we execute the code block one more time, which doubles `number` to 128. After that, the condition `number <= 100` is no longer true, so we exit the loop and print the last number.
+Why is our last number 128 and not 64? 
 
-### Infinite Loop
+This is because the condition `number <= 100` is still true when `number` is equal to 64, so we execute the code block one more time, which doubles `number` to 128. After that, the condition `number <= 100` is no longer true, so we exit the loop and print the last number.
+
+### Infinite loops
 
 A very important thing to note about `while` loops is they can potentially run indefinitely if the condition never becomes false. Therefore, it is important to make sure that the condition will eventually become false, otherwise we will have an infinite loop. For example, the following code will run indefinitely because the condition `i < 5` will always be `True`:
 
@@ -315,7 +330,10 @@ Let's create a `while` loop to evaluates the number 17 to see each step in the p
 - If it is in an odd integer, multiply it by 3 and add 1
 - Exit the `while` loop when it reaches 1
 
-*Hint: You will likely want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example, 4 mod 2 would return 0 because the remainder of 4 divided by 2 is zero, while 5 mod 2 would return 1 because the remainder of 5 divided by 2 is 1.*
+_Hint: You will likely want to use a modulo operator, `%`. Modulo operators tell you the remainder following division. For example:_ 
+
+ - 4 mod 2 = 0 because the remainder of 4 divided by 2 is 0
+ - 5 mod 2 = 1 because the remainder of 5 divided by 2 is 1
 
 :::
 

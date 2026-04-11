@@ -12,7 +12,7 @@
 <meta name="keywords" content="Indexing, Slicing, Mutable objects, Strings">
 <meta name="description" content="This lesson covers core Python data structures, focusing on lists, dictionaries and strings. This lesson will also demonstrate how to index, slice, modif, and nest them for data wrangling.">
 
-<title>Data structures – Introduction to Python</title>
+<title>Data Structures – Introduction to Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -5146,7 +5146,7 @@ background-color: #f8f8f8;
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Day 2:</a></li><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Data structures</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Day 2:</a></li><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Data Structures</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -5210,7 +5210,7 @@ background-color: #f8f8f8;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/04_data_structures.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Data structures</span></a>
+ <span class="menu-text">Data Structures</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -5350,9 +5350,9 @@ background-color: #f8f8f8;
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Day 2:</a></li><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Data structures</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Day 2:</a></li><li class="breadcrumb-item"><a href="../lessons/04_data_structures.html">Data Structures</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Data structures</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Data Structures</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
   <div class="quarto-categories">
     <div class="quarto-category">Python programming</div>
     <div class="quarto-category">Data structures</div>
@@ -5467,14 +5467,14 @@ Table 1: Python data structures.
 <p>To create a list, we use the <code>[]</code> keys. We can place all the elements we wish to include in the list within the brackets, separating them with commas. There are no limits on the number of values or data types that can be included in a list.</p>
 <div id="cell-list_example" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="list_example" class="cell-output cell-output-display" data-execution_count="139">
+<div id="list_example" class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[1, 6, 7]</code></pre>
 </div>
 </div>
 <p>If we inspect the <code>type()</code>, we can see that it is a list data structure:</p>
 <div id="cell-list_type_example" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>([<span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">7</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="list_type_example" class="cell-output cell-output-display" data-execution_count="140">
+<div id="list_type_example" class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>list</code></pre>
 </div>
 </div>
@@ -5482,7 +5482,7 @@ Table 1: Python data structures.
 <div id="cell-list_mixed_example" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="st">&quot;hello&quot;</span>, <span class="fl">3.14</span>, <span class="va">True</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>list1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="list_mixed_example" class="cell-output cell-output-display" data-execution_count="141">
+<div id="list_mixed_example" class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>[1, &#39;hello&#39;, 3.14, True]</code></pre>
 </div>
 </div>
@@ -5528,7 +5528,7 @@ Table 1: Python data structures.
 <div id="cell-list_len_after_append" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the number of elements in glengths after appending a new element</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(glengths)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="list_len_after_append" class="cell-output cell-output-display" data-execution_count="145">
+<div id="list_len_after_append" class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>4</code></pre>
 </div>
 </div>
@@ -5571,7 +5571,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-species_elem_0" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first element of species</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="species_elem_0" class="cell-output cell-output-display" data-execution_count="146">
+<div id="species_elem_0" class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>&#39;ecoli&#39;</code></pre>
 </div>
 </div>
@@ -5579,7 +5579,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-species_elem_1" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="species_elem_1" class="cell-output cell-output-display" data-execution_count="147">
+<div id="species_elem_1" class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>&#39;human&#39;</code></pre>
 </div>
 </div>
@@ -5603,7 +5603,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-glengths_last_elem" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the last element of glengths</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>glengths[<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="glengths_last_elem" class="cell-output cell-output-display" data-execution_count="148">
+<div id="glengths_last_elem" class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>12000</code></pre>
 </div>
 </div>
@@ -5632,7 +5632,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a nested list that contains both glengths and species</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>nested_list <span class="op">=</span> [glengths, species]</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>nested_list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="nested_list_example" class="cell-output cell-output-display" data-execution_count="150">
+<div id="nested_list_example" class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>[[4.6, 3000, 50000, 12000], [&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;]]</code></pre>
 </div>
 </div>
@@ -5640,7 +5640,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-nested_list_access" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access species inside nested_list</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>]  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="nested_list_access" class="cell-output cell-output-display" data-execution_count="151">
+<div id="nested_list_access" class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>[&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;]</code></pre>
 </div>
 </div>
@@ -5648,7 +5648,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-nested_list_access_second_element" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the second element of species inside nested_list</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>nested_list[<span class="dv">1</span>][<span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="nested_list_access_second_element" class="cell-output cell-output-display" data-execution_count="152">
+<div id="nested_list_access_second_element" class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>&#39;human&#39;</code></pre>
 </div>
 </div>
@@ -5665,7 +5665,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-slicing_example" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get the first three elements of species</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">0</span>:<span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="slicing_example" class="cell-output cell-output-display" data-execution_count="153">
+<div id="slicing_example" class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>[&#39;ecoli&#39;, &#39;human&#39;, &#39;corn&#39;]</code></pre>
 </div>
 </div>
@@ -5673,7 +5673,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-slicing_example_to_end" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get all elements from the second element to the end</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>species[<span class="dv">1</span>:]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="slicing_example_to_end" class="cell-output cell-output-display" data-execution_count="154">
+<div id="slicing_example_to_end" class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>[&#39;human&#39;, &#39;corn&#39;, &#39;yeast&#39;]</code></pre>
 </div>
 </div>
@@ -5706,7 +5706,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use an index to get the first character of a string</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">&quot;hello&quot;</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="string_index_example" class="cell-output cell-output-display" data-execution_count="155">
+<div id="string_index_example" class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>&#39;h&#39;</code></pre>
 </div>
 </div>
@@ -5714,7 +5714,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <div id="cell-string_slicing_example" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a slice to get characters from index 1 to index 3</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>s[<span class="dv">1</span>:<span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="string_slicing_example" class="cell-output cell-output-display" data-execution_count="156">
+<div id="string_slicing_example" class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>&#39;ell&#39;</code></pre>
 </div>
 </div>
@@ -5735,7 +5735,7 @@ Table 2: Indices of list <code>species</code>, showing how the first element is
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;yeast&quot;</span>: <span class="dv">12000</span></span>
 <span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>genome_dict</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="create_genome_dict" class="cell-output cell-output-display" data-execution_count="157">
+<div id="create_genome_dict" class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>{&#39;ecoli&#39;: 4.6, &#39;human&#39;: 3000, &#39;corn&#39;: 50000, &#39;yeast&#39;: 12000}</code></pre>
 </div>
 </div>
@@ -5778,7 +5778,7 @@ Table 3: Dictionary, where keys are species name and values are length of the s
 <p>And if we investigate the <code>type()</code> of <code>genome_dict</code>, we can see that it is a dictionary data structure:</p>
 <div id="cell-dict_type" class="cell" data-execution_count="21">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(genome_dict)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="dict_type" class="cell-output cell-output-display" data-execution_count="158">
+<div id="dict_type" class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>dict</code></pre>
 </div>
 </div>
@@ -5800,7 +5800,7 @@ dict_values([4.6, 3000, 50000, 12000])</code></pre>
 <div id="cell-dict_human_key" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the value for the key &quot;human&quot;</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>genome_dict[<span class="st">&quot;human&quot;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="dict_human_key" class="cell-output cell-output-display" data-execution_count="160">
+<div id="dict_human_key" class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>3000</code></pre>
 </div>
 </div>
@@ -6282,7 +6282,7 @@ dict_values([4.6, 3000, 50000, 12000])</code></pre>
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Data structures&quot;</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Data Structures&quot;</span></span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co">  This lesson covers core Python data structures, focusing on lists, dictionaries and strings. This lesson will also demonstrate how to index, slice, modif, and nest them for data wrangling.</span></span>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
