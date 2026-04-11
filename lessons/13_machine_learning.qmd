@@ -33,7 +33,9 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-When doing XYZ...
+Maching learning and AI are becoming increasingly important tools in the world and the life sciences are no exception. These tools are able to learn patterns from data without the need for a human to define the rules. This makes them powerful for making predictions and uncovering insights from complex datasets. 
+
+In this lesson, we will be using a machine learning algorithm called a **random forest classifier** to predict the cortical layer labels of cells in a spatial transcriptomics dataset. This is a great example of how machine learning can be used to make predictions and uncover insights from biological datasets. We will be using the `scikit-learn` library in Python to train our random forest classifier and evaluate its performance.
 
 ## Machine learning
 
@@ -46,9 +48,33 @@ Machine learning is a subfield of artificial intelligence that focuses on traini
 
 These algorithms can be used for a wide range of applications, including image recognition, natural language processing, and predictive modeling.
 
+### Random forest classifiers
+
+Random forests allow you to predict a categorical variable (cortical layer) based on one or more predictor variables (spatial coordinates and gene expression scores). To do so, the algorithm builds multiple decision trees, which are models that make predictions based on a series of binary decisions (`True` or `False`).
+
+::: {#fig-decision_tree_example .figure}
+![](../img/decision_tree_example.png){width="80%"}
+
+Example of a decision tree where the variables are age, weight, and smoker to predict risk level of a heart attack.<br>
+_Image source: [DataCamp](https://www.datacamp.com/tutorial/decision-tree-classification-python)_
+:::
+
+These decision trees comprise of decision nodes, which are the points where the data is split based on a predictor variable, and leaf nodes, which are the final predictions made by the tree.
+
+The random forest algorithm generates multiple of these decision trees based upon the training data. Each tree is built upon a random subset of the data and variables variables. This randomness helps to reduce overfitting and improve the generalizability of the model. Therefore, each tree will learn different patterns from the data. 
+
+Now that the model has been trained, we can supply a new dataset and run it through the model. In this case, the data will run through each of the decision trees in the random forest and make a prediction. Then, a majority vote is taken across the decision of all the trees to make the final prediction.
+
+::: {#fig-random_forest_example .figure}
+![](../img/random_forest_algorithm.png){width="80%"}
+
+Example of a random forest with 3 decision trees to generate a prediction based upon majority voting.<br>
+_Image source: [GeeksforGeeks](https://www.geeksforgeeks.org/random-forest-classifier-using-scikit-learn/)_
+:::
+
 ## Cortical layer dataset
 
-To provide a real-world example of how to use machine learning in research, we will be using a synthetic [Visium HD](https://www.10xgenomics.com/platforms/visium/product-family) spatial transcriptomics dataset. In this experiment, you take a piece of tissue and lay it on a grid. Then, each spot is genomically sequenced such that you know **both the spatial location and gene expression** of each spot. 
+To provide a real-world example of how to use machine learning in research, we will be using a synthetic [Visium HD](https://www.10xgenomics.com/platforms/visium/product-family) spatial transcriptomics dataset. In type of experiment, you take a piece of tissue and lay it on a grid. Then, each spot on the grid is genomically sequenced such that you know **both the spatial location and gene expression** of each spot. 
 
 ::: {#fig-visium_hd .figure}
 ![](../img/visium.png){width=300}
@@ -62,7 +88,7 @@ _Image source: [10x Genomics](https://www.10xgenomics.com/blog/your-introduction
 ::: column
 The human cortex is a great use case for this technology because the brain is divvied into layers 1-6 and a white matter layer. A good analogy would be to think of them as an onion, where the layers are stacked right on top of each other spatially (x, y coordinates). 
 
-The layers are relatively distinct in their spatial locations but also have genes that are expressed highly in one layer and not the others. This makes it a great use case for machine learning because we can use both the spatial location and gene expression to predict which layer a cell belongs to.
+The layers are relatively distinct in their spatial locations but also have genes that are expressed highly in one layer and not the others. This makes it a great use case for machine learning because we can use both the spatial location and gene expression to predict which layer a spot belongs to.
 :::
 
 ::: column
@@ -81,7 +107,7 @@ _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026
 
 ### Cortical information
 
-We have created a made-up dataset (as the data has not been published yet) based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full). Where layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer. The dataset contains spatial coordinates of cells in the cortex, as well as the cortical layer that each cell belongs to.
+We have created a made-up dataset (as the data has not been published yet) based upon [this dataset](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full). Where layers are broken into 6 cortical layers (L1, L2, L3, L4, L5, L6) and a white matter layer.
 
 ```{python}
 #| label: tbl-load_cortical_data
@@ -96,23 +122,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 # Load synthetic cortical dataset
-df_cortical = pd.read_csv("data/synthetic_cortex_data.csv")
+df_cortical = pd.read_csv("data/synthetic_cortex_data_new.csv")
 df_cortical.head()
 ```
 
 We have the following columns in this dataset:
 
 - `barcode`: A unique identifier for each spot in the dataset
-- `x`: The x coordinate of the cell's spatial location
-- `y`: The y coordinate of the cell's spatial location
-- `layer`: The cortical layer that the cell belongs to (L1, L2, L3, L4, L5, L6, WM)
+- `x`: The x coordinate of the spot's spatial location
+- `y`: The y coordinate of the spot's spatial location
+- `layer`: The cortical layer that the spot belongs to (L1, L2, L3, L4, L5, L6, WM)
 
-As this is a spatial dataset, we can visualize where on the tissue each cell is located by plotting the x and y coordinates of each cell and coloring the points by the cortical layer that they belong to:
+As this is a spatial dataset, we can visualize where on the tissue each spot is located by plotting the x and y coordinates of each spot and coloring the points by the cortical layer that they belong to:
 
 ```{python}
 #| label: fig-cortical_layers
-#| fig-cap: "Spatial plot of the cortical cells colored by the cortical layer they belong to."
-# Plot the spatial locations of the cells colored by the cortical layer they belong to
+#| fig-cap: "Spatial plot of the cortical spots colored by the cortical layer they belong to."
+# Plot the spatial locations of the spots colored by the cortical layer they belong to
 sns.scatterplot(data=df_cortical, 
                 x="x", y="y", 
                 hue="cortical_layer", 
@@ -129,7 +155,7 @@ plt.show()
 
 So now we have a better idea of what the cross-section of the cortex looks like and where the different layers are located.
 
-However, just using the x and y coordinates of each spot is not enough. You may have noticed that there apepars to be some mixing of layers near the boundaries. Luckily for us, the different cortical layers have known genes that are highly expressed in distinct layers. We can take a quick look at some canonical markers that are used to identify the different cortical layers:
+However, just using the x and y coordinates of each spot is not enough. You may have noticed that there appears to be some mixing of layers near the boundaries. Luckily for us, the different cortical layers have known genes that are unique expressed in the layers. We can take a quick look at some of these marker genes that are used to identify the different cortical layers in the original paper that this dataset is based on:
 
 ::: {#fig-cortical_marker_genes .figure}
 ![](../img/paper_cortical_markers.png){width=550}
@@ -138,7 +164,7 @@ Example of the spatial expression of known marker genes for each cortical layer.
 _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
 :::
 
-In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17`, and `MOBP`. These are the log-normalized expression values for those genes in each cell. Similar to the figure from above, we can visualize the expression of these marker genes in each cell (point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a cell belongs to.
+In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17`, and `MOBP`. These are the [log-normalized expression](https://hbctraining.github.io/Intro-to-scRNAseq/lessons/07_SCT_normalization.html#normalization) values for those genes in each spot. Similar to the figure from above, we can visualize the expression of these marker genes in each spot (scatterplot point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a spot belongs to.
 
 ```{python}
 #| label: fig-cortical_marker_genes
@@ -171,40 +197,21 @@ plt.show()
 
 ::: {.callout-note collapse="true"}
 # Making multiple subplots in a loop
-In the above code, we first initialized a plot with 2 rows and 3 columns - with the goal of plotting each of the 6 genes in our dataset. This creates an **array of plots** which we can then access to generate each of our plots.
+In the above code, we first initialized a plot with 2 rows and 3 columns - with the goal of plotting each of the 6 genes in our dataset. This creates an **2D array of plots** which we can then access to generate each of our plots.
 
-So we could have proceeded using the `[]` indexing we have been using for matrices, but that is more complex as we would need to keep track of both rows and columns in the for loop. Instead, we can use the `flatten()` method to convert this **2D array of plots into a list of plots**, which is easier to index in the for loop.
+So we could have proceeded using the `[row, column]` indexing we have been using for matrices, but that is more complex as we would need to keep track of both rows and columns in the for loop. Instead, we can use the `flatten()` method to convert this **2D array of plots into a list of plots**, which is easier to index in the for loop.
 
 :::
 
 **We will be using this synthetic dataset to train a random forest classifier to predict the cortical layer labels based on the spatial location and gene expression of each cell.**
 
+## Training a random forest classifier
 
-## Random forest classifiers
-
-Random forests allow you to predict a categorical variable (cortical layer) based on one or more predictor variables (x and y coordinates). To do so, the algorithm builds multiple decision trees, which are models that make predictions based on a series of binary decisions (`True` or `False`).
-
-::: {#fig-decision_tree_example .figure}
-![](../img/decision_tree_example.png){width="80%"}
-
-Example of a decision tree where the variables are age, weight, and smoker to predict risk level of a heart attack.<br>
-_Image source: [DataCamp](https://www.datacamp.com/tutorial/decision-tree-classification-python)_
-:::
-
-These decision trees comprise of decision nodes, which are the points where the data is split based on a predictor variable, and leaf nodes, which are the final predictions made by the tree.
-
-Random forests build multiple decision trees and combine their predictions to improve accuracy and reduce overfitting. These trees are built on random subsets of the data. Then, a majority vote is taken across the final decision of all the trees to make the final prediction.
-
-::: {#fig-random_forest_example .figure}
-![](../img/random_forest_algorithm.png){width="80%"}
-
-Example of a random forest with 3 decision trees to generate a prediction based upon majority voting.<br>
-_Image source: [GeeksforGeeks](https://www.geeksforgeeks.org/random-forest-classifier-using-scikit-learn/)_
-:::
+Now that we have a basic understanding of how random forests work, let's dive into training one with our cortical dataset. We will be using the `RandomForestClassifier` class from the `sklearn.ensemble` module to train our model.
 
 ### Preparing training dataset
 
-The _learning_ of machine learning comes from the fact that these algorithms must first learn patterns. This is accomplished by taking a subset of labelled data, the **training set**, to train the model. From this, the random forest classifier would learn how to predict the cortical layer of a cell based on its x, y coordinates and gene expression.
+The _learning_ of machine learning comes from the fact that these algorithms must first learn patterns. This is accomplished by taking a subset of labelled data, the **training set**, to train the model. From this, the random forest classifier would learn how to predict the cortical layer of a cell based on its coordinates and gene expression. Additionally, we also need a **test set** to evaluate the performance of the model. The test set is a subset of the data that the model has not seen during training (but has labels), and it is used to assess the accuracy of the model.
 
 First we are going to define what is the label we want to predict (`cortical_layer`), and what are the predictor variables we want to use to make that prediction, (`x`, `y` coordinates and gene expression). Oftentimes there will be referred to as the `X` and `y` respectively.
 
@@ -256,7 +263,7 @@ rf = RandomForestClassifier(n_estimators=100,
                             class_weight="balanced")
 ```
 
-Next, we will train the model using the `fit()` method, which takes in the predictor variables (x and y coordinates) and the target variable (cortical layer) from the training data.
+Next, we will train the model using the `fit()` method, which takes in the predictor variables (spatial coordinates and gene expression) and the target variable (cortical layer) from the training data.
 
 ```{python}
 #| label: train_model
@@ -267,7 +274,7 @@ rf.fit(X_train, y_train)
 
 ## Predict cortical layer labels
 
-With this model, `rf`, we can now predict the cortical layer labels of the test dataset using the `predict()` method. Once again supplying the x and y coordinates, but this time for the prediction data instead of the training data. The model will use the patterns it learned from the training data to predict which cortical layer each unassigned cell belongs to based on its spatial location.
+With this model, `rf`, we can now predict the cortical layer labels of the test dataset using the `predict()` method. Once again supplying the predictor variables, but this time for the **test data** instead of the training data. The model will use the patterns it learned from the training data to predict which cortical layer each spot belongs to.
 
 ```{python}
 #| label: predict_cortical_layer
@@ -290,34 +297,34 @@ It is a numpy array! So we can access the first few elements to see what the pre
 y_pred[0:5]
 ```
 
+So we see that the output of the `predict()` method is an array of predicted cortical layer labels for each spot in the test dataset. 
 
 ::: {.callout-note collapse="true"}
 # Visualizing a _single_ decision tree in the random forest
 
 ```{python}
 #| label: visualize_decision_tree
-#| fig-cap: Visualization of a single decision tree from the random forest model.
-#| fig-width: 40
-#| fig-height: 15
-# Source - https://stackoverflow.com/a/61037626
-# Posted by Michael James Kali Galarnyk
-# Retrieved 2026-04-09, License - CC BY-SA 4.0
-from sklearn import tree
+#| fig-cap: Visualization of a single decision tree from the random forest model (truncated to depth `max_depth`).
+from sklearn.tree import export_graphviz
+import graphviz
 
-fn = df_cortical["cell_barcode"]
-cn = df_cortical["cortical_layer"]
+# Unique class names for the target variable (cortical_layer)
+cn = df_cortical["cortical_layer"].unique()
 
-fig, axes = plt.subplots(nrows = 1,
-                         ncols = 1,
-                         figsize = (70, 25),
-                         dpi=300)
 
-tree.plot_tree(rf.estimators_[0],
-               feature_names = fn, 
-               class_names = cn,
-               filled = True)
+dot_data = export_graphviz(rf.estimators_[0],
+                           out_file = None,
+                           feature_names = feature_cols,
+                           class_names = cn,
+                           filled = True,
+                           rounded = True,
+                           special_characters = True,
+                           impurity = False,
+                           proportion = True,
+                           max_depth = 3)
 
-plt.show()
+graph = graphviz.Source(dot_data)
+graph
 ```
 
 :::
@@ -343,7 +350,8 @@ Our accuracy is quite high! This tells us that our model is doing a good job at 
 Confusion matrices are another way to evaluate the performance of classification. This table shows the number of labels that were correctly predicted (true positives and true negatives) and the number of labels that were incorrectly predicted (false positives and false negatives).
 
 ```{python}
-#| label: calculate_confusion_matrix
+#| label: fig-confusion_matrix
+#| fig-cap: Confusion matrix to evaluate the performance of the random forest classifier on the test dataset for each cortical layer.
 class_names = sorted(y.unique())
 cm = confusion_matrix(y_test, y_pred, labels=class_names)
 
@@ -364,6 +372,8 @@ plt.show()
 ```
 
 This can help you understand which classes the model is doing well on and which classes it is struggling with. If your accuracy is low, you can look at the confusion matrix to see which classes are being misclassified and potentially adjust your model or data accordingly.
+
+If we think about our dataset, it makes sense that we see the **most error in the prediction when layers are adjacent to one another**. This is because the boundary between when one layer starts and another ends is not always clear, and there may be some mixing of layers near the boundaries. 
 
 ## Next steps
 

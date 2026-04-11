@@ -1,4 +1,17 @@
-When creating the `intro_python` environment, also run the following line:
+When creating the `intro_python` environment, the following libraries need to be installed:
+
+```
+jupyter
+nb_conda_kernels
+numpy
+pandas
+matplotlib
+scikit-learn
+seaborn
+python-graphviz
+```
+
+also run the following line:
 
 ```
 python -m ipykernel install --user --name intro_python --display-name "intro_python"
