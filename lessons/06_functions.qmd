@@ -28,7 +28,7 @@ editor_options:
 
 Approximate time: 60 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -39,11 +39,11 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Functions allow you to bundle a task so that you can use it repeatedly. In a more complex project, you might write a function to clean a dataset or run a standard calculation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer and easier to fix. It is much easier to make avoidable mistakes when you are copy-pasting code! Functions help you avoid all that by letting you write the code once and to reuse it as many times as you want.
+Functions allow you to bundle a task so that you can use it repeatedly. In a more complex project, you might write a function to clean a dataset or run a standard calculation. Then, you can call that function on any multitude of datasets without having to rewrite the code. This keeps your code shorter, clearer and easier to fix. It is much easier to make avoidable mistakes when you are copy-pasting code! Functions help you avoid all that by letting you **write the code once and to reuse it as many times as you want.**
 
 In this lesson, you will learn how to call built‑in functions and define your own so you can start building a small “toolbox” tailored to your own needs.
 
-## What are Functions?
+## What are functions?
 
 A key feature of Python is functions. Functions are “self contained” modules of code that accomplish a specific task. Functions usually receive some sort of data structure (value, list, dataframe etc.), process it and return a result.
 
@@ -65,15 +65,14 @@ function_name(input)
 
 The input(s) are called **arguments**, which can include:
 
-- the object (any data structure) on which the function carries out a task
-- specifications that alter the way the function operates (e.g. options)
+- The object (any data structure) on which the function carries out a task
+- Specifications that alter the way the function operates (e.g. options, arguments)
 
 Functions can potentially take several arguments. If you don’t specify a required argument when calling the function, you will either receive an error or the function will fall back on using a default value.
 
-The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be what symbol to use in a plot. However, if you want a more specific symbol, simply change the argument yourself with a value of your choice.
+The **defaults** represent standard values that the author of the function specified as being “good enough in standard cases”. An example would be the `sep` argument in the `print()` function, which has a default value of a single space. This means that if you use `print()` to print multiple values, they will be separated by a single space by default, as we saw previously.
 
-
-### Basic Functions
+### Base Python functions
 
 Since Python is frequently used for statistical computing, many of its base functions involve mathematical operations. For example, the `sum()` function receives a vector of numbers and returns its sum:
 
@@ -105,9 +104,9 @@ print(rounded_num)
 
 The output we receive is `3`, which is num rounded to the single digit; this is the default behavior of the `round()` function. However, if we want to round to a specific number of decimal places, we would need to specify more information, likely in the form of an argument.
 
-### Seeking Help on Arguments for Functions
+### Seeking help with functions
 
-If you want to know more about the arguments that a function can take, **Python’s built-in `help()` function** is a great first step. `help()` provides documentation for any function you pass to it. For example, `help(round)` will give you information about the `round()` function, including its arguments and usage.
+If you want to know more about the arguments that a function can take in, **Python’s built-in `help()` function** is a great first step. `help()` provides documentation for any function you pass to it. For example, `help(round)` will give you information about the `round()` function, including its arguments and usage.
 
 ```{python}
 #| label: help_round
@@ -124,7 +123,7 @@ The result shows us that the `round()` function can take two arguments: `number`
 4. Apply the `sorted()` function to the `numbers` list. What does it do? What are the arguments for the `sorted()` function? Use the `help()` function to find out.
 :::
 
-## Methods for Data Structures
+## Methods for data structures
 
 When we were working with lists earlier, we made use of the `list.append()` function. This is an example of a **method**, which is a function that is associated with a specific data structure. In this case, the `append()` method is associated with lists and allows us to add an element to the end of the list.
 
@@ -140,6 +139,15 @@ my_string.upper()
 ```
 
 Each data structure has its own set of methods that are designed to perform specific tasks related to that data structure. To find out what methods are available for a particular data structure, you can use the `dir()` function. For example, `dir(list)` will show you all the methods that are available for lists.
+
+::: callout-note
+# Double underscore methods
+You may notice that there are many functions that follow the structure `__method__` when we view the output for `dir()`. These are called **dunder methods** (short for “double underscore”) and they are special methods . They are typically used to define the behavior of data structures in certain scenarious. 
+
+We will not be covering dunder methods as they relate closely to `classes` which we are not covering in this workshop. You can ignore them for now.
+:::
+
+If you scroll to the bottom of the output for `dir(list)`, you will see that there are many methods available for lists:
 
 ```{python}
 #| label: dir_list
@@ -164,7 +172,20 @@ Even though there are slight differences between these two functions, they both 
 
 **Most importantly, this is another reminder that there is no single “right” way to do something in Python!**
 
-## User-defined Functions
+Additionally, these methods are not limited to numerical data. For example, we can use the `sort()` method to sort a list of strings in alphabetical order:
+
+```{python}
+#| label: string_sort
+# List of strings
+twice = ["Momo", "Sana", "Jihyo", "Mina", "Nayeon",
+         "Chaeryeong", "Dahyun", "Jeongyeon", "Tzuyu"]
+
+# Sort the list of strings in alphabetical order
+twice.sort()
+print(twice)
+```
+
+## User-defined functions
 
 One of the great strengths of Python is the user’s ability to add functions. Sometimes there is a small task (or series of tasks) you need completed and you find yourself having to repeat it multiple times. In these types of situations, it can be helpful to create your own custom function. The **structure of a function is given below**:
 
@@ -176,16 +197,18 @@ One of the great strengths of Python is the user’s ability to add functions. S
 # Define the function name and arguments
 def function_name(argument1, argument2, ...):
     # Code block that defines what the function does
+    ...
+    # Return statement
     return output
 ```
 
-When you **define the function** you will need to provide the **list of arguments** required (inputs and/or options to modify behaviour of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a list, a logical, etc.), and it’s not necessary to define the type of object.
+When you **define the function** you will need to provide the **list of arguments** required (inputs and/or options to modify behavior of the function). The argument(s) can be any type of object (like a scalar, a matrix, a dataframe, a list, a logical, etc.), and it’s not necessary to define the type of object.
 
 Then, indented under the function definition, you will write the code that carries out whatever task the function is designed to do. This is where the function is **executing code on the arguments supplied**.
 
-Finally, you can **“return” the value of the object from the function**, which means to pass the value determined by the function into the global environment. A very important fact to understand about functions is that objects that are created within the function are only local to the environment of the function – they don’t exist outside of the function.
+Finally, you can **`return` the value of the object from the function**, which means to pass the value determined by the function into the global environment. A very important fact to understand about functions is that objects that are created within the function are only local to the environment of the function – they don’t exist outside of the function.
 
-### Creating a Function
+### Creating a function
 
 Let’s try creating a simple function for an example. This function will take a numeric value as input, and return the squared value.
 
@@ -207,7 +230,7 @@ Now, we can use this function like any other base Python functions. We first typ
 square_it(5)
 ```
 
-Pretty simple, right? In this case, the function only ran a single line of code, but you could have many lines of code to get obtain the final results that you need to “return” to the user.
+Pretty simple, right? In this case, the function only ran a single line of code, but you could have many lines of code to get obtain the final results that you need to `return` to the user.
 
 :::{.callout-tip}
 # [**Exercise 2**](06_functions-Answer_key.qmd#exercise-2)
