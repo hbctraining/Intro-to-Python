@@ -241,7 +241,6 @@ We will start by calculating the sum of 3 and 5. We are also going to include **
 # April 2026
 # Author: Harvard Chan Bioinformatics Core
 
-
 # Add 3 and 5
 3 + 5
 ```

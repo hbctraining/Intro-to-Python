@@ -69,7 +69,7 @@ When creating variables in Python, there are some rules and guidelines that you 
 There is an [official Python style guide](https://peps.python.org/pep-0008/) that has much more detailed guidelines.
 :::
 
-If we would like to see the value of a variable we have created, we can use the the `print()` function:
+If we would like to see the value of a variable we have created, we can call the variable name:
 
 ```{python}
 #| label: show_my_number
@@ -87,7 +87,7 @@ Another way you can print a variable is by putting it within a `print()` functio
 print(my_number)
 ```
 
-Putting variables within `print()` function can be very helpful in case you want to inspect multiple variables. We will see this shortly. You can also add text around a variable within the `print()` function:
+We can also print entire messages that include variables by putting the variable within the `print()` function. When we add text around a variable, it automatically adds spaces on either side of that variable inside the `print()` function.
 
 ```{python}
 #| label: text_within_print
@@ -95,12 +95,7 @@ Putting variables within `print()` function can be very helpful in case you want
 print('I want to remember', my_number, 'for later use.')
 ```
 
-::: {.callout-note}
-# The `print()` function
-You can see that when we add text around a variable, it automatically adds spaces on either side of that variable inside the `print()` function.
-:::
-
-Let's go ahead and create a second number that we are interested in:
+Now let us create a second variable that we are interested in. We can assign it a different value and continue to investigate variables and the `print()` fucntion.
 
 ```{python}
 #| label: create_variable_2
@@ -108,7 +103,7 @@ Let's go ahead and create a second number that we are interested in:
 your_number = 8.5
 ```
 
-We can use the `print()` function to see the values of these variables:
+Putting variables within `print()` function can be very helpful in case you want to inspect _multiple variables_. We can use the `print()` function to see the values of these variables:
 
 ```{python}
 #| label: multiple_variable_within_print
@@ -131,7 +126,7 @@ Do you notice that it only has the output from `your_number`? This is because wi
 
 ```{python}
 #| label: with_print
-# Print my number
+# Print my_number
 print(my_number)
 
 # Print your_number
@@ -147,6 +142,7 @@ f-strings (formatted string literals) are a concise way to build strings (text v
 # f-string Example
 print(f'I want to remember {my_number} and {your_number}')
 ```
+
 :::
 
 You can carry out basic arithmetic using variables. For example, if we wanted to add `my_number` and `your_number`, we could do that with:
@@ -252,6 +248,7 @@ difference = a - b
 #| echo: false
 print('The difference of', a, 'and', b, 'is', difference)
 ```
+
 :::
 
 ## Types of variables
@@ -290,30 +287,9 @@ Integers are whole numbers and floats are numbers with decimals. Both of these d
 5 + 3.14
 ```
 
-::: {.callout-note collapse="true"}
-# You do not always have to `print()` your variables
-You can directly see the output for a variable to if you run a cell and the variable is the last line in the code chunk. However, this will ony work for seeing on variable at a time, so if you wanted to see two variables as the same time, we would have to use the print function. For example:
-
-```{python}
-#| label: print_example_1
-our_sum
-my_number
-```
-
-versus
-
-```{python}
-#| label: print_example_2
-print(our_sum)
-print(my_number)
-```
-
-:::
-
-
 ### Strings
 
-Strings are a data type that can hold a sequence of characters. Strings are denoted by wrapping the string in either single- or double-quotes and either is acceptable. 
+Strings are a data type that can hold a sequence of characters. Strings are denoted by wrapping the string in either single(`''`)- or double-quotes(`""`). Both are allowed in Python. 
 
 ```{python}
 #| label: string_variable
@@ -445,12 +421,12 @@ print(type(True + True + False))
 If we right click on some empty space within the JupyterLab interface, we can open up the `Variable Inspector`. This is a helpful tool to see all of the variables that you have created and their data types.
 
 ::: {#fig-jupyter_right_click .figure}
-![](../img/jupyter_lab_right_click.png)
+![](../img/jupyter_lab_right_click.png){width="50%"}
 
 Options after right-clicking an empty spot within JupyterLab.
 :::
 
-Once we open up the `Variable Inspector`, a new tab will open. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and cannot recall what each are.
+Once we open up the Variable Inspector, a new tab will open. From this tab, we can see all of the variables that we have created, their data types and their values. This is a useful resource to quickly check what variables you have created and what they contain, especially if you have created many variables and cannot recall what each are.
 
 
 ::: {#fig-jupyter_variable_inspector .figure}
