@@ -12,7 +12,7 @@
 <meta name="keywords" content="Matrix, Math, Indexing">
 <meta name="description" content="In this lesson, you will learn how to work with NumPy arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common NumPy functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.">
 
-<title>NumPy arrays – Introduction to Python</title>
+<title>NumPy Arrays – Introduction to Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -3937,7 +3937,7 @@ var data = {
 
 
 }
-,"blob":{"1":"2","10":"G-68JBPLLNLG|GT-M399CZS","11":true,"14":"6481","15":"0","16":"ChEI8L/izgYQ99ak8ZP7xsOAARIdAJeLUmEAOwWSNqFbmgKo9K8ExJFqV8wfgQ3cNJIaAkCb","17":"","19":"dataLayer","20":"","21":"www.googletagmanager.com","22":"eyIwIjoiVVMiLCIxIjoiVVMtTUEiLCIyIjpmYWxzZSwiMyI6IiIsIjQiOiIiLCI1Ijp0cnVlLCI2IjpmYWxzZSwiNyI6ImFkX3N0b3JhZ2V8YW5hbHl0aWNzX3N0b3JhZ2V8YWRfdXNlcl9kYXRhfGFkX3BlcnNvbmFsaXphdGlvbiJ9","23":"google.tagmanager.debugui2.queue","24":"tagassistant.google.com","27":0.005,"3":"www.googletagmanager.com","30":"US","31":"US-MA","32":true,"34":"G-68JBPLLNLG","35":"G","36":"https://adservice.google.com/pagead/regclk","37":"__TAGGY_INSTALLED","38":"cct.google","39":"googTaggyReferrer","40":"https://cct.google/taggy/agent.js","41":"google.tagmanager.ta.prodqueue","42":0.01,"43":"{\"keys\":[{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BEi/HQnB882MlGABpyFmh1oIl2ZnT5VvHiHj3U3A13rkEbcNJyh+iG199HxtiTsmjrCL0RzSs2Jec9GEvUxzD4Y=\",\"version\":0},\"id\":\"d75bc502-b575-4edb-baf2-ecf1cdf1db63\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BEdAXOvlB7R6vtwciaQfLmITqzp9eUc/KfhxO8eBUpCbEiCnGN0PP2XVFA5Sm6WwMYxpAWqhx+yWlkCNfIhJq/8=\",\"version\":0},\"id\":\"d28eb729-71ce-486e-8527-14d29c0254df\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BI4cBdDJs3snksrMVh9KSD2Cib1IZIpvWX2gKPZ6so2o53WYiBpGISbsDj9UrVgjA/7frRt1dQ3iGdOqQdx7M9M=\",\"version\":0},\"id\":\"794a4e7d-62e2-4e3d-891b-13d52ea6477a\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BOR9RIgZi1b8B0aXwFyIHR792y7j1ncsr5yFiACtjkcq0rdnGZ/X6qlv0SXdTetT5tXj8CbHEAPm3zBPo4MaM+I=\",\"version\":0},\"id\":\"53398c97-fa2b-4ecc-99cd-440841c5e7d0\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BHkCip94IdHFZIzw01OfHAL/0WcHjrd9CemerppwpToemVLPHMcJZb6nlhLy6aOAeeyHYrWnk/cMgn7VglmvES8=\",\"version\":0},\"id\":\"404b193a-a288-4d9b-802a-8f797fc6d389\"}]}","44":"0","45":true,"46":{"1":"1000","10":"63b0","11":"63a0","14":"1000","16":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","17":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","2":"9","20":"5000","21":"5000","22":"4.2.0","23":"0.0.0","25":"1","26":"4000","27":"100","3":"5","4":"ad_storage|analytics_storage|ad_user_data|ad_personalization","44":"15000","48":"30000","5":"ad_storage|analytics_storage|ad_user_data","6":"1","61":"1000","62":"A6ONHRY7/bvBro+IMZd/a6LNjn7SSv999SkN/hFAE9L6vMr34dNgfdSVdYmv4U+NHZg1sxd38RtciRpRUtIRPgQAAACCeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2hhcmVkV29ya2VyRXh0ZW5kZWRMaWZldGltZSIsImV4cGlyeSI6MTc3NjcyOTYwMCwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==","63":"1000","66":"100","7":"10"},"48":true,"5":"G-68JBPLLNLG","55":["G-68JBPLLNLG"],"56":[{"1":403,"3":0.5,"4":115938465,"5":115938466,"6":0,"7":2},{"1":404,"3":0.5,"4":115938468,"5":115938469,"6":0,"7":1},{"1":521,"2":true},{"1":490,"2":true},{"1":491,"3":0.001,"4":118012007,"5":118012008,"6":118012009,"7":1},{"1":480,"2":true},{"1":530,"2":true},{"1":457,"2":true},{"1":526,"2":true},{"1":418,"2":true},{"1":489,"2":true},{"1":527,"2":true},{"1":447,"2":true},{"1":462,"2":true},{"1":525,"2":true},{"1":413,"3":0.05,"4":116363097,"5":116363098,"6":118289195,"7":2},{"1":408,"3":0.1,"4":117266400,"5":117266401,"6":117266402,"7":1},{"1":528,"2":true},{"1":497,"2":true},{"1":439,"2":true},{"1":420,"2":true},{"1":442,"2":true},{"1":507,"2":true},{"1":450,"3":0.01,"4":117227714,"5":117227715,"6":117227716,"7":3},{"1":458,"2":true},{"1":444,"3":0.1,"4":117384405,"5":117384406,"6":117884344,"7":1},{"1":498,"3":0.2,"4":115616985,"5":115616986,"6":0,"7":1},{"1":518,"2":true},{"1":465,"3":0.1,"4":117512542,"5":117512543,"6":0,"7":3},{"1":406,"2":true},{"1":495,"3":0.05,"4":118131810,"5":118131808,"6":118131809,"7":1},{"1":431,"3":0.01,"4":116701381,"5":116701382,"6":116767281,"7":3},{"1":520,"3":0.1,"4":118442251,"5":118442252,"6":0,"7":1},{"1":515,"3":0.05,"4":118128922,"5":118128923,"6":0,"7":1},{"1":412,"2":true},{"1":441,"2":true},{"1":534,"2":true},{"1":446,"3":0.005,"4":118463262,"5":118463261,"6":0,"7":1},{"1":524,"2":true}],"59":["G-68JBPLLNLG"],"6":"123131330"}
+,"blob":{"1":"2","10":"G-68JBPLLNLG|GT-M399CZS","11":true,"14":"6481","15":"0","16":"ChAI8OLnzgYQ3uCvy6jApdNZEh0AFXEUX6WnmKSvA6WLcPge2P70+jEvx1a1drQWZRoC5+w=","17":"","19":"dataLayer","20":"","21":"www.googletagmanager.com","22":"eyIwIjoiVVMiLCIxIjoiVVMtTUEiLCIyIjpmYWxzZSwiMyI6IiIsIjQiOiIiLCI1Ijp0cnVlLCI2IjpmYWxzZSwiNyI6ImFkX3N0b3JhZ2V8YW5hbHl0aWNzX3N0b3JhZ2V8YWRfdXNlcl9kYXRhfGFkX3BlcnNvbmFsaXphdGlvbiJ9","23":"google.tagmanager.debugui2.queue","24":"tagassistant.google.com","27":0.005,"3":"www.googletagmanager.com","30":"US","31":"US-MA","32":true,"34":"G-68JBPLLNLG","35":"G","36":"https://adservice.google.com/pagead/regclk","37":"__TAGGY_INSTALLED","38":"cct.google","39":"googTaggyReferrer","40":"https://cct.google/taggy/agent.js","41":"google.tagmanager.ta.prodqueue","42":0.01,"43":"{\"keys\":[{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BGyFe4JBy048Tbxa6VawXnXMCxwcrFjDS7YHqMfSVl4Q7tUSarWG2I/Vf6unL0fzdwVM6rAFHGyB5VeTdWlbR+M=\",\"version\":0},\"id\":\"f13357bb-7804-44a5-a7ba-372a2a1fc6b2\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BNk4hnqRmpLCop3CACiBwbcaOTRBCqatqdcvn/FIyxpFapgJ9hCZHeRXFXxxy4t5AiD/Go/OlqOrRpbC7RtNZ+k=\",\"version\":0},\"id\":\"895eb676-9e71-4f4b-a354-a4fa53986476\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BHXfbdWFwA54J7RYNpyFznyKcsM9JMCoLEFarL9ZhJLihEE81dCzcJlN1sHn7z5iU+GAmXhHYhp3UWe+hhGGN2w=\",\"version\":0},\"id\":\"4b70a56e-492d-4b06-be69-c9074ba03a9a\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BBoj8ygNJyeowweHmXrqZWtmUXR4tzVscRdpk6VdNWnb9wrRIzJBrkWn0QEBNfH6d/YBOOe+RS0JncYmL+Nww8I=\",\"version\":0},\"id\":\"316b8aac-0100-4468-8514-c75d6aca0f7e\"},{\"hpkePublicKey\":{\"params\":{\"aead\":\"AES_128_GCM\",\"kdf\":\"HKDF_SHA256\",\"kem\":\"DHKEM_P256_HKDF_SHA256\"},\"publicKey\":\"BJz5se85BuX2Gi1iZY5sJt0X44aGeZxqnOBOAykiU5ezDohcwq4hBFr5qSLGZF0M+4dCXvsfMx6OV4XuJoyB5+0=\",\"version\":0},\"id\":\"2bdab84e-0b96-4cb0-932b-cad7da319e47\"}]}","44":"0","45":true,"46":{"1":"1000","10":"63b0","11":"63a0","14":"1000","16":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","17":"US-CO~US-CT~US-MT~US-NE~US-NH~US-TX~US-MN~US-NJ~US-MD~US-OR~US-DE","2":"9","20":"5000","21":"5000","22":"4.2.0","23":"0.0.0","25":"1","26":"4000","27":"100","3":"5","4":"ad_storage|analytics_storage|ad_user_data|ad_personalization","44":"15000","48":"30000","5":"ad_storage|analytics_storage|ad_user_data","6":"1","61":"1000","62":"A6ONHRY7/bvBro+IMZd/a6LNjn7SSv999SkN/hFAE9L6vMr34dNgfdSVdYmv4U+NHZg1sxd38RtciRpRUtIRPgQAAACCeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2hhcmVkV29ya2VyRXh0ZW5kZWRMaWZldGltZSIsImV4cGlyeSI6MTc3NjcyOTYwMCwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==","63":"1000","66":"100","7":"10"},"48":true,"5":"G-68JBPLLNLG","55":["G-68JBPLLNLG"],"56":[{"1":403,"3":0.5,"4":115938465,"5":115938466,"6":0,"7":2},{"1":404,"3":0.5,"4":115938468,"5":115938469,"6":0,"7":1},{"1":521,"2":true},{"1":490,"2":true},{"1":491,"3":0.001,"4":118012007,"5":118012008,"6":118012009,"7":1},{"1":480,"2":true},{"1":530,"2":true},{"1":457,"2":true},{"1":526,"2":true},{"1":418,"2":true},{"1":489,"2":true},{"1":447,"2":true},{"1":462,"2":true},{"1":525,"2":true},{"1":413,"3":0.05,"4":116363097,"5":116363098,"6":118289195,"7":2},{"1":408,"3":0.1,"4":117266400,"5":117266401,"6":117266402,"7":1},{"1":497,"2":true},{"1":439,"2":true},{"1":420,"2":true},{"1":442,"2":true},{"1":507,"2":true},{"1":450,"3":0.01,"4":117227714,"5":117227715,"6":117227716,"7":3},{"1":458,"2":true},{"1":444,"3":0.1,"4":117384405,"5":117384406,"6":117884344,"7":1},{"1":498,"3":0.2,"4":115616985,"5":115616986,"6":0,"7":1},{"1":518,"2":true},{"1":465,"3":0.1,"4":117512542,"5":117512543,"6":0,"7":3},{"1":406,"2":true},{"1":495,"3":0.05,"4":118131810,"5":118131808,"6":118131809,"7":1},{"1":431,"3":0.01,"4":116701381,"5":116701382,"6":116767281,"7":3},{"1":520,"3":0.1,"4":118442251,"5":118442252,"6":0,"7":1},{"1":515,"3":0.05,"4":118128922,"5":118128923,"6":0,"7":1},{"1":412,"2":true},{"1":441,"2":true},{"1":534,"2":true},{"1":446,"3":0.005,"4":118463262,"5":118463261,"6":0,"7":1},{"1":524,"2":true}],"59":["G-68JBPLLNLG"],"6":"123131330"}
 ,"permissions":{
 "__c":{}
 ,
@@ -5146,7 +5146,7 @@ background-color: #f8f8f8;
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html">Day 3:</a></li><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html"><code>NumPy</code> arrays</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html">Day 3:</a></li><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html"><code>NumPy</code> Arrays</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -5193,7 +5193,7 @@ background-color: #f8f8f8;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/03_conditional_statements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditional statements</span></a>
+ <span class="menu-text">Conditional Statements</span></a>
   </div>
 </li>
       </ul>
@@ -5210,7 +5210,7 @@ background-color: #f8f8f8;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/04_data_structures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data structures</span></a>
+ <span class="menu-text">Data Structures</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -5256,7 +5256,7 @@ background-color: #f8f8f8;
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lessons/08_numpy_arrays.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><code>NumPy</code> arrays</span></a>
+ <span class="menu-text"><code>NumPy</code> Arrays</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -5323,14 +5323,17 @@ background-color: #f8f8f8;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#numpy-library" id="toc-numpy-library" class="nav-link" data-scroll-target="#numpy-library"><code>NumPy</code> Library</a>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#overview-of-lesson" id="toc-overview-of-lesson" class="nav-link" data-scroll-target="#overview-of-lesson">Overview of lesson</a></li>
+  <li><a href="#numpy-library" id="toc-numpy-library" class="nav-link" data-scroll-target="#numpy-library"><code>NumPy</code> library</a>
   <ul class="collapse">
-  <li><a href="#dimensional-arrays" id="toc-dimensional-arrays" class="nav-link" data-scroll-target="#dimensional-arrays">1-dimensional Arrays</a></li>
-  <li><a href="#n-dimensional-arrays" id="toc-n-dimensional-arrays" class="nav-link" data-scroll-target="#n-dimensional-arrays">N-dimensional Arrays</a></li>
-  <li><a href="#indexing-and-slicing-arrays" id="toc-indexing-and-slicing-arrays" class="nav-link" data-scroll-target="#indexing-and-slicing-arrays">Indexing and Slicing Arrays</a></li>
+  <li><a href="#dimensional-arrays" id="toc-dimensional-arrays" class="nav-link" data-scroll-target="#dimensional-arrays">1-dimensional arrays</a></li>
+  <li><a href="#n-dimensional-arrays" id="toc-n-dimensional-arrays" class="nav-link" data-scroll-target="#n-dimensional-arrays">N-dimensional arrays</a></li>
+  <li><a href="#special-matrices" id="toc-special-matrices" class="nav-link" data-scroll-target="#special-matrices">Special matrices</a></li>
+  <li><a href="#reshaping-arrays" id="toc-reshaping-arrays" class="nav-link" data-scroll-target="#reshaping-arrays">Reshaping arrays</a></li>
   </ul></li>
-  <li><a href="#useful-numpy-functions" id="toc-useful-numpy-functions" class="nav-link" data-scroll-target="#useful-numpy-functions">Useful <code>NumPy</code> Functions</a>
+  <li><a href="#indexing-and-slicing-arrays" id="toc-indexing-and-slicing-arrays" class="nav-link" data-scroll-target="#indexing-and-slicing-arrays">Indexing and slicing arrays</a></li>
+  <li><a href="#useful-numpy-functions" id="toc-useful-numpy-functions" class="nav-link" data-scroll-target="#useful-numpy-functions">Useful <code>NumPy</code> functions</a>
   <ul class="collapse">
   <li><a href="#summarizing-arrays" id="toc-summarizing-arrays" class="nav-link" data-scroll-target="#summarizing-arrays">Summarizing arrays</a></li>
   <li><a href="#random-numbers" id="toc-random-numbers" class="nav-link" data-scroll-target="#random-numbers">Random numbers</a></li>
@@ -5341,9 +5344,9 @@ background-color: #f8f8f8;
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html">Day 3:</a></li><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html"><code>NumPy</code> arrays</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html">Day 3:</a></li><li class="breadcrumb-item"><a href="../lessons/08_numpy_arrays.html"><code>NumPy</code> Arrays</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><code>NumPy</code> arrays</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><code>NumPy</code> Arrays</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
   <div class="quarto-categories">
     <div class="quarto-category">Python programming</div>
     <div class="quarto-category">numpy</div>
@@ -5391,7 +5394,7 @@ background-color: #f8f8f8;
 
 <p>Approximate time: 30 minutes</p>
 <section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
 <p>In this lesson, we will:</p>
 <ul>
 <li>Manipulate <code>NumPy</code> arrays with indexing and slicing</li>
@@ -5399,11 +5402,15 @@ background-color: #f8f8f8;
 <li>Use <code>NumPy</code> functions to perform common operations</li>
 </ul>
 </section>
+<section id="overview-of-lesson" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-lesson">Overview of lesson</h2>
+<p><code>NumPy</code> is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. In this lesson, we will cover the basics of working with <code>NumPy</code> arrays, including how to create and manipulate them, as well as some common functions that are available for performing operations on arrays.</p>
+</section>
 <section id="numpy-library" class="level2">
-<h2 class="anchored" data-anchor-id="numpy-library"><code>NumPy</code> Library</h2>
-<p><code>NumPy</code> is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. You can find the official documentation for <code>NumPy</code> <a href="https://numpy.org/doc/stable/">here</a> and you should consult it whenever there you need to run a specific task repeatedly to see if an function already exists for that task. You can also use the <code>help()</code> function in Python to get more information about a specific <code>NumPy</code> function or data structure.</p>
+<h2 class="anchored" data-anchor-id="numpy-library"><code>NumPy</code> library</h2>
+<p>You can find the official documentation for <code>NumPy</code> <a href="https://numpy.org/doc/stable/">here</a> and you should consult it whenever there you need to run a specific task repeatedly to see if an function already exists for that task. You can also use the <code>help()</code> function in Python to get more information about a specific <code>NumPy</code> function or data structure.</p>
 <section id="dimensional-arrays" class="level3">
-<h3 class="anchored" data-anchor-id="dimensional-arrays">1-dimensional Arrays</h3>
+<h3 class="anchored" data-anchor-id="dimensional-arrays">1-dimensional arrays</h3>
 <p>The most basic data structure in <code>NumPy</code> is the 1-dimensional array, which is similar to a list. You can create a 1-dimensional array using the <code>numpy.array()</code> function:</p>
 <div id="create_1d_array" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Import numpy using the alias, np</span></span>
@@ -5458,7 +5465,7 @@ background-color: #f8f8f8;
 </div>
 </section>
 <section id="n-dimensional-arrays" class="level3">
-<h3 class="anchored" data-anchor-id="n-dimensional-arrays">N-dimensional Arrays</h3>
+<h3 class="anchored" data-anchor-id="n-dimensional-arrays">N-dimensional arrays</h3>
 <p>Arrays are not just limited to 1 dimension; <code>NumPy</code> can also create and handle multi-dimensional arrays. For example, you can create a 2-dimensional array (also known as a matrix) while using the same <code>numpy.array()</code> function:</p>
 <div id="create_2d_array" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2-dimensional array (matrix)</span></span>
@@ -5486,7 +5493,10 @@ background-color: #f8f8f8;
  [490 640]]</code></pre>
 </div>
 </div>
-<p>We can initialize a matrix of zeros or ones by using <code>numpy.zeros()</code> and <code>numpy.ones()</code> methods in as many dimensions as we want. Alternatively, we could use <code>numpy.identity()</code> to create an identity matrix.</p>
+</section>
+<section id="special-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="special-matrices">Special matrices</h3>
+<p>We can initialize a matrix of zeros or ones by using <code>numpy.zeros()</code> and <code>numpy.ones()</code> methods in as many dimensions as we want.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -5513,7 +5523,8 @@ background-color: #f8f8f8;
  [0. 0. 0.]]</code></pre>
 </div>
 </div>
-<div id="cc4d6b29" class="cell" data-execution_count="8">
+<p>Similarly, we can initialize a matrix of ones:</p>
+<div id="initialize_ones_matrix" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 2x4 matrix of ones</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ones_matrix <span class="op">=</span> np.ones((<span class="dv">2</span>, <span class="dv">4</span>))</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -5524,7 +5535,8 @@ background-color: #f8f8f8;
  [1. 1. 1. 1.]]</code></pre>
 </div>
 </div>
-<div id="91d58e9e" class="cell" data-execution_count="9">
+<p>We can even create an identify matrix with <code>numpy.identity()</code>. An identity matrix is a square matrix (same number of rows and columns) with ones on the main diagonal and zeros elsewhere.</p>
+<div id="initialize_identity_matrix" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 3x3 identity matrix</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>identity_matrix <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(identity_matrix)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -5534,64 +5546,105 @@ background-color: #f8f8f8;
  [0. 0. 1.]]</code></pre>
 </div>
 </div>
-<p>The <code>numpy.reshape()</code> function is another flexible way to create arrays of varying shapes and sizes. We can use this in conjunction with <code>numpy.arange()</code> to create an array of a specific range of numbers and then reshape it into the desired dimensions.</p>
-<div id="arange_function" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array of integers from 0 to 9, then reshape it into a 2x5 matrix</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>matrix_arange <span class="op">=</span> np.arange(<span class="dv">10</span>).reshape(<span class="dv">2</span>, <span class="dv">5</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the matrix</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix_arange)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Identity matrix math
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>It is often denoted as <code>I</code> and has the property that when multiplied by any matrix of compatible dimensions, it returns the original matrix (i.e., <code>I * A = A</code>).</p>
+<div id="identity_matrix_multiplication" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of identity matrix multiplication</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]])</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> np.dot(I, A)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1. 2. 3.]
+ [4. 5. 6.]
+ [7. 8. 9.]]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reshaping-arrays" class="level3">
+<h3 class="anchored" data-anchor-id="reshaping-arrays">Reshaping arrays</h3>
+<p>The <code>numpy.reshape()</code> function is a flexible way to create arrays of varying shapes and sizes. We can use this in conjunction with <code>numpy.arange()</code> to create an array of a specific range of numbers and then reshape it into the desired dimensions.</p>
+<div id="arange_function" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array of integers from 0 to 9</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>matrix_arange <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix_arange)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[0 1 2 3 4 5 6 7 8 9]</code></pre>
+</div>
+</div>
+<p>And now we can reshape the values to be the size we want to work with:</p>
+<div id="reshape_array" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape the array into a 2x5 matrix</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>reshaped_matrix <span class="op">=</span> matrix_arange.reshape(<span class="dv">2</span>, <span class="dv">5</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(reshaped_matrix)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[0 1 2 3 4]
  [5 6 7 8 9]]</code></pre>
 </div>
 </div>
 </section>
-<section id="indexing-and-slicing-arrays" class="level3">
-<h3 class="anchored" data-anchor-id="indexing-and-slicing-arrays">Indexing and Slicing Arrays</h3>
+</section>
+<section id="indexing-and-slicing-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-and-slicing-arrays">Indexing and slicing arrays</h2>
 <p>Arrays can be indexed and sliced in a similar way to lists with indices (again beginning with 0) and slicing syntax. So if we wanted to access the first element of a 1-dimensional array, we would use <code>arr1[0]</code>:</p>
-<div id="indexing_1d_array" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the first element of arr</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> arr[<span class="dv">0</span>]</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_element)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="indexing_1d_array" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the first element of arr</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> arr[<span class="dv">0</span>]</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_element)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1</code></pre>
 </div>
 </div>
 <p>In a 2-dimensional array, the first index refers to the row and the second index refers to the column. So if we wanted to access the first row of a 2-dimensional array, we would use <code>matrix[0]</code>:</p>
-<div id="indexing_2d_array" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first row of a 2-dimensional array</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>first_row <span class="op">=</span> matrix[<span class="dv">0</span>]</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved row</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="indexing_2d_array" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first row of a 2-dimensional array</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>first_row <span class="op">=</span> matrix[<span class="dv">0</span>]</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved row</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_row)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1 2 3]</code></pre>
 </div>
 </div>
 <p>If we wanted to access the element in the second row and third column of the matrix, we would use <code>matrix[1, 2]</code>:</p>
-<div id="indexing_2d_array_element" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the element in the second row and third column</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>element <span class="op">=</span> matrix[<span class="dv">1</span>, <span class="dv">2</span>]</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(element)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="indexing_2d_array_element" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the element in the second row and third column</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>element <span class="op">=</span> matrix[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(element)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>6</code></pre>
 </div>
 </div>
 <p>So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to more easily select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and wrangle the data.</p>
-<div id="boolean_indexing" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select elements greater than 3</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>filtered_arr <span class="op">=</span> arr[arr <span class="op">&gt;</span> <span class="dv">3</span>]</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the selected elements</span></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(filtered_arr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="boolean_indexing" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select elements greater than 3</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>filtered_arr <span class="op">=</span> arr[arr <span class="op">&gt;</span> <span class="dv">3</span>]</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the selected elements</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(filtered_arr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[4 5]</code></pre>
 </div>
@@ -5616,33 +5669,43 @@ background-color: #f8f8f8;
 </div>
 </div>
 </section>
-</section>
 <section id="useful-numpy-functions" class="level2">
-<h2 class="anchored" data-anchor-id="useful-numpy-functions">Useful <code>NumPy</code> Functions</h2>
+<h2 class="anchored" data-anchor-id="useful-numpy-functions">Useful <code>NumPy</code> functions</h2>
 <p>Base Python is somewhat limited when it comes to numerical operations. The <a href="https://numpy.org/doc/stable/reference/"><code>NumPy</code> library</a> provides a broader range of mathematical tools. For example, you can quickly calculate the mean, median, and standard deviation of an array with the <code>numpy.mean()</code>, <code>numpy.median()</code>, and <code>numpy.std()</code> functions:</p>
-<div id="numpy_functions" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">7</span>, <span class="fl">9.5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="fl">3.2</span>])</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean of arr</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> np.mean(arr)</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate median of arr</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>median <span class="op">=</span> np.median(arr)</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate standard deviation of arr</span></span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> np.std(arr)</span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Print an f-string (Python inteprets items with {}) with the mean, median and standard deviation</span></span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Mean: </span><span class="sc">{</span>mean<span class="sc">}</span><span class="ss">, Median: </span><span class="sc">{</span>median<span class="sc">}</span><span class="ss">, Standard Deviation: </span><span class="sc">{</span>std_dev<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="numpy_functions" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">7</span>, <span class="fl">9.5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="fl">3.2</span>])</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean of arr</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> np.mean(arr)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate median of arr</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>median <span class="op">=</span> np.median(arr)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate standard deviation of arr</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> np.std(arr)</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Print an f-string (Python inteprets items with {}) with the mean, median and standard deviation</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Mean: </span><span class="sc">{</span>mean<span class="sc">}</span><span class="ss">, Median: </span><span class="sc">{</span>median<span class="sc">}</span><span class="ss">, Standard Deviation: </span><span class="sc">{</span>std_dev<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Mean: 5.616666666666667, Median: 6.0, Standard Deviation: 2.523500654954453</code></pre>
 </div>
 </div>
-<p>NumPy has other functions for performing mathematical operations on arrays, such as <code>numpy.sum()</code>, <code>numpy.prod()</code>, <code>numpy.cumsum()</code>, <code>numpy.cumprod()</code>, <code>numpy.square()</code>, <code>numpy.sqrt()</code>, <code>numpy.max()</code>, <code>numpy.min()</code>. All these functions allow you to perform operations across the entire array or along specific axes.</p>
+<p>NumPy has other functions for performing mathematical operations on arrays, such as</p>
+<ul>
+<li><code>numpy.sum()</code></li>
+<li><code>numpy.prod()</code></li>
+<li><code>numpy.cumsum()</code></li>
+<li><code>numpy.cumprod()</code></li>
+<li><code>numpy.square()</code></li>
+<li><code>numpy.sqrt()</code></li>
+<li><code>numpy.max()</code></li>
+<li><code>numpy.min()</code>.</li>
+</ul>
+<p>All these functions allow you to perform operations across the entire array or along specific axes.</p>
 <section id="summarizing-arrays" class="level3">
 <h3 class="anchored" data-anchor-id="summarizing-arrays">Summarizing arrays</h3>
-<p>Arrays come with built in methods to see the general information about the array.</p>
+<p>Arrays come with built in methods to see the general information about the array. Recall that methods are functions that are associated with a specific object. Let us test our what some of the attributes of the <code>matrix_arange</code> array are:</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -5654,7 +5717,7 @@ background-color: #f8f8f8;
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Test out the following functions on the <code>matrix_arange</code> array that we created earlier and describe what the output is for each function:
+<li><p>Test out the following functions on the <code>matrix_arange</code> array that we created earlier and describe what the output is for each function:</p>
 <ul>
 <li><code>np.shape()</code></li>
 <li><code>np.ndim()</code></li>
@@ -5667,27 +5730,28 @@ background-color: #f8f8f8;
 <section id="random-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="random-numbers">Random numbers</h3>
 <p>Within <code>NumPy</code>, we can also generate random numbers, which can be helpful for random sampling or initializing a non-zero matrix with values. These functions come from the <code>numpy.random</code> module. For example, you can generate a random array of numbers between 0 and 1 using the <code>numpy.random.rand()</code> function:</p>
-<div id="random_array" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers between 0 and 1</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.rand(<span class="dv">10</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="random_array" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers between 0 and 1</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.rand(<span class="dv">10</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[0.69972493 0.8690798  0.76707831 0.20646066 0.95636237 0.17631721
- 0.89745904 0.5921447  0.34393024 0.9425169 ]</code></pre>
+<pre><code>[0.24103789 0.5350177  0.9551413  0.4506068  0.57524586 0.32255953
+ 0.03588693 0.37674368 0.41939486 0.37033848]</code></pre>
 </div>
 </div>
 <p>Similarly, we can also create a random array from a specific distribution. For example, you can generate a random array of numbers from a normal distribution using the <code>numpy.random.normal()</code> function:</p>
-<div id="random_normal" class="cell" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers from a normal distribution with mean 0 and standard deviation 1</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10</span>)  </span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="random_normal" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers from a normal distribution </span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># with mean 0 and standard deviation 1</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10</span>)  </span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[-0.86543403  0.56281739  1.42400947  0.11286936 -0.75008706 -1.29142901
-  0.16343289 -1.12700465 -1.06188944  0.89250708]</code></pre>
+<pre><code>[ 0.11184395 -0.49229183 -1.71398121 -1.3738992  -1.56482345  0.04545861
+ -0.66243773  0.37890057 -0.34691502 -1.30902003]</code></pre>
 </div>
 </div>
 <hr>
@@ -6152,299 +6216,352 @@ background-color: #f8f8f8;
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;`NumPy` arrays&quot;</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">  In this lesson, you will learn how to work with `NumPy` arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common NumPy functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Noor Sohail</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Will Gammerdinger</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2026-03-15&quot;</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - Python programming</span></span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - numpy</span></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Arrays</span></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - Matrix</span></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - Math</span></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - Indexing</span></span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a><span class="an">license:</span><span class="co"> &quot;CC-BY-4.0&quot;</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a><span class="co">  markdown: </span></span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="co">    wrap: 72</span></span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> intro_python</span></span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a>Approximate time: 30 minutes</span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives </span></span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
-<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Manipulate <span class="in">`NumPy`</span> arrays with indexing and slicing</span>
-<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create arrays/matrices of varying dimensions and shapes</span>
-<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`NumPy`</span> functions to perform common operations</span>
-<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-35"><a href="#cb35-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## `NumPy` Library</span></span>
-<span id="cb35-36"><a href="#cb35-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a><span class="in">`NumPy`</span> is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. You can find the official documentation for <span class="in">`NumPy`</span> <span class="co">[</span><span class="ot">here</span><span class="co">](https://numpy.org/doc/stable/)</span> and you should consult it whenever there you need to run a specific task repeatedly to see if an function already exists for that task. You can also use the <span class="in">`help()`</span> function in Python to get more information about a specific <span class="in">`NumPy`</span> function or data structure.</span>
-<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1-dimensional Arrays</span></span>
-<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a>The most basic data structure in <span class="in">`NumPy`</span> is the 1-dimensional array, which is similar to a list. You can create a 1-dimensional array using the <span class="in">`numpy.array()`</span> function:</span>
-<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-45"><a href="#cb35-45" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-46"><a href="#cb35-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_1d_array</span></span>
-<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a><span class="co">#Import numpy using the alias, np</span></span>
-<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional numpy array called arr</span></span>
-<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
-<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the numpy array </span></span>
-<span id="cb35-54"><a href="#cb35-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span>
-<span id="cb35-55"><a href="#cb35-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a>One of the key advantages of <span class="in">`NumPy`</span> arrays over Python lists is their greater efficiency for numerical operations. For example, you can easily perform element-wise operations on <span class="in">`NumPy`</span> arrays. So if we were to add two arrays together, it would add each element of the first array to the corresponding element of the second array:</span>
-<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-61"><a href="#cb35-61" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-62"><a href="#cb35-62" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: elementwise_operations</span></span>
-<span id="cb35-63"><a href="#cb35-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Create another 1-dimensional numpy array called arr2</span></span>
-<span id="cb35-64"><a href="#cb35-64" aria-hidden="true" tabindex="-1"></a>arr2 <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>])</span>
-<span id="cb35-65"><a href="#cb35-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-66"><a href="#cb35-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise addition on arr and arr2 and assign the output to result</span></span>
-<span id="cb35-67"><a href="#cb35-67" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> arr <span class="op">+</span> arr2</span>
-<span id="cb35-68"><a href="#cb35-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-69"><a href="#cb35-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Print result array</span></span>
-<span id="cb35-70"><a href="#cb35-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
-<span id="cb35-71"><a href="#cb35-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-72"><a href="#cb35-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-73"><a href="#cb35-73" aria-hidden="true" tabindex="-1"></a>If we were to try to do this with Python lists, we would get a different result:</span>
-<span id="cb35-74"><a href="#cb35-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-77"><a href="#cb35-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-78"><a href="#cb35-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_addition</span></span>
-<span id="cb35-79"><a href="#cb35-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two Python lists</span></span>
-<span id="cb35-80"><a href="#cb35-80" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb35-81"><a href="#cb35-81" aria-hidden="true" tabindex="-1"></a>list2 <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>]</span>
-<span id="cb35-82"><a href="#cb35-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-83"><a href="#cb35-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Attempt to perform element-wise addition (this will not work as expected)</span></span>
-<span id="cb35-84"><a href="#cb35-84" aria-hidden="true" tabindex="-1"></a>result_list <span class="op">=</span> list1 <span class="op">+</span> list2</span>
-<span id="cb35-85"><a href="#cb35-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-86"><a href="#cb35-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the resulting list</span></span>
-<span id="cb35-87"><a href="#cb35-87" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_list)</span>
-<span id="cb35-88"><a href="#cb35-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-89"><a href="#cb35-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-90"><a href="#cb35-90" aria-hidden="true" tabindex="-1"></a>Instead of adding two lists together element-wise, Python concatenates them (in order to concatenate arrays in <span class="in">`NumPy`</span>, you would use the <span class="in">`np.concatenate()`</span> function).</span>
-<span id="cb35-91"><a href="#cb35-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-92"><a href="#cb35-92" aria-hidden="true" tabindex="-1"></a>Attributes can be thought of as the characteristics or properties of a Python object. One attribute of interest could be the data type on a <span class="in">`NumPy`</span> array. If we were to investigate the <span class="in">`dtype`</span> attribute of the <span class="in">`NumPy`</span> array, we would find that it is a specific data type (e.g., <span class="in">`int64`</span> or <span class="in">`float64`</span>).  So, unlike lists, which can contain different data types, the elements in <span class="in">`NumPy`</span> arrays are all the same data type.</span>
-<span id="cb35-93"><a href="#cb35-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-96"><a href="#cb35-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-97"><a href="#cb35-97" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: check_dtype</span></span>
-<span id="cb35-98"><a href="#cb35-98" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the data type attribute of the NumPy array</span></span>
-<span id="cb35-99"><a href="#cb35-99" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr.dtype)</span>
-<span id="cb35-100"><a href="#cb35-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-101"><a href="#cb35-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-102"><a href="#cb35-102" aria-hidden="true" tabindex="-1"></a><span class="fu">### N-dimensional Arrays</span></span>
-<span id="cb35-103"><a href="#cb35-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-104"><a href="#cb35-104" aria-hidden="true" tabindex="-1"></a>Arrays are not just limited to 1 dimension; <span class="in">`NumPy`</span> can also create and handle multi-dimensional arrays. For example, you can create a 2-dimensional array (also known as a matrix) while using the same <span class="in">`numpy.array()`</span> function:</span>
-<span id="cb35-105"><a href="#cb35-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-108"><a href="#cb35-108" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-109"><a href="#cb35-109" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_2d_array</span></span>
-<span id="cb35-110"><a href="#cb35-110" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2-dimensional array (matrix)</span></span>
-<span id="cb35-111"><a href="#cb35-111" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
-<span id="cb35-112"><a href="#cb35-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-113"><a href="#cb35-113" aria-hidden="true" tabindex="-1"></a><span class="co"># Print out the matrix</span></span>
-<span id="cb35-114"><a href="#cb35-114" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix)</span>
-<span id="cb35-115"><a href="#cb35-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb35-116"><a href="#cb35-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-117"><a href="#cb35-117" aria-hidden="true" tabindex="-1"></a>This again may seem familiar to a list of lists in Python, but it is important to note this is a <span class="in">`NumPy`</span> array which has different properties and capabilities than a list of lists. For example, you can perform matrix operations on this 2-dimensional array, such as matrix multiplication (dot product).</span>
-<span id="cb35-118"><a href="#cb35-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-121"><a href="#cb35-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-122"><a href="#cb35-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: matrix_multiplication</span></span>
-<span id="cb35-123"><a href="#cb35-123" aria-hidden="true" tabindex="-1"></a><span class="co"># Create another 2-dimensional array (matrix)</span></span>
-<span id="cb35-124"><a href="#cb35-124" aria-hidden="true" tabindex="-1"></a>matrix2 <span class="op">=</span> np.array([[<span class="dv">10</span>, <span class="dv">20</span>], [<span class="dv">30</span>, <span class="dv">40</span>], [<span class="dv">50</span>, <span class="dv">60</span>]])</span>
-<span id="cb35-125"><a href="#cb35-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-126"><a href="#cb35-126" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform matrix multiplication</span></span>
-<span id="cb35-127"><a href="#cb35-127" aria-hidden="true" tabindex="-1"></a>result_matrix <span class="op">=</span> np.dot(matrix, matrix2)</span>
-<span id="cb35-128"><a href="#cb35-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-129"><a href="#cb35-129" aria-hidden="true" tabindex="-1"></a><span class="co"># Print out the result matrix</span></span>
-<span id="cb35-130"><a href="#cb35-130" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_matrix)</span>
-<span id="cb35-131"><a href="#cb35-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb35-132"><a href="#cb35-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-133"><a href="#cb35-133" aria-hidden="true" tabindex="-1"></a>We can initialize a matrix of zeros or ones by using <span class="in">`numpy.zeros()`</span> and <span class="in">`numpy.ones()`</span> methods in as many dimensions as we want. Alternatively, we could use <span class="in">`numpy.identity()`</span> to create an identity matrix.</span>
-<span id="cb35-134"><a href="#cb35-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-135"><a href="#cb35-135" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb35-136"><a href="#cb35-136" aria-hidden="true" tabindex="-1"></a><span class="fu"># Rows then columns</span></span>
-<span id="cb35-137"><a href="#cb35-137" aria-hidden="true" tabindex="-1"></a>When accessing elements in a 2-dimensional array, the first index refers to the row and the second index refers to the column. So <span class="in">`matrix[0, 1]`</span> would access the element in the first row and second column of the matrix.</span>
-<span id="cb35-138"><a href="#cb35-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-139"><a href="#cb35-139" aria-hidden="true" tabindex="-1"></a>Similarly, when initializing a matrix, the first number refers to the number of rows and the second number refers to the number of columns.</span>
-<span id="cb35-140"><a href="#cb35-140" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-141"><a href="#cb35-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-144"><a href="#cb35-144" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-145"><a href="#cb35-145" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: initialize_matrices</span></span>
-<span id="cb35-146"><a href="#cb35-146" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 3x3 matrix of zeros</span></span>
-<span id="cb35-147"><a href="#cb35-147" aria-hidden="true" tabindex="-1"></a>zeros_matrix <span class="op">=</span> np.zeros((<span class="dv">3</span>, <span class="dv">3</span>))</span>
-<span id="cb35-148"><a href="#cb35-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-149"><a href="#cb35-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the zeros_matrix</span></span>
-<span id="cb35-150"><a href="#cb35-150" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeros_matrix) </span>
-<span id="cb35-151"><a href="#cb35-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-152"><a href="#cb35-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-155"><a href="#cb35-155" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-156"><a href="#cb35-156" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 2x4 matrix of ones</span></span>
-<span id="cb35-157"><a href="#cb35-157" aria-hidden="true" tabindex="-1"></a>ones_matrix <span class="op">=</span> np.ones((<span class="dv">2</span>, <span class="dv">4</span>))</span>
-<span id="cb35-158"><a href="#cb35-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-159"><a href="#cb35-159" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the ones_matrix</span></span>
-<span id="cb35-160"><a href="#cb35-160" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ones_matrix)</span>
-<span id="cb35-161"><a href="#cb35-161" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-162"><a href="#cb35-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-165"><a href="#cb35-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-166"><a href="#cb35-166" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 3x3 identity matrix</span></span>
-<span id="cb35-167"><a href="#cb35-167" aria-hidden="true" tabindex="-1"></a>identity_matrix <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
-<span id="cb35-168"><a href="#cb35-168" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(identity_matrix)</span>
-<span id="cb35-169"><a href="#cb35-169" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-170"><a href="#cb35-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-171"><a href="#cb35-171" aria-hidden="true" tabindex="-1"></a>The <span class="in">`numpy.reshape()`</span> function is another flexible way to create arrays of varying shapes and sizes. We can use this in conjunction with <span class="in">`numpy.arange()`</span> to create an array of a specific range of numbers and then reshape it into the desired dimensions.</span>
-<span id="cb35-172"><a href="#cb35-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-175"><a href="#cb35-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-176"><a href="#cb35-176" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: arange_function</span></span>
-<span id="cb35-177"><a href="#cb35-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array of integers from 0 to 9, then reshape it into a 2x5 matrix</span></span>
-<span id="cb35-178"><a href="#cb35-178" aria-hidden="true" tabindex="-1"></a>matrix_arange <span class="op">=</span> np.arange(<span class="dv">10</span>).reshape(<span class="dv">2</span>, <span class="dv">5</span>)</span>
-<span id="cb35-179"><a href="#cb35-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-180"><a href="#cb35-180" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the matrix</span></span>
-<span id="cb35-181"><a href="#cb35-181" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix_arange)</span>
-<span id="cb35-182"><a href="#cb35-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-183"><a href="#cb35-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-184"><a href="#cb35-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Indexing and Slicing Arrays</span></span>
-<span id="cb35-185"><a href="#cb35-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-186"><a href="#cb35-186" aria-hidden="true" tabindex="-1"></a>Arrays can be indexed and sliced in a similar way to lists with indices (again beginning with 0) and slicing syntax. So if we wanted to access the first element of a 1-dimensional array, we would use <span class="in">`arr1[0]`</span>:</span>
-<span id="cb35-187"><a href="#cb35-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-190"><a href="#cb35-190" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-191"><a href="#cb35-191" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: indexing_1d_array</span></span>
-<span id="cb35-192"><a href="#cb35-192" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the first element of arr</span></span>
-<span id="cb35-193"><a href="#cb35-193" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> arr[<span class="dv">0</span>]</span>
-<span id="cb35-194"><a href="#cb35-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-195"><a href="#cb35-195" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
-<span id="cb35-196"><a href="#cb35-196" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_element)</span>
-<span id="cb35-197"><a href="#cb35-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-198"><a href="#cb35-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-199"><a href="#cb35-199" aria-hidden="true" tabindex="-1"></a>In a 2-dimensional array, the first index refers to the row and the second index refers to the column. So if we wanted to access the first row of a 2-dimensional array, we would use <span class="in">`matrix[0]`</span>:</span>
-<span id="cb35-200"><a href="#cb35-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-203"><a href="#cb35-203" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-204"><a href="#cb35-204" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: indexing_2d_array</span></span>
-<span id="cb35-205"><a href="#cb35-205" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first row of a 2-dimensional array</span></span>
-<span id="cb35-206"><a href="#cb35-206" aria-hidden="true" tabindex="-1"></a>first_row <span class="op">=</span> matrix[<span class="dv">0</span>]</span>
-<span id="cb35-207"><a href="#cb35-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-208"><a href="#cb35-208" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved row</span></span>
-<span id="cb35-209"><a href="#cb35-209" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_row)</span>
-<span id="cb35-210"><a href="#cb35-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-211"><a href="#cb35-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-212"><a href="#cb35-212" aria-hidden="true" tabindex="-1"></a>If we wanted to access the element in the second row and third column of the matrix, we would use <span class="in">`matrix[1, 2]`</span>:</span>
-<span id="cb35-213"><a href="#cb35-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-216"><a href="#cb35-216" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-217"><a href="#cb35-217" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: indexing_2d_array_element</span></span>
-<span id="cb35-218"><a href="#cb35-218" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the element in the second row and third column</span></span>
-<span id="cb35-219"><a href="#cb35-219" aria-hidden="true" tabindex="-1"></a>element <span class="op">=</span> matrix[<span class="dv">1</span>, <span class="dv">2</span>]</span>
-<span id="cb35-220"><a href="#cb35-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-221"><a href="#cb35-221" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
-<span id="cb35-222"><a href="#cb35-222" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(element)</span>
-<span id="cb35-223"><a href="#cb35-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-224"><a href="#cb35-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-225"><a href="#cb35-225" aria-hidden="true" tabindex="-1"></a>So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to more easily select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and wrangle the data.</span>
-<span id="cb35-226"><a href="#cb35-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-229"><a href="#cb35-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-230"><a href="#cb35-230" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: boolean_indexing</span></span>
-<span id="cb35-231"><a href="#cb35-231" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
-<span id="cb35-232"><a href="#cb35-232" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
-<span id="cb35-233"><a href="#cb35-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-234"><a href="#cb35-234" aria-hidden="true" tabindex="-1"></a><span class="co"># Select elements greater than 3</span></span>
-<span id="cb35-235"><a href="#cb35-235" aria-hidden="true" tabindex="-1"></a>filtered_arr <span class="op">=</span> arr[arr <span class="op">&gt;</span> <span class="dv">3</span>]</span>
-<span id="cb35-236"><a href="#cb35-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-237"><a href="#cb35-237" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the selected elements</span></span>
-<span id="cb35-238"><a href="#cb35-238" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(filtered_arr)</span>
-<span id="cb35-239"><a href="#cb35-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb35-240"><a href="#cb35-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-241"><a href="#cb35-241" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb35-242"><a href="#cb35-242" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](08_numpy_arrays-Answer_key.qmd#exercise-1)</span></span>
-<span id="cb35-243"><a href="#cb35-243" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a NumPy array holding the values <span class="in">`1`</span>, <span class="in">`14`</span>, <span class="in">`22`</span>, <span class="in">`47`</span>, <span class="in">`58`</span> and <span class="in">`67`</span> and assign it to <span class="in">`exercise_array`</span></span>
-<span id="cb35-244"><a href="#cb35-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-245"><a href="#cb35-245" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Retrieve the second, third and fourth elements from <span class="in">`exercise_array`</span></span>
-<span id="cb35-246"><a href="#cb35-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-247"><a href="#cb35-247" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Retrieve the values less than 25 from <span class="in">`exercise_array`</span></span>
-<span id="cb35-248"><a href="#cb35-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-249"><a href="#cb35-249" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Reshape <span class="in">`exercise_array`</span> into a matrix have three rows with two columns each and assign it to <span class="in">`exercise_matrix`</span>.</span>
-<span id="cb35-250"><a href="#cb35-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-251"><a href="#cb35-251" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Retrieve the value in the third row, second column of <span class="in">`exercise_matrix`</span></span>
-<span id="cb35-252"><a href="#cb35-252" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-253"><a href="#cb35-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-254"><a href="#cb35-254" aria-hidden="true" tabindex="-1"></a><span class="fu">## Useful `NumPy` Functions</span></span>
-<span id="cb35-255"><a href="#cb35-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-256"><a href="#cb35-256" aria-hidden="true" tabindex="-1"></a>Base Python is somewhat limited when it comes to numerical operations. The <span class="co">[</span><span class="ot">`NumPy` library</span><span class="co">](https://numpy.org/doc/stable/reference/)</span> provides a broader range of mathematical tools. For example, you can quickly calculate the mean, median, and standard deviation of an array with the <span class="in">`numpy.mean()`</span>, <span class="in">`numpy.median()`</span>, and <span class="in">`numpy.std()`</span> functions:</span>
-<span id="cb35-257"><a href="#cb35-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-260"><a href="#cb35-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-261"><a href="#cb35-261" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: numpy_functions</span></span>
-<span id="cb35-262"><a href="#cb35-262" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
-<span id="cb35-263"><a href="#cb35-263" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">7</span>, <span class="fl">9.5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="fl">3.2</span>])</span>
-<span id="cb35-264"><a href="#cb35-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-265"><a href="#cb35-265" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean of arr</span></span>
-<span id="cb35-266"><a href="#cb35-266" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> np.mean(arr)</span>
-<span id="cb35-267"><a href="#cb35-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-268"><a href="#cb35-268" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate median of arr</span></span>
-<span id="cb35-269"><a href="#cb35-269" aria-hidden="true" tabindex="-1"></a>median <span class="op">=</span> np.median(arr)</span>
-<span id="cb35-270"><a href="#cb35-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-271"><a href="#cb35-271" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate standard deviation of arr</span></span>
-<span id="cb35-272"><a href="#cb35-272" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> np.std(arr)</span>
-<span id="cb35-273"><a href="#cb35-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-274"><a href="#cb35-274" aria-hidden="true" tabindex="-1"></a><span class="co"># Print an f-string (Python inteprets items with {}) with the mean, median and standard deviation</span></span>
-<span id="cb35-275"><a href="#cb35-275" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Mean: </span><span class="sc">{</span>mean<span class="sc">}</span><span class="ss">, Median: </span><span class="sc">{</span>median<span class="sc">}</span><span class="ss">, Standard Deviation: </span><span class="sc">{</span>std_dev<span class="sc">}</span><span class="ss">&quot;</span>)</span>
-<span id="cb35-276"><a href="#cb35-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-277"><a href="#cb35-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-278"><a href="#cb35-278" aria-hidden="true" tabindex="-1"></a>NumPy has other functions for performing mathematical operations on arrays, such as <span class="in">`numpy.sum()`</span>, <span class="in">`numpy.prod()`</span>, <span class="in">`numpy.cumsum()`</span>, <span class="in">`numpy.cumprod()`</span>, <span class="in">`numpy.square()`</span>, <span class="in">`numpy.sqrt()`</span>, <span class="in">`numpy.max()`</span>, <span class="in">`numpy.min()`</span>. All these functions allow you to perform operations across the entire array or along specific axes.</span>
-<span id="cb35-279"><a href="#cb35-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-280"><a href="#cb35-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### Summarizing arrays</span></span>
-<span id="cb35-281"><a href="#cb35-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-282"><a href="#cb35-282" aria-hidden="true" tabindex="-1"></a>Arrays come with built in methods to see the general information about the array.</span>
-<span id="cb35-283"><a href="#cb35-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-284"><a href="#cb35-284" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
-<span id="cb35-285"><a href="#cb35-285" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](08_numpy_arrays-Answer_key.qmd#exercise-2)</span></span>
-<span id="cb35-286"><a href="#cb35-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Test out the following functions on the <span class="in">`matrix_arange`</span> array that we created earlier and describe what the output is for each function:</span>
-<span id="cb35-287"><a href="#cb35-287" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span><span class="in">`np.shape()`</span></span>
-<span id="cb35-288"><a href="#cb35-288" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span><span class="in">`np.ndim()`</span></span>
-<span id="cb35-289"><a href="#cb35-289" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span><span class="in">`np.size()`</span></span>
-<span id="cb35-290"><a href="#cb35-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-291"><a href="#cb35-291" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb35-292"><a href="#cb35-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-293"><a href="#cb35-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-294"><a href="#cb35-294" aria-hidden="true" tabindex="-1"></a><span class="fu">### Random numbers</span></span>
-<span id="cb35-295"><a href="#cb35-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-296"><a href="#cb35-296" aria-hidden="true" tabindex="-1"></a>Within <span class="in">`NumPy`</span>, we can also generate random numbers, which can be helpful for random sampling or initializing a non-zero matrix with values. These functions come from the <span class="in">`numpy.random`</span> module. For example, you can generate a random array of numbers between 0 and 1 using the <span class="in">`numpy.random.rand()`</span> function:</span>
-<span id="cb35-297"><a href="#cb35-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-300"><a href="#cb35-300" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-301"><a href="#cb35-301" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: random_array</span></span>
-<span id="cb35-302"><a href="#cb35-302" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers between 0 and 1</span></span>
-<span id="cb35-303"><a href="#cb35-303" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.rand(<span class="dv">10</span>)</span>
-<span id="cb35-304"><a href="#cb35-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-305"><a href="#cb35-305" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
-<span id="cb35-306"><a href="#cb35-306" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span>
-<span id="cb35-307"><a href="#cb35-307" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-308"><a href="#cb35-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-309"><a href="#cb35-309" aria-hidden="true" tabindex="-1"></a>Similarly, we can also create a random array from a specific distribution. For example, you can generate a random array of numbers from a normal distribution using the <span class="in">`numpy.random.normal()`</span> function:</span>
-<span id="cb35-310"><a href="#cb35-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-313"><a href="#cb35-313" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb35-314"><a href="#cb35-314" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: random_normal</span></span>
-<span id="cb35-315"><a href="#cb35-315" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers from a normal distribution with mean 0 and standard deviation 1</span></span>
-<span id="cb35-316"><a href="#cb35-316" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10</span>)  </span>
-<span id="cb35-317"><a href="#cb35-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-318"><a href="#cb35-318" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
-<span id="cb35-319"><a href="#cb35-319" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span>
-<span id="cb35-320"><a href="#cb35-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb35-321"><a href="#cb35-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-322"><a href="#cb35-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-323"><a href="#cb35-323" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb35-324"><a href="#cb35-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-325"><a href="#cb35-325" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](09_pandas_dataframes.qmd)</span></span>
-<span id="cb35-326"><a href="#cb35-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-327"><a href="#cb35-327" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;`NumPy` Arrays&quot;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> |</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co">  In this lesson, you will learn how to work with `NumPy` arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common NumPy functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Noor Sohail</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co">  - Will Gammerdinger</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2026-03-15&quot;</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - Python programming</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - numpy</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - Arrays</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - Matrix</span></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - Math</span></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - Indexing</span></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a><span class="an">license:</span><span class="co"> &quot;CC-BY-4.0&quot;</span></span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a><span class="co">  markdown: </span></span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a><span class="co">    wrap: 72</span></span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> intro_python</span></span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>Approximate time: 30 minutes</span>
+<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives </span></span>
+<span id="cb39-28"><a href="#cb39-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-29"><a href="#cb39-29" aria-hidden="true" tabindex="-1"></a>In this lesson, we will:</span>
+<span id="cb39-30"><a href="#cb39-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-31"><a href="#cb39-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Manipulate <span class="in">`NumPy`</span> arrays with indexing and slicing</span>
+<span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create arrays/matrices of varying dimensions and shapes</span>
+<span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`NumPy`</span> functions to perform common operations</span>
+<span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of lesson</span></span>
+<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a><span class="in">`NumPy`</span> is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. In this lesson, we will cover the basics of working with <span class="in">`NumPy`</span> arrays, including how to create and manipulate them, as well as some common functions that are available for performing operations on arrays. </span>
+<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## `NumPy` library</span></span>
+<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a>You can find the official documentation for <span class="in">`NumPy`</span> <span class="co">[</span><span class="ot">here</span><span class="co">](https://numpy.org/doc/stable/)</span> and you should consult it whenever there you need to run a specific task repeatedly to see if an function already exists for that task. You can also use the <span class="in">`help()`</span> function in Python to get more information about a specific <span class="in">`NumPy`</span> function or data structure.</span>
+<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1-dimensional arrays</span></span>
+<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a>The most basic data structure in <span class="in">`NumPy`</span> is the 1-dimensional array, which is similar to a list. You can create a 1-dimensional array using the <span class="in">`numpy.array()`</span> function:</span>
+<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_1d_array</span></span>
+<span id="cb39-51"><a href="#cb39-51" aria-hidden="true" tabindex="-1"></a><span class="co">#Import numpy using the alias, np</span></span>
+<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional numpy array called arr</span></span>
+<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the numpy array </span></span>
+<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span>
+<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-61"><a href="#cb39-61" aria-hidden="true" tabindex="-1"></a>One of the key advantages of <span class="in">`NumPy`</span> arrays over Python lists is their greater efficiency for numerical operations. For example, you can easily perform element-wise operations on <span class="in">`NumPy`</span> arrays. So if we were to add two arrays together, it would add each element of the first array to the corresponding element of the second array:</span>
+<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: elementwise_operations</span></span>
+<span id="cb39-67"><a href="#cb39-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Create another 1-dimensional numpy array called arr2</span></span>
+<span id="cb39-68"><a href="#cb39-68" aria-hidden="true" tabindex="-1"></a>arr2 <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>])</span>
+<span id="cb39-69"><a href="#cb39-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-70"><a href="#cb39-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise addition on arr and arr2 and assign the output to result</span></span>
+<span id="cb39-71"><a href="#cb39-71" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> arr <span class="op">+</span> arr2</span>
+<span id="cb39-72"><a href="#cb39-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-73"><a href="#cb39-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Print result array</span></span>
+<span id="cb39-74"><a href="#cb39-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb39-75"><a href="#cb39-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-76"><a href="#cb39-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-77"><a href="#cb39-77" aria-hidden="true" tabindex="-1"></a>If we were to try to do this with Python lists, we would get a different result:</span>
+<span id="cb39-78"><a href="#cb39-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-81"><a href="#cb39-81" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-82"><a href="#cb39-82" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: list_addition</span></span>
+<span id="cb39-83"><a href="#cb39-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two Python lists</span></span>
+<span id="cb39-84"><a href="#cb39-84" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb39-85"><a href="#cb39-85" aria-hidden="true" tabindex="-1"></a>list2 <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>]</span>
+<span id="cb39-86"><a href="#cb39-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-87"><a href="#cb39-87" aria-hidden="true" tabindex="-1"></a><span class="co"># Attempt to perform element-wise addition (this will not work as expected)</span></span>
+<span id="cb39-88"><a href="#cb39-88" aria-hidden="true" tabindex="-1"></a>result_list <span class="op">=</span> list1 <span class="op">+</span> list2</span>
+<span id="cb39-89"><a href="#cb39-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-90"><a href="#cb39-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the resulting list</span></span>
+<span id="cb39-91"><a href="#cb39-91" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_list)</span>
+<span id="cb39-92"><a href="#cb39-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-93"><a href="#cb39-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-94"><a href="#cb39-94" aria-hidden="true" tabindex="-1"></a>Instead of adding two lists together element-wise, Python concatenates them (in order to concatenate arrays in <span class="in">`NumPy`</span>, you would use the <span class="in">`np.concatenate()`</span> function).</span>
+<span id="cb39-95"><a href="#cb39-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-96"><a href="#cb39-96" aria-hidden="true" tabindex="-1"></a>Attributes can be thought of as the characteristics or properties of a Python object. One attribute of interest could be the data type on a <span class="in">`NumPy`</span> array. If we were to investigate the <span class="in">`dtype`</span> attribute of the <span class="in">`NumPy`</span> array, we would find that it is a specific data type (e.g., <span class="in">`int64`</span> or <span class="in">`float64`</span>).  So, unlike lists, which can contain different data types, the elements in <span class="in">`NumPy`</span> arrays are all the same data type.</span>
+<span id="cb39-97"><a href="#cb39-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-100"><a href="#cb39-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-101"><a href="#cb39-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: check_dtype</span></span>
+<span id="cb39-102"><a href="#cb39-102" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the data type attribute of the NumPy array</span></span>
+<span id="cb39-103"><a href="#cb39-103" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr.dtype)</span>
+<span id="cb39-104"><a href="#cb39-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-105"><a href="#cb39-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-106"><a href="#cb39-106" aria-hidden="true" tabindex="-1"></a><span class="fu">### N-dimensional arrays</span></span>
+<span id="cb39-107"><a href="#cb39-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-108"><a href="#cb39-108" aria-hidden="true" tabindex="-1"></a>Arrays are not just limited to 1 dimension; <span class="in">`NumPy`</span> can also create and handle multi-dimensional arrays. For example, you can create a 2-dimensional array (also known as a matrix) while using the same <span class="in">`numpy.array()`</span> function:</span>
+<span id="cb39-109"><a href="#cb39-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-112"><a href="#cb39-112" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-113"><a href="#cb39-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: create_2d_array</span></span>
+<span id="cb39-114"><a href="#cb39-114" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2-dimensional array (matrix)</span></span>
+<span id="cb39-115"><a href="#cb39-115" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb39-116"><a href="#cb39-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-117"><a href="#cb39-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Print out the matrix</span></span>
+<span id="cb39-118"><a href="#cb39-118" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix)</span>
+<span id="cb39-119"><a href="#cb39-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb39-120"><a href="#cb39-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-121"><a href="#cb39-121" aria-hidden="true" tabindex="-1"></a>This again may seem familiar to a list of lists in Python, but it is important to note this is a <span class="in">`NumPy`</span> array which has different properties and capabilities than a list of lists. For example, you can perform matrix operations on this 2-dimensional array, such as matrix multiplication (dot product).</span>
+<span id="cb39-122"><a href="#cb39-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-125"><a href="#cb39-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-126"><a href="#cb39-126" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: matrix_multiplication</span></span>
+<span id="cb39-127"><a href="#cb39-127" aria-hidden="true" tabindex="-1"></a><span class="co"># Create another 2-dimensional array (matrix)</span></span>
+<span id="cb39-128"><a href="#cb39-128" aria-hidden="true" tabindex="-1"></a>matrix2 <span class="op">=</span> np.array([[<span class="dv">10</span>, <span class="dv">20</span>], [<span class="dv">30</span>, <span class="dv">40</span>], [<span class="dv">50</span>, <span class="dv">60</span>]])</span>
+<span id="cb39-129"><a href="#cb39-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-130"><a href="#cb39-130" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform matrix multiplication</span></span>
+<span id="cb39-131"><a href="#cb39-131" aria-hidden="true" tabindex="-1"></a>result_matrix <span class="op">=</span> np.dot(matrix, matrix2)</span>
+<span id="cb39-132"><a href="#cb39-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-133"><a href="#cb39-133" aria-hidden="true" tabindex="-1"></a><span class="co"># Print out the result matrix</span></span>
+<span id="cb39-134"><a href="#cb39-134" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result_matrix)</span>
+<span id="cb39-135"><a href="#cb39-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb39-136"><a href="#cb39-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-137"><a href="#cb39-137" aria-hidden="true" tabindex="-1"></a><span class="fu">### Special matrices</span></span>
+<span id="cb39-138"><a href="#cb39-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-139"><a href="#cb39-139" aria-hidden="true" tabindex="-1"></a>We can initialize a matrix of zeros or ones by using <span class="in">`numpy.zeros()`</span> and <span class="in">`numpy.ones()`</span> methods in as many dimensions as we want. </span>
+<span id="cb39-140"><a href="#cb39-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-141"><a href="#cb39-141" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb39-142"><a href="#cb39-142" aria-hidden="true" tabindex="-1"></a><span class="fu"># Rows then columns</span></span>
+<span id="cb39-143"><a href="#cb39-143" aria-hidden="true" tabindex="-1"></a>When accessing elements in a 2-dimensional array, the first index refers to the row and the second index refers to the column. So <span class="in">`matrix[0, 1]`</span> would access the element in the first row and second column of the matrix.</span>
+<span id="cb39-144"><a href="#cb39-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-145"><a href="#cb39-145" aria-hidden="true" tabindex="-1"></a>Similarly, when initializing a matrix, the first number refers to the number of rows and the second number refers to the number of columns.</span>
+<span id="cb39-146"><a href="#cb39-146" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb39-147"><a href="#cb39-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-150"><a href="#cb39-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-151"><a href="#cb39-151" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: initialize_matrices</span></span>
+<span id="cb39-152"><a href="#cb39-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 3x3 matrix of zeros</span></span>
+<span id="cb39-153"><a href="#cb39-153" aria-hidden="true" tabindex="-1"></a>zeros_matrix <span class="op">=</span> np.zeros((<span class="dv">3</span>, <span class="dv">3</span>))</span>
+<span id="cb39-154"><a href="#cb39-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-155"><a href="#cb39-155" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the zeros_matrix</span></span>
+<span id="cb39-156"><a href="#cb39-156" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeros_matrix) </span>
+<span id="cb39-157"><a href="#cb39-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-158"><a href="#cb39-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-159"><a href="#cb39-159" aria-hidden="true" tabindex="-1"></a>Similarly, we can initialize a matrix of ones:</span>
+<span id="cb39-160"><a href="#cb39-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-163"><a href="#cb39-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-164"><a href="#cb39-164" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: initialize_ones_matrix</span></span>
+<span id="cb39-165"><a href="#cb39-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 2x4 matrix of ones</span></span>
+<span id="cb39-166"><a href="#cb39-166" aria-hidden="true" tabindex="-1"></a>ones_matrix <span class="op">=</span> np.ones((<span class="dv">2</span>, <span class="dv">4</span>))</span>
+<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-168"><a href="#cb39-168" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the ones_matrix</span></span>
+<span id="cb39-169"><a href="#cb39-169" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ones_matrix)</span>
+<span id="cb39-170"><a href="#cb39-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-171"><a href="#cb39-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-172"><a href="#cb39-172" aria-hidden="true" tabindex="-1"></a>We can even create an identify matrix with  <span class="in">`numpy.identity()`</span>. An identity matrix is a square matrix (same number of rows and columns) with ones on the main diagonal and zeros elsewhere. </span>
+<span id="cb39-173"><a href="#cb39-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-176"><a href="#cb39-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-177"><a href="#cb39-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: initialize_identity_matrix</span></span>
+<span id="cb39-178"><a href="#cb39-178" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a 3x3 identity matrix</span></span>
+<span id="cb39-179"><a href="#cb39-179" aria-hidden="true" tabindex="-1"></a>identity_matrix <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
+<span id="cb39-180"><a href="#cb39-180" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(identity_matrix)</span>
+<span id="cb39-181"><a href="#cb39-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-182"><a href="#cb39-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-183"><a href="#cb39-183" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse=&quot;true&quot;}</span>
+<span id="cb39-184"><a href="#cb39-184" aria-hidden="true" tabindex="-1"></a><span class="fu"># Identity matrix math</span></span>
+<span id="cb39-185"><a href="#cb39-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-186"><a href="#cb39-186" aria-hidden="true" tabindex="-1"></a>It is often denoted as <span class="in">`I`</span> and has the property that when multiplied by any matrix of compatible dimensions, it returns the original matrix (i.e., <span class="in">`I * A = A`</span>).</span>
+<span id="cb39-187"><a href="#cb39-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-190"><a href="#cb39-190" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-191"><a href="#cb39-191" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: identity_matrix_multiplication</span></span>
+<span id="cb39-192"><a href="#cb39-192" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of identity matrix multiplication</span></span>
+<span id="cb39-193"><a href="#cb39-193" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
+<span id="cb39-194"><a href="#cb39-194" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], </span>
+<span id="cb39-195"><a href="#cb39-195" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], </span>
+<span id="cb39-196"><a href="#cb39-196" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]])</span>
+<span id="cb39-197"><a href="#cb39-197" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> np.dot(I, A)</span>
+<span id="cb39-198"><a href="#cb39-198" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb39-199"><a href="#cb39-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-200"><a href="#cb39-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-201"><a href="#cb39-201" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb39-202"><a href="#cb39-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-203"><a href="#cb39-203" aria-hidden="true" tabindex="-1"></a><span class="fu">### Reshaping arrays</span></span>
+<span id="cb39-204"><a href="#cb39-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-205"><a href="#cb39-205" aria-hidden="true" tabindex="-1"></a>The <span class="in">`numpy.reshape()`</span> function is a flexible way to create arrays of varying shapes and sizes. We can use this in conjunction with <span class="in">`numpy.arange()`</span> to create an array of a specific range of numbers and then reshape it into the desired dimensions.</span>
+<span id="cb39-206"><a href="#cb39-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-209"><a href="#cb39-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-210"><a href="#cb39-210" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: arange_function</span></span>
+<span id="cb39-211"><a href="#cb39-211" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array of integers from 0 to 9</span></span>
+<span id="cb39-212"><a href="#cb39-212" aria-hidden="true" tabindex="-1"></a>matrix_arange <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb39-213"><a href="#cb39-213" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix_arange)</span>
+<span id="cb39-214"><a href="#cb39-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-215"><a href="#cb39-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-216"><a href="#cb39-216" aria-hidden="true" tabindex="-1"></a>And now we can reshape the values to be the size we want to work with:</span>
+<span id="cb39-217"><a href="#cb39-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-220"><a href="#cb39-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-221"><a href="#cb39-221" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reshape_array</span></span>
+<span id="cb39-222"><a href="#cb39-222" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape the array into a 2x5 matrix</span></span>
+<span id="cb39-223"><a href="#cb39-223" aria-hidden="true" tabindex="-1"></a>reshaped_matrix <span class="op">=</span> matrix_arange.reshape(<span class="dv">2</span>, <span class="dv">5</span>)</span>
+<span id="cb39-224"><a href="#cb39-224" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(reshaped_matrix)</span>
+<span id="cb39-225"><a href="#cb39-225" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-226"><a href="#cb39-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-227"><a href="#cb39-227" aria-hidden="true" tabindex="-1"></a><span class="fu">## Indexing and slicing arrays</span></span>
+<span id="cb39-228"><a href="#cb39-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-229"><a href="#cb39-229" aria-hidden="true" tabindex="-1"></a>Arrays can be indexed and sliced in a similar way to lists with indices (again beginning with 0) and slicing syntax. So if we wanted to access the first element of a 1-dimensional array, we would use <span class="in">`arr1[0]`</span>:</span>
+<span id="cb39-230"><a href="#cb39-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-233"><a href="#cb39-233" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-234"><a href="#cb39-234" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: indexing_1d_array</span></span>
+<span id="cb39-235"><a href="#cb39-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the first element of arr</span></span>
+<span id="cb39-236"><a href="#cb39-236" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> arr[<span class="dv">0</span>]</span>
+<span id="cb39-237"><a href="#cb39-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-238"><a href="#cb39-238" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
+<span id="cb39-239"><a href="#cb39-239" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_element)</span>
+<span id="cb39-240"><a href="#cb39-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-241"><a href="#cb39-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-242"><a href="#cb39-242" aria-hidden="true" tabindex="-1"></a>In a 2-dimensional array, the first index refers to the row and the second index refers to the column. So if we wanted to access the first row of a 2-dimensional array, we would use <span class="in">`matrix[0]`</span>:</span>
+<span id="cb39-243"><a href="#cb39-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-246"><a href="#cb39-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-247"><a href="#cb39-247" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: indexing_2d_array</span></span>
+<span id="cb39-248"><a href="#cb39-248" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the first row of a 2-dimensional array</span></span>
+<span id="cb39-249"><a href="#cb39-249" aria-hidden="true" tabindex="-1"></a>first_row <span class="op">=</span> matrix[<span class="dv">0</span>]</span>
+<span id="cb39-250"><a href="#cb39-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-251"><a href="#cb39-251" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved row</span></span>
+<span id="cb39-252"><a href="#cb39-252" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_row)</span>
+<span id="cb39-253"><a href="#cb39-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-254"><a href="#cb39-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-255"><a href="#cb39-255" aria-hidden="true" tabindex="-1"></a>If we wanted to access the element in the second row and third column of the matrix, we would use <span class="in">`matrix[1, 2]`</span>:</span>
+<span id="cb39-256"><a href="#cb39-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-259"><a href="#cb39-259" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-260"><a href="#cb39-260" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: indexing_2d_array_element</span></span>
+<span id="cb39-261"><a href="#cb39-261" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve the element in the second row and third column</span></span>
+<span id="cb39-262"><a href="#cb39-262" aria-hidden="true" tabindex="-1"></a>element <span class="op">=</span> matrix[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb39-263"><a href="#cb39-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-264"><a href="#cb39-264" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the retrieved element</span></span>
+<span id="cb39-265"><a href="#cb39-265" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(element)</span>
+<span id="cb39-266"><a href="#cb39-266" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-267"><a href="#cb39-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-268"><a href="#cb39-268" aria-hidden="true" tabindex="-1"></a>So far, this is quite similar to lists. Arrays differ because they have more advanced indexing and slicing capabilities, allowing you to more easily select specific elements or subsets of the array based on certain conditions. This is particularly useful when working with large datasets as it allows you to efficiently filter and wrangle the data.</span>
+<span id="cb39-269"><a href="#cb39-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-272"><a href="#cb39-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-273"><a href="#cb39-273" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: boolean_indexing</span></span>
+<span id="cb39-274"><a href="#cb39-274" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
+<span id="cb39-275"><a href="#cb39-275" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb39-276"><a href="#cb39-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-277"><a href="#cb39-277" aria-hidden="true" tabindex="-1"></a><span class="co"># Select elements greater than 3</span></span>
+<span id="cb39-278"><a href="#cb39-278" aria-hidden="true" tabindex="-1"></a>filtered_arr <span class="op">=</span> arr[arr <span class="op">&gt;</span> <span class="dv">3</span>]</span>
+<span id="cb39-279"><a href="#cb39-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-280"><a href="#cb39-280" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the selected elements</span></span>
+<span id="cb39-281"><a href="#cb39-281" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(filtered_arr)</span>
+<span id="cb39-282"><a href="#cb39-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb39-283"><a href="#cb39-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-284"><a href="#cb39-284" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb39-285"><a href="#cb39-285" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 1**](08_numpy_arrays-Answer_key.qmd#exercise-1)</span></span>
+<span id="cb39-286"><a href="#cb39-286" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a NumPy array holding the values <span class="in">`1`</span>, <span class="in">`14`</span>, <span class="in">`22`</span>, <span class="in">`47`</span>, <span class="in">`58`</span> and <span class="in">`67`</span> and assign it to <span class="in">`exercise_array`</span></span>
+<span id="cb39-287"><a href="#cb39-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-288"><a href="#cb39-288" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Retrieve the second, third and fourth elements from <span class="in">`exercise_array`</span></span>
+<span id="cb39-289"><a href="#cb39-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-290"><a href="#cb39-290" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Retrieve the values less than 25 from <span class="in">`exercise_array`</span></span>
+<span id="cb39-291"><a href="#cb39-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-292"><a href="#cb39-292" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Reshape <span class="in">`exercise_array`</span> into a matrix have three rows with two columns each and assign it to <span class="in">`exercise_matrix`</span>.</span>
+<span id="cb39-293"><a href="#cb39-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-294"><a href="#cb39-294" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Retrieve the value in the third row, second column of <span class="in">`exercise_matrix`</span></span>
+<span id="cb39-295"><a href="#cb39-295" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb39-296"><a href="#cb39-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-297"><a href="#cb39-297" aria-hidden="true" tabindex="-1"></a><span class="fu">## Useful `NumPy` functions</span></span>
+<span id="cb39-298"><a href="#cb39-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-299"><a href="#cb39-299" aria-hidden="true" tabindex="-1"></a>Base Python is somewhat limited when it comes to numerical operations. The <span class="co">[</span><span class="ot">`NumPy` library</span><span class="co">](https://numpy.org/doc/stable/reference/)</span> provides a broader range of mathematical tools. For example, you can quickly calculate the mean, median, and standard deviation of an array with the <span class="in">`numpy.mean()`</span>, <span class="in">`numpy.median()`</span>, and <span class="in">`numpy.std()`</span> functions:</span>
+<span id="cb39-300"><a href="#cb39-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-303"><a href="#cb39-303" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-304"><a href="#cb39-304" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: numpy_functions</span></span>
+<span id="cb39-305"><a href="#cb39-305" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array</span></span>
+<span id="cb39-306"><a href="#cb39-306" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">7</span>, <span class="fl">9.5</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="fl">3.2</span>])</span>
+<span id="cb39-307"><a href="#cb39-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-308"><a href="#cb39-308" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean of arr</span></span>
+<span id="cb39-309"><a href="#cb39-309" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> np.mean(arr)</span>
+<span id="cb39-310"><a href="#cb39-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-311"><a href="#cb39-311" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate median of arr</span></span>
+<span id="cb39-312"><a href="#cb39-312" aria-hidden="true" tabindex="-1"></a>median <span class="op">=</span> np.median(arr)</span>
+<span id="cb39-313"><a href="#cb39-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-314"><a href="#cb39-314" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate standard deviation of arr</span></span>
+<span id="cb39-315"><a href="#cb39-315" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> np.std(arr)</span>
+<span id="cb39-316"><a href="#cb39-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-317"><a href="#cb39-317" aria-hidden="true" tabindex="-1"></a><span class="co"># Print an f-string (Python inteprets items with {}) with the mean, median and standard deviation</span></span>
+<span id="cb39-318"><a href="#cb39-318" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Mean: </span><span class="sc">{</span>mean<span class="sc">}</span><span class="ss">, Median: </span><span class="sc">{</span>median<span class="sc">}</span><span class="ss">, Standard Deviation: </span><span class="sc">{</span>std_dev<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb39-319"><a href="#cb39-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-320"><a href="#cb39-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-321"><a href="#cb39-321" aria-hidden="true" tabindex="-1"></a>NumPy has other functions for performing mathematical operations on arrays, such as </span>
+<span id="cb39-322"><a href="#cb39-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-323"><a href="#cb39-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.sum()`</span></span>
+<span id="cb39-324"><a href="#cb39-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.prod()`</span></span>
+<span id="cb39-325"><a href="#cb39-325" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.cumsum()`</span></span>
+<span id="cb39-326"><a href="#cb39-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.cumprod()`</span></span>
+<span id="cb39-327"><a href="#cb39-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.square()`</span></span>
+<span id="cb39-328"><a href="#cb39-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.sqrt()`</span></span>
+<span id="cb39-329"><a href="#cb39-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.max()`</span></span>
+<span id="cb39-330"><a href="#cb39-330" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`numpy.min()`</span>. </span>
+<span id="cb39-331"><a href="#cb39-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-332"><a href="#cb39-332" aria-hidden="true" tabindex="-1"></a>All these functions allow you to perform operations across the entire array or along specific axes.</span>
+<span id="cb39-333"><a href="#cb39-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-334"><a href="#cb39-334" aria-hidden="true" tabindex="-1"></a><span class="fu">### Summarizing arrays</span></span>
+<span id="cb39-335"><a href="#cb39-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-336"><a href="#cb39-336" aria-hidden="true" tabindex="-1"></a>Arrays come with built in methods to see the general information about the array. Recall that methods are functions that are associated with a specific object. Let us test our what some of the attributes of the <span class="in">`matrix_arange`</span> array are:</span>
+<span id="cb39-337"><a href="#cb39-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-338"><a href="#cb39-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-339"><a href="#cb39-339" aria-hidden="true" tabindex="-1"></a>:::{.callout-tip}</span>
+<span id="cb39-340"><a href="#cb39-340" aria-hidden="true" tabindex="-1"></a><span class="fu"># [**Exercise 2**](08_numpy_arrays-Answer_key.qmd#exercise-2)</span></span>
+<span id="cb39-341"><a href="#cb39-341" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Test out the following functions on the <span class="in">`matrix_arange`</span> array that we created earlier and describe what the output is for each function:</span>
+<span id="cb39-342"><a href="#cb39-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-343"><a href="#cb39-343" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span><span class="in">`np.shape()`</span></span>
+<span id="cb39-344"><a href="#cb39-344" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span><span class="in">`np.ndim()`</span></span>
+<span id="cb39-345"><a href="#cb39-345" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span><span class="in">`np.size()`</span></span>
+<span id="cb39-346"><a href="#cb39-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-347"><a href="#cb39-347" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb39-348"><a href="#cb39-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-349"><a href="#cb39-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-350"><a href="#cb39-350" aria-hidden="true" tabindex="-1"></a><span class="fu">### Random numbers</span></span>
+<span id="cb39-351"><a href="#cb39-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-352"><a href="#cb39-352" aria-hidden="true" tabindex="-1"></a>Within <span class="in">`NumPy`</span>, we can also generate random numbers, which can be helpful for random sampling or initializing a non-zero matrix with values. These functions come from the <span class="in">`numpy.random`</span> module. For example, you can generate a random array of numbers between 0 and 1 using the <span class="in">`numpy.random.rand()`</span> function:</span>
+<span id="cb39-353"><a href="#cb39-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-356"><a href="#cb39-356" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-357"><a href="#cb39-357" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: random_array</span></span>
+<span id="cb39-358"><a href="#cb39-358" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers between 0 and 1</span></span>
+<span id="cb39-359"><a href="#cb39-359" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.rand(<span class="dv">10</span>)</span>
+<span id="cb39-360"><a href="#cb39-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-361"><a href="#cb39-361" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
+<span id="cb39-362"><a href="#cb39-362" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span>
+<span id="cb39-363"><a href="#cb39-363" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-364"><a href="#cb39-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-365"><a href="#cb39-365" aria-hidden="true" tabindex="-1"></a>Similarly, we can also create a random array from a specific distribution. For example, you can generate a random array of numbers from a normal distribution using the <span class="in">`numpy.random.normal()`</span> function:</span>
+<span id="cb39-366"><a href="#cb39-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-369"><a href="#cb39-369" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb39-370"><a href="#cb39-370" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: random_normal</span></span>
+<span id="cb39-371"><a href="#cb39-371" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a 1-dimensional array of 10 random numbers from a normal distribution </span></span>
+<span id="cb39-372"><a href="#cb39-372" aria-hidden="true" tabindex="-1"></a><span class="co"># with mean 0 and standard deviation 1</span></span>
+<span id="cb39-373"><a href="#cb39-373" aria-hidden="true" tabindex="-1"></a>random_array <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10</span>)  </span>
+<span id="cb39-374"><a href="#cb39-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-375"><a href="#cb39-375" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the random array</span></span>
+<span id="cb39-376"><a href="#cb39-376" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_array)</span>
+<span id="cb39-377"><a href="#cb39-377" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb39-378"><a href="#cb39-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-379"><a href="#cb39-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-380"><a href="#cb39-380" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb39-381"><a href="#cb39-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-382"><a href="#cb39-382" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Next Lesson &gt;&gt;</span><span class="co">](09_pandas_dataframes.qmd)</span></span>
+<span id="cb39-383"><a href="#cb39-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-384"><a href="#cb39-384" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Back to Schedule</span><span class="co">](../schedule/schedule.qmd)</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
