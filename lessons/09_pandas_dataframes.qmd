@@ -22,7 +22,7 @@ editor_options:
 jupyter: intro_python
 ---
 
-Approximate time: 50 minutes
+Approximate time: 75 minutes
 
 ## Learning Objectives 
 
@@ -71,7 +71,9 @@ metadata
 ```
 
 
-The first column contains the row names and the remaining columns contain information about our samples that we can use to categorize them. For example, the second column contains genotype information for each sample. Each sample is classified in one of two categories: `Wt` (wild type) or `KO` (knockout). _What types of categories do you observe in the remaining columns?_
+The first column contains the row names and the remaining columns contain information about our samples that we can use to categorize them. For example, the second column contains genotype information for each sample. Each sample is classified in one of two categories: `Wt` (wild type) or `KO` (knockout).
+
+ _What types of categories do you observe in the remaining columns?_
 
 This metadata describes the samples in our study. Each row holds information for a single sample and the columns contain categorical information about the sample `genotype` (WT or KO), `celltype` (typeA or typeB) and `replicate` number (1, 2 or 3).
 
@@ -204,7 +206,9 @@ metadata.iloc[[0, 2, 5], :]
 
 ### Subsetting DataFrames with Labels
 
-When we work with larger datasets, it can be tricky to remember the column number that corresponds to a particular variable. (*Is `celltype` in column 1 or 2?*). The column/row number for values can also change if you use a script that adds or removes columns/rows. Therefore, it’s often better to use column/row names to refer to extract particular values; this choice makes your code easier to read and your intentions clearer.
+When we work with larger datasets, it can be tricky to remember the column number that corresponds to a particular variable. _Is `celltype` in column 1 or 2?_. 
+
+The column/row number for values can also change if you use a script that adds or removes columns/rows. Therefore, it’s often better to use column/row names to refer to extract particular values; this choice makes your code easier to read and your intentions clearer.
 
 First, we will look at the attributes to retrieve our row names (`index`) and column names (`columns`) from our DataFrame:
 
@@ -229,21 +233,21 @@ Now that we know the row and column names, we can use them to subset our data. W
 metadata.loc[["sample1", "sample2", "sample3"], "celltype"]
 ```
 
-We can mix and match label-based and numerical indexing. For example, we can start by using label-based indexing to select the column we want and then use numerical indexing to select the first three samples from that column:
-
-```{python}
-#| label: label_based_indexing
-# Extract the first three samples for the celltype column 
-metadata.iloc[0:3]["celltype"]
-```
-
-It’s important to type the names of the columns/rows in the exact way that they are typed in the DataFrame; for instance, if I had spelled `celltype` with a capital `C`, the line of code would not have worked.
+It is important to type the names of the columns/rows in the exact way that they are typed in the DataFrame; for instance, if I had spelled `celltype` with a capital `C`, the line of code would not have worked.
 
 ```{python}
 #| label: incorrect_column_name
 #| error: true
 # Extract the first three samples for the Celltype column 
-metadata.iloc[0:3]["Celltype"] # Celltype column incorrect
+metadata.loc["Celltype"] # Celltype column incorrect
+```
+
+If we wanted to access only a few values within the column, we can index the column with the column name and then use numerical indexing to select the desired values.
+
+```{python}
+#| label: label_based_indexing_column_then_rows
+# Extract the first three samples for the celltype column
+metadata.loc[:, "celltype"][0:3]
 ```
 
 We can also directly access a column without the `loc` method by using the column name as an attribute of the DataFrame. For example, to access the `celltype` column, we can use the following code:
@@ -252,6 +256,31 @@ We can also directly access a column without the `loc` method by using the colum
 #| label: direct_column_access
 # Access the celltype column directly
 metadata["celltype"]
+```
+
+However, this method only works for accessing columns - _not rows_. If we wanted to access a row using this method, we would get an error:
+
+```{python}
+#| label: direct_row_access
+#| error: true
+# Access the sample1 row directly
+metadata["sample1"] # Error because column "sample1" does not exist
+``` 
+
+So to access all the information for the first sample, we would need to use the `loc` method with the row name.
+
+```{python}
+#| label: label_based_indexing_row
+# Access the first sample using the loc method
+metadata.loc["sample1", :]
+```
+
+We can mix and match label-based and numerical indexing. For example, we can start by using label-based indexing to select the column we want and then use numerical indexing to select the first three samples from that column:
+
+```{python}
+#| label: label_based_indexing
+# Extract the first three samples for the celltype column 
+metadata.iloc[0:3]["celltype"]
 ```
 
 ### Subsetting DataFrames with Logical Expressions
