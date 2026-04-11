@@ -26,7 +26,7 @@ jupyter: intro_python
 
 Approximate time: 45 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -35,9 +35,11 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-Much of the power and appeal of Python comes from its rich ecosystem of libraries. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading CSV files, working with biological sequences or creating complex plots. The open-source community has developed a vast array of libraries to support various domains and use cases. You do not have to reinvent the wheel every time you need to perform a common task. In this lesson, you will learn how to install, load and explore libraries so you can tap into this broader ecosystem for your own work.
+Much of the power and appeal of Python comes from its **rich ecosystem of libraries**. Instead of writing everything from scratch, you can install and import packages that handle tasks like reading CSV files, working with biological sequences, or creating plots. The open-source community has developed a vast array of libraries to support various domains and use cases. You do not have to reinvent the wheel every time you need to perform a common task. 
 
-## Libaries in Python
+In this lesson, you will learn how to install, load and explore libraries so you can tap into this broader ecosystem for your own work.
+
+## Libraries in Python
 
 **Libraries** are collections of Python functions, data and compiled code in a well-defined format, created to add specific functionality. Just as we created our own functions in the previous lesson, other users have created packages of functions they have shared with the community in the form of libraries. These packages can be installed and loaded into your Python environment so you can use the functions that they contain.
 
@@ -45,7 +47,7 @@ There are a set of **standard (or base)** packages which are considered part of 
 
 Libraries are directories where packages for Python are stored. Note that the terms _package and library_ are sometimes used interchangably and there has been some discussion amongst the community to resolve this. 
 
-### Channels for Python Libraries
+### Channels for Python libraries
 
 There are many different channels for Python libraries. You can think of these as different places where Python libraries are stored and can be accessed from. Some of the most commonly used channels include:
 
@@ -64,18 +66,18 @@ If you click on the "Channels" button from the "Environments" tab of the Anacond
 Additionally, you can click on the "Not installed" filter to see a list of packages that are not currently installed in your environment. This can be a useful way to find new packages to explore and install.
 :::
 
-## Package Installation from the Anaconda Navigator
+## Package installation from the Anaconda Navigator
 
-Now that we have an understanding of what libraries are, we can talk about how to install them. There are many different ways to install packages in Python, but two of the more common means are: 
+Now that we have an understanding of what libraries are, we can talk about how to install them. There are many different ways to install packages in Python, but two of the more common ways are: 
 
 - Installing from the Anaconda Navigator
-- Installing from the command line using `pip` or `conda`.
+- Installing from the [command line](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html) using `pip` or `conda`.
 
-For this workshop, we will use the Anaconda Navigator to install packages. The Anaconda Navigator is a graphical user interface that allows you to manage your Python environments and packages without needing to use the command line.
+For this workshop, we will use the Anaconda Navigator to install packages. 
 
 ### Create a new environment
 
-Generally, the recommendation is to avoid installing backages on `base (root)`. So instead we are going to create a new environment. These are like separate "workspaces" where you can install packages on one environment without affecting the other environments. This can be useful for keeping your projects organized and be consistent with package versions across projects.
+Generally, the recommendation is to avoid installing backages on `base (root)`. So we are going to **create a new environment**. These are like separate "workspaces" where you can install packages on one environment without affecting the other environments. This can be useful for keeping your projects organized and be consistent with package or Python versions across projects.
 
 To begin, let's first create a new environment called `intro_python`. Navigate to the "Environments" tab in the Anaconda Navigator and click on the "Create" button. In the pop-up window, enter `intro_python` as the name of the environment and select Python 3.10.20 as the version. Then click on the "Create" button to create the environment.
 
@@ -91,14 +93,14 @@ This step may take a few moments to install everything for your new environment.
 
 Within our `intro_python` environment, we are going to install the very popular `NumPy` library (commonly used for matrix and mathematical operations). 
 
-First, change the dropdown menu to either "All" or "Not installed" instead of "Installed". Next, in the search bar, type `NumPy` and press enter. You should see the `NumPy` package listed in the search results. There many be several packages that match your search as all potential search matches are listed in alphabetical order. You may have to scroll until you see the `NumPy` package. 
+First, change the dropdown menu to either "All" or "Not installed" instead of "Installed". Next, in the search bar, type `numpy` and press enter. _There many be several packages that appear as all potential search matches are listed in alphabetical order. You may have to scroll until you see the `numpy` package._
 
-Click on the checkbox next to `NumPy` to select it for installation, and then click on the "Apply" button to start the installation process. The Anaconda Navigator will handle the installation and will let you know when it is complete.
+Click on the checkbox next to `numpy` to select it for installation, and then click on the "Apply" button to start the installation process. The Anaconda Navigator will handle the installation and will let you know when it is complete.
 
 ::: {#fig-install_NumPy .fig}
-![](../img/anaconda_install_NumPy.png)
+![](../img/anaconda_install_numpy.png)
 
-Anaconda Navigator window for installing the `NumPy` package in the `intro_python` environment.
+Anaconda Navigator window for installing the `numpy` package in the `intro_python` environment.
 :::
 
 You may get another pop-up window asking you to confirm the installation of `NumPy` and any dependencies that it may have. Dependencies are other libraries that `NumPy` uses under the hood in order to function properly. Therefore, we want to install these additional packages to have a succesful installation of `NumPy`. Click on the "Apply" button to confirm the installation and continue with the process.
@@ -129,7 +131,7 @@ This installation may take quite some time as there are many dependencies that w
 You will know that the installation is complete if you search installed packages and see each of these libraries with a green checkmark next to them.
 :::
 
-## Importing Libraries
+## Importing libraries
 
 Now that we have installed the libraries we want to use, we need to import them into our Python environment in order to access their functions. 
 
@@ -200,7 +202,7 @@ my_array = np.array([1, 2, 3, 4, 5])
 print(my_array)
 ``` 
 
-It does not really matter what you set this alias to be as long as it does not conflict with existing names. For example, you could import `NumPy` as `meow_math` and it would work just fine.
+It does not really matter what you set this alias to be as long as it does not conflict with existing names. For example, you could  `import numpy as meow_math` and it would work just fine.
 
 ```{python}
 #| label: NumPy_array_meow_math
@@ -241,7 +243,7 @@ Some libraries are large and have many functions that are organized into submodu
 from sklearn.ensemble import RandomForestClassifier
 ```
 
-This way we do not have to import the entire `sklearn` library and can just import the specific function that we need.
+This way we do not have to import the entire `sklearn` library and can just import the specific functions that we need.
 
 
 ***
