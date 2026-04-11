@@ -35,7 +35,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-This lesson includes instructions on how to install Python, open a JupyterLab notebook and **run Python code on your own**. We will be using `Anaconda` and JupyterLab so that you can work within the notebook ecosystem, which allows you to see the results of your code immediately. These same tools are widely used across fields for research and data scientists to explore datasets, document code and share results with collaborators.
+This lesson includes instructions on how to install Python, open a JupyterLab notebook and **run Python code on your own**. We will be using **Anaconda and JupyterLab** so that you can work within the notebook ecosystem, which allows you to see the results of your code immediately. These same tools are widely used across fields for research and data scientists to explore datasets, document code and share results with collaborators.
 
 By the end, you will have a working Python environment that you can reuse for future projects, whether you are automating a task or starting a larger analysis!
 
@@ -137,8 +137,7 @@ We will open JupyterLab by clicking the "Launch" button under the JupyterLab app
 ::: {#fig-jupyter_lab_interface .figure}
 ![](../img/jupyter_lab_landing_annotated.png)
 
-JupyterLab interface.<br>
-_Source: [Python for Geographic Data Analysis](https://pythongis.org/part1/chapter-01/nb/04-using-jupyterlab.html)_
+JupyterLab interface.
 :::
 
 Even though JupyterLab opens your web browser, it is not actually accessing the internet. It is running on your local computer at the port `http://localhost:8888`, which is only hosted on your computer and is not accessible to anyone else.
@@ -162,9 +161,15 @@ Creating `intro_python` directory.
 - `results/`: directory for intermediate results
 - `figures/`: directory for the plots you will generate
 
-We will create all of the above directories for this exercise. You can download the `data` directory by right-clicking [here](https://www.dropbox.com/scl/fi/eop1fgud59p4cutry16xm/data.zip?rlkey=ljd313mlverfvns79kz6mk7ol&st=yqhnxi2p&dl=1) and selecting "Save Link As...". Place the ZIP file within your `intro_python` directory. Within a file browser, navigate to your `intro_python` directory and double-click on the `data.zip` file in order to uncompress it. 
+We will create all of the above directories for this exercise. Add a `results` and `figures` directory within your `intro_python` directory. 
 
-Next, go ahead and add a `results` and `figures` directory within your `intro_python` directory. When finished, your working directory should look like this:
+Download the `data` directory as follows:
+
+- [Download the ZIP file]((https://www.dropbox.com/scl/fi/eop1fgud59p4cutry16xm/data.zip?rlkey=ljd313mlverfvns79kz6mk7ol&st=yqhnxi2p&dl=1)) by  right-clicking this link and choose “Save Link As…”
+- Save the file into your intro_python directory
+- Double click the `data.zip` file to extract the contents
+
+When finished, your working directory should look like this:
 
 ::: {#fig-jupyter_file_nav .figure}
 ![](../img/jupyter_lab_file_navigator.png){width=300px}
@@ -221,7 +226,7 @@ Creating Jupyter notebook and renaming it.
 
 We will be writing text within the cells of the Jupyter Notebook. These blocks can either be text (Markdown) or code (Python). To create a new cell, click the `"+"` button in the toolbar at the top of the notebook. **Each time we come across a code block in these lessons, we will click the "+" button to create a new code block in our Jupyter Notebook.** We could add all of the code to a single code block, but then we would need to re-evaluate all of the code each time we added some code. If we make new code block for each chunk of code, we only need to run the new code and not the previous code.
 
-::: callout-note
+::: {.callout-note collapse="true"}
 # Using Markdown within Jupyter Notebook
 Jupyter notebooks are capable of being rendered into HTML documents. Because of this, you can add text around your code blocks using Markdown. If you are interested in learning more about using Markdown to do this, this [Markdown basics from the Jupyter Documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) is helpful.
 :::
