@@ -1,5 +1,5 @@
 ---
-title: "Data wrangling"
+title: "Data Wrangling"
 description: |
   This lesson focuses on wrangling linked datasets with `pandas`, including filtering, reordering, saving cleaned tables and merging DataFrames to prepare real data for analysis.
 author:
@@ -23,12 +23,12 @@ jupyter: intro_python
 
 Approximate time: 70 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
 - Reorder related datasets to ensure that they are in the same order
-- Extract specific rows from a DataFrame using the `isin` operator
+- Extract specific rows from a DataFrame using the `isin` function
 - Save a DataFrame as a new CSV file
 - Use the `merge()` function to combine two DataFrames
 
@@ -45,7 +45,7 @@ In our use case, we will be working with genomic data. We have **gene expression
 - `mouse_exp_design.csv`
 - `counts.rpkm.csv`
 
-### Read in Expression Data and Metadata
+### Read in expression data and metadata
 
 Let’s start by reading in our gene expression data (RPKM matrix) and then previewing the first few lines:
 
@@ -87,9 +87,9 @@ print("Dimensions of metadata:", metadata.shape)
 
 We can see that we have 12 samples in both our expression data (columns) and our metadata (rows). What we want to know is, **are all the samples in our metadata also in our expression data?**
 
-### The `isin` Operator
+### The `isin` function
 
-Let’s try checking if all our metadata samples are also in our expression data. We will use the `in` operator to check for membership in a collection. 
+Let’s try checking if all our metadata samples are also in our expression data. We will use the `in` function to check for membership in a collection. 
 
 ```{python}
 #| label: get_sample_names
@@ -151,7 +151,7 @@ We can see that they are not in the same order. We can use the `reindex` method 
 #| label: tbl-reorder_expression_data
 #| tbl-cap: Reordered RPKM data columns to match the order of the metadata rownames.
 # Reorder the columns of the rpkm_data DataFrame to match the order of the metadata
-rpkm_ordered = rpkm_data.reindex(columns=x)
+rpkm_ordered = rpkm_data.reindex(columns = metadata.index)
 
 # Inspect the re-ordered table to make sure it looks correct
 rpkm_ordered.head()
@@ -182,7 +182,7 @@ important_genes = ["ENSMUSG00000083700", "ENSMUSG00000080990",
 :::
 
 
-## Saving CSV Files
+## Saving CSV files
 
 Now that we have our properly ordered expression data, we will save it as a new CSV file by using the `to_csv` method:
 
@@ -210,7 +210,8 @@ If you look at the output, you'll see an extra column called `Unnamed: 0`. This 
 #| label: tbl-read_new_csv_rownames
 #| tbl-cap: Read in the new CSV file that of the ordered RPKM data that was just saved with rownames set appropriately.
 # Read in the new CSV file with genes as rownames
-rpkm_ordered_new = pd.read_csv("data/ordered_counts_rpkm.csv", index_col=0)
+rpkm_ordered_new = pd.read_csv("data/ordered_counts_rpkm.csv", 
+                               index_col = 0)
 
 # Inspect the read-in CSV file
 rpkm_ordered_new.head()
@@ -220,11 +221,11 @@ rpkm_ordered_new.head()
 
 Now we want to update some information in our `metadata` object. We want to evaluate the average expression for each sample and its relationship with the age of the mouse. Our goal is to wrangle our data so we can create visualizations with these new columns in the next lesson.
 
-### Calculating Average Expression
+### Calculating average expression
 
 Let’s take a closer look at our counts data. Each column represents a sample in our experiment and each sample has ~38K values corresponding to the expression of different transcripts. We want to compute the **average value of expression** for each sample.
 
-Taking this one step at a time, what would we do if we just wanted the average expression for Sample 1 (across all transcripts)? We can use the base `numpy` function called `mean()`:
+Taking this one step at a time, what would we do if we just wanted the average expression for Sample 1 across all genes. We can use the base `numpy` function called `mean()`:
 
 ```{python}
 #| label: calculate_mean_sample_1
@@ -273,17 +274,17 @@ help(pd.merge)
 ```
 
 
-When we look at the arguments for the `merge()` method, we can see that we can specify the left and right DataFrames to merge, as well as the columns or indices we want to merge on. We can specify which columns to merge on using the `left_on` and `right_on` arguments or we can specify that we want to merge on the index using the `left_index` and `right_index` arguments.
+When we look at the arguments for the `merge()` method, we can see that we can specify the left and right DataFrames to merge, as well as the columns or indices we want to merge on. We can specify what columns or indices to merge on using the `left_*` and `right_*` arguments. 
 
-In this case, "left" DataFrame will be the `metadata` and the "right" DataFrame will be the `samplemeans`. Since both `metadata` and `samplemeans` have the sample names as indicies, we can merge them on the indices using the `left_index` and `right_index` arguments:
+In this case, the "left" DataFrame will be the `metadata` and the "right" DataFrame will be the `samplemeans`. Since both `metadata` and `samplemeans` have the sample names as indicies, we can merge them on the indices using the `left_index` and `right_index` arguments:
 
 ```{python}
 #| label: merge_dataframes
 #| error: true
 # Merge the samplemeans series with the metadata DataFrame on the index
 new_metadata = metadata.merge(samplemeans, 
-                              left_index=True, 
-                              right_index=True)
+                              left_index = True, 
+                              right_index = True)
 
 # Inspect the merged metadata
 new_metadata.head()
@@ -330,22 +331,22 @@ new_metadata.to_csv("data/new_metadata.csv")
 
 **We are now ready for plotting and data visualization!**
 
-## Fun With Data Wrangling
+## Fun with data wrangling
 
 As you work more and more with different datasets, you will likely find yourself spending a lot of time and energy wrangling data to put it in the right format for analysis. We have a few fun and useful exercises to practice some of the data wrangling skills we have learned in this lesson.
 
 ::: {.callout-tip}
 # [**Exercise 2**](10_data_wrangling-Answer_key.qmd#exercise-2)
 
-### Reading in and inspecting data
+**Reading in and inspecting data**
 
-1. Using the `animals.csv` within your `data` directory, read the `.csv` file into your environment and assign it to a variable called `animals`. **Be sure to check that your row names are the different animals.**
+1. Using the `animals.csv` within your `data` directory, read the `.csv` file into your environment and assign it to a variable called `animals`. _Be sure to check that your row names are the different animals._
 
 2. Check to make sure that `animals` is a DataFrame.
 
 3. How many rows are in the `animals` DataFrame? How many columns?
 
-### Data wrangling
+**Data wrangling**
 
 4. Extract the `speed` value of 40 km/h from the `animals` DataFrame.
 
@@ -359,9 +360,9 @@ As you work more and more with different datasets, you will likely find yourself
 
 9. Create a dictionary with the appropriate keys (i.e., speed and color).
 
-### The `isin` operator, reordering and matching
+**The `isin` operator, reordering and matching**
 
-10. In the `data` directory, you should have a table called `project-summary.txt` that contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. **Copy and paste the code below to create DataFrames for the project summary and for the control samples with the associated batch information**:
+10. In the `data` directory, you should have a table called `project-summary.txt` that contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. _Copy and paste the code below to create DataFrames for the project summary and for the control samples with the associated batch information_:
 
 ```{python}
 #| label: create_ctrl_samples_df
