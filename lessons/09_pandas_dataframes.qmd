@@ -24,11 +24,11 @@ jupyter: intro_python
 
 Approximate time: 75 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
-- Load and inspect data in a `Pandas` DataFrame
+- Load and inspect data in a `pandas` DataFrame
 - Subset and index DataFrames in different ways
 - Add new columns to a DataFrame based on existing data
 - Perform useful operations on DataFrames to summarize data
@@ -37,20 +37,20 @@ In this lesson, we will:
 
 Real-life data are oftentimes represented in the forms of tables of data, matrices of gene expression or Excel spreadsheets of patient data. `pandas` DataFrames are Python’s way of processing and representing this tabular data so you can clean, filter and summarize it efficiently. DataFrames enable you to do tasks, such as quickly finding all samples from a particular condition, computing summary statistics or preparing a clean table for plotting. In this lesson, you will practice loading data into DataFrames and performing common operations that mirror how you would explore a dataset in a spreadsheet, but with far more control and reproducibility.
 
-## `Pandas` Library
+## `pandas` library
 
-The `Pandas` library is a powerful tool for data wrangling and analysis in Python. It provides useful data structures and functions needed to handle tables of data, like Excel or Google Sheets spreadsheets. The primary data structures of note in `Pandas` are Series and DataFrames.
+The `pandas` library is a powerful tool for data wrangling and analysis in Python. It provides useful data structures and functions needed to handle tables of data, like Excel or Google Sheets spreadsheets. The primary data structures of note in `pandas` are Series and DataFrames.
 
 ::: callout-note
-# `Pandas` and `NumPy`
-Pandas is built on top of the `NumPy` library, which in practice means that most of the methods defined for `NumPy` Arrays also apply to `Pandas` data structures.
+# `pandas` and `NumPy`
+Pandas is built on top of the `NumPy` library, which in practice means that most of the methods defined for `NumPy` arrays also apply to `Pandas` data structures.
 :::
 
 This library is widely used in data science and machine learning fields for tasks such as data cleaning, transformation and analysis. It provides a comprehensive set of functions for handling and manipulating data and can handle large datasets efficiently.
 
-### Loading a Datasets
+### Loading a dataset
 
-Within the `Pandas` library, there are built-in functions to load datasets from various file formats, such as CSV (comma separated values) or Excel files (`.xlsx`). The most commonly used function for loading data is `pandas.read_csv()`, which allows you to read a CSV file and create a DataFrame with the data.
+Within the `pandas` library, there are built-in functions to load datasets from various file formats, such as CSV (comma separated values) or Excel files (`.xlsx`). The most commonly used function for loading data is `pandas.read_csv()`, which allows you to read a CSV file and create a DataFrame with the data.
 
 When working with a large dataset, you will very likely work with a "metadata" file that contains the information about each sample in your dataset. This is important information and we encourage you to always generate a document with as much metadata as you can record before you bring the data into Python. Metadata can include information about the experimental design, sample characteristics, data collection methods and any other relevant information that can help you understand and analyze your data. [Here is some additional reading on metadata](https://datamanagement.hms.harvard.edu/metadata-overview) from the [HMS Data Management Working Group](https://datamanagement.hms.harvard.edu/).
 
@@ -115,13 +115,13 @@ When learning about basic functions, we saw that we can use the `help()` functio
 1. Use the `tail()` method to inspect our `metadata` DataFrame.
 :::
 
-## Indexing and Subsetting DataFrames
+## Indexing and subsetting DataFrames
 
 When we need to access specific elements of a DataFrame, we commonly use indexing and subsetting techniques. DataFrames can be indexed using both numerical indices and labels (row names and column names).
 
 Both are useful for different purposes. Numerical indexing is often more concise and can be faster for certain operations, while label-based indexing can be more intuitive and easier to read, especially when working with large datasets with meaningful row and column names.
 
-### Subsetting DataFrames with Indices
+### Subsetting DataFrames with indices
 
 We can use the `iloc` method (which stands for "integer location") to access specific elements of a DataFrame by using numerical indexing. This method allows us to access rows and columns by their indices.
 
@@ -204,7 +204,7 @@ Alternatively, we could use the list of indices `[]` to extract any number of ro
 metadata.iloc[[0, 2, 5], :]
 ``` 
 
-### Subsetting DataFrames with Labels
+### Subsetting DataFrames with labels
 
 When we work with larger datasets, it can be tricky to remember the column number that corresponds to a particular variable. _Is `celltype` in column 1 or 2?_. 
 
@@ -283,7 +283,7 @@ We can mix and match label-based and numerical indexing. For example, we can sta
 metadata.iloc[0:3]["celltype"]
 ```
 
-### Subsetting DataFrames with Logical Expressions
+### Subsetting DataFrames with logical expressions
 
 We can use logical expressions with DataFrames to extract the rows or columns in the DataFrame by using specific values. First, we need to determine the indices in the rows or columns where a logical expression is `True`, then we can extract those rows or columns from the DataFrame.
 
@@ -329,11 +329,11 @@ metadata[metadata["celltype"] == "typeA"]
 :::
 
 
-## Adding New Columns
+## Adding new columns
 
 Now that we know how to access specific values in a DataFrame, we can also add new columns to our data. You will often need to create new variables based on the information in your DataFrame or to add new information to your DataFrame.
 
-### Adding a New Column with the Same Value
+### Adding a new column with the same value
 
 We could want to add a new column to our metadata that specifies that the species for each of our samples is `Mus musculus`. When the value is the same across all the rows, we can simply create a new column and assign whichever value we want to that column:
 
@@ -345,7 +345,7 @@ metadata["species"] = "Mus musculus"
 metadata
 ```
 
-### Adding a New Column with Conditional Values
+### Adding a new column with conditional values
 
 We can also conditionally add data to new columns depending on other data within the dataframe. For example, if all the mice in `replicate 1` were `female` and those that were not in `replicate 1` were `male`, we can create a new column with `sex` and make corresponding assignments using the `loc` method.
 
@@ -393,7 +393,7 @@ metadata
 ```
 
 
-### Calculating New Columns
+### Calculating new columns
 
 We can also create new columns by performing calculations on existing columns. For example, we can create a new column called `replicate_squared` that contains the square of the values in the `replicate` column.
 
@@ -421,12 +421,12 @@ metadata
 
 We can apply any range of mathematical operations to create new columns based on data that already exists in the DataFrame.
 
-## Useful DataFrame Operations
+## Useful DataFrame operations
 
-The `Pandas` library is filled with useful functions to wrangle dataframes. Here, we will continue to cover some useful functions that are commonly used, but a more comprehensive cheatsheet of `Pandas` functions can be found [on the official website](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf).
+The `pandas` library is filled with useful functions to wrangle dataframes. Here, we will continue to cover some useful functions that are commonly used, but a more comprehensive cheatsheet of `pandas` functions can be found [on the official website](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf).
 
 
-### `value_counts()`
+### The `value_counts()` function
 
 One way to quickly summarize the contents of a DataFrame is by using `value_counts()`, which counts the number of times a particular value appears in a column. We can use this function to count the number of samples that belong to each genotype category:
 
