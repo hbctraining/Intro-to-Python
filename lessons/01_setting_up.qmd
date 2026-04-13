@@ -165,7 +165,7 @@ We will create all of the above directories for this exercise. Add a `results` a
 
 Download the `data` directory as follows:
 
-- [Download the ZIP file]((https://www.dropbox.com/scl/fi/eop1fgud59p4cutry16xm/data.zip?rlkey=ljd313mlverfvns79kz6mk7ol&st=yqhnxi2p&dl=1)) by  right-clicking this link and choose “Save Link As…”
+- [Download the ZIP file](https://www.dropbox.com/scl/fi/gfuo9ywg1hmz5ozuh5ga8/data.zip?rlkey=8tpxtcmvgpi2xwweql8bnnrbu&dl=1) by  right-clicking this link and choose “Save Link As…”
 - Save the file into your intro_python directory
 - Double click the `data.zip` file to extract the contents
 
