@@ -59,11 +59,11 @@ Example of a decision tree where the variables are age, weight, and smoker to pr
 _Image source: [DataCamp](https://www.datacamp.com/tutorial/decision-tree-classification-python)_
 :::
 
-These decision trees comprise of decision nodes, which are the points where the data is split based on a predictor variable, and leaf nodes, which are the final predictions made by the tree.
+These decision trees are made up of decision nodes, which are the points where the data is split based on a predictor variable, and leaf nodes, which are the final predictions made by the tree.
 
-The random forest algorithm generates multiple of these decision trees based upon the training data. Each tree is built upon a random subset of the data and variables variables. This randomness helps to reduce overfitting and improve the generalizability of the model. Therefore, each tree will learn different patterns from the data. 
+The random forest algorithm generates multiple of these decision trees based upon the training data. Each tree is built upon a random subset of the data and variables. This randomness helps to reduce overfitting and improve the generalizability of the model. Therefore, each tree will learn different patterns from the data. 
 
-Now that the model has been trained, we can supply a new dataset and run it through the model. In this case, the data will run through each of the decision trees in the random forest and make a prediction. Then, a majority vote is taken across the decision of all the trees to make the final prediction.
+Once the model has been trained, we can supply a new dataset and run it through the model. In this case, the data will run through each of the decision trees in the random forest and make a prediction. Then, a majority vote is taken across the decision of all the trees to make the final prediction.
 
 ::: {#fig-random_forest_example .figure}
 ![](../img/random_forest_algorithm.png){width="80%"}
@@ -74,7 +74,7 @@ _Image source: [GeeksforGeeks](https://www.geeksforgeeks.org/random-forest-class
 
 ## Cortical layer dataset
 
-To provide a real-world example of how to use machine learning in research, we will be using a synthetic [Visium HD](https://www.10xgenomics.com/platforms/visium/product-family) spatial transcriptomics dataset. In type of experiment, you take a piece of tissue and lay it on a grid. Then, each spot on the grid is genomically sequenced such that you know **both the spatial location and gene expression** of each spot. 
+To provide a real-world example of how to use machine learning in research, we will be using a synthetic [Visium HD](https://www.10xgenomics.com/platforms/visium/product-family) spatial transcriptomics dataset. In this type of experiment, you take a piece of tissue and lay it on a grid. Then, each spot on the grid is genomically sequenced such that you know **both the spatial location and gene expression** of each spot. 
 
 ::: {#fig-visium_hd .figure}
 ![](../img/visium.png){width=300}
@@ -213,7 +213,7 @@ Now that we have a basic understanding of how random forests work, let's dive in
 
 The _learning_ of machine learning comes from the fact that these algorithms must first learn patterns. This is accomplished by taking a subset of labelled data, the **training set**, to train the model. From this, the random forest classifier would learn how to predict the cortical layer of a cell based on its coordinates and gene expression. Additionally, we also need a **test set** to evaluate the performance of the model. The test set is a subset of the data that the model has not seen during training (but has labels), and it is used to assess the accuracy of the model.
 
-First we are going to define what is the label we want to predict (`cortical_layer`), and what are the predictor variables we want to use to make that prediction, (`x`, `y` coordinates and gene expression). Oftentimes there will be referred to as the `X` and `y` respectively.
+First we are going to define what is the label we want to predict (`cortical_layer`), and what are the predictor variables we want to use to make that prediction, (`x` and `y` coordinates and gene expression). Oftentimes the predictor features and target label will be referred to as the `X` and `y`, respectively.
 
 ```{python}
 #| label: define_feature_target_cols
@@ -232,7 +232,7 @@ With this information, we can now prepare our training and test dataset with `tr
 We will train the model on the training set and then evaluate its performance (accuracy) on the test set. We supply the following parameters into the function:
 
 - `test_size`: proportion of the dataset that we want to use as the test set (30% of the data for testing and 70% for training).
-- `stratify`: distribution of the target variable (`cortical_layer`) is the same in both the training and test sets. This is to reduce bias due to sampling and ensure that the model is trained on a representative sample of the data.
+- `stratify`: ensure that the distribution of the target variable (`cortical_layer`) is the same in both the training and test sets. This is to reduce bias due to sampling and ensure that the model is trained on a representative sample of the data.
 - `random_state`: random seed for reproducibility.
 
 ```{python}
@@ -377,7 +377,7 @@ If we think about our dataset, it makes sense that we see the **most error in th
 
 ## Next steps
 
-With this model, you could try to predict the cortical layer labels of other datasets. You could also try to use different predictor variables (e.g. only gene expression or only spatial coordinates) to see how that affects the accuracy of the model's predictions.
+With this model, you could try to predict the cortical layer labels of other datasets. You could also try to use different predictor variables (e.g., only gene expression or only spatial coordinates) to see how that affects the accuracy of the model's predictions.
 
 ***
 
