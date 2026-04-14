@@ -46,7 +46,7 @@ Machine learning is a subfield of artificial intelligence that focuses on traini
 3. Evaluating the model's performance on the test data
 4. Using the model to make predictions on new data
 
-These algorithms can be used for a wide range of applications, including image recognition, natural language processing, and predictive modeling.
+These algorithms can be used for a wide range of applications, including image recognition, natural language processing and predictive modeling.
 
 ### Random forest classifiers
 
@@ -55,7 +55,7 @@ Random forests allow you to predict a categorical variable (cortical layer) base
 ::: {#fig-decision_tree_example .figure}
 ![](../img/decision_tree_example.png){width="80%"}
 
-Example of a decision tree where the variables are age, weight, and smoker to predict risk level of a heart attack.<br>
+Example of a decision tree where the variables are age, weight and smoker to predict risk level of a heart attack.<br>
 _Image source: [DataCamp](https://www.datacamp.com/tutorial/decision-tree-classification-python)_
 :::
 
@@ -122,7 +122,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 # Load synthetic cortical dataset
-df_cortical = pd.read_csv("data/synthetic_cortex_data_new.csv")
+df_cortical = pd.read_csv("data/synthetic_cortex_data.csv")
 df_cortical.head()
 ```
 
@@ -155,7 +155,7 @@ plt.show()
 
 So now we have a better idea of what the cross-section of the cortex looks like and where the different layers are located.
 
-However, just using the x and y coordinates of each spot is not enough. You may have noticed that there appears to be some mixing of layers near the boundaries. Luckily for us, the different cortical layers have known genes that are unique expressed in the layers. We can take a quick look at some of these marker genes that are used to identify the different cortical layers in the original paper that this dataset is based on:
+However, just using the x and y coordinates of each spot is not enough. You may have noticed that there appears to be some mixing of layers near the boundaries. Luckily for us, the different cortical layers have known genes that are uniquely expressed in the layers. We can take a quick look at some of these marker genes that are used to identify the different cortical layers in the original paper that this dataset is based on:
 
 ::: {#fig-cortical_marker_genes .figure}
 ![](../img/paper_cortical_markers.png){width=550}
@@ -164,7 +164,7 @@ Example of the spatial expression of known marker genes for each cortical layer.
 _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
 :::
 
-In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17`, and `MOBP`. These are the [log-normalized expression](https://hbctraining.github.io/Intro-to-scRNAseq/lessons/07_SCT_normalization.html#normalization) values for those genes in each spot. Similar to the figure from above, we can visualize the expression of these marker genes in each spot (scatterplot point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a spot belongs to.
+In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17` and `MOBP`. These are the [log-normalized expression](https://hbctraining.github.io/Intro-to-scRNAseq/lessons/07_SCT_normalization.html#normalization) values for those genes in each spot. Similar to the figure from above, we can visualize the expression of these marker genes in each spot (scatterplot point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a spot belongs to.
 
 ```{python}
 #| label: fig-cortical_marker_genes
@@ -178,6 +178,7 @@ fig, axes = plt.subplots(2, 3, figsize=(15, 8))
 
 # Make axes a flat list so we can index easily
 axes = axes.flatten()
+
 
 for i, gene in enumerate(genes):
     ax = axes[i]
