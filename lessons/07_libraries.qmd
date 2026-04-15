@@ -118,7 +118,7 @@ So now we will never have to install `NumPy` again for whenever we are using the
 
 
 :::{.callout-tip}
-# **Exercise 1**
+# [**Exercise 1**](07_libraries-Answer_key.qmd#exercise-1)
 1. Repeat the steps above to install the following packages from the Anaconda Navigator:
     - `jupyter`
     - `pandas`
@@ -210,8 +210,8 @@ print(my_array)
 However, it is good practice to use the commonly accepted aliases for libraries. For example, `NumPy` is commonly imported as `np`, `pandas` is commonly imported as `pd`, and `matplotlib.pyplot` is commonly imported as `plt`. Using these common aliases can make your code more readable and easier for others to understand.
 
 :::{.callout-tip}
-# **Exercise 2**
-1. To ensure that you have successfully installed the libraries from the previous exercise, try running the import commands:
+# [**Exercise 2**](07_libraries-Answer_key.qmd#exercise-2)
+1. To ensure that you have successfully installed some of the libraries from the previous exercise, try running the import commands:
 
 ```{python}
 #| label: import_libraries
