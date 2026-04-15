@@ -125,6 +125,7 @@ So now we will never have to install `NumPy` again for whenever we are using the
     - `matplotlib` 
     - `scikit-learn`
     - `seaborn`
+    - `nb_conda_kernels`
 
 This installation may take quite some time as there are many dependencies that will need to be installed for each of these packages. 
 
@@ -137,27 +138,17 @@ Now that we have installed the libraries we want to use, we need to import them 
 
 ### Changing the kernel in Jupyter Lab
 
-First, we will open our Jupyter Lab notebook and make sure that we are using the `intro_python` environment by setting our "kernel" to `intro_python`. Kernels are another way to refer to a Python environment in Jupyter Lab.
-
-Navigate to the "Kernel" tab in the top menu and select "Change Kernel". 
+First, we will close our Jupyter Lab notebook and re-launch it to make sure that we are using the `intro_python` environment by setting our "kernel" to `intro_python`. Kernels are another way to refer to a Python environment in Jupyter Lab. When we relaunch Jupyter Lab it should ask us which kernel we would like to use. Select `Python [conda env:intro_python]*` and click "Select". We should now see that out kernel is `Python [conda env:intro_python]*` in the top right of our Jupyter notebook.
 
 ::: {#fig-change_kernel .fig}
-![](../img/anaconda_change_kernel.png){width="50%"}
+![](../img/Select_kernel.gif){width=600px}
 
-Jupyter Lab menu option for changing the kernel to `intro_python` in order to use a different Python environment.    
+Selecting our `intro_python` kernel.
 :::
 
 ::: {.callout-note collapse="true"}
 # Alternative way to change kernel
-To check that we are using the correct kernel, we can look at the top right corner of our Jupyter Lab notebook. It should say `Python 3 (base)` or something similar. If it does not, you can click on the kernel name and select `intro_python` from the dropdown menu to switch to the correct environment.
-:::
-
-Then select `intro_python` from the dropdown menu to switch to the correct environment.
-
-::: {#fig-change_kernel .fig}
-![](../img/anaconda_select_kernel.png){width="50%"}
-
-Dropdown menu for changing the kernel to `intro_python` to change the kernel to a different Python environment.
+To check that we are using the correct kernel, we can look at the top right corner of our Jupyter Lab notebook. It should say `Python [conda env:intro_python]*` or something similar. If it does not, you can click on the kernel name and select `Python [conda env:intro_python]*` from the dropdown menu to switch to the correct environment.
 :::
 
 ### Importing `NumPy`
