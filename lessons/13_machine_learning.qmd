@@ -23,7 +23,7 @@ jupyter: intro_python
 
 Approximate time: XX minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -167,6 +167,23 @@ _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026
 In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17` and `MOBP`. These are the [log-normalized expression](https://hbctraining.github.io/Intro-to-scRNAseq/lessons/07_SCT_normalization.html#normalization) values for those genes in each spot. Similar to the figure from above, we can visualize the expression of these marker genes in each spot (scatterplot point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a spot belongs to.
 
 ```{python}
+#| label: fig-cortical_marker_gene_aqp4
+#| fig-cap: Spatial plot of the gene expression of the Layer 1 marker gene, AQP4, across the cortex.
+# Plot the spatial expression of AQP4 across the cortex
+sns.scatterplot(data = df_cortical,
+                x = "x", y = "y",
+                hue = "AQP4",
+                palette = "viridis",
+                edgecolor = None
+)
+plt.title("Expression of AQP4 across the cortex")
+plt.show()
+```
+
+::: {.callout-note collapse="true"}
+# Making multiple subplots in a loop
+
+```{python}
 #| label: fig-cortical_marker_genes
 #| fig-cap: Spatial plot of the gene expression of known marker genes for each cortical layer.
 # List of marker genes to plot
@@ -178,7 +195,6 @@ fig, axes = plt.subplots(2, 3, figsize=(15, 8))
 
 # Make axes a flat list so we can index easily
 axes = axes.flatten()
-
 
 for i, gene in enumerate(genes):
     ax = axes[i]
@@ -196,8 +212,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-::: {.callout-note collapse="true"}
-# Making multiple subplots in a loop
 In the above code, we first initialized a plot with 2 rows and 3 columns - with the goal of plotting each of the 6 genes in our dataset. This creates an **2D array of plots** which we can then access to generate each of our plots.
 
 So we could have proceeded using the `[row, column]` indexing we have been using for matrices, but that is more complex as we would need to keep track of both rows and columns in the for loop. Instead, we can use the `flatten()` method to convert this **2D array of plots into a list of plots**, which is easier to index in the for loop.
@@ -272,6 +286,33 @@ Next, we will train the model using the `fit()` method, which takes in the predi
 rf.fit(X_train, y_train)
 ```
 
+Now that we have trained a model, we can visualize how **one** of the decision trees in the random forest is making its predictions. This can help us understand how the model is learning to predict the cortical layer labels based on the spatial location and gene expression of each cell. Here, we see the first few splits in the decision tree:
+
+```{python}
+#| label: visualize_decision_tree
+#| fig-cap: Visualization of a single decision tree from the random forest model (truncated to depth `max_depth`).
+#| echo: false
+from sklearn.tree import export_graphviz
+import graphviz
+
+# Unique class names for the target variable (cortical_layer)
+cn = df_cortical["cortical_layer"].unique()
+
+
+dot_data = export_graphviz(rf.estimators_[0],
+                           out_file = None,
+                           feature_names = feature_cols,
+                           class_names = cn,
+                           filled = True,
+                           rounded = True,
+                           special_characters = True,
+                           impurity = False,
+                           proportion = True,
+                           max_depth = 3)
+
+graph = graphviz.Source(dot_data)
+graph
+```
 
 ## Predict cortical layer labels
 
@@ -300,36 +341,6 @@ y_pred[0:5]
 
 So we see that the output of the `predict()` method is an array of predicted cortical layer labels for each spot in the test dataset. 
 
-::: {.callout-note collapse="true"}
-# Visualizing a _single_ decision tree in the random forest
-
-```{python}
-#| label: visualize_decision_tree
-#| fig-cap: Visualization of a single decision tree from the random forest model (truncated to depth `max_depth`).
-from sklearn.tree import export_graphviz
-import graphviz
-
-# Unique class names for the target variable (cortical_layer)
-cn = df_cortical["cortical_layer"].unique()
-
-
-dot_data = export_graphviz(rf.estimators_[0],
-                           out_file = None,
-                           feature_names = feature_cols,
-                           class_names = cn,
-                           filled = True,
-                           rounded = True,
-                           special_characters = True,
-                           impurity = False,
-                           proportion = True,
-                           max_depth = 3)
-
-graph = graphviz.Source(dot_data)
-graph
-```
-
-:::
-
 ## Assessing model performance
 
 At this point, we have the predicted labels for the test dataset, but how do we know if these predictions are accurate? To evaluate the performance of our model, we can compare the predicted labels to the true labels of the test dataset.
@@ -348,14 +359,25 @@ accuracy_percentage
 
 Our accuracy is quite high! This tells us that our model is doing a good job at predicting the cortical layer labels based on the x, y coordinates and gene expression. However, accuracy alone does not always give us the full picture of how well our model is performing.
 
-Confusion matrices are another way to evaluate the performance of classification. This table shows the number of labels that were correctly predicted (true positives and true negatives) and the number of labels that were incorrectly predicted (false positives and false negatives).
+### Confusion matrices
+
+If your accuracy is low, you can look at the confusion matrix to see which classes are being misclassified and potentially adjust your model or data accordingly. Confusion matrices are a common way to evaluate which labels are being correctly predicted and which are being incorrectly predicted. This can help you understand where your model is making mistakes and how to improve it.
+
+```{python}
+#| label: calculate_confusion_matrix
+class_names = sorted(y.unique())
+cm = confusion_matrix(y_test, y_pred, labels=class_names)
+
+print(cm)
+```
+
+This confusion matrix shows the number of correct and incorrect predictions for each class (cortical layer) in the test dataset. The diagonal elements represent the number of correct predictions for each class, while the off-diagonal elements represent the number of incorrect predictions.
+
+The easiest way to interpret this confusion matrix is to visualize it as a heatmap, where the intensity of the color represents the number of predictions for each class. This can help you quickly identify which classes are being misclassified and which are being correctly classified.
 
 ```{python}
 #| label: fig-confusion_matrix
 #| fig-cap: Confusion matrix to evaluate the performance of the random forest classifier on the test dataset for each cortical layer.
-class_names = sorted(y.unique())
-cm = confusion_matrix(y_test, y_pred, labels=class_names)
-
 plt.figure(figsize=(8, 6))
 sns.heatmap(
     cm,
@@ -372,9 +394,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-This can help you understand which classes the model is doing well on and which classes it is struggling with. If your accuracy is low, you can look at the confusion matrix to see which classes are being misclassified and potentially adjust your model or data accordingly.
-
-If we think about our dataset, it makes sense that we see the **most error in the prediction when layers are adjacent to one another**. This is because the boundary between when one layer starts and another ends is not always clear, and there may be some mixing of layers near the boundaries. 
+Our accuracy is quite high, so the diagonal (correct predictions) has the highest values. However, we can see that there are several instances of misclassification (the 15% inaccurate predictions). It makes sense that we see the **most error in the prediction when layers are adjacent to one another**. This is because the boundary between when one layer starts and another ends is not always clear, and there may be some mixing of layers near the boundaries. 
 
 ## Next steps
 
