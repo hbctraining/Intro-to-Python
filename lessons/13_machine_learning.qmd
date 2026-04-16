@@ -1,7 +1,7 @@
 ---
-title: "Machine learning - Random forests"
+title: "Machine Learning - Random Forests"
 description: |
-  Write a description of the lesson here. 
+  This lesson introduces machine learning with random forests using a synthetic spatial transcriptomics dataset of the human cortex. You will learn how to prepare features and labels, split data into training and test sets, train a `RandomForestClassifier` in `scikit-learn` and interpret model outputs. Along the way, you will visualize spatial patterns of cortical layers and marker genes, inspect an individual decision tree and evaluate model performance using accuracy and confusion matrices.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -21,7 +21,7 @@ editor_options:
 jupyter: intro_python
 ---
 
-Approximate time: XX minutes
+Approximate time: 50 minutes
 
 ## Learning objectives 
 
@@ -123,21 +123,26 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 # Load synthetic cortical dataset
 df_cortical = pd.read_csv("data/synthetic_cortex_data.csv")
+
+# Inspect the loaded dataset
 df_cortical.head()
 ```
 
 We have the following columns in this dataset:
 
-- `barcode`: A unique identifier for each spot in the dataset
-- `x`: The x coordinate of the spot's spatial location
-- `y`: The y coordinate of the spot's spatial location
-- `layer`: The cortical layer that the spot belongs to (L1, L2, L3, L4, L5, L6, WM)
+- `barcode` - A unique identifier for each spot in the dataset
+- `x` - The x coordinate of the spot's spatial location
+- `y` - The y coordinate of the spot's spatial location
+- `layer` - The cortical layer that the spot belongs to (L1, L2, L3, L4, L5, L6, WM)
 
 As this is a spatial dataset, we can visualize where on the tissue each spot is located by plotting the x and y coordinates of each spot and coloring the points by the cortical layer that they belong to:
 
 ```{python}
 #| label: fig-cortical_layers
 #| fig-cap: "Spatial plot of the cortical spots colored by the cortical layer they belong to."
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
 # Plot the spatial locations of the spots colored by the cortical layer they belong to
 sns.scatterplot(data=df_cortical, 
                 x="x", y="y", 
@@ -145,11 +150,19 @@ sns.scatterplot(data=df_cortical,
                 edgecolor=None,
                 palette="tab10")
 
-# Add title and axis labels
+# Add a plot title
 plt.title("Brain Cells by Cortical Layer")
+
+# Add an x-axis label
 plt.xlabel("x coordinate")
+
+# Add a y-axis label
 plt.ylabel("y coordinate")
+
+# Add a title to the legend
 plt.legend(title="Cortical Layer")
+
+# Render the plot
 plt.show()
 ```
 
@@ -164,24 +177,34 @@ Example of the spatial expression of known marker genes for each cortical layer.
 _Image source: [Rai et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.12.698703v1.full)_
 :::
 
-In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17` and `MOBP`. These are the [log-normalized expression](https://hbctraining.github.io/Intro-to-scRNAseq/lessons/07_SCT_normalization.html#normalization) values for those genes in each spot. Similar to the figure from above, we can visualize the expression of these marker genes in each spot (scatterplot point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a spot belongs to.
+In the dataset, you have have noted that we also have columns: `AQP4`, `HPCAL1`, `FREM3`, `TRABD2A`, `KRT17` and `MOBP`. These are the [log-normalized expression](https://hbctraining.github.io/Intro-to-scRNAseq/lessons/07_SCT_normalization.html#normalization) values for those genes in each spot. Similar to the figure from above, we can visualize the expression of a marker gene in each spot (scatterplot point) across the cortex to see the pattern of values across the different layers. This will give us a better idea of how we can use both the spatial location and gene expression to predict which layer a spot belongs to.
 
 ```{python}
 #| label: fig-cortical_marker_gene_aqp4
 #| fig-cap: Spatial plot of the gene expression of the Layer 1 marker gene, AQP4, across the cortex.
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
 # Plot the spatial expression of AQP4 across the cortex
 sns.scatterplot(data = df_cortical,
-                x = "x", y = "y",
+                x = "x",
+                y = "y",
                 hue = "AQP4",
                 palette = "viridis",
                 edgecolor = None
 )
+
+# Add a plot title
 plt.title("Expression of AQP4 across the cortex")
+
+# Render the plot
 plt.show()
 ```
 
 ::: {.callout-note collapse="true"}
 # Making multiple subplots in a loop
+
+Alternatively, we could have plotted all six genes together by doing something like:
 
 ```{python}
 #| label: fig-cortical_marker_genes
@@ -196,6 +219,7 @@ fig, axes = plt.subplots(2, 3, figsize=(15, 8))
 # Make axes a flat list so we can index easily
 axes = axes.flatten()
 
+# Loop through each gene creating a plot
 for i, gene in enumerate(genes):
     ax = axes[i]
     sns.scatterplot(
@@ -208,14 +232,18 @@ for i, gene in enumerate(genes):
     )
     ax.set_title(f"Expression of {gene} across the cortex")
 
+# Adjust spacing so that figures fit neatly together
 plt.tight_layout()
+
+# Render the plot
 plt.show()
 ```
 
 In the above code, we first initialized a plot with 2 rows and 3 columns - with the goal of plotting each of the 6 genes in our dataset. This creates an **2D array of plots** which we can then access to generate each of our plots.
 
-So we could have proceeded using the `[row, column]` indexing we have been using for matrices, but that is more complex as we would need to keep track of both rows and columns in the for loop. Instead, we can use the `flatten()` method to convert this **2D array of plots into a list of plots**, which is easier to index in the for loop.
+We could have proceeded using the `[row, column]` indexing we have been using for matrices, but that is more complex as we would need to keep track of both rows and columns in the for loop. Instead, we can use the `flatten()` method to convert this **2D array of plots into a list of plots**, which is easier to index in the `for` loop.
 
+You will also note that in our `for` loop there is a comma `i, gene`. This is because `enumerate(genes)` will provide the index (`i`) in addition to the gene name (`gene`) as it is looping through `genes`. Because it is returning two variables, we need to assign them to two variables and we use the comma to separate the two variables we are wanting to return values to.
 :::
 
 **We will be using this synthetic dataset to train a random forest classifier to predict the cortical layer labels based on the spatial location and gene expression of each cell.**
@@ -228,17 +256,21 @@ Now that we have a basic understanding of how random forests work, let's dive in
 
 The _learning_ of machine learning comes from the fact that these algorithms must first learn patterns. This is accomplished by taking a subset of labelled data, the **training set**, to train the model. From this, the random forest classifier would learn how to predict the cortical layer of a cell based on its coordinates and gene expression. Additionally, we also need a **test set** to evaluate the performance of the model. The test set is a subset of the data that the model has not seen during training (but has labels), and it is used to assess the accuracy of the model.
 
-First we are going to define what is the label we want to predict (`cortical_layer`), and what are the predictor variables we want to use to make that prediction, (`x` and `y` coordinates and gene expression). Oftentimes the predictor features and target label will be referred to as the `X` and `y`, respectively.
+First, we are going to define what is the target label we want to predict (`cortical_layer`), and what are the predictor variables we want to use to make that prediction, (`x` coordinates, `y` coordinates and gene expression). Oftentimes, the predictor features and target label will be referred to as the `X` and `y`, respectively.
 
 ```{python}
 #| label: define_feature_target_cols
-# Feature and target columns
+# Define the predictor feature columns
 feature_cols = ["x", "y", "AQP4", "HPCAL1", "FREM3",
                 "TRABD2A", "KRT17", "MOBP"]
+
+# Define the target label column
 target_col = "cortical_layer"
 
-# Set X and y for future use in training and prediction
+# Set X for future use in training and prediction
 X = df_cortical[feature_cols]
+
+# Set y for future use in training and prediction
 y = df_cortical[target_col]
 ```
 
@@ -247,24 +279,30 @@ With this information, we can now prepare our training and test dataset with `tr
 We will train the model on the training set and then evaluate its performance (accuracy) on the test set. We supply the following parameters into the function:
 
 - `test_size`: proportion of the dataset that we want to use as the test set (30% of the data for testing and 70% for training).
-- `stratify`: ensure that the distribution of the target variable (`cortical_layer`) is the same in both the training and test sets. This is to reduce bias due to sampling and ensure that the model is trained on a representative sample of the data.
+- `stratify`: ensure that the distribution of the target label (`cortical_layer`) is the same in both the training and test sets. This is to reduce bias due to sampling and ensure that the model is trained on a representative sample of the data.
 - `random_state`: random seed for reproducibility.
 
 ```{python}
 #| label: prepare_training_data
+# Split the dataset into the training and test dataset and also split the predictor variables and target labels 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
-    test_size=0.3,
-    random_state=42,
-    stratify=y
+    test_size = 0.3,
+    random_state = 42,
+    stratify = y
 )
 ```
 
-::: callout-warning
-explain how we assign values to multiple variables at once.
-:::
+::: callout-note
+# Assigning output to multiple object
 
+`train_test_split` will return four objects (`X_train`, `X_test`, `y_train`, `y_test`), which is why each object is separated by a comma in the assignment. The objects contain:
+- `X_train` - The predictor variables, `x` coordinates, `y` coordinates along with our gene expression, for our training set
+- `X_test` - The predictor variables, `x` coordinates, `y` coordinates along with our gene expression, for our testing set
+- `y_train`: The target labels for our training set
+- `y_test`: The target labels for our testing set
+:::
 
 ### Train random forest classifier
 
@@ -273,9 +311,9 @@ To create the model, first we are going to initialize an instance of the `Random
 ```{python}
 #| label: initialize_random_forest
 # Initialize the random forest classifier
-rf = RandomForestClassifier(n_estimators=100,
-                            random_state=42,
-                            class_weight="balanced")
+rf = RandomForestClassifier(n_estimators = 100,
+                            random_state = 42,
+                            class_weight = "balanced")
 ```
 
 Next, we will train the model using the `fit()` method, which takes in the predictor variables (spatial coordinates and gene expression) and the target variable (cortical layer) from the training data.
@@ -292,13 +330,14 @@ Now that we have trained a model, we can visualize how **one** of the decision t
 #| label: visualize_decision_tree
 #| fig-cap: Visualization of a single decision tree from the random forest model (truncated to depth `max_depth`).
 #| echo: false
+# Load libraries
 from sklearn.tree import export_graphviz
 import graphviz
 
 # Unique class names for the target variable (cortical_layer)
 cn = df_cortical["cortical_layer"].unique()
 
-
+# Export one of the trees
 dot_data = export_graphviz(rf.estimators_[0],
                            out_file = None,
                            feature_names = feature_cols,
@@ -310,17 +349,20 @@ dot_data = export_graphviz(rf.estimators_[0],
                            proportion = True,
                            max_depth = 3)
 
+# Structure the tree for plotting
 graph = graphviz.Source(dot_data)
+
+# Plot the tree
 graph
 ```
 
 ## Predict cortical layer labels
 
-With this model, `rf`, we can now predict the cortical layer labels of the test dataset using the `predict()` method. Once again supplying the predictor variables, but this time for the **test data** instead of the training data. The model will use the patterns it learned from the training data to predict which cortical layer each spot belongs to.
+With this model, `rf`, we can now predict the cortical layer labels of the test dataset using the `predict()` method. Once again, we are supplying the predictor variables, but this time for the **test data** instead of the training data. The model will use the patterns it learned from the training data to predict which cortical layer each spot belongs to.
 
 ```{python}
 #| label: predict_cortical_layer
-# Predict coritcal layers for test dataset
+# Predict cortical layers for test dataset
 y_pred = rf.predict(X_test)
 ```
 
@@ -328,10 +370,11 @@ So now we have `y_pred`, but what is this output?
 
 ```{python}
 #| label: type_y_pred
+# Inspect the data type of y_pred
 type(y_pred)
 ``` 
 
-It is a numpy array! So we can access the first few elements to see what the predicted labels look like:
+It is a NumPy array! So we can access the first few elements to see what the predicted labels look like:
 
 ```{python}
 #| label: view_predicted_labels
@@ -353,8 +396,12 @@ Now that we have the predicted and true labels of the test dataset, we can calcu
 #| label: calculate_accuracy
 # Calculate the accuracy of the model's predictions
 acc = accuracy_score(y_test, y_pred)
+
+# Convert proportion to percentage
 accuracy_percentage = acc * 100
-accuracy_percentage
+
+# Print out the accuracy
+print(accuracy_percentage)
 ``` 
 
 Our accuracy is quite high! This tells us that our model is doing a good job at predicting the cortical layer labels based on the x, y coordinates and gene expression. However, accuracy alone does not always give us the full picture of how well our model is performing.
@@ -365,32 +412,51 @@ If your accuracy is low, you can look at the confusion matrix to see which class
 
 ```{python}
 #| label: calculate_confusion_matrix
+# Obtain the data labels
 class_names = sorted(y.unique())
-cm = confusion_matrix(y_test, y_pred, labels=class_names)
 
+# Create a confusion matrix of true and predicted labels
+cm = confusion_matrix(y_true = y_test,
+                      y_pred = y_pred,
+                      labels = class_names)
+
+# Print out the confusion matrix
 print(cm)
 ```
 
-This confusion matrix shows the number of correct and incorrect predictions for each class (cortical layer) in the test dataset. The diagonal elements represent the number of correct predictions for each class, while the off-diagonal elements represent the number of incorrect predictions.
+This confusion matrix shows the number of correct and incorrect predictions for each class (cortical layer) in the test dataset. Each row is the predicted cortical layer and each column is the true cortical layer. Thus, the diagonal elements represent the number of correct predictions for each class, while the off-diagonal elements represent the number of incorrect predictions.
 
 The easiest way to interpret this confusion matrix is to visualize it as a heatmap, where the intensity of the color represents the number of predictions for each class. This can help you quickly identify which classes are being misclassified and which are being correctly classified.
 
 ```{python}
 #| label: fig-confusion_matrix
 #| fig-cap: Confusion matrix to evaluate the performance of the random forest classifier on the test dataset for each cortical layer.
-plt.figure(figsize=(8, 6))
+# Initialize a plot with a specific size
+plt.figure(figsize = (8, 6))
+
+# Create a heatmap from the confusion matrix
 sns.heatmap(
-    cm,
-    annot=True,
-    fmt="g",
-    cmap="Blues",
-    xticklabels=class_names,
-    yticklabels=class_names
+    data = cm,
+    annot = True,
+    fmt = "g",
+    cmap = "Blues",
+    xticklabels = class_names,
+    yticklabels = class_names
 )
+
+# Add a plot title
 plt.title("Random Forest – Confusion Matrix (Test Set)")
+
+# Add an x-axis label
 plt.xlabel("Predicted label")
+
+# Add an y-axis label
 plt.ylabel("True label")
+
+#
 plt.tight_layout()
+
+# Render the plot
 plt.show()
 ```
 
@@ -398,7 +464,7 @@ Our accuracy is quite high, so the diagonal (correct predictions) has the highes
 
 ## Next steps
 
-With this model, you could try to predict the cortical layer labels of other datasets. You could also try to use different predictor variables (e.g., only gene expression or only spatial coordinates) to see how that affects the accuracy of the model's predictions.
+With this model, you could try to predict the cortical layer labels of other unlabelled datasets. You could also try to use different predictor variables (e.g., only gene expression or only spatial coordinates) to see how that affects the accuracy of the model's predictions.
 
 ***
 

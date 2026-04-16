@@ -38,7 +38,7 @@ In this lesson, we will:
 
 Plots are one of the best ways to communication and summarize results to others. With `Matplotlib` and `Seaborn`, you can create customizable visualizations from your data. Data scientists and researchers use these tools everyday to explore trends and create publication-ready figures for presentations and manuscripts. In this lesson, you will learn the basics of building a scatterplot and adjusting its aesthetics to give you the foundation for creating any plot you may want to generate in the future.
 
-## Plotting Basics
+## Plotting basics
 
 `MatPlotLib` is one of the most widely used plotting packages in Python. With it, we can create many different types of plots, including scatterplots, line plots, bar plots, boxplots and more. The important thing to remember is that you can slowly build upon your plot, adding different layers of information to create a more informative and visually appealing plot. So there is no need to create a perfect plot in one step!
 
@@ -78,10 +78,16 @@ So first, we'll create an empty plot of size 8 inches by 6 inches:
 #| fig-cap: An empty plot initialized with `MatPlotLib`.
 # Initialize a plot with a specific size
 plt.figure(figsize = (8, 6))
+
+# Render the plot
 plt.show()
 ```
 
-### Adding a Scatterplot Layer
+::: callout-note
+As we go through the lesson, you may notice that most plots will render just fine without `plt.show()`. `plt.show()` is a good practice to have in your plot’s code to explicitly state that you would like the figure to be created at this point. Certain computing set-ups require `plt.show()` in order to render an image, while others may get confused and attempt to overlay multiple plots without it. As a result, it is a good habit to use `plt.show()` to explicitly state where in the code you’d like your plot to be rendered.
+:::
+
+### Adding a scatterplot layer
 
 We will once again first initialize the plot with `figure()` and then add the scatterplot layer to the plot with `scatter()`. We need to specify where we are pulling the data to plot from, which in this case will be the `new_metadata` DataFrame, and the `x` and `y` values for our scatterplot, which in this case will be `age_in_days` for `x` and `mean_expression` for `y`. 
 
@@ -97,6 +103,9 @@ plt.figure(figsize = (8, 6))
 plt.scatter(data = new_metadata,
             x = "age_in_days", 
             y = "mean_expression")
+
+# Render the plot
+plt.show()
 ```
 
 ::: callout-note
@@ -248,6 +257,7 @@ sns.scatterplot(data = new_metadata,
 # Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize = 20)
+#
 plt.show()
 ``` 
 
