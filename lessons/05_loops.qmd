@@ -39,7 +39,7 @@ In this lesson, we will:
 
 ## Overview of lesson
 
-One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops for autmoation. This is essential in a real analysis, where you might need to process hundreds of files or thousands of values consistently and without human error. 
+One of the most common problems that programming solves is the tedium of performing the same task/calculation repeatedly. Instead of writing the same code over and over again, we can use loops for automation. This is essential in a real analysis, where you might need to process hundreds of files or thousands of values consistently and without human error. 
 
 In this lesson, we will learn about two types of loops: 
 
@@ -94,9 +94,9 @@ for organism in species:
     print(organism)
 ```
 
-We now created a value `organism` for the for loop. This is a variable that takes the value of each element in the `species` list as we iterate through it. So, in the first iteration of the loop, `organism` will be equal to `"human"`, in the second iteration, `organism` will be equal to `"mouse"`, and so on.
+We now created a variable `organism` for the `for` loop. This is a variable that takes the value of each element in the `species` list as we iterate through it. So, in the first iteration of the loop, `organism` will be equal to `"human"`, in the second iteration, `organism` will be equal to `"mouse"`, and so on.
 
-We do not have to assign the list to a variable before we use them. For example, we could iterate over a list of numbers without doing any assignment first and run calculations on those numbers as follows:
+We do not have to assign the list to a variable before we use it For example, we could iterate over a list of numbers without doing any assignment first and run calculations on those numbers as follows:
 
 ```{python}
 #| label: for_loop_example_2
@@ -131,7 +131,7 @@ This is to once again emphasize that indentation is not just a matter of style i
 
 ### Conditional statements within `for` loops
 
-We can use what we learned  about `if` statements in the lesson on [conditional statements](03_conditional_statements.qmd) within our `for` loops to perform different actions based on certain conditions. This can be useful if we want to perform a specific action for certain elements in our list. For example, if we wanted to print out a different message for humans compared to the other species, we could use the following code:
+We can use what we learned  about `if` statements in the lesson on [conditional statements](03_conditional_statements.qmd) within our `for` loops to perform different actions based on certain conditions. This can be useful if we want to perform a specific action for certain elements in our list. For example, if we wanted to print out a different message for "human" compared to the other species, we could use the following code:
 
 ```{python}
 #| label: for_loop_with_if
