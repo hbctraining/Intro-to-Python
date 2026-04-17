@@ -403,7 +403,7 @@ Because booleans are `0` and `1` under the hood, they can be added together and 
 ```{python}
 #| label: summing_booleans
 # Adding together two Trues and a False
-True + True + False
+print(True + True + False)
 
 # Data type for adding together two Trues and a False
 print(type(True + True + False))
