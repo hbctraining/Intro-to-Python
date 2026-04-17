@@ -1,7 +1,7 @@
 ---
 title: "Conditional Statements"
 description: |
-  This lesson introduces conditional logic in Python, showing how to use if, elif, else, comparison operators and logical operators to evaluate conditions.
+  This lesson introduces conditional logic in Python, showing how to use `if`, `elif`, `else`, comparison operators and logical operators to evaluate conditions.
 author:
   - Noor Sohail
   - Will Gammerdinger
