@@ -1,5 +1,5 @@
 ---
-title: "Plotting basics with `MatPlotlib` and `Seaborn` - Answer Key"
+title: "Plotting Basics with `MatPlotlib` and `Seaborn` - Answer Key"
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -49,6 +49,9 @@ plt.xlabel(xlabel = "Age in Days",
 # Add an plt.ylabel() layers to the current plot such that the y-axis is labeled “Mean expression”.
 plt.ylabel(ylabel = "Mean expression",
            fontsize=20)
+           
+# Render the plot
+plt.show()
 ``` 
 
 2. Use the `plt.title()` layer to add a plot title of your choice. 
@@ -79,6 +82,9 @@ plt.ylabel(ylabel = "Mean expression",
 
 # Use the plt.title() layer to add a plot title of your choice.
 plt.title(label = "Mean expression by age")
+
+# Render the plot
+plt.show()
 ``` 
 
 3. When you add the arguments `loc="right"` to the `plt.title()` function, what does it change?
@@ -111,6 +117,9 @@ plt.ylabel(ylabel = "Mean expression",
 # When you add the arguments loc="right" to the plt.title() function, what does it change?
 plt.title(label = "Mean expression by age",
           loc="right")
+
+# Render the plot
+plt.show()
 ``` 
 
 The title of the plot is now right-aligned.
@@ -146,6 +155,9 @@ plt.title(label = "Mean expression by age")
 
 # Change legend location
 plt.legend(loc="center right")
+
+# Render the plot
+plt.show()
 ``` 
 
 `plt.legend` changes the location of the legend in the plot. We can add as many layers as we would like.

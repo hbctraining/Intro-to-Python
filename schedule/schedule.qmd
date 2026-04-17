@@ -8,7 +8,7 @@ toc: false
 
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
-| 10:00 - 10:15 | [Workshop introduction](../slides/workshop_intro_slides.pdf) |  Will |
+| 10:00 - 10:15 | [Workshop Introduction](../slides/workshop_intro_slides.pdf) |  Will |
 | 10:15 - 10:45 | [Introduction to Python and Jupyter Lab](../lessons/01_setting_up.qmd) | Will |
 | 10:45 - 10:50 | Break | |
 | 10:50 - 11:25 | [Variables](../lessons/02_variables.qmd) | Noor |
@@ -18,7 +18,7 @@ toc: false
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Conditional statements](../lessons/03_conditional_statements.qmd)
+   1. [Conditional Statements](../lessons/03_conditional_statements.qmd)
       
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       This lesson introduces conditional logic in Python, showing how to use if, elif, else, comparison operators and logical operators to evaluate conditions.
@@ -44,7 +44,7 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 11:00 | [Data structures](../lessons/04_data_structures.qmd) | Noor |
+| 10:30 - 11:00 | [Data Structures](../lessons/04_data_structures.qmd) | Noor |
 | 11:00 - 11:05 | Break | |
 | 11:05 - 11:55 | [Loops](../lessons/05_loops.qmd) | Will |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Will |
@@ -67,7 +67,7 @@ I. Please **study the contents** and **work through all the code** within the fo
 
       :::
 
-   2. [Loading and installing libraries](../lessons/07_libraries.qmd)
+   2. [Loading and Installing Libraries](../lessons/07_libraries.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       This lesson introduces Python libraries, showing how to install packages, import them into your environment and explore library functions to extend Python functionality for data analysis.
@@ -92,7 +92,7 @@ II. **Submit your work**:
 | Time |  Topic  | Instructor |
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:30 | Self-learning lessons discussion | All |
-| 10:30 - 11:00 | [`NumPy` arrays](../lessons/08_numpy_arrays.qmd) | Will |
+| 10:30 - 11:00 | [`NumPy` Arrays](../lessons/08_numpy_arrays.qmd) | Will |
 | 11:00 - 11:05 | Break | |
 | 11:05 - 11:55 | [`Pandas` DataFrames](../lessons/09_pandas_dataframes.qmd) | Noor |
 | 11:55 - 12:00 | Overview of self-learning materials and homework submission | Will |
@@ -101,7 +101,7 @@ II. **Submit your work**:
 
 I. Please **study the contents** and **work through all the code** within the following lessons:
  
-   1. [Data wrangling](../lessons/10_data_wrangling.qmd)
+   1. [Data Wrangling](../lessons/10_data_wrangling.qmd)
 
       :::{.callout-note collapse="true" title="Click here for a preview of this lesson"}
       This lesson focuses on wrangling linked datasets with `pandas`, including filtering, reordering, saving cleaned tables and merging DataFrames to prepare real data for analysis.
@@ -154,7 +154,7 @@ II. **Submit your work**:
 |:-----------:|:----------:|:--------:|
 | 10:00 - 10:45 | Self-learning lessons discussion | All |
 | 10:45 - 10:50 | Break | |
-| 10:50 - 11:40 | [Machine learning](../lessons/13_machine_learning.qmd) | Noor |
+| 10:50 - 11:40 | [Machine Learning - Random Forests](../lessons/13_machine_learning.qmd) | Noor |
 | 11:40 - 11:50 | Discussion, Q & A | All |
 | 11:50 - 12:00 | [Wrap-up](../slides/workshop_wrapup_slides.pdf) | Will |
 

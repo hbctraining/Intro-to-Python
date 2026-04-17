@@ -25,7 +25,7 @@ jupyter: intro_python
 
 Approximate time: 30 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -104,12 +104,14 @@ plt.xlabel(xlabel = "Genotype",
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
+
+# Render the plot
 plt.show()
 ```
 
 :::
 
-## Changing the Order of Genotypes in the Boxplot
+## Changing the order of genotypes in the boxplot
 
 Let’s say you wanted to have the `KO` boxplots displayed first on the left side, and `Wt` on the right. In the next exercise, we will go through how to do this
 
@@ -151,6 +153,7 @@ plt.xlabel(xlabel = "Genotype",
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
 
+# Render the plot
 plt.show()
 ```
 
@@ -199,6 +202,7 @@ plt.xlabel(xlabel = "Genotype",
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
 
+# Render the plot
 plt.show()
 ```
 
@@ -245,6 +249,7 @@ plt.xlabel(xlabel = "Genotype",
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
 
+# Render the plot
 plt.show()
 ```
 

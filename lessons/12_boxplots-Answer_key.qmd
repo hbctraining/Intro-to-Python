@@ -36,6 +36,9 @@ plt.figure(figsize = (8, 6))
 sns.boxplot(data = new_metadata,
             x="genotype", 
             y="mean_expression")
+
+# Render the plot
+plt.show()
 ```
 
 2. Use the `hue` aesthetic to look at differences in sample means between the celltypes within each genotype.
@@ -50,6 +53,9 @@ sns.boxplot(data = new_metadata,
             x="genotype", 
             y="mean_expression",
             hue="celltype")
+
+# Render the plot
+plt.show()
 ```
 
 3. Add a title to your plot.
@@ -67,6 +73,9 @@ sns.boxplot(data = new_metadata,
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression")
+
+# Render the plot
+plt.show()
 ```
 
 4. Add labels for the axes, "Genotype" for the x-axis and "Mean expression" for the y-axis.
@@ -90,6 +99,9 @@ plt.xlabel(xlabel = "Genotype")
 
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression")
+
+# Render the plot
+plt.show()
 ```
 
 5. Make the following aesthetic changes:
@@ -122,6 +134,9 @@ plt.xlabel(xlabel = "Genotype",
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
+
+# Render the plot
+plt.show()
 ```
 
 # Exercise 2
@@ -156,6 +171,9 @@ plt.xlabel(xlabel = "Genotype",
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
+
+# Render the plot
+plt.show()
 ```
 
 # Exercise 3
@@ -189,6 +207,9 @@ plt.xlabel(xlabel = "Genotype",
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
+
+# Render the plot
+plt.show()
 ```
 
 2. Back in your boxplot code, change the colors in the `palette` argument to be your 2 favorite colors. Are there any colors that you tried that did not work? You can try to find some named colors [here](https://matplotlib.org/stable/gallery/color/named_colors.html#css-colors) if you want to explore more colors.
@@ -220,6 +241,9 @@ plt.xlabel(xlabel = "Genotype",
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
+
+# Render the plot
+plt.show()
 ```
 
 `cornflowerblue` is a great color in both R and Python and it exists in both. It also pairs well with `orange` which also exists in both.
@@ -255,5 +279,8 @@ plt.xlabel(xlabel = "Genotype",
 # Add y-axis label
 plt.ylabel(ylabel = "Mean expression", 
            fontsize = 15)
+
+# Render the plot
+plt.show()
 ```
 

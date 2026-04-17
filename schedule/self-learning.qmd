@@ -25,13 +25,13 @@ Once downloaded, run the installer and follow the prompts to complete the instal
 - [Data Structures](../lessons/04_data_structures.qmd)
 - [Loops](../lessons/05_loops.qmd)
 - [Functions](../lessons/06_functions.qmd)
-- [Libraries](../lessons/07_libraries.qmd)
+- [Loading and Installing Libraries](../lessons/07_libraries.qmd)
 - [Numpy Arrays](../lessons/08_numpy_arrays.qmd)
 - [Pandas DataFrames](../lessons/09_pandas_dataframes.qmd)
 - [Data Wrangling](../lessons/10_data_wrangling.qmd)
 - [Plotting Basics](../lessons/11_plotting_basics.qmd)
 - [Boxplots](../lessons/12_boxplots.qmd)
-- [Machine Learning - Random Forest](../lessons/13_machine_learning.qmd)
+- [Machine Learning - Random Forests](../lessons/13_machine_learning.qmd)
 
 
 ## Resources

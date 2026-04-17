@@ -82,7 +82,7 @@ for variable in sequence:
 ```
 
 
-### Creating a `for` Loop 
+### Creating a `for` loop 
 
 So if we wanted to print out the names of all the species in a list, we could use the following code:
 

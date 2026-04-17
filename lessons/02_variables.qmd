@@ -362,7 +362,7 @@ Note that the words `True` and `False` are reserved keywords in Python, so they 
 my_boolean = true
 ```
 
-### Changing the Data Type
+### Changing the data type
 
 Let's consider the case where you have perhaps classified the data type of variable incorrectly. In our case, `number_string` is a string with the number `12`. We can see that:
 

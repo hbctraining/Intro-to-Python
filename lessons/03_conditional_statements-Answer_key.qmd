@@ -1,5 +1,5 @@
 ---
-title: "Conditional statements - Answer Key"
+title: "Conditional Statements - Answer Key"
 author:
   - Noor Sohail
   - Will Gammerdinger

@@ -1,5 +1,5 @@
 ---
-title: "Plotting basics with `Matplotlib` and `Seaborn`"
+title: "Plotting Basics with `Matplotlib` and `Seaborn`"
 description: |
   This lesson introduces data visualization in Python using `Matplotlib` and `Seaborn`, showing how to build scatterplots, adjust aesthetics and customize labels to create clear figures.
 author:
@@ -26,7 +26,7 @@ jupyter: intro_python
 
 Approximate time: 40 minutes
 
-## Learning Objectives 
+## Learning objectives 
 
 In this lesson, we will:
 
@@ -44,7 +44,7 @@ Plots are one of the best ways to communication and summarize results to others.
 
 We will start with drawing a simple x-y scatterplot of `mean_expression` versus `age_in_days` from `new_metadata`.
 
-### Initialize a Plot with `MatPlotLib`
+### Initialize a plot with `MatPlotLib`
 
 First, we will import the `MatPlotLib` and `Pandas` libraries as well as load `new_metadata` that we created in the previous lesson:
 
@@ -121,6 +121,9 @@ plt.figure(figsize = (8, 6))
 # Add a scatterplot layer to the plot
 plt.scatter(x = new_metadata["age_in_days"], 
             y = new_metadata["mean_expression"])
+            
+# Render the plot
+plt.show()
 ```
 :::
 
@@ -138,11 +141,14 @@ plt.scatter(data = new_metadata,
             x = "age_in_days", 
             y = "mean_expression",
             c = "genotype")
+
+# Render the plot
+plt.show()
 ```
 
 **We are getting an error from trying to set the color.** This is because the `c` argument in `scatter()` expects a list of color values, but we are providing it with categorical data from the `genotype` column. 
 
-### Changing Aesthetics
+### Changing aesthetics
 
 To work around the error from `plt.scatter`, we will instead use the `seaborn` package's `scatterplot()` function and use the `hue` argument instead of `c`, which allows us to specify a categorical variable in order to color the plot points. The documentation for `seaborn.scatterplot()` is quite extensive and can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.scatterplot.html).
 
@@ -162,6 +168,9 @@ sns.scatterplot(data = new_metadata,
                 x = "age_in_days", 
                 y = "mean_expression",
                 hue = "genotype")
+
+# Render the plot
+plt.show()
 ```
 
 `seaborn` is a bit more flexible than `MatPlotLib` and allows us to easily add more aesthetics to our plot. You will oftentimes find yourself using a blend of both packages together to create the plot you want.
@@ -180,6 +189,9 @@ sns.scatterplot(data = new_metadata,
                 y = "mean_expression",
                 hue = "genotype",
                 style = "celltype")
+
+# Render the plot
+plt.show()
 ```
 
 ::: callout-note
@@ -201,6 +213,9 @@ sns.scatterplot(data = new_metadata,
                 hue = "genotype",
                 style = "celltype",
                 s = 50)
+
+# Render the plot
+plt.show()
 ```
 
 ### Themes
@@ -224,6 +239,9 @@ sns.scatterplot(data = new_metadata,
                 hue = "genotype",
                 style = "celltype",
                 s = 50)
+
+# Render the plot
+plt.show()
 ```
 
 ::: callout-note
@@ -231,7 +249,7 @@ sns.scatterplot(data = new_metadata,
 You can also customize themes further with `rc_params` when you want to adjust specific elements of the theme. The documentation for `set_style()` can be found [on their official website](https://seaborn.pydata.org/generated/seaborn.set_style.html).
 :::
 
-### Changing Labels
+### Changing labels
 
 The axis labels and tick labels don't get any larger by changing themes. We can, however, change both the x-axis labels and size labels with the `plt.xlabel()` functions from `matplotlib`. Since we will be adding this layer “on top” of, or after, `sns.set_style()`, any features we change will override what is set by the `sns.set_style()` layer.
 
@@ -257,7 +275,8 @@ sns.scatterplot(data = new_metadata,
 # Change the size and text of the axis label
 plt.xlabel(xlabel = "Age in Days",
            fontsize = 20)
-#
+
+# Render the plot
 plt.show()
 ``` 
 
