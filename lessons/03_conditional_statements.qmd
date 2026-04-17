@@ -359,7 +359,7 @@ x < 5 or x > 10
 
 ### `not` operator
 
-The `not` operator allows us to check if a condition is `False` and returns a `True`, or vis versa. For example, one way we could check if `x` is not greater than 10 would be to write: 
+The `not` operator allows us to check if a condition is `False` and returns a `True`, or vice versa. For example, one way we could check if `x` is not greater than 10 would be to write: 
 
 ```{python}
 #| label: not_operator_example
