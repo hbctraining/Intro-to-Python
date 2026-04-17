@@ -91,6 +91,7 @@ if x >= 5 and x <= 10:
 
 ```{python}
 #| label: if_elif_statement
+#| eval: false
 # Check if x is greater than of equal to 5 AND if x is less than of equal to 10
 if x >= 5 and x <= 10:
     # If true, print out this message
@@ -105,6 +106,7 @@ elif x > 10:
 
 ```{python}
 #| label: if_elif_else_statement
+#| eval: false
 # Check if x is greater than of equal to 5 AND if x is less than of equal to 10
 if x >= 5 and x <= 10:
     # If true, print out this message

@@ -78,11 +78,11 @@ We can also compare strings with these conditional statements:
 
 ```{python}
 #| label: conditional_test_string
-# Set the string 'Anja' to a variable called my_name
-my_name = 'Anja'
+# Set the string "Anja" to a variable called my_name
+my_name = "Anja"
 
-# Test if my_name variable is equal to 'Anja'
-print(my_name == 'Anja')
+# Test if my_name variable is equal to "Anja"
+print(my_name == "Anja")
 ``` 
 
 ## `if` statements
@@ -110,8 +110,8 @@ So if we wanted to check if `x` is greater than 10, we could write:
 # x = 15
 # Check if x is greater than 10
 if x > 10:
-    # If true, print out 'x is greater than 10'
-    print('x is greater than 10')
+    # If true, print out "x is greater than 10"
+    print("x is greater than 10")
 ``` 
 
 However, if the boolean logic returns false, then the conditional code will not be executed and thus nothing will be returned:
@@ -121,15 +121,15 @@ However, if the boolean logic returns false, then the conditional code will not 
 # x = 15
 # Check if x is greater than 10
 if x <= 10:
-    # If true, print out 'x is greater than 10'
-    print('x is greater than 10')
+    # If true, print out "x is greater than 10"
+    print("x is greater than 10")
 ``` 
 
 `if` statements are not exclusively numerical comparisons, we can check any boolean logic. So we could also test our `my_name` string from earlier:
 
 ```{python}
 #| label: if_statement_string_example
-# Check if my_name is equal to 'Anja'
+# Check if my_name is equal to "Anja"
 if my_name == "Anja":
     # If true, then print out this message
     print("Hello, Anja!")
@@ -140,10 +140,10 @@ Additionally, we are not limited to only one line of code in a single code block
 ```{python}
 #| label: if_statement_multiple_lines
 # If my_name is equal to Anja 
-if my_name == 'Anja':
+if my_name == "Anja":
     # If true, print out these two statements
-    print('Hello, Anja!')
-    print('Welcome to the Python training!')
+    print("Hello, Anja!")
+    print("Welcome to the Python training!")
 ``` 
 
 ### Indentation matters
@@ -237,17 +237,17 @@ We can join together the functionality of multiple `if` statements using `elif` 
 
 ### `else` statements
 
-Sometimes you may want to have a "catch-all" block of code that executes when the `if` statement is not met. This is where `else` comes in! We can build upon the "Anja" example from above and add an `else` statement to handle the case where `name != "Anja"`:
+Sometimes you may want to have a "catch-all" block of code that executes when the `if` statement is not met. This is where `else` comes in! We can build upon the `my_name` example from above and add an `else` statement to handle the case where `name != "Anja"`:
 
 ```{python}
 #| label: if_else_example
-# Set the string 'Anja' to the variable called my_name
-my_name = 'Anja'
+# Set the string "Noor" to the variable called my_name
+my_name = "Noor"
 
-# Check if my_name matches 'Anja'
-if my_name == 'Anja':
+# Check if my_name matches "Anja"
+if my_name == "Anja":
     # If true, print this message
-    print('Hello, Anja!')
+    print("Hello, Anja!")
 # Otherwise, do this
 else:
     # Print this message
@@ -260,17 +260,14 @@ Somewhat similarly to `else`, `elif` (short for "else if") allows us to check mu
 
 ```{python}
 #| label: elif_example
-# Set the string 'Anja' to the variable called my_name
-my_name = 'Noor'
-
-# Check if my_name matches 'Anja'
-if my_name == 'Anja':
+# Check if my_name matches "Anja"
+if my_name == "Anja":
     # If true, print this message
-    print('Hello, Anja!')
-# Otherwise, check if my_name matches 'Noor'
-elif my_name == 'Noor':
+    print("Hello, Anja!")
+# Otherwise, check if my_name matches "Noor"
+elif my_name == "Noor":
     # If true, print this message
-    print('Hello, Noor!')
+    print("Hello, Noor!")
 # Otherwise
 else:
     # Print this message
@@ -288,17 +285,17 @@ In this example below, we will see that we have an `if`/`else` pair of statement
 #| label: multiple_elif_example
 #| error: true
 # Change my_name to a different name
-my_name = 'Juan'
+my_name = "Juan"
 
-# Check if my_name matches 'Anja'
-if my_name == 'Anja':
+# Check if my_name matches "Anja"
+if my_name == "Anja":
     # If true, print this message
-    print('Hello, Anja!')
+    print("Hello, Anja!")
 # Otherwise
 else:
     # Print this message
     print("You aren't Anja or Noor!")
-# Otherwise, check if my_name matches 'Noor'
+# Otherwise, check if my_name matches "Noor"
 # Note that this syntax of putting elif after the else is going to return an error on line 14
 elif name == "Noor":
     # If true, print this message
@@ -362,7 +359,7 @@ x < 5 or x > 10
 
 ### `not` operator
 
-The `not` operator allows us to check if a condition is `False` and returns a `True`. For example, one way we could check if `x` is not greater than 10 would be to write: 
+The `not` operator allows us to check if a condition is `False` and returns a `True`, or vis versa. For example, one way we could check if `x` is not greater than 10 would be to write: 
 
 ```{python}
 #| label: not_operator_example
