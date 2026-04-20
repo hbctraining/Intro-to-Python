@@ -1,7 +1,7 @@
 ---
 title: "`NumPy` Arrays"
 description: |
-  In this lesson, you will learn how to work with `NumPy` arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common NumPy functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.
+  In this lesson, you will learn how to work with `NumPy` arrays as the core data structure for numerical computing. You’ll create 1‑dimensional and multi‑dimensional arrays, reshape them and initialize arrays with special patterns such as zeros, ones and identity matrices. You’ll practice indexing, slicing and filtering to efficiently select and manipulate subsets of data. Finally, you’ll use common `NumPy` functions to summarize arrays, compute basic statistics and generate random data for simulations and testing.
 author:
   - Noor Sohail
   - Will Gammerdinger
@@ -28,13 +28,13 @@ Approximate time: 30 minutes
 
 In this lesson, we will:
 
-- Manipulate `NumPy` arrays with indexing and slicing
+- Wrangle `NumPy` arrays with indexing and slicing
 - Create arrays/matrices of varying dimensions and shapes
 - Use `NumPy` functions to perform common operations
 
 ## Overview of lesson
 
-`NumPy` is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. In this lesson, we will cover the basics of working with `NumPy` arrays, including how to create and manipulate them, as well as some common functions that are available for performing operations on arrays. 
+`NumPy` is a powerful library for numerical computing in Python. It is widely used to work with arrays and matrices. The implementation of these data structures and associated methods have been optimized for performance, making it a popular choice for scientific computing and data analysis. In this lesson, we will cover the basics of working with `NumPy` arrays, including how to create and wrangle them, as well as some common functions that are available for performing operations on arrays. 
 
 ## `NumPy` library
 
@@ -153,28 +153,37 @@ ones_matrix = np.ones((2, 4))
 print(ones_matrix)
 ```
 
-We can even create an identify matrix with  `numpy.identity()`. An identity matrix is a square matrix (same number of rows and columns) with ones on the main diagonal and zeros elsewhere. 
+We can even create an identity matrix with  `numpy.identity()`. An identity matrix is a square matrix (same number of rows and columns) with ones on the main diagonal and zeros elsewhere. 
 
 ```{python}
 #| label: initialize_identity_matrix
 # Initialize a 3x3 identity matrix
 identity_matrix = np.identity(3)
+
+# Print the identity matrix
 print(identity_matrix)
 ```
 
 ::: {.callout-note collapse="true"}
 # Identity matrix math
 
-It is often denoted as `I` and has the property that when multiplied by any matrix of compatible dimensions, it returns the original matrix (i.e., `I * A = A`).
+The identity matrix is often denoted as `I` and has the property that when multiplied by any matrix of compatible dimensions, it returns the original matrix (i.e., `I * A = A`).
 
 ```{python}
 #| label: identity_matrix_multiplication
 # Example of identity matrix multiplication
+# Create an identity matrix
 I = np.identity(3)
+
+# Create a populated matrix
 A = np.array([[1, 2, 3], 
               [4, 5, 6], 
               [7, 8, 9]])
+
+# Perform matrix multiplication
 result = np.dot(I, A)
+
+# Print the matrix
 print(result)
 ```
 
@@ -188,6 +197,8 @@ The `numpy.reshape()` function is a flexible way to create arrays of varying sha
 #| label: arange_function
 # Create an array of integers from 0 to 9
 matrix_arange = np.arange(10)
+
+# Print the matrix
 print(matrix_arange)
 ```
 
@@ -197,6 +208,8 @@ And now we can reshape the values to be the size we want to work with:
 #| label: reshape_array
 # Reshape the array into a 2x5 matrix
 reshaped_matrix = matrix_arange.reshape(2, 5)
+
+# Print the reshaped matrix
 print(reshaped_matrix)
 ```
 
@@ -264,7 +277,7 @@ print(filtered_arr)
 
 ## Useful `NumPy` functions
 
-Base Python is somewhat limited when it comes to numerical operations. The [`NumPy` library](https://numpy.org/doc/stable/reference/) provides a broader range of mathematical tools. For example, you can quickly calculate the mean, median, and standard deviation of an array with the `numpy.mean()`, `numpy.median()`, and `numpy.std()` functions:
+Base Python is somewhat limited when it comes to numerical operations. The [`NumPy` library](https://numpy.org/doc/stable/reference/) provides a broader range of mathematical tools. For example, you can quickly calculate the mean, median and standard deviation of an array with the `numpy.mean()`, `numpy.median()` and `numpy.std()` functions:
 
 ```{python}
 #| label: numpy_functions
@@ -284,7 +297,7 @@ std_dev = np.std(arr)
 print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
 ```
 
-NumPy has other functions for performing mathematical operations on arrays, such as 
+`NumPy` has other functions for performing mathematical operations on arrays, such as 
 
 - `numpy.sum()`
 - `numpy.prod()`
@@ -331,8 +344,10 @@ Similarly, we can also create a random array from a specific distribution. For e
 ```{python}
 #| label: random_normal
 # Generate a 1-dimensional array of 10 random numbers from a normal distribution 
-# with mean 0 and standard deviation 1
-random_array = np.random.normal(loc=0, scale=1, size=10)  
+# With mean 0 and standard deviation 1
+random_array = np.random.normal(loc=0,
+                                scale=1,
+                                size=10)  
 
 # Print the random array
 print(random_array)
