@@ -18,7 +18,7 @@ jupyter: intro_python
 # Load libraries and data
 import numpy as np
 
-matrix_arange = np.arange(10).reshape(2, 5)
+reshaped_matrix = np.arange(10).reshape(2, 5)
 ```
 
 # Exercise 1
@@ -67,7 +67,7 @@ print(exercise_matrix[2,1])
 
 # Exercise 2
 
-1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
+1. Test out the following functions on the `reshaped_matrix` array that we created earlier and describe what the output is for each function:
       - `np.shape()`
       - `np.ndim()`
       - `np.size()`
@@ -77,7 +77,7 @@ print(exercise_matrix[2,1])
 ```{python}
 #| label: numpy_shape
 # Retrieve the dimensions of matrix_arange
-np.shape(matrix_arange)
+np.shape(reshaped_matrix)
 ```
 
 - `np.ndim()`: This function returns the number of dimensions of the array. 
@@ -85,7 +85,7 @@ np.shape(matrix_arange)
 ```{python}
 #| label: numpy_ndim
 # Retrieve number of the dimensions of matrix_arange
-np.ndim(matrix_arange)
+np.ndim(reshaped_matrix)
 ```
 
 - `np.size()`: This function returns the total number of elements in the array. For example, `np.size` on a 2 x 5 2-dimensional array would return `10` (2 rows x 5 columns = 10 elements).
@@ -93,5 +93,5 @@ np.ndim(matrix_arange)
 ```{python}
 #| label: numpy_size
 # Retrieve number of elements within matrix_arange
-np.size(matrix_arange)
+np.size(reshaped_matrix)
 ```

@@ -312,12 +312,12 @@ All these functions allow you to perform operations across the entire array or a
 
 ### Summarizing arrays
 
-Arrays come with built in methods to see the general information about the array. Recall that methods are functions that are associated with a specific object. Let us test our what some of the attributes of the `matrix_arange` array are:
+Arrays come with built in methods to see the general information about the array. Recall that methods are functions that are associated with a specific object. Let us test our what some of the attributes of the `reshaped_matrix` array are:
 
 
 :::{.callout-tip}
 # [**Exercise 2**](08_numpy_arrays-Answer_key.qmd#exercise-2)
-1. Test out the following functions on the `matrix_arange` array that we created earlier and describe what the output is for each function:
+1. Test out the following functions on the `reshaped_matrix` array that we created earlier and describe what the output is for each function:
 
       - `np.shape()`
       - `np.ndim()`
