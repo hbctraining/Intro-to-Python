@@ -94,7 +94,7 @@ for organism in species:
     print(organism)
 ```
 
-We now created a variable `organism` for the `for` loop. This is a variable that takes the value of each element in the `species` list as we iterate through it. So, in the first iteration of the loop, `organism` will be equal to `"human"`, in the second iteration, `organism` will be equal to `"mouse"`, and so on.
+We now created a variable `organism` for the `for` loop. This is a variable that takes the value of each element in the `species` list as we iterate through it. So, in the first iteration of the loop, `organism` will be equal to `"ecoli"`, in the second iteration, `organism` will be equal to `"human"`, and so on.
 
 We do not have to assign the list to a variable before we use it For example, we could iterate over a list of numbers without doing any assignment first and run calculations on those numbers as follows:
 
