@@ -52,8 +52,10 @@ This library is widely used in data science and machine learning fields for task
 
 Within the `pandas` library, there are built-in functions to load datasets from various file formats, such as CSV (comma separated values) or Excel files (`.xlsx`). The most commonly used function for loading data is `pandas.read_csv()`, which allows you to read a CSV file and create a DataFrame with the data.
 
+::: {.callout-note collapse="true"}
+# Metadata
 When working with a large dataset, you will very likely work with a "metadata" file that contains the information about each sample in your dataset. This is important information and we encourage you to always generate a document with as much metadata as you can record before you bring the data into Python. Metadata can include information about the experimental design, sample characteristics, data collection methods and any other relevant information that can help you understand and analyze your data. [Here is some additional reading on metadata](https://datamanagement.hms.harvard.edu/metadata-overview) from the [HMS Data Management Working Group](https://datamanagement.hms.harvard.edu/).
-
+:::
 
 We have a file in which we identify information about the data, called metadata. Our metadata is also stored in a CSV file. In this file, each row corresponds to a sample and each column contains some information about each sample.
 
@@ -75,7 +77,11 @@ The first column contains the row names and the remaining columns contain inform
 
  _What types of categories do you observe in the remaining columns?_
 
-This metadata describes the samples in our study. Each row holds information for a single sample and the columns contain categorical information about the sample `genotype` (WT or KO), `celltype` (typeA or typeB) and `replicate` number (1, 2 or 3).
+This metadata describes the samples in our study. Each row holds information for a single sample and the columns contain categorical information about: 
+
+  - `genotype`  (WT or KO)
+  - `celltype`  (typeA or typeB)
+  - `replicate` (1, 2 or 3).
 
 ### Inspecting the DataFrame
 
@@ -130,18 +136,10 @@ If we wanted to extract the wild type (Wt) value that is present in the **first 
 1. To extract it we first use the name of the dataframe that we want to extract from, followed by the `iloc` method with square brackets (`metadata.iloc[ ]`).
 2. Inside the square brackets we add the coordinates or indices for the rows in which the value(s) are present, followed by a comma, and then the coordinates or indices for the columns in which the value(s) are present (`metadata.iloc[rows, columns]`).
 
-We know the wild type value is in the first row if we count from the top, so we put a zero followed by a comma. The wild type value is also in the first column (counting from left to right as usual), so we put a zero in the columns space too.
+We know the wild type value is in the first row if we count from the top, so we put a zero followed by a comma. The wild type value is also in the first column (counting from left to right as usual), so we put a zero in the columns space too.Here, we want to extract the value `1` from the first row and third column.
 
 ```{python}
 #| label: numerical_indexing
-# Extract the value in the first row and first column
-metadata.iloc[0, 0]
-```
-
-Now we will extract the value `1` from the first row and third column.
-
-```{python}
-#| label: numerical_indexing_2
 # Extract the value in the first row and third column
 metadata.iloc[0, 2]
 ```
@@ -163,15 +161,8 @@ type(metadata.iloc[0, :])
 
 This is a `Series` data structure, which is a one-dimensional array with row names (in this case, the original column names from our DataFrame). The reason we get a Series instead of a DataFrame is because we are **selecting a single row** from the DataFrame. Python will output a list-like object as the simplest data structure.
 
-If you were selecting specific columns from the DataFrame, the rows are left blank:
-
-```{python}
-#| label: numerical_indexing_columns
-# Extract the first column
-metadata.iloc[:, 0]
-```
-
-Same as before, we get a `Series` data structure because we are selecting a single column from the DataFrame.
+::: {.callout-note collapse=true}
+# Convert `Series` to `DataFrame`
 
 Oftentimes we would like to keep our single column as a DataFrame. We use the `to_frame()` method to convert a Series to a DataFrame:
 
@@ -181,6 +172,8 @@ Oftentimes we would like to keep our single column as a DataFrame. We use the `t
 # Extract the first column and convert it to a DataFrame
 metadata.iloc[:, 0].to_frame()
 ```
+
+:::
 
 ### Slicing DataFrames
 
@@ -242,15 +235,7 @@ It is important to type the names of the columns/rows in the exact way that they
 metadata.loc["Celltype"] # Celltype column incorrect
 ```
 
-If we wanted to access only a few values within the column, we can index the column with the column name and then use numerical indexing to select the desired values.
-
-```{python}
-#| label: label_based_indexing_column_then_rows
-# Extract the first three samples for the celltype column
-metadata.loc[:, "celltype"][0:3]
-```
-
-We can also directly access a column without the `loc` method by using the column name as an attribute of the DataFrame. For example, to access the `celltype` column, we can use the following code:
+We can also directly access a **column** without the `loc` method by using the column name as an attribute of the DataFrame. For example, to access the `celltype` column, we can use the following code:
 
 ```{python}
 #| label: direct_column_access
@@ -275,14 +260,6 @@ So to access all the information for the first sample, we would need to use the 
 metadata.loc["sample1", :]
 ```
 
-We can mix and match label-based and numerical indexing. For example, we can start by using label-based indexing to select the column we want and then use numerical indexing to select the first three samples from that column:
-
-```{python}
-#| label: label_based_indexing
-# Extract the first three samples for the celltype column 
-metadata.iloc[0:3]["celltype"]
-```
-
 ### Subsetting DataFrames with logical expressions
 
 We can use logical expressions with DataFrames to extract the rows or columns in the DataFrame by using specific values. First, we need to determine the indices in the rows or columns where a logical expression is `True`, then we can extract those rows or columns from the DataFrame.
@@ -298,7 +275,11 @@ For example, if we want to only return the rows of the DataFrame with the cellty
 metadata["celltype"] == "typeA"
 ```
 
-This will output `True` and `False` values for the values in the vector. The first six values are `True` and the last six are `False`. This means the first six rows of our metadata have a value of `typeA` while the last six do not. We can save these values to a variable, which we can name whatever we would like; let’s call it `logical_idx`.
+This will output `True` and `False` values for the values in the vector. The first six values are `True` and the last six are `False`. This means the first six rows of our metadata have a value of `typeA` while the last six do not. 
+
+::: {.callout-note collapse="true"}
+# Boolean mask
+We can save these values to a variable, which we can name whatever we would like; let’s call it `logical_idx`.
 
 ```{python}
 #| label: tbl-conditional_subsetting_2
@@ -310,9 +291,11 @@ logical_idx = metadata["celltype"] == "typeA"
 metadata[logical_idx]
 ```
 
-We can use those `True` and `False` values to extract the rows that correspond to the `True` values from the metadata DataFrame. The result is a DataFrame that only contains rows where the celltype is `typeA`.
+This is an alternative way to subset by using a more nested approach.
 
-Alternatively, you can also use a nested approach and put the logical index within the subsetting:
+:::
+
+We can use those `True` and `False` values to extract the rows that correspond to the `True` values from the metadata DataFrame. The result is a DataFrame that only contains rows where the celltype is `typeA`.
 
 ```{python}
 #| label: tbl-conditional_subsetting_nested
