@@ -142,7 +142,7 @@ Each data structure has its own set of methods that are designed to perform spec
 
 ::: callout-note
 # Double underscore methods
-You may notice that there are many functions that follow the structure `__method__` when we view the output for `dir()`. These are called **dunder methods** (short for “double underscore”) and they are special methods . They are typically used to define the behavior of data structures in certain scenarious. 
+You may notice that there are many functions that follow the structure `__method__` when we view the output for `dir()`. These are called **dunder methods** (short for “double underscore”) and they are special methods . They are typically used to define the behavior of data structures in certain scenarios. 
 
 We will not be covering dunder methods as they relate closely to `classes` which we are not covering in this workshop. You can ignore them for now.
 :::

@@ -34,8 +34,8 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression")
+            x = "genotype", 
+            y = "mean_expression")
 
 # Render the plot
 plt.show()
@@ -50,9 +50,9 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype")
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype")
 
 # Render the plot
 plt.show()
@@ -67,9 +67,9 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype")
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype")
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression")
@@ -87,9 +87,9 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype")
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype")
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression")
@@ -119,9 +119,9 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype")
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype")
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -155,10 +155,10 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype",
-            order=["KO", "Wt"])
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype",
+            order = ["KO", "Wt"])
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -190,11 +190,11 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype",
-            order=["KO", "Wt"],
-            palette=["purple", "orange"])
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype",
+            order = ["KO", "Wt"],
+            palette = ["purple", "orange"])
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -224,11 +224,11 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype",
-            order=["KO", "Wt"],
-            palette=["cornflowerblue", "orange"])
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype",
+            order = ["KO", "Wt"],
+            palette = ["cornflowerblue", "orange"])
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -250,7 +250,7 @@ plt.show()
 
 # Exercise 4
 
-1. Find the hexadecimal code for your 2 favorite colors (from the previous exercise) and replace the color names with the hexadecimal codes within the ggplot2 code chunk.
+1. Find the hexadecimal code for your 2 favorite colors (from the previous exercise) and replace the color names with the hexadecimal codes within the code chunk.
 
 ```{python}
 #| label: boxplot_hexadecimal_color
@@ -262,11 +262,11 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype",
-            order=["KO", "Wt"],
-            palette=["#6495ED", "#FFA500"])
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype",
+            order = ["KO", "Wt"],
+            palette = ["#6495ED", "#FFA500"])
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",

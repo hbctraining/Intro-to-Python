@@ -85,13 +85,13 @@ new_metadata = pd.read_csv("data/new_metadata.csv", index_col=0)
 sns.set_style("white")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype")
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype")
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -132,14 +132,14 @@ The figure should now look like the figure below:
 sns.set_style("white")
 
 # Initialize a plot with a specific size
-plt.figure(figsize=(8, 6))
+plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype",
-            order=["KO", "Wt"])
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype",
+            order = ["KO", "Wt"])
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -184,11 +184,11 @@ plt.figure(figsize = (8, 6))
 
 # Add a boxplot layer to the plot, coloring boxes by celltype
 sns.boxplot(data = new_metadata,
-            x="genotype", 
-            y="mean_expression",
-            hue="celltype",
-            order=["KO", "Wt"],
-            palette=["purple","orange"])
+            x = "genotype", 
+            y = "mean_expression",
+            hue = "celltype",
+            order = ["KO", "Wt"],
+            palette = ["purple","orange"])
 
 # Add plot title
 plt.title(label = "Genotype differences in average gene expression",
@@ -215,7 +215,7 @@ You are not restricted to only using written colors. You have the choice of a lo
 ::: {.callout-tip}
 # [**Exercise 4**](12_boxplots-Answer_key.qmd#exercise-4)
 
-1. Find the hexadecimal code for your 2 favorite colors (from the previous exercise) and replace the color names with the hexadecimal codes within the ggplot2 code chunk.
+1. Find the hexadecimal code for your 2 favorite colors (from the previous exercise) and replace the color names with the hexadecimal codes within the code chunk.
 
 The figure could now look like the figure below:
 
