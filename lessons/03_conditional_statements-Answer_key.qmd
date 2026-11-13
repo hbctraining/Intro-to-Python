@@ -29,7 +29,7 @@ my_name = 'Anja'
 x != 67
 ```
 
-2. Create an `if` statement that evaluates if `x` is ***NOT*** equal to `67` and if the number is not `67` then have it print "x is NOT 67."
+2. Create an `if` statement that evaluates if `x` is ***NOT*** equal to `67` and if the number is not `67` then have it print "Your number is NOT 67."
 
 ```{python}
 #| label: if_statement_x
