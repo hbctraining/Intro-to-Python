@@ -136,7 +136,9 @@ If we wanted to extract the wild type (Wt) value that is present in the **first 
 1. To extract it we first use the name of the dataframe that we want to extract from, followed by the `iloc` method with square brackets (`metadata.iloc[ ]`).
 2. Inside the square brackets we add the coordinates or indices for the rows in which the value(s) are present, followed by a comma, and then the coordinates or indices for the columns in which the value(s) are present (`metadata.iloc[rows, columns]`).
 
-We know the wild type value is in the first row if we count from the top, so we put a zero followed by a comma. The wild type value is also in the first column (counting from left to right as usual), so we put a zero in the columns space too.Here, we want to extract the value `1` from the first row and third column.
+We know the wild type value is in the first row if we count from the top, so we put a zero followed by a comma. The wild type value is also in the first column (counting from left to right as usual), so we put a zero in the columns space too.
+
+Here, we want to extract the value `1` from the first row and third column.
 
 ```{python}
 #| label: numerical_indexing
