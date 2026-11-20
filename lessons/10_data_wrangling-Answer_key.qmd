@@ -141,11 +141,24 @@ animals[animals["speed"] > 50]["color"].to_frame()
 
 ```{python}
 #| label: change_grey_to_gray
-# Two ways to change Grey to Gray
-animals["color"][animals["color"] == "Grey"] = "Gray"
+# Change Grey to Gray
 animals.loc[animals["color"] == "Grey", "color"] = "Gray"
 animals
 ```
+
+:::{.callout-warning}
+# Changes to `pandas` 3.0
+
+You used to be able to use syntax of the form `df["col"][row_indexer] = value`, i.e.
+
+```{python}
+#| label: change_grey_to_gray_old
+# Change Grey to Gray
+animals["color"][animals["color"] == "Grey"] = "Gray"
+```
+
+However, as we can see, this code gives us a warning saying that the intermediate object, the column being accessed, is now being copied by pandas instead of updating the original. This code will still work for now, but it's better to use the `df.loc[row_indexer, "col"] = values` syntax.
+:::
 
 8. Create a list called `animals_list` in which the first element contains the speed column of the `animals` dataframe and the second element contains the color column of the `animals` dataframe. 
 
