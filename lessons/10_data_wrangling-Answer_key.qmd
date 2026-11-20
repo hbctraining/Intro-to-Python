@@ -35,11 +35,11 @@ rpkm_ordered = rpkm_data.reindex(columns=metadata.index)
 
 We have a list of 6 marker genes that we are very interested in. Our goal is to extract count data for these genes using the `in` operator from the `rpkm_ordered` data frame, instead of scrolling through `rpkm_ordered` and finding them manually.
 
-First, let's create a vector called `important_genes` with the Ensembl IDs of the 6 genes we are interested in:
+First, let's create a list called `important_genes` with the Ensembl IDs of the 6 genes we are interested in:
 
 ```{python}
 #| label: create_important_genes
-# Create important genes vector
+# Create important genes list
 important_genes = ["ENSMUSG00000083700", "ENSMUSG00000080990", 
                    "ENSMUSG00000065619", "ENSMUSG00000047945", 
                    "ENSMUSG00000081010", "ENSMUSG00000030970"]
@@ -164,7 +164,7 @@ However, as we can see, this code gives us a warning saying that the intermediat
 
 ```{python}
 #| label: create_list
-# Create a list with the speed and color vectors
+# Create a list with the speed and color lists
 animals_list = [animals["speed"], animals["color"]]
 animals_list
 ```
@@ -173,7 +173,7 @@ animals_list
 
 ```{python}
 #| label: create_dict
-# Create a dictionary with the speed and color vectors
+# Create a dictionary with the speed and color lists
 animals_dict = {"speed": animals["speed"], 
                 "color": animals["color"]}
 animals_dict
