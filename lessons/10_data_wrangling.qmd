@@ -164,11 +164,11 @@ When we look at the columns of `rpkm_ordered` now, we see that they are now in t
 
 We have a list of 6 marker genes that we are interested in. Our goal is to extract count data for these genes using the `isin` operator from the `rpkm_ordered` DataFrame instead of finding them manually.
 
-First, we will create a vector called `important_genes` with the Ensemble IDs of the 6 genes we are interested in:
+First, we will create a list called `important_genes` with the Ensemble IDs of the 6 genes we are interested in:
 
 ```{python}
 #| label: create_important_genes
-# Create important genes vector
+# Create important genes list
 important_genes = ["ENSMUSG00000083700", "ENSMUSG00000080990", 
                    "ENSMUSG00000065619", "ENSMUSG00000047945", 
                    "ENSMUSG00000081010", "ENSMUSG00000030970"]
@@ -301,7 +301,7 @@ Let’s also create a list with the ages of each of the mice in our dataset. We 
 ```{python}
 #| label: add_age_column
 # Add the age column to the metadata DataFrame
-# Create a numeric vector with ages. 
+# Create a numeric list with ages. 
 age_in_days = [40, 32, 38, 35, 41, 32, 
                34, 26, 28, 28, 30, 32]   
 
